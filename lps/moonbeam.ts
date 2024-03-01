@@ -63,8 +63,8 @@ const tokenContractAbi = [
 
 export async function updateLps() {
     
-    const lps = JSON.parse(fs.readFileSync('./glmr_holders/lps_base.json', 'utf8'))
-    const asseRegistry = JSON.parse(fs.readFileSync('../assets/asset_registry/glmr_assets.json', 'utf8'))
+    const lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lps_base.json'), 'utf8'))
+    const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
     lps.map((lp: any) => {
         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
@@ -442,7 +442,7 @@ async function main() {
     process.exit(0)
 }
 
-main()
+// main()
 
 // Adds two arrays for the given base (10 or 16), returning the result.
 // This turns out to be the only "primitive" operation we need.

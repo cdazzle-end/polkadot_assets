@@ -1,13 +1,20 @@
 import * as fs from 'fs';
 // import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../assets/asset_types';
 import { MyLp } from '../types';
-import * as bncHandler from './bifrost.ts'
+import * as bncPolkadotHandler from './bifrost_polkadot.ts'
 import * as paraHandler from './parallel.ts'
 import * as acaHandler from './acala.ts'
 import * as glmrHandler from './moonbeam.ts'
+import * as bncKusamaHandler from './bifrost_kusama.ts'
+import * as hkoHandler from './heiko.ts'
+import * as karHandler from './karura.ts'
+import * as movrHandler from './moonriver.ts'
+import * as bsxHandler from './basilisk.ts'
+// import * as sdnHandler from './sdn/lp_handler'
+
 // import * as sdnHandler from './sdn/lp_handler'
 // import * as kucoinHandler from './kucoin/lp_handler'
-// import * as mgxHandler from './mgx/lp_handler'
+import * as mgxHandler from './mangata.ts'
 import * as hdxHandler from './hydra.ts'
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
@@ -64,9 +71,9 @@ async function updateLpTimeStamp() {
     fs.appendFileSync("lp_timestamps.txt", "LPs updated at: " + startTime + "\n");
 }
 
-async function updateLps(chopsticks: boolean) {
+async function updatePolkadotLps(chopsticks: boolean) {
     await Promise.all([
-        bncHandler.updateLps(chopsticks).then(() => console.log("bnc complete")),
+        bncPolkadotHandler.updateLps(chopsticks).then(() => console.log("bnc polkadot complete")),
         paraHandler.updateLps(chopsticks).then(() => console.log("para complete")),
         acaHandler.updateLps(chopsticks).then(() => console.log("aca complete")),
         // kucoinHandler.updateLps().then(() => console.log("kucoin complete")),
@@ -77,15 +84,47 @@ async function updateLps(chopsticks: boolean) {
     ]);
 }
 
+async function updateKusamaLps(chopsticks: boolean) {
+    await Promise.all([
+        bncKusamaHandler.updateLps(chopsticks).then(() => console.log("bnc kusama complete")),
+        hkoHandler.updateLps(chopsticks).then(() => console.log("hko complete")),
+        karHandler.updateLps(chopsticks).then(() => console.log("kar complete")),
+        // kucoinHandler.updateLps().then(() => console.log("kucoin complete")),
+        mgxHandler.updateLps(chopsticks).then(() => console.log("mgx complete")),
+        bsxHandler.updateLps(chopsticks).then(() => console.log("bsx complete")),
+        movrHandler.updateLps().then(() => console.log("movr complete")),
+        // sdnHandler.updateLps().then(() => console.log("sdn complete"))
+    ]);
+}
+
 async function main() {
 
-    let chopsticks = await process.argv.includes("true")
-
+    // let chopsticks = await process.argv.includes("true")
+    let args = process.argv
+    let relay = args[2]
+    let chopsticks = args[3]
+    console.log(JSON.stringify(args))
+    console.log("relay: " + relay)
     console.log("chopsticks: " + chopsticks)
+    let runWithChopsticks
+    if (chopsticks === "true") {
+        runWithChopsticks = true
+    } else {
+        runWithChopsticks = false
+    }
+    if(relay === "polkadot") {
+        await updatePolkadotLps(runWithChopsticks)
+    } else if(relay === "kusama") {
+        await updateKusamaLps(runWithChopsticks)
+    } else {
+        console.log("Invalid relay")
+        process.exit(0)
+    }
 
-    startTimer()
-    await updateLps(chopsticks)
-    updateLpTimeStamp()
+    // startTimer()
+    // await updateKusamaLps(false)
+    // updateLpTimeStamp()
+    process.exit(0)
 }
 
 main()

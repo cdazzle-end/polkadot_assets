@@ -31,7 +31,7 @@ export async function updateLps(chopsticks: boolean) {
     const zenTokens = tokensMeta.map((item: AssetMeta) => {
         return new Token(item);
     });
-    const bncAssets = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/bnc_assets.json'), 'utf8'))
+    const bncAssets = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/bnc_polkadot_assets.json'), 'utf8'))
 
     const standardPairs = await firstValueFrom(dexApi.standardPairOfTokens(zenTokens));
     const standardPools = await firstValueFrom(dexApi.standardPoolOfPairs(standardPairs));
@@ -57,7 +57,7 @@ export async function updateLps(chopsticks: boolean) {
         }
         return newLp
     })
-    console.log(JSON.stringify(lps, null, 2))
+    // console.log(JSON.stringify(lps, null, 2))
     await fs.writeFileSync(path.join(__dirname, './lp_registry/bnc_lps.json'), JSON.stringify(lps, null, 2));
     dexApi.api?.disconnect();
 }
@@ -82,7 +82,7 @@ export async function saveLps() {
     const zenTokens = tokensMeta.map((item: AssetMeta) => {
         return new Token(item);
     });
-    const filePath = path.join(__dirname, './../assets/asset_registry/bnc_assets.json');
+    const filePath = path.join(__dirname, './../assets/asset_registry/bnc_polkadot_assets.json');
     // fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2))
     const bncAssets = JSON.parse(fs.readFileSync(filePath, 'utf8'))
 
@@ -128,7 +128,7 @@ export async function saveLps() {
     })
     console.log("---------------------")
     console.log(lps)
-    fs.writeFileSync(path.join(__dirname, './lp_registry/bnc_lps.json'), JSON.stringify(lps, null, 2));
+    fs.writeFileSync(path.join(__dirname, './lp_registry/bnc_polkadot_lps.json'), JSON.stringify(lps, null, 2));
 }
 
 async function getLps(): Promise<MyLp[]> {
