@@ -58,10 +58,19 @@ const tokenContractAbi = [
     "event Transfer(address indexed src, address indexed dst, uint val)"
 ]
 
+export const dexAbis = [
+    
+    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/solarDexAbi.json'), 'utf8')),
+    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/uniswapDexV3.json'), 'utf8')),
+    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/algebraDex.json'), 'utf8')),
+    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/beamDex.json'), 'utf8')),
+    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/beamV3Dex.json'), 'utf8')),
+    // JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/zenlinkDexAbi.json'), 'utf8')),
+    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/stellaDexAbi.json'), 'utf8')),
+]
 
 
-
-export async function updateLps() {
+export async function updateLps(chopsticks: boolean) {
     
     const lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lps_base.json'), 'utf8'))
     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
@@ -135,9 +144,7 @@ async function lpList() {
     fs.writeFileSync('./lp_contracts', JSON.stringify(lps, null, 2))
 }
 
-async function getLpContracts() {
 
-}
 
 async function parseCSV(directory, file){
     // let filePath = path.join(__dirname, './token_holders/glmr_token_holders.csv');
@@ -210,13 +217,13 @@ async function parseCSVFilesInDirectory() {
 //   let complete = await Promise.all(filesParse);
 }
 //From list of top wsdn holders, get list of dexs
-async function getGlmrLiqPools() {
+async function getGlmrLiqPools(batchSize: number = 100) {
 
-    let glmrAddresses = JSON.parse(fs.readFileSync('./token_holders_parsed/glmr_token_holders.json', 'utf8'))
+    let glmrAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './token_holders_parsed/glmr_token_holders.json'), 'utf8'))
     console.log(glmrAddresses)
 
     let reservesAll = []
-    await queryAndCollectAddressesInBatches(glmrAddresses, 100)
+    await queryAndCollectAddressesInBatches(glmrAddresses, batchSize)
 }
 async function getOtherLiqPools() {
     let directoryPath = path.join(__dirname, './token_holders_parsed');
@@ -236,17 +243,32 @@ function readGlmrLps(){
     let lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/glmr_lps.json'), 'utf8'))
     return lps
 }
+function readGlmrHolders(){
+    let lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/glmr_token_holders.json'), 'utf8'))
+    return lps
+}
 function readOtherLps(){
     let lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/other_lps.json'), 'utf8'))
     return lps
 }
 
+interface LpResult {
+    success: boolean,
+    abi: string
+}
+
 function addAddressesToGlmrLp(lpResults: any[]){
     let lps = readGlmrLps()
-    lpResults.forEach(([lpAddress, result]) => {
-        if(!lps[lpAddress] || lps[lpAddress] == false){
-            lps[lpAddress] = result
+    // let lps: any = {}
+    lpResults.forEach(([lpAddress, result, abi]) => {
+        // if(!lps[lpAddress] || lps[lpAddress] == false){
+        //     lps[lpAddress] = [result, abi]
+        // }
+        let lpResult: LpResult = {
+            success: result,
+            abi: abi
         }
+        lps[lpAddress] = lpResult
     })
     fs.writeFileSync(path.join(__dirname, './glmr_holders/glmr_lps.json'), JSON.stringify(lps, null, 2))
 }
@@ -263,28 +285,57 @@ function addAddressesToOtherLp(lpResults: any[]){
 async function queryAndCollectAddressesInBatches(addresses, batchSize) {
     const lpAddresses = [];
     let addressesToCheck = []
-    let glmrLps = readGlmrLps()
-    addresses.forEach((address: any) => {
-        if(!glmrLps[address] || glmrLps[address] == false){
-            addressesToCheck.push(address)
-        }
-    })
-    for (let i = 0; i < addressesToCheck.length; i += batchSize) {
-        const batch = addressesToCheck.slice(i, i + batchSize);
+    let possibleGlmrLps = readGlmrHolders()
+
+    // addresses.forEach((address: any) => {
+    //     if(!glmrLps[address] || glmrLps[address] == false){
+    //         addressesToCheck.push(address)
+    //     }
+    //     addressesToCheck.push(address)
+    // })
+    for (let i = 0; i < possibleGlmrLps.length; i += batchSize) {
+        // console.log
+        const batch = possibleGlmrLps.slice(i, i + batchSize);
         console.log(`Processing batch from ${i} to ${i + batchSize}`);
-        
         // Map each address in the batch to a promise that resolves to the address or null
         const results = await Promise.all(batch.map(async (currentAddress) => {
-            try {
-                let contract = new ethers.Contract(currentAddress.toLowerCase(), altDexContractAbi, provider);
-                await contract.getReserves(); // Attempt to fetch reserves
-                return [currentAddress.toLowerCase(),true]; // Return address on success
-            } catch (e) {
-                console.log(`${currentAddress} is not an LP address or failed to fetch reserves: ${e.message}`);
-                return [currentAddress.toLowerCase(),false]; // Return null on failure
+            // console.log(currentAddress)
+            let abiIndex = 0
+            let abiFound = false
+            while(abiIndex < 3 && !abiFound){
+                try {
+                    if(abiIndex == 0){
+                        // Standard  V2 pool
+                        let contract = new ethers.Contract(currentAddress.toLowerCase(), dexAbis[abiIndex], provider);
+                        await contract.getReserves(); // Attempt to fetch reserves
+                        console.log("success solar")
+                        return [currentAddress.toLowerCase(), true, "Solar"]; // Return address on success
+                    } else if(abiIndex == 1){
+                        // Uni V3 pool
+                        let contract = new ethers.Contract(currentAddress.toLowerCase(), dexAbis[abiIndex], provider);
+                        await contract.slot0(); // Attempt to fetch reserves
+                        abiFound = true
+                        console.log("success uni")
+                        return [currentAddress.toLowerCase(), true, "Uni V3"]; // Return address on success
+                    } else if (abiIndex == 2){
+                        // Algebra pool
+                        let contract = new ethers.Contract(currentAddress.toLowerCase(), dexAbis[abiIndex], provider);
+                        await contract.globalState(); // Attempt to fetch reserves
+                        abiFound = true
+                        console.log("succes algebra")
+                        return [currentAddress.toLowerCase(), true, "Algebra"]; // Return address on success
+                    }
+                } catch (e) {
+                    // return [currentAddress.toLowerCase(), false]; // Return null on failure
+                } finally {
+                    abiIndex++
+                }
+                
             }
+            return [currentAddress.toLowerCase(), false]; // Return null on failure
         }));
-        console.log(results)
+    
+        // console.log(results)
         addAddressesToGlmrLp(results)
         // Filter out nulls and add successful addresses to lpAddresses
         lpAddresses.push(...results.filter(address => address !== null));
@@ -437,8 +488,10 @@ async function main() {
     // await getOtherLiqPools()
     // await writeConfirmedLpAddresses()
     // await saveLps()
-    await updateLps()
+    // await updateLps()
     // await getPool()
+    // await queryAndCollectAddressesInBatches()
+    await getGlmrLiqPools()
     process.exit(0)
 }
 

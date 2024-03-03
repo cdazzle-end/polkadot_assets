@@ -1,6 +1,6 @@
 /assets/asset_registry
 /lps/lp_registry
-lps/glmr_holders
+
 lps/token_holders
 lps/token_holders_parsed
 lps/lp_timestamps.txt

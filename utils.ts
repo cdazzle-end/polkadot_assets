@@ -2,13 +2,26 @@ import * as paraspell from '@paraspell/sdk'
 import { ApiPromise, WsProvider } from '@polkadot/api'
 export const ksmRpc = "wss://kusama-rpc.dwellir.com"
 import {Mangata } from "@mangata-finance/sdk"
+import { localRpcs } from './consts';
 export async function getApiForNode(node: paraspell.TNode | "Kusama", chopsticks: boolean){
+    console.log("Getting api for node : ", node, "Chopsticks: ", chopsticks)
     let apiEndpoint: string[];
 
     if(node == "Kusama"){
         apiEndpoint = [ksmRpc]
     } else{
         apiEndpoint = paraspell.getAllNodeProviders(node)
+    }
+
+    // if(chopsticks){
+    //     apiEndpoint = localRpcs
+    // }
+
+    if(chopsticks){
+        let localRpc = localRpcs[node]
+        if(localRpc){
+            apiEndpoint = [localRpc]
+        }
     }
 
     console.log("Node RPC: ", apiEndpoint[0])

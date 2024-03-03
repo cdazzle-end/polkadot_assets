@@ -17,7 +17,10 @@ declare const fetch: any;
 const localRpc = "ws://172.26.130.75:8008"
 const liveRpc = endpoint2
 export async function updateLps(chopsticks: boolean) {
-    let api = await getApiForNode("Karura", chopsticks);
+    // let api = await getApiForNode("Karura", chopsticks);
+    let rpc = chopsticks === true ?  localRpc : liveRpc;
+    let provider = new WsProvider(rpc);
+    let api = new ApiPromise(options({ provider })); 
     await api.isReady;
 
     let stables = updateStables(api);

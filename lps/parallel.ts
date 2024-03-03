@@ -16,7 +16,9 @@ const liveRpc = 'wss://parallel-rpc.dwellir.com'
 
 export async function updateLps(chopsticks: boolean) {
     // let api = await getApiForNode("Parallel", chopsticks);
-    const provider = new WsProvider(liveRpc);
+    let rpc = chopsticks ? localRpc : liveRpc
+
+    const provider = new WsProvider(rpc);
     const api = new ApiPromise({ provider });
     await api.isReady;
     // await api.isReady;
