@@ -2,137 +2,299 @@ import { ethers } from 'ethers'
 import * as fs from 'fs';  
 import readline from 'readline';
 import path from 'path';
-// import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../asset_types';
+// import { BigNumber } from 'ethers'; // ← used to convert bn object to Ethers BigNumber standard 
+import bn, { BigNumber } from 'bignumber.js'
 import { parse } from 'path'
-// import { formatUnits } from 'ethers/lib/utils';
-// import {hexToDec2, decToHex2} from '../../parachains/hex'
 import { ApiPromise, WsProvider } from '@polkadot/api';
-// import { } from '@moonbeam-network/api-augment/moonriver/interfaces';
-// const apiHelper = require('../parachains/api_utils')
-// import apiHelper from '../parachains/api_utils'
-// import Keyring from '@polkadot/keyring';
-// import { u8aToHex, stringToHex, numberToHex } from '@polkadot/util';
-// import { mnemonicToLegacySeed, hdEthereum } from '@polkadot/util-crypto';
-import { MyLp } from '../types';
+import { GlobalState, MyLp } from '../types';
+import { altDexContractAbi, dexAbiMap, dexAbis, wsProvider, xcTokenAbi } from './glmrConsts';
+import { TickMath } from '@uniswap/v3-sdk';
+import { getAlgebraTickData, getSolarData, getUni3TickData, rewriteAbi, saveAllInitializedTicks, saveAllInitializedTicksMultiCall } from './moonbeamUtils.ts'
 const rpc1 = 'wss://moonbeam.public.blastapi.io';
 const rpc2 = 'wss://moonbeam-rpc.dwellir.com';
 // const rpc3 = 'wss://moonriver.api.onfinality.io/public-ws';
 const rpc4 = 'wss://moonbeam.unitedbloc.com'
+const testZenContract = "0x94F9EB420174B8d7396A87c27073f74137B40Fe2"
 
-// const providerRPC = {
-//     moonriver: {
-//         name: 'moonriver',
-//         rpc: rpc2, // Insert your RPC URL here
-//         chainId: 1285, // 0x505 in hex,
-//     },
-// };
-// const provider = new ethers.JsonRpcProvider(
-//     providerRPC.moonriver.rpc,
-//     {
-//         chainId: providerRPC.moonriver.chainId,
-//         name: providerRPC.moonriver.name,
-//     }
-// );
-const provider = new ethers.WebSocketProvider(rpc2);
-const dexContractAbi = [
-    "function name() view returns (string)",
-    "function symbol() view returns (string)",
-    "function getReserves() view returns (uint, uint, uint)",
-    "function token0() view returns (address)",
-    "function token1() view returns (address)"
-]
+interface LpData {
+    address: string,
+    lp: boolean,
+    abi?: string,
+    name?: string,
+    symbol?: string
 
-//getReserves returns 2 uint instead of 3
-const altDexContractAbi = [
-    "function name() view returns (string)",
-    "function symbol() view returns (string)",
-    "function getReserves() view returns (uint, uint)",
-    "function token0() view returns (address)",
-    "function token1() view returns (address)"
-]
+}
 
-const tokenContractAbi = [
-    "function name() view returns (string)",
-    "function symbol() view returns (string)",
-    "function decimals() view returns (uint8)",
-    "event Transfer(address indexed src, address indexed dst, uint val)"
-]
+interface LpResult {
+    success: boolean,
+    abi: string
+    name?: string,
+    symbol?: string
+}
 
-export const dexAbis = [
+interface Lp {
+    chainId: number,
+    contractAddress: string,
+    poolAssets: string[],
+    liquidityStats: string[]
+}
+
+
+// export async function updateLps(chopsticks: boolean) {
     
-    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/solarDexAbi.json'), 'utf8')),
-    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/uniswapDexV3.json'), 'utf8')),
-    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/algebraDex.json'), 'utf8')),
-    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/beamDex.json'), 'utf8')),
-    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/beamV3Dex.json'), 'utf8')),
-    // JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/zenlinkDexAbi.json'), 'utf8')),
-    JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_abis/stellaDexAbi.json'), 'utf8')),
-]
+//     const lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lps_base.json'), 'utf8'))
+//     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
+//     lps.map((lp: any) => {
+//         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
+//         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
+//         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
+//     })
 
+//     const updatedLps = (await Promise.all(lps.map(async (lp: any) => {
+        
+//         const pool = await new ethers.Contract(lp.contractAddress, altDexContractAbi, provider);
+//         let reserves = await pool.getReserves();
+//         // let reserve_0 = removeLastChar(reserves[0].toString());
+//         // let reserve_1 = removeLastChar(reserves[1].toString());
+//         let reserve_0 = reserves[0].toString();
+//         let reserve_1 = reserves[1].toString();
+//         if (reserve_0 !== "" && reserve_1 !== "") {
+//             const newPool: MyLp = {
+//                 chainId: 2004,
+//                 contractAddress: lp.contractAddress,
+//                 poolAssets: lp.poolAssets,
+//                 liquidityStats: [reserve_0, reserve_1]
+//             };
+//             return newPool;
+//         }
+//     }))).filter(pool => pool != null); // Filter out null entries
+//     fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(updatedLps, null, 2))
+//     provider.destroy()
+// }
 
-export async function updateLps(chopsticks: boolean) {
-    
-    const lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lps_base.json'), 'utf8'))
+// export async function saveLpsOld() {
+//     const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lp_data_results.json'), 'utf8'))
+//     const lpsPromise = lpContractAddresses.map(async (lpContract: any) => {
+//         let newLp: MyLp;
+//         if(lpContract.abi == 'algebra'){
+//             newLp = await getAlgebraData(lpContract.address)
+//         } else if (lpContract.abi == 'uni3'){
+//             newLp = await getUni3Data(lpContract.address)
+//         } else {
+//             newLp = await getSolarData(lpContract.address)
+//         }
+//         return newLp;
+//     })
+//     let lps = await Promise.all(lpsPromise)
+//     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
+//     lps.map((lp: any) => {
+//         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
+//         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
+//         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
+//     })
+//     // console.log(lps)
+//     fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
+// }
+
+// export async function testUni3Data() {
+//     const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lp_data_results.json'), 'utf8'))
+//     let lpPromises = []
+//     const lpsPromise = lpContractAddresses.forEach(async (lpContract: any) => {
+//         let newLp: MyLp;
+//         if(lpContract.abi == 'algebra'){
+//             await getAlgebraTickData(lpContract.address)
+//         } else if (lpContract.abi == 'uni3'){
+//             // newLp = await getUni3Data(lpContract.address)
+//         } else {
+//             // newLp = await getSolarData(lpContract.address)
+//         }
+//         lpPromises.push(newLp)
+//     })
+//     let lps = await Promise.all(lpPromises)
+//     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
+//     lps.map((lp: any) => {
+//         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
+//         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
+//         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
+//     })
+//     // console.log(lps)
+//     // fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
+// }
+
+export async function saveLps() {
+    const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), 'utf8'))
+    // let lpPromises = []
+
+    let lpsPromise = await lpContractAddresses.map(async (lpContract: any) => {
+        let newLp: MyLp;
+        if(lpContract.abi == 'algebra'){
+            newLp =await getAlgebraTickData(lpContract.contractAddress)
+        } else if (lpContract.abi == 'uni3'){
+            newLp = await getUni3TickData(lpContract.contractAddress)
+        } else {
+            newLp = await getSolarData(lpContract.contractAddress)
+        }
+        // lpPromises.push(newLp)
+        return newLp
+    })
+    // let lpsFor = await Promise.all(lpPromises)
+    // console.log(lpsFor)
+    let lps = await Promise.all(lpsPromise)
+    lps = lps.filter((lp) => lp != undefined)
+    // console.log(lps)
     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
     lps.map((lp: any) => {
         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
-        // if(token0){
-        //     console.log(`Token0: ${token0.tokenData.localId}`)
-        // } 
-        // if(token1) {
-        //     console.log(`Token1: ${token1.tokenData.localId}`)
-        // }
         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
     })
-
-    const updatedLps = (await Promise.all(lps.map(async (lp: any) => {
-        
-        const pool = await new ethers.Contract(lp.contractAddress, altDexContractAbi, provider);
-        let reserves = await pool.getReserves();
-        // let reserve_0 = removeLastChar(reserves[0].toString());
-        // let reserve_1 = removeLastChar(reserves[1].toString());
-        let reserve_0 = reserves[0].toString();
-        let reserve_1 = reserves[1].toString();
-        if (reserve_0 !== "" && reserve_1 !== "") {
-            const newPool: MyLp = {
-                chainId: 2004,
-                contractAddress: lp.contractAddress,
-                poolAssets: lp.poolAssets,
-                liquidityStats: [reserve_0, reserve_1]
-            };
-            return newPool;
-        }
-    }))).filter(pool => pool != null); // Filter out null entries
-    fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(updatedLps, null, 2))
-    provider.destroy()
-
+    // console.log(lps)
+    fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
 }
 
-async function saveLps() {
-    const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/confirmed_lps.json'), 'utf8'))
-    const lps = await Promise.all(lpContractAddresses.map(async (lpContract: any) => {
-        // console.log(lpContract)
-        const pool = await new ethers.Contract(lpContract, altDexContractAbi, provider);
-        let reserves = await pool.getReserves();
-        const token0 = await pool.token0();
-        const token1 = await pool.token1();
-        console.log(reserves)
-        // let reserve_0 = await hexToDec(reserves[0]["_hex"]);
-        // let reserve_1 = await hexToDec(reserves[1]["_hex"]);
-        let reserve_0 = reserves[0].toString();
-        let reserve_1 = reserves[1].toString();
-        let newliquidityStats = [reserve_0, reserve_1];
-        const newPool: MyLp = {
-            chainId: 2004,
-            contractAddress: lpContract,
-            poolAssets: [token0, token1],
-            liquidityStats: newliquidityStats
-        }
-        return newPool;
-    }))
-    console.log(lps)
-    fs.writeFileSync(path.join(__dirname, './glmr_holders/lps_base.json'), JSON.stringify(lps, null, 2))
+
+async function saveLpsAdvanced(){
+    let lpDataSets: LpData[] = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lp_data_results.json'), 'utf8'))
+    lpDataSets.forEach(async (lpData: LpData) => {
+        if(lpData.abi == 'algebra'){
+            console.log(`Contract: ${lpData.address}`)
+            const pool = await new ethers.Contract(lpData.address, dexAbiMap['algebra'], wsProvider);
+            console.log("Algebra")
+            let token0 = await pool.token0();
+            let token1 = await pool.token1();
+            console.log(`Token0: ${token0} - Token1: ${token1}`)
+        } 
+    })
+
+    // for(let lp of lpDataSets){
+    //     if(lp.abi == 'algebra'){
+    //         console.log(`Contract: ${lp.address}`)
+    //         const pool = await new ethers.Contract(lp.address, dexAbiMap['algebra'], provider);
+    //         console.log("Algebra")
+    //         let token0 = await pool.token0();
+    //         let token1 = await pool.token1();
+    //         console.log(`Token0: ${token0} - Token1: ${token1}`)
+    //     }
+    // }
+
+    let testContract = "0xb13b281503f6ec8a837ae1a21e86a9cae368fcc5"
+    const pool = await new ethers.Contract(testContract, dexAbiMap['algebra'], wsProvider);
+    let token0 = await pool.token0();
+    let token1 = await pool.token1();
+    let token0Contract = await new ethers.Contract(token0, xcTokenAbi, wsProvider);
+    let token1Contract = await new ethers.Contract(token1, xcTokenAbi, wsProvider);
+    let token0Symbol = await token0Contract.symbol();
+    let token1Symbol = await token1Contract.symbol();
+    let token0Decimals = await token0Contract.decimals();
+    let token1Decimals = await token1Contract.decimals();
+    let liquidity = await pool.liquidity();
+    let tickSpacing = await pool.tickSpacing();
+    
+    let liqBn = new bn(liquidity)
+    let tickSpacingBn = new bn(tickSpacing)
+ 
+
+
+    let poolInfo: GlobalState = await pool.globalState()
+    console.log(`Token0: ${token0} - Token1: ${token1}`)
+    console.log(poolInfo)
+    let poolFee = new bn(poolInfo.fee)
+    let poolFeeRate = poolFee.div(new bn(1).times(new bn(10).pow(6)))
+    let currentTick =new bn(poolInfo.tick)
+    bn.config({ EXPONENTIAL_AT: 999999, DECIMAL_PLACES: 40 }) // Set to max precision
+    let sqrtPriceX96 = new bn(poolInfo.price)
+    
+    let q96 = new bn(2).pow(96)
+    let sqrtPrice = sqrtPriceX96.div(q96)
+    let price = sqrtPrice.pow(2)
+    console.log(`Sqrt96 Price: ${sqrtPriceX96}`)
+    console.log(`Sqrt Price: ${sqrtPrice}`)
+    console.log(`Price: ${price}`)
+    
+    let glmrDotPrice = (sqrtPriceX96.div(q96)).pow(2)
+    let inputGlmr = new bn(1).times(new bn(10).pow(token0Decimals))
+    let poneDot = new bn(0.1).times(new bn(10).pow(token1Decimals))
+    let oneDot = new bn(1).times(new bn(10).pow(token1Decimals))
+    let tenDot = new bn(10).times(new bn(10).pow(token1Decimals))
+    let oneHDot = new bn(100).times(new bn(10).pow(token1Decimals))
+    let dotIn = oneHDot
+    let glmrIn = new bn(100).times(new bn(10).pow(token0Decimals))
+    let feesInDot = dotIn.times(poolFeeRate)
+    let feesInGlmr = glmrIn.times(poolFeeRate)
+    console.log(`GLMR/DOT Price: ${glmrDotPrice}`)
+    // console.log(`Input GLMR: ${inputGlmr}`)
+    // L = dY / d sqrt(P)
+
+    // d sqrt(P) = dY / L --- Calculate P
+    // d (1/sqrt(P)) = dX / L --- Calculate P
+    // dX = d (1/sqrt(P)) * L --- Calculate amount out
+    // dY = d sqrt(P) * L --- Calculate amount out
+
+    // Swap 10 DOT for GLMR
+    // 1) Calculate change in sqrt P
+    let amountDotInMinusFee = dotIn.minus(feesInDot)
+    let changeInSqrtP = amountDotInMinusFee.div(liqBn)
+    console.log(`Change in sqrt P: ${changeInSqrtP}`)
+    // 2) Add change in P to current P
+    let targetSqrtP = sqrtPrice.plus(changeInSqrtP)
+    console.log(`Target Sqrt P: ${targetSqrtP}`)
+
+    // 3) After calculating target P, calculate amount out
+    let amountDotIn = calculateAmount1(liqBn, targetSqrtP, sqrtPrice)
+    let amountGlmrOut = calculateAmount0(liqBn, targetSqrtP, sqrtPrice)
+    
+    console.log(`Amount DOT in: ${amountDotIn}`)
+    console.log(`Amount GLMR out: ${amountGlmrOut}`)
+
+    // 4) Verify amount out
+    let changeInPriceInGlmr = new bn(1).div(targetSqrtP).minus(new bn(1).div(sqrtPrice))
+    let outputGlmr = changeInPriceInGlmr.times(liqBn)
+    console.log(`Output GLMR: ${outputGlmr}`)
+
+    // Swap 100 GLMR for DOT
+    // 1) Calculate change in sqrt P
+    let glmrInMinusFee = glmrIn.minus(feesInGlmr)
+    let changeInPRecipricol = glmrInMinusFee.div(liqBn)
+
+    // 2) Add change in P to current P
+    let inverseTargetSqrtP = new bn(1).div(sqrtPrice).plus(changeInPRecipricol)
+    let targetSqrtP2 = new bn(1).div(inverseTargetSqrtP)
+
+    // 3) After calculating target P, calculate amount out
+    let amountGlmrIn = calculateAmount0(liqBn, targetSqrtP2, sqrtPrice)
+    let amountDotOut = calculateAmount1(liqBn, targetSqrtP2, sqrtPrice)
+    console.log(`Amount GLMR in: ${amountGlmrIn}`)
+    console.log(`Amount DOT out: ${amountDotOut}`)
+
+    //4) Verify amount out
+    let changeInPriceInDot = targetSqrtP2.minus(sqrtPrice)
+    let outputDot = changeInPriceInDot.times(liqBn)
+    console.log(`Output DOT: ${outputDot}`)
+
+
+    console.log(`Current tick: ${currentTick}`)
+    let tickLower = currentTick.minus(currentTick.mod(new bn(tickSpacing)))
+    let tickUpper = tickLower.plus(tickSpacing)
+    console.log(`Lower tick: ${tickLower} - Upper tick: ${tickUpper}`)
+    
+    let sqrtLower = TickMath.getSqrtRatioAtTick(tickLower.toNumber())
+    let sqrtUpper = TickMath.getSqrtRatioAtTick(tickUpper.toNumber())
+    console.log(`Lower sqrt: ${sqrtLower} - Upper sqrt: ${sqrtUpper}`)
+}
+function calculateAmount0(liq: BigNumber, pa: BigNumber, pb: BigNumber){
+    if(pa > pb){
+        [pa, pb] = [pb, pa]
+    }
+    let amount = liq.times(pb.minus(pa).div(pb).div(pa))
+    return amount
+}
+
+function calculateAmount1(liq: BigNumber, pa: BigNumber, pb: BigNumber){
+    if(pa > pb){
+        [pa, pb] = [pb, pa]
+    }
+    let amount = liq.times(pb.minus(pa))
+    return amount
 }
 
 
@@ -216,29 +378,8 @@ async function parseCSVFilesInDirectory() {
 //   })
 //   let complete = await Promise.all(filesParse);
 }
-//From list of top wsdn holders, get list of dexs
-async function getGlmrLiqPools(batchSize: number = 100) {
 
-    let glmrAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './token_holders_parsed/glmr_token_holders.json'), 'utf8'))
-    console.log(glmrAddresses)
 
-    let reservesAll = []
-    await queryAndCollectAddressesInBatches(glmrAddresses, batchSize)
-}
-async function getOtherLiqPools() {
-    let directoryPath = path.join(__dirname, './token_holders_parsed');
-    let fileNames = fs.readdirSync(directoryPath)
-    let allAddresses = []
-    for (let file of fileNames) {
-        let filePath = path.join(directoryPath, file);
-        let addresses = JSON.parse(fs.readFileSync(filePath, 'utf8')).slice(1)
-        addresses.forEach((address: any) => {
-            allAddresses.push(address)
-        })
-    }
-
-    await queryAndCollectOtherAddressesInBatches(allAddresses, 100)
-}
 function readGlmrLps(){
     let lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/glmr_lps.json'), 'utf8'))
     return lps
@@ -251,143 +392,160 @@ function readOtherLps(){
     let lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/other_lps.json'), 'utf8'))
     return lps
 }
-
-interface LpResult {
-    success: boolean,
-    abi: string
+function readLpsBase(): Lp[]{
+    let lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lps_base.json'), 'utf8'))
+    return lps
 }
 
-function addAddressesToGlmrLp(lpResults: any[]){
-    let lps = readGlmrLps()
-    // let lps: any = {}
-    lpResults.forEach(([lpAddress, result, abi]) => {
-        // if(!lps[lpAddress] || lps[lpAddress] == false){
-        //     lps[lpAddress] = [result, abi]
-        // }
-        let lpResult: LpResult = {
-            success: result,
-            abi: abi
-        }
-        lps[lpAddress] = lpResult
-    })
-    fs.writeFileSync(path.join(__dirname, './glmr_holders/glmr_lps.json'), JSON.stringify(lps, null, 2))
-}
-function addAddressesToOtherLp(lpResults: any[]){
+function addAddressesToOtherLp(lpResults: any[], overWriteAll: boolean){
     let lps = readOtherLps()
     lpResults.forEach(([lpAddress, result]) => {
-        if(!lps[lpAddress] || lps[lpAddress] == false){
+        if(overWriteAll){
             lps[lpAddress] = result
+        } else {
+            // Only add if not already confirmed LP
+            if(!lps[lpAddress] || lps[lpAddress] == false){
+                lps[lpAddress] = result
+            }
         }
     })
     fs.writeFileSync(path.join(__dirname, './glmr_holders/other_lps.json'), JSON.stringify(lps, null, 2))
 }
 
-async function queryAndCollectAddressesInBatches(addresses, batchSize) {
-    const lpAddresses = [];
-    let addressesToCheck = []
-    let possibleGlmrLps = readGlmrHolders()
 
-    // addresses.forEach((address: any) => {
-    //     if(!glmrLps[address] || glmrLps[address] == false){
-    //         addressesToCheck.push(address)
-    //     }
-    //     addressesToCheck.push(address)
-    // })
-    for (let i = 0; i < possibleGlmrLps.length; i += batchSize) {
-        // console.log
-        const batch = possibleGlmrLps.slice(i, i + batchSize);
-        console.log(`Processing batch from ${i} to ${i + batchSize}`);
-        // Map each address in the batch to a promise that resolves to the address or null
-        const results = await Promise.all(batch.map(async (currentAddress) => {
-            // console.log(currentAddress)
-            let abiIndex = 0
-            let abiFound = false
-            while(abiIndex < 3 && !abiFound){
-                try {
-                    if(abiIndex == 0){
-                        // Standard  V2 pool
-                        let contract = new ethers.Contract(currentAddress.toLowerCase(), dexAbis[abiIndex], provider);
-                        await contract.getReserves(); // Attempt to fetch reserves
-                        console.log("success solar")
-                        return [currentAddress.toLowerCase(), true, "Solar"]; // Return address on success
-                    } else if(abiIndex == 1){
-                        // Uni V3 pool
-                        let contract = new ethers.Contract(currentAddress.toLowerCase(), dexAbis[abiIndex], provider);
-                        await contract.slot0(); // Attempt to fetch reserves
-                        abiFound = true
-                        console.log("success uni")
-                        return [currentAddress.toLowerCase(), true, "Uni V3"]; // Return address on success
-                    } else if (abiIndex == 2){
-                        // Algebra pool
-                        let contract = new ethers.Contract(currentAddress.toLowerCase(), dexAbis[abiIndex], provider);
-                        await contract.globalState(); // Attempt to fetch reserves
-                        abiFound = true
-                        console.log("succes algebra")
-                        return [currentAddress.toLowerCase(), true, "Algebra"]; // Return address on success
-                    }
-                } catch (e) {
-                    // return [currentAddress.toLowerCase(), false]; // Return null on failure
-                } finally {
-                    abiIndex++
-                }
-                
-            }
-            return [currentAddress.toLowerCase(), false]; // Return null on failure
-        }));
-    
-        // console.log(results)
-        addAddressesToGlmrLp(results)
-        // Filter out nulls and add successful addresses to lpAddresses
-        lpAddresses.push(...results.filter(address => address !== null));
-    }
-
-    console.log("LP Addresses:", lpAddresses);
-    return lpAddresses;
-}
-
-async function queryAndCollectOtherAddressesInBatches(addresses, batchSize) {
-    const lpAddresses = [];
-    let addressesToCheck = []
-    let otherLps = readOtherLps()
-    addresses.forEach((address: any) => {
-        if(!otherLps[address] || otherLps[address] == false){
-            addressesToCheck.push(address)
+async function testContractAbi(contractAddress: string, abiIndex: any){
+    let abiFound
+    if(abiIndex == 0){
+        // Standard  V2 pool
+        let contract = new ethers.Contract(contractAddress.toLowerCase(), dexAbis[abiIndex], wsProvider);
+        await contract.getReserves();
+        let name = await contract.name(); 
+        let symbol = await contract.symbol(); 
+        let lpData: LpData = {
+            address: contractAddress.toLowerCase(),
+            lp: true,
+            abi: "solar",
+            name: name,
+            symbol: symbol
         }
-    })
-    for (let i = 0; i < addressesToCheck.length; i += batchSize) {
-        const batch = addressesToCheck.slice(i, i + batchSize);
-        console.log(`Processing batch from ${i} to ${i + batchSize}`);
-        
-        // Map each address in the batch to a promise that resolves to the address or null
-        const results = await Promise.all(batch.map(async (currentAddress) => {
-            try {
-                let contract = new ethers.Contract(currentAddress.toLowerCase(), altDexContractAbi, provider);
-                await contract.getReserves(); // Attempt to fetch reserves
-                console.log("contract true with normal abi")
-                return [currentAddress.toLowerCase(),true]; // Return address on success
-
-            } catch (e) {
-                try{
-                    let contract = new ethers.Contract(currentAddress.toLowerCase(), dexContractAbi, provider);
-                    await contract.getReserves(); // Attempt to fetch reserves
-                    console.log("CONTRACT TRUE WITH ALT ABI")
-                    return [currentAddress.toLowerCase(),true]; // Return address on success
-                } catch (e) {
-                    // console.log(`${currentAddress} is not an LP address or failed to fetch reserves: ${e.message}`);
-                    return [currentAddress.toLowerCase(),false]; // Return null on failure
-                }
-                
-            }
-        }));
-        // console.log(results)
-        addAddressesToOtherLp(results)
-        // Filter out nulls and add successful addresses to lpAddresses
-        lpAddresses.push(...results.filter(address => address !== null));
+        abiFound = true
+        return lpData
+    } else if(abiIndex == 1){
+        // Uni V3 pool
+        let contract = new ethers.Contract(contractAddress.toLowerCase(), dexAbis[abiIndex], wsProvider);
+        await contract.slot0();
+        let name = await contract.name(); 
+        let symbol = await contract.symbol(); 
+        let lpData: LpData = {
+            address: contractAddress.toLowerCase(),
+            lp: true,
+            abi: "uni3",
+            name: name,
+            symbol: symbol
+        }
+        abiFound = true
+        return lpData
+    } else if (abiIndex == 2){
+        // Algebra pool
+        let contract = new ethers.Contract(contractAddress.toLowerCase(), dexAbis[abiIndex], wsProvider);
+        await contract.globalState(); // Attempt to fetch reserves
+        let name = await contract.name(); 
+        let symbol = await contract.symbol(); 
+        let lpData: LpData = {
+            address: contractAddress.toLowerCase(),
+            lp: true,
+            abi: "algebra",
+            name: name,
+            symbol: symbol
+        }
+        abiFound = true
+        return lpData
+    } else if (abiIndex == 3){
+        // Algebra pool
+        let contract = new ethers.Contract(contractAddress.toLowerCase(), dexAbis[abiIndex], wsProvider);
+        await contract.getReserves(); // Attempt to fetch reserves
+        let name = await contract.name(); 
+        let symbol = await contract.symbol(); 
+        let lpData: LpData = {
+            address: contractAddress.toLowerCase(),
+            lp: true,
+            abi: "beam",
+            name: name,
+            symbol: symbol
+        }
+        abiFound = true
+        return lpData
+    } else if (abiIndex == 4){
+        // Algebra pool
+        let contract = new ethers.Contract(contractAddress.toLowerCase(), dexAbis[abiIndex], wsProvider);
+        await contract.globalState(); // Attempt to fetch reserves
+        let name = await contract.name(); 
+        let symbol = await contract.symbol(); 
+        let lpData: LpData = {
+            address: contractAddress.toLowerCase(),
+            lp: true,
+            abi: "beam3",
+            name: name,
+            symbol: symbol
+        }
+        abiFound = true
+        return lpData
+    } else if (abiIndex == 5){
+        // Algebra pool
+        let contract = new ethers.Contract(contractAddress.toLowerCase(), dexAbis[abiIndex], wsProvider);
+        await contract.globalState(); // Attempt to fetch reserves
+        let name = await contract.name(); 
+        let symbol = await contract.symbol(); 
+        let lpData: LpData = {
+            address: contractAddress.toLowerCase(),
+            lp: true,
+            abi: "stella",
+            name: name,
+            symbol: symbol
+        }
+        abiFound = true
+        return lpData
+    } else if (abiIndex == 6){
+        // Zenlink pool
+        let contract = new ethers.Contract(contractAddress.toLowerCase(), dexAbis[abiIndex], wsProvider);
+        let reserves = await contract.getReserves() // Attempt to fetch reserves
+        console.log(reserves)
+        let name = await contract.name(); 
+        let symbol = await contract.symbol(); 
+        console.log(`${name} -- ${symbol}`)
+        let lpData: LpData = {
+            address: contractAddress.toLowerCase(),
+            lp: true,
+            abi: "zenlink",
+            name: name,
+            symbol: symbol
+        }
+        abiFound = true
+        return lpData
+    } else if (abiIndex == 7){
+        // Algebra pool
+        let contract = new ethers.Contract(contractAddress.toLowerCase(), dexAbis[abiIndex], wsProvider);
+        await contract.getReserves(); // Attempt to fetch reserves
+        let name = await contract.name(); 
+        let symbol = await contract.symbol(); 
+        let lpData: LpData = {
+            address: contractAddress.toLowerCase(),
+            lp: true,
+            abi: "zenlink2",
+            name: name,
+            symbol: symbol
+        }
+        abiFound = true
+        return lpData
     }
-
-    console.log("LP Addresses:", lpAddresses);
-    return lpAddresses;
 }
+
+async function saveLpDataResults(lpDataResults: LpData[]){
+
+
+}
+
+
 
 async function writeConfirmedLpAddresses(){
     let glmrLps = readGlmrLps()
@@ -418,7 +576,7 @@ function toChecksumAddress(address) {
 async function isDex(dexAddress: any) {
     // const code = await provider.getCode(dexAddress);
 
-    let contract = new ethers.Contract(dexAddress, altDexContractAbi, provider);
+    let contract = new ethers.Contract(dexAddress, altDexContractAbi, wsProvider);
 
     let reserves = await contract.getReserves();
     console.log(reserves)
@@ -481,104 +639,17 @@ async function isDex(dexAddress: any) {
 //     fs.writeFileSync('./lps_base.json', JSON.stringify(lps, null, 2))
 // }
 
+// get solar dexs and try to query with zen
+
 async function main() {
-    // await updateLps()
-    // await parseCSVFilesInDirectory()
-    // await getGlmrLiqPools()
-    // await getOtherLiqPools()
-    // await writeConfirmedLpAddresses()
-    // await saveLps()
-    // await updateLps()
-    // await getPool()
-    // await queryAndCollectAddressesInBatches()
-    await getGlmrLiqPools()
+    // await testUni3Data()
+    // await testDex3Data()
+
+    await saveLps()
+    // await saveAllInitializedTicks()
+    await saveAllInitializedTicksMultiCall()
+    // rewriteAbi()
     process.exit(0)
 }
 
 // main()
-
-// Adds two arrays for the given base (10 or 16), returning the result.
-// This turns out to be the only "primitive" operation we need.
-function add(x: any, y: any, base: any) {
-    var z: any = [];
-    var n = Math.max(x.length, y.length);
-    var carry = 0;
-    var i = 0;
-    while (i < n || carry) {
-        var xi = i < x.length ? x[i] : 0;
-        var yi = i < y.length ? y[i] : 0;
-        var zi = carry + xi + yi;
-        z.push(zi % base);
-        carry = Math.floor(zi / base);
-        i++;
-    }
-    return z;
-}
-
-// Returns a*x, where x is an array of decimal digits and a is an ordinary
-// JavaScript number. base is the number base of the array x.
-function multiplyByNumber(num: any, x: any, base: any) {
-    if (num < 0) return null;
-    if (num == 0) return [];
-
-    var result = [];
-    var power = x;
-    while (true) {
-        if (num & 1) {
-            result = add(result, power, base);
-        }
-        num = num >> 1;
-        if (num === 0) break;
-        power = add(power, power, base);
-    }
-
-    return result;
-}
-
-function parseToDigitsArray(str: any, base: any) {
-    var digits = str.split('');
-    var ary: any = [];
-    for (var i = digits.length - 1; i >= 0; i--) {
-        var n = parseInt(digits[i], base);
-        if (isNaN(n)) return null;
-        ary.push(n);
-    }
-    return ary;
-}
-
-function convertBase(str: any, fromBase: any, toBase: any) {
-    var digits = parseToDigitsArray(str, fromBase);
-    if (digits === null) return null;
-
-    var outArray: any = [];
-    var power: any = [1];
-    for (var i = 0; i < digits.length; i++) {
-        // invariant: at this point, fromBase^i = power
-        if (digits[i]) {
-            outArray = add(outArray, multiplyByNumber(digits[i], power, toBase), toBase);
-        }
-        power = multiplyByNumber(fromBase, power, toBase);
-    }
-
-    var out: any = '';
-    for (var i = outArray.length - 1; i >= 0; i--) {
-        out += outArray[i].toString(toBase);
-    }
-    return out;
-}
-
-async function decToHex(decStr: any) {
-    var hex = convertBase(decStr, 10, 16);
-    return hex ? '0x' + hex : null;
-}
-
-async function hexToDec(hexStr: any) {
-    console.log(hexStr)
-    if (hexStr.substring(0, 2) === '0x') hexStr = hexStr.substring(2);
-    hexStr = hexStr.toLowerCase();
-    return convertBase(hexStr, 16, 10);
-}
-
-function removeLastChar(str: string) {
-    return str.slice(0, -1);
-}
