@@ -35,6 +35,7 @@ export async function updateLps(chopsticks: boolean) {
         })
         let lp: MyLp = {
             chainId: parseInt(chainIdNum),
+            dexType: "solar",
             poolAssets: assetIdsFormat,
             liquidityStats: poolLiq
         }

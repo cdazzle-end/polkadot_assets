@@ -1,26 +1,3 @@
 ASTAR in para assets has no location
 
-lcDOT asset location 2012 vs 2000 // Fixed, acala location needed edit
-2004 Bifrost Voucher FIL xcvFIL vs2030 Voucher FIL vFIL
-
-2030 Voucher ASTR vASTR vs Location: AssetLocation { here: false, xtype: Some("X2"), properties: Some(["{\"Parachain\":\"2030\"}", "{\"GeneralKey\":{\"data\":\"0x0903000000000000000000000000000000000000000000000000000000000000\",\"length\":\"2\"}}"]) }
-2004 Bifrost Voucher ASTR xcvASTR // BNC needed edit 2001 -> 2030
-
-2030 Voucher MANTA vMANTA vs 2004 Bifrost Voucher MANTA xcvMANTA // 2030
-
-2030 Voucher GLMR vGLMR vs 2004 Bifrost Voucher GLMR xcvGLMR //2030
-
-2030 Voucher DOT vDOT 2004 Bifrost Voucher DOT xcvDOT // 2030
-2090 Bifrost Voucher DOT vDOT
-
-2030 bncs-20 inscription token BNCS BNCS 2004 bncs-20 inscription token BNCS xcBNCS
-
-Location: AssetLocation { here: false, xtype: Some("X2"), properties: Some(["{\"Parachain\":\"2090\"}", "{\"GeneralIndex\":\"0\"}"]) } // HDX 2090 -> 2034
-2090 HydraDX HDX
-Location: AssetLocation { here: false, xtype: Some("X2"), properties: Some(["{\"Parachain\":\"2034\"}", "{\"GeneralIndex\":\"0\"}"]) }
-2004 HydraDX xcHDX
-
-Location: AssetLocation { here: false, xtype: Some("X2"), properties: Some(["{\"Parachain\":\"2001\"}", "{\"GeneralKey\":{\"data\":\"0x0804000000000000000000000000000000000000000000000000000000000000\",\"length\":\"2\"}}"]) }
-2030 Filecoin Network Token FIL
-Location: AssetLocation { here: false, xtype: Some("X2"), properties: Some(["{\"Parachain\":\"2030\"}", "{\"GeneralKey\":{\"data\":\"0x0804000000000000000000000000000000000000000000000000000000000000\",\"length\":\"2\"}}"]) }
-2004 Bifrost Filecoin Native Token xcFIL
+**** Need to add vaaults to possible evm lps

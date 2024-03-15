@@ -79,7 +79,7 @@ async function updatePolkadotLps(chopsticks: boolean) {
         // kucoinHandler.updateLps().then(() => console.log("kucoin complete")),
         // mgxHandler.updateLps(chopsticks).then(() => console.log("mgx complete")),
         hdxHandler.updateLps(chopsticks).then(() => console.log("hdx complete")),
-        glmrHandler.updateLps(chopsticks).then(() => console.log("glmr complete")),
+        glmrHandler.saveLps().then(() => console.log("glmr complete")),
         // sdnHandler.updateLps().then(() => console.log("sdn complete"))
     ]);
 }

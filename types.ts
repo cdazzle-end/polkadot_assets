@@ -71,13 +71,26 @@ export interface MyJunction {
         part: string
     }
 }
-
+export interface TickData {
+    tick: string,
+    liquidityTotal: string,
+    liquidityDelta: string,
+    intialized: boolean
+}
 
 export interface MyLp{
     chainId: number,
+    dexType: string,
     contractAddress?: string,
+    abi?: string,
     poolAssets: any[]
-    liquidityStats: string[]
+    liquidityStats: string[],
+    feeRate?: string,
+    currentTick?: string,
+    activeLiquidity?: string,
+    initializedTicks?: number[],
+    lowerTicks?: TickData[],
+    upperTicks?: TickData[],
 }
 
 export interface CexLp{
@@ -89,6 +102,7 @@ export interface CexLp{
 
 export interface StableSwapPool{
     chainId: number,
+    dexType: String,
     contractAddress?: string,
     poolAssets: any[],
     liquidityStats: string[],
@@ -101,4 +115,35 @@ export interface StableSwapPool{
     futureABlock: number,
     totalSupply: string,
     poolPrecision: string,
+}
+
+export interface GlobalState{
+    price: string,
+    tick: string,
+    fee: string,
+    timepointIndex: string,
+    communityFeeToken0: string,
+    communityFeeToken1: string,
+    unlocked: boolean
+}
+
+export interface Slot0 {
+    sqrtPriceX96: string,
+    tick: string,
+    observationIndex: string,
+    observationCardinality: string,
+    observationCardinalityNext: string,
+    fee: string, //feeProtocol
+    unlocked: boolean
+
+}
+export interface OmniPool{
+    assetId: string,
+    hubAmount: string,
+    tokenAmount: string,
+    assetAmount: string,
+    protocolAmount: string,
+    assetFee: string,
+    protocolFee: string,
+    cap: string,
 }

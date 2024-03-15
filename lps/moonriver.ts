@@ -77,6 +77,7 @@ export async function updateLps() {
         if (reserve_0 !== "" && reserve_1 !== "") {
             const newPool: MyLp = {
                 chainId: 2023,
+                dexType: "solar",
                 contractAddress: lp.contractAddress,
                 poolAssets: lp.poolAssets,
                 liquidityStats: [reserve_0, reserve_1]
@@ -102,6 +103,7 @@ async function saveLps() {
         // let newPool = new LiqPool("2023", poolAddress, pool["poolAssets"], newliquidityStats);
         const newPool: MyLp = {
             chainId: 2023,
+            dexType: "solar",
             contractAddress: lpContract,
             poolAssets: [token0, token1],
             liquidityStats: newliquidityStats

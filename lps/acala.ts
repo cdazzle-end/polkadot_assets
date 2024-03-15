@@ -64,6 +64,7 @@ export async function updateLps(chopsticks: boolean) {
         })
         const newLp: MyLp = {
             chainId: parachainId.toJSON() as number,
+            dexType: "solar",
             poolAssets: tokens,
             liquidityStats: liquidity
         }
@@ -125,6 +126,7 @@ async function saveLps() {
         })
         const newLp: MyLp = {
             chainId: parachainId.toJSON() as number,
+            dexType: "solar",
             poolAssets: tokens,
             liquidityStats: liquidity
         }
@@ -190,6 +192,7 @@ async function updateStables(api: any) {
         })
         let newStablePool: StableSwapPool = {
             chainId: parachainId.toJSON() as number,
+            dexType: 'stable',
             poolAssets: matchedAssets,
             liquidityStats: liquidity,
             tokenPrecisions: tokenPrecisions,
@@ -266,6 +269,7 @@ async function queryStableLps(api: any) {
         })
         let newStablePool: StableSwapPool = {
             chainId: parachainId.toJSON() as number,
+            dexType: 'stable',
             poolAssets: matchedAssets,
             liquidityStats: liquidity,
             tokenPrecisions: tokenPrecisions,

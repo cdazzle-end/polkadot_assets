@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import {MyLp, StableSwapPool} from '../types'
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 const { options } = require('@acala-network/api');
+import bn, { BigNumber } from 'bignumber.js' 
 // import { BigNumber } from 'bignumber.js';
 import path from 'path';
 import { getApiForNode } from '../utils';
@@ -11,6 +12,7 @@ const endpoint6 = 'wss://karura-rpc.dwellir.com'
 const endpoint3 = 'wss://karura-rpc-0.aca-api.network'
 const endpoint4 = 'wss://karura-rpc-1.aca-api.network'
 const endpoint5 = 'wss://karura-rpc-2.aca-api.network/ws'
+
 // wss://karura-rpc-3.aca-api.network/ws
 
 declare const fetch: any;
@@ -64,6 +66,7 @@ export async function updateLps(chopsticks: boolean) {
         })
         const newLp: MyLp = {
             chainId: parachainId.toJSON() as number,
+            dexType: "solar",
             poolAssets: tokens,
             liquidityStats: liquidity
         }
@@ -114,6 +117,7 @@ async function saveLps() {
         })
         const newLp: MyLp = {
             chainId: parachainId.toJSON() as number,
+            dexType: "solar",
             poolAssets: tokens,
             liquidityStats: liquidity
         }
@@ -179,6 +183,7 @@ async function updateStables(api: any) {
         })
         let newStablePool: StableSwapPool = {
             chainId: parachainId.toJSON() as number,
+            dexType: 'stable',
             poolAssets: matchedAssets,
             liquidityStats: liquidity,
             tokenPrecisions: tokenPrecisions,
@@ -255,6 +260,7 @@ async function queryStableLps(api: any) {
         })
         let newStablePool: StableSwapPool = {
             chainId: parachainId.toJSON() as number,
+            dexType: 'stable',
             poolAssets: matchedAssets,
             liquidityStats: liquidity,
             tokenPrecisions: tokenPrecisions,
@@ -542,6 +548,221 @@ function getD(balances: any, A: any) {
     }
     return D;
 }
+function testSwap(){
+    let inputIndex = 2 //USDT
+    let outputIndex = 0 //KUSD
+    let inputAmount = new bn(4998774) // 10
+    let poolInfo = {
+        balances: [
+            new bn(853738653055275362), 
+            new bn(38905179099000000), 
+            new bn(30498687922000000)
+        ],
+        a: new bn(10000),
+        aBlock: new bn(1913274),
+        futureA: new bn(10000),
+        futureABlock: new bn (1913274),
+        totalSupply: new bn(914029567135413531),
+        swapFee: new bn(5000000),
+        precisions: [
+            new bn(1),
+            new bn(1000000),
+            new bn(1000000)
+        ]
+        
+    }
+
+    let swapAmount = stableGetSwapAmount(poolInfo, inputIndex, outputIndex, inputAmount)
+    let {dx, dy, y, balanceI} = swapAmount
+
+    let balances = poolInfo.balances.map((b) => new bn(b) )
+    balances[inputIndex] = balanceI,
+    balances[outputIndex] = y
+
+    let dxFormatted = dx.div(new bn(10).pow(6))
+    let dyFormatted = dy.div(new bn(10).pow(12))
+
+    console.log(`${dxFormatted} USDT -> ${dyFormatted} KUSD`)
+    console.log(`New Balances: ${balances.map((b) => b.toString() + " | ")}`)
+}
+
+function stableGetSwapAmount(poolInfo: any, inputIndex: number, outputIndex: number, inputAmount: BigNumber){
+    let zero = new bn(0)
+    let one = new bn(1)
+    // let mintFee = new bn(0)
+    let swapFee = poolInfo.swapFee
+    // let redeemFee = new bn(10000000)
+    let totalSupply = poolInfo.totalSupply
+    // let a = poolInfo.a
+    // let aBlock = poolInfo.aBlock
+    let futureA = poolInfo.futureA
+    // let futureABlock = poolInfo.futureABlock
+    let precisions = poolInfo.precisions
+    let balances = poolInfo.balances
+    
+    
+    // let precisions = [
+    //     new bn(1),
+    //     new bn(1000000),
+    //     new bn(1000000)
+    //   ]
+
+    // GET SWAP AMOUNT(inputIndex, outputIndex, dxBalance)
+
+    // GET A FUNCTION, always returns future A
+    let swapA = futureA
+    let swapD = totalSupply
+    let feeRecipient = "qbK5taeJoMcwJoK3hZ7W8y2KkGu1iDRUvjrg9xQMsUKrrv7"
+    let accountId = "qmmNug1GQstpimAXBpy3QzBL5cUWg2p6SeQzRWzRFhu8pfX"
+    let yieldRecipient = "qbK5taeJoMcwJoK3hZ7W8y2KkGu1iDRUvjrg9xQMsUKrrv7"
+    let precision = new bn(1000000000000)
+    let feePrecision = new bn(10000000000) // CONST.stableAsset.feePrecision FEE PRECISION on chain
+    let aPrecision = new bn(100) // CONST.stableAsset.aPrecision
+
+    let swapBalances = balances.map((b) => new bn(b) )
+    swapBalances[inputIndex] = swapBalances[inputIndex].plus(inputAmount.times(precisions[inputIndex]))
+
+    let y = getYBN(swapBalances, outputIndex, swapD, swapA ) // Get Y function
+    console.log(`Y: ${y}`)
+    let dy = swapBalances[outputIndex].minus(y).minus(one)
+        .div(precisions[outputIndex]);
+    
+    if (swapFee.gt(zero)) {
+        const feeAmount = dy.times(swapFee).div(feePrecision);
+        dy = dy.minus(feeAmount);
+    }
+
+    return {
+        dx: new bn(inputAmount), // Assuming dx_bal is defined elsewhere. Replace `new BN(0)` with actual value
+        dy: dy,
+        y: y,
+        balanceI: swapBalances[inputIndex],
+    };
+    
+}
+// Current block 6,397,339, WILL ALWAYS RETURN FUTURE A
+function getA(poolA, poolABlock, futureA, futureABlock){
+    let currentBlock = 0// Get current block
+    let timeDiff;
+    if(currentBlock < futureABlock){
+        timeDiff = currentBlock - poolABlock
+        let timeDiffDiv = futureABlock - poolABlock
+        if(futureA > poolA){
+            let diff = futureA - poolA
+            let amount = diff * timeDiff / timeDiffDiv
+            let returnValue = poolA + amount
+        } else {
+            let diff = poolA - futureA
+            let amount = diff * timeDiff / timeDiffDiv
+            let returnValue = poolA - amount
+        }
+    } else {
+        let returnValue = futureA
+    }
+}
+
+function getY(balances: any[], outputIndex, d, a){
+    let c = d
+    let sum = 0
+    let ann = a
+    const balanceSize = balances.length
+    const targetD = d
+    const aPrecision = 100
+
+    for (let i = 0; i < balanceSize; i++){
+        ann = ann * balanceSize
+        if(i == outputIndex){
+            continue
+        }
+        sum = sum + balances[i]
+        c = c * targetD / (balances[i] * balanceSize)
+    }
+
+    // balances.forEach(([balance, i]) => {
+    //     ann = ann * balanceSize
+    //     if (i == outputIndex) {
+    //         continue
+    //     }
+    //     sum = sum + balance
+    //     c = c * targetD / (balance * balanceSize)
+    // })
+    c = c * targetD * aPrecision / (ann * balanceSize)
+    // c = c
+    //     .checked_mul(target_d_u256)?
+    //     .checked_mul(a_precision_u256)?
+    //     .checked_div(ann.checked_mul(balance_size)?)?;
+    let b = sum + (targetD * aPrecision / ann)
+    // let b: U512 = sum.checked_add(target_d_u256.checked_mul(a_precision_u256)?.checked_div(ann)?)?;
+    let prevY;
+    // let mut prev_y: U512;
+    let y = targetD
+    // let mut y: U512 = target_d_u256;
+
+    let NUMBER_OF_ITERATIONS_TO_CONVERGE = 255
+
+    for (let i = 0; i < NUMBER_OF_ITERATIONS_TO_CONVERGE; i++){
+        prevY = y
+        y = y * y + c / (y * 2 + b - targetD)
+        if (y > prevY){
+            if (y - prevY <= 1){
+                break
+            }
+        } else if (prevY - y <= 1){
+            break
+        }
+    }
+    let result = y
+    return result
+
+}
+
+function getYBN(
+    balances: BigNumber[],
+    tokenIndex: number,
+    targetD: BigNumber,
+    amplitude: BigNumber
+  ): BigNumber | null {
+    const one = new BigNumber(1);
+    const two = new BigNumber(2);
+    let c = new BigNumber(targetD);
+    let sum = new BigNumber(0);
+    let ann = new BigNumber(amplitude);
+    const balanceSize = new BigNumber(balances.length);
+    const targetDU512 = new BigNumber(targetD);
+    const aPrecisionU512 = new BigNumber(100); // Replace with actual precision value if needed
+    console.log(`C: ${c} | Sum: ${sum} | Ann: ${ann} | BalanceSize: ${balanceSize} | TargetDU512: ${targetDU512} | aPrecisionU512: ${aPrecisionU512}`)
+  
+    balances.forEach((balance, i) => {
+      ann = ann.multipliedBy(balanceSize);
+      if (i === tokenIndex) {
+        return;
+      }
+      sum = sum.plus(balance);
+      const divOp = balance.multipliedBy(balanceSize);
+      c = c.multipliedBy(targetDU512).dividedBy(divOp);
+    });
+  
+    c = c.multipliedBy(targetDU512).multipliedBy(aPrecisionU512).dividedBy(ann.multipliedBy(balanceSize));
+    console.log("C: ", c.toString())
+    const b = sum.plus(targetDU512.multipliedBy(aPrecisionU512).dividedBy(ann));
+    let prevY = new BigNumber(0);
+    let y = targetDU512;
+    console.log("B: ", b.toString())
+    console.log("Y Start: ", y.toString())
+
+    let NUMBER_OF_ITERATIONS_TO_CONVERGE = 255
+    for (let i = 0; i < NUMBER_OF_ITERATIONS_TO_CONVERGE; i++) {
+      prevY = y;
+      y = y.multipliedBy(y).plus(c).dividedBy(y.multipliedBy(two).plus(b).minus(targetDU512));
+      
+      if (y.minus(prevY).abs().lte(one)) {
+        break;
+      }
+    }
+  
+    return y.isNaN() ? null : y;
+  }
+
 // async function getD2(balances: any, A: any) {
 //     let sum = BigNumber(0);
 //     let one = BigNumber(1);

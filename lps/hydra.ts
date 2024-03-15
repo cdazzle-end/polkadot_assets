@@ -1,11 +1,12 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { MyLp } from '../types.ts';
+import { MyAsset, MyAssetRegistryObject, MyLp, OmniPool } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import { getApiForNode } from './../utils.ts';
 // import { BigNumber } from 'bignumber.js';
 const localRpc = "ws://172.26.130.75:8010"
 const liveRpc = 'wss://basilisk-rpc.dwellir.com'
+const hdxOmniPoolAccount = "7L53bUTBbfuj14UpdCNPwmgzzHSsrsTWBHX5pys32mVWM3C1"
 export async function updateLps(chopsticks: boolean) {
     let api = await getApiForNode("HydraDX", chopsticks);
     await api.isReady;
@@ -33,13 +34,18 @@ export async function updateLps(chopsticks: boolean) {
 
         let newLp: MyLp = {
             chainId: parseInt(parachainId),
+            dexType: "solar",
             poolAssets: assetIdsString,
             liquidityStats: tokenLiqs
         }
         return newLp
     }))
+
+    let [omniPools, omniPoolsAsLps] = await getOmnipoolData(api)
+    lps = lps.concat(omniPoolsAsLps)
+    fs.writeFileSync(path.join(__dirname, './lp_registry/hdx_omnipool.json'), JSON.stringify(omniPools, null, 2))
     fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_lps.json"), JSON.stringify(lps, null, 2), "utf8");
-    api.disconnect()
+    await api.disconnect()
 }
 
 async function saveLps() {
@@ -62,7 +68,7 @@ async function saveLps() {
 
 
         let assetIds = assets.toJSON() as any;
-        console.log(assetIds)
+        // console.log(assetIds)
         let accountFormatted = (assetPoolAccount.toHuman() as any)[0]
         let tokenLiqs = await Promise.all(assetIds.map(async (id: any) => {
             
@@ -76,21 +82,22 @@ async function saveLps() {
                 return tokenLiq
             }
         }))
-        console.log("Account: " + accountFormatted)
+        // console.log("Account: " + accountFormatted)
         let totalCalculate = tokenLiqs.reduce((a: any, b: any) => {
-            console.log(a)
-            console.log(b)
+            // console.log(a)
+            // console.log(b)
             return parseInt(a) * parseInt(b)
         })
-        console.log("Total liquidity: " + totalCalculate)
+        // console.log("Total liquidity: " + totalCalculate)
 
-        console.log(assetPoolAccount.toHuman())
-        console.log("Pool liq " + liqTotal.toHuman())
+        // console.log(assetPoolAccount.toHuman())
+        // console.log("Pool liq " + liqTotal.toHuman())
 
         let assetIdsString = assetIds.map((id: any) => id.toString())
 
         let newLp: MyLp = {
             chainId: parseInt(parachainId),
+            dexType: "solar",
             poolAssets: assetIdsString,
             liquidityStats: tokenLiqs
         }
@@ -100,6 +107,108 @@ async function saveLps() {
     console.log(lps)
     fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_lps.json"), JSON.stringify(lps, null, 2), "utf8");
     api.disconnect()
+}
+
+async function getOmnipoolLps(){
+
+}
+
+async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
+    const fees = await api.query.dynamicFees.assetFee.entries()
+    let omnipool = await api.query.omnipool.assets.entries();
+    let hdxAssets: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hdx_assets.json'), 'utf8'));
+    let omnipoolHdxBalance = await api.query.system.account(hdxOmniPoolAccount)
+    let omnipoolTokenBalances = await api.query.tokens.accounts.entries(hdxOmniPoolAccount)
+
+    let omnipoolBalances: any = {}
+    // console.log(omnipoolHdxBalance.toHuman())
+    omnipoolTokenBalances.forEach((balance) => {
+        let assetIdAccount = balance[0].toHuman() as any
+        let assetId: number = Number.parseInt(assetIdAccount[1])
+        let accountBalance = balance[1].toHuman() as any
+        let balanceFree = accountBalance.free.toString()
+        balanceFree = balanceFree.replace(/,/g, '')
+        omnipoolBalances[assetId] = balanceFree
+    })
+
+    let hdxBalanceData = omnipoolHdxBalance.toHuman() as any
+    let balance = hdxBalanceData.data.free.toString().replace(/,/g, '')
+    // console.log(balance)
+
+    omnipoolBalances[0] = balance
+
+    let allOmnipools:OmniPool[] = []
+    let omniPoolsAsLps: MyLp[] = []
+    omnipool.forEach((pool) => {
+        let poolAsset = pool[0].toHuman() as any
+        let asset = hdxAssets.find((asset) => {
+            let tokenData = asset.tokenData as MyAsset
+            return tokenData.localId == poolAsset[0]
+        })
+        // console.log(asset)
+        if(!asset){
+            throw new Error("Asset not found")
+        }
+        let lrnaAsset = hdxAssets.find((asset) => {
+            let tokenData = asset.tokenData as MyAsset
+            return tokenData.localId == 1
+        })
+
+        let tokenReserve = omnipoolBalances[poolAsset[0]]
+
+        let fee = fees.find((fee) => {
+            let feeAsset = fee[0].toHuman() as any
+            return feeAsset == poolAsset[0]
+        })
+        let feeStats = fee?.[1].toHuman() as any
+        let assetFee = feeStats.assetFee as string
+        let protocolFee = feeStats.protocolFee as string
+        assetFee = assetFee.slice(0, assetFee.length - 1)
+        protocolFee = protocolFee.slice(0, protocolFee.length - 1)
+        let assetFeeNumber = parseFloat(assetFee)
+        let protocolFeeNumber = parseFloat(protocolFee)
+        assetFeeNumber = assetFeeNumber * 1000
+        protocolFeeNumber = protocolFeeNumber * 1000
+
+        let poolStats = pool[1].toHuman() as any
+        let hubReserve = poolStats.hubReserve as string
+        let assetAmount = poolStats.shares as string
+        let protocolAmount = poolStats.protocolShares as string
+        let capAmount = poolStats.cap as string
+        hubReserve = hubReserve.replace(/,/g, '')
+        assetAmount = assetAmount.replace(/,/g, '')
+        protocolAmount = protocolAmount.replace(/,/g, '')
+        capAmount = capAmount.replace(/,/g, '')
+
+        // console.log(`Hub Reserve: ${hubReserve} | Asset Amount: ${assetAmount} | Protocol Reserve: ${protocolAmount} | Cap: ${capAmount} | Asset Fee: ${assetFeeNumber} | Protocol Fee: ${protocolFeeNumber}`)
+
+        let tokenData = asset.tokenData as MyAsset
+        let omniPoolEntry: OmniPool = {
+            assetId: tokenData.localId,
+            tokenAmount: tokenReserve,
+            hubAmount: hubReserve,
+            assetAmount: assetAmount,
+            protocolAmount: protocolAmount,
+            assetFee: assetFeeNumber.toString(),
+            protocolFee: protocolFeeNumber.toString(),
+            cap: capAmount
+        }
+        allOmnipools.push(omniPoolEntry)
+        let lrnaAssetData = lrnaAsset?.tokenData as MyAsset
+        let omniPoolAsLpEntry: MyLp = {
+            chainId: 2034,
+            dexType: "omnipool",
+            poolAssets: [tokenData.localId, lrnaAssetData.localId],
+            liquidityStats: [tokenReserve, hubReserve],
+            feeRate: assetFeeNumber.toString()
+        }
+        omniPoolsAsLps.push(omniPoolAsLpEntry)
+    })
+    
+    // fs.writeFileSync(path.join(__dirname, './hdx_omnipool.json'), JSON.stringify(allOmnipools, null, 2))
+    
+    // await api.disconnect()
+    return [allOmnipools, omniPoolsAsLps]
 }
 
 // async function calculateSwap() {
