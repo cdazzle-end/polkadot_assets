@@ -1,12 +1,28 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { MyAsset, MyAssetRegistryObject, MyLp, OmniPool } from '../types.ts';
+import { MyAsset, MyAssetRegistryObject, MyLp, OmniPool, StableSwapPool } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import { getApiForNode } from './../utils.ts';
-// import { BigNumber } from 'bignumber.js';
+import bn from 'bignumber.js';
 const localRpc = "ws://172.26.130.75:8010"
 const liveRpc = 'wss://basilisk-rpc.dwellir.com'
+// const hdxOmniPoolAccount = "7L53bUTBbfuj14UpdCNPwmgzzHSsrsTWBHX5pys32mVWM3C1"
+
 const hdxOmniPoolAccount = "7L53bUTBbfuj14UpdCNPwmgzzHSsrsTWBHX5pys32mVWM3C1"
+const hdx4Pool = "7JP6TvcH5x31TsbC6qVJHEhsW7UNmpREMZuLBpK2bG1goJRS"
+const hdxIntrIbtcStable = "7MaKPwwnqN4cqg35PbxsGXUo1dfvjXQ3XfBjWF9UVvKMjJj8"
+const hdxUsdtUsdcStable = "7LVGEVLFXpsCCtnsvhzkSMQARU7gRVCtwMckG7u7d3V6FVvG"
+
+type StableAccountKey = '100' | '101' | '102';
+const MAX_D_ITERATIONS = 64
+const MAX_Y_ITERATIONS = 128
+const TARGET_PRECISION = new bn(18)
+
+const stableAccountMap: Record<StableAccountKey, string> = {
+    '100': hdx4Pool,
+    '101': hdxIntrIbtcStable,
+    '102': hdxUsdtUsdcStable,
+};
 export async function updateLps(chopsticks: boolean) {
     let api = await getApiForNode("HydraDX", chopsticks);
     await api.isReady;
@@ -42,9 +58,11 @@ export async function updateLps(chopsticks: boolean) {
     }))
 
     let [omniPools, omniPoolsAsLps] = await getOmnipoolData(api)
+    let stablePools = await getStablePoolData(api)
     lps = lps.concat(omniPoolsAsLps)
     fs.writeFileSync(path.join(__dirname, './lp_registry/hdx_omnipool.json'), JSON.stringify(omniPools, null, 2))
     fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_lps.json"), JSON.stringify(lps, null, 2), "utf8");
+    fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_stable_lps.json"), JSON.stringify(stablePools, null, 2), "utf8");
     await api.disconnect()
 }
 
@@ -109,10 +127,92 @@ async function saveLps() {
     api.disconnect()
 }
 
-async function getOmnipoolLps(){
+async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
+    // const wsProvider = new WsProvider(liveRpc);
+    // const api = await ApiPromise.create({ provider: wsProvider });
+    const fees = await api.query.dynamicFees.assetFee.entries()
 
+    let stablePools = await api.query.stableswap.pools.entries();
+
+    
+    let stableSwapPools = stablePools.map(async (pool) => {
+        console.log(pool[0].toHuman(), pool[1].toHuman())
+        let poolId = pool[0].toHuman() as any
+        // poolId = poolId[0]
+        let poolData = pool[1].toHuman() as any
+        let assets = poolData.assets
+        let initialAmplification = new bn(poolData.initialAmplification).toNumber()
+        let finalAmplification = poolData.finalAmplification.replace(/,/g, '')
+        let swapFee = new bn(poolData.fee.replace(/%/g, '')).div(new bn(10).pow(2)).toFixed()
+        let initialBlock = new bn(poolData.initialBlock.replace(/,/g, '')).toFixed()
+        let finalBlock = new bn(poolData.finalBlock.replace(/,/g, '')).toFixed()
+
+        let poolIdString: StableAccountKey = poolId[0].toString() as StableAccountKey; // Cast to the type explicitly if you're sure about the conversion
+        // console.log("Pool ID: ", poolIdString);
+        let stablePoolAccount = stableAccountMap[poolIdString];
+        // console.log("Stable account: ", stablePoolAccount);
+        // let liquidityStats = await api.query.tokens.accounts.entries(stablePoolAccount);
+
+        let assetStats = assets.map(async (assetId: any) => {
+            console.log(assetId)
+            // console.log(assetId.toHuman())
+            let assetLiquidity = await api.query.tokens.accounts(stablePoolAccount, assetId)
+            let assetLiquidityString = assetLiquidity.toHuman() as any
+            // console.log(assetLiquidityString.free)
+            return [assetId, assetLiquidityString.free]
+        })
+
+        let stats = await Promise.all(assetStats)
+        // console.log(JSON.stringify(stats, null, 2))
+
+        let poolAssetIds: string[]= []
+        let poolLiquidityStats: string[] = []
+        let tokenPrecisions: string[] = []
+        stats.forEach(([assetId, stat]) => {
+            poolAssetIds.push(assetId)
+            poolLiquidityStats.push(stat)
+            tokenPrecisions.push('1')
+        })
+        console.log(poolAssetIds)
+        console.log(poolLiquidityStats)
+
+        // console.log(`Final A: ${finalAmplification}`)
+
+        let reserves = poolLiquidityStats.map((stat) => new bn(stat.replace(/,/g, '')))
+        let totalSupply = calculateD(reserves, new bn(finalAmplification))
+        let reserveString = reserves.map((reserve) => reserve.toFixed())
+        // console.log(`Total Supply: ${totalSupply.toFixed()}`)
+        let shareIssuance = await api.query.tokens.totalIssuance(poolIdString)
+        let shareIssuanceFixed = new bn(shareIssuance.toString()).toFixed()
+
+        let stableSwapPool: StableSwapPool = {
+            chainId: 2034,
+            dexType: "stable",
+            poolId: poolIdString,
+            shareIssuance: shareIssuanceFixed,
+            poolAssets: assets,
+            liquidityStats: reserveString,
+            tokenPrecisions: tokenPrecisions,
+            swapFee: swapFee,
+            a: initialAmplification,
+            aPrecision: 0,
+            aBlock: initialBlock,
+            futureA: finalAmplification,
+            futureABlock: finalBlock,
+            totalSupply: totalSupply.toFixed(),
+            poolPrecision: "1"
+        }
+        return stableSwapPool
+    })
+
+    let s = await Promise.all(stableSwapPools)
+    // s.forEach((pool) => {
+    //     console.log(JSON.stringify(pool, null, 2))
+    // })
+
+    // fs.writeFileSync(path.join(__dirname, './hdx_stable_lps.json'), JSON.stringify(s, null, 2))
+    return s
 }
-
 async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
     const fees = await api.query.dynamicFees.assetFee.entries()
     let omnipool = await api.query.omnipool.assets.entries();
@@ -210,6 +310,58 @@ async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
     // await api.disconnect()
     return [allOmnipools, omniPoolsAsLps]
 }
+// D or TotalSupply, calculated from reserves
+function calculateD(reserves: bn[], a: bn){
+    let one = new bn(1)
+    let n_coins = new bn(reserves.length)
+    let ann = new bn(a)
+    let sum = new bn(0)
+    reserves.forEach((reserve) => {
+        sum = sum.plus(reserve)
+        ann = ann.times(n_coins)
+    })
+
+    let d = new bn(sum)
+
+    for(let i = 0; i < MAX_D_ITERATIONS; i++){
+        let p_d = new bn(d)
+        reserves.forEach((reserve) => {
+            let div_op = reserve.times(n_coins)
+            p_d = p_d.times(d).div(div_op)   
+        })
+
+        let prev_d = new bn(d)
+        
+        let t_1 = ann.times(sum).plus(p_d.times(n_coins))
+        let t_2 = ann.minus(one).times(d)
+        let t_3 = n_coins.plus(one).times(p_d)
+        let t_4 = t_2.plus(t_3)
+
+        d = t_1.times(d).div(t_4).integerValue()
+
+        if(hasConverged(prev_d, d)){
+            return d.integerValue()
+        }
+    }
+    return d.integerValue()
+}
+
+function hasConverged(v0: bn, v1: bn){
+    let diff = v0.minus(v1)
+
+    return (v1 <= v0 && diff < new bn(1)) || (v1 > v0 && diff <= new bn(1))
+}
+
+// async function getStablePoolData(api: ApiPromise){
+//     let stablePools = await api.query.stablePools.poolData.entries()
+//     let stablePoolData: any = {}
+//     stablePools.forEach((pool) => {
+//         let poolData = pool[1].toHuman() as any
+//         let poolId = pool[0].toHuman() as any
+//         stablePoolData[poolId] = poolData
+//     })
+//     return stablePoolData
+// }
 
 // async function calculateSwap() {
 //     let bsx_assets = JSON.parse(fs.readFileSync("../../assets/bsx/asset_registry.json", "utf8"));
