@@ -14,7 +14,10 @@ import { Percent, Token, TokenAmount, TradeType, StandardPair, StandardPool, Sta
 // import sdkCore from '@zenlink-dex/sdk-core';
 // const { Percent, Token, TokenAmount, TradeType, StandardPair, StandardPool, StablePair, StableSwap, AssetType } = sdkCore
 import { getApiForNode } from './../utils.ts';
-const axios = require('axios').default;
+import axios from 'axios';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export async function saveAssets() {
     // const provider = new WsProvider('wss://bifrost-parachain.api.onfinality.io/public-ws');
@@ -31,42 +34,7 @@ export async function saveAssets() {
     //Match assets with their locations
     const assetRegistry = await Promise.all(bncAssets.map(async (asset: MyAsset) => {
         let [assetIdKey, assetIdValue] = Object.entries(asset.localId)[0];
-        // if (assetIdValue === "ZLK") {
-        //     let colorLocation = await getColorLocation(assetIdKey, assetIdValue);
-        //     let assetRegistryObject: MyAssetRegistryObject = {
-        //         tokenData: asset,
-        //         hasLocation: true,
-        //         tokenLocation: colorLocation
-        //     }
-        //     return assetRegistryObject
-        // }
-        // if (assetIdKey === "VToken" && assetIdValue === "KSM") {
-        //     let colorLocation = await getColorLocation(assetIdKey, assetIdValue);
-        //     let assetRegistryObject: MyAssetRegistryObject = {
-        //         tokenData: asset,
-        //         hasLocation: true,
-        //         tokenLocation: colorLocation
-        //     }
-        //     return assetRegistryObject
-        // }
-        // if (assetIdKey === "VSToken" && assetIdValue === "KSM") {
-        //     let colorLocation = await getColorLocation(assetIdKey, assetIdValue);
-        //     let assetRegistryObject: MyAssetRegistryObject = {
-        //         tokenData: asset,
-        //         hasLocation: true,
-        //         tokenLocation: colorLocation
-        //     }
-        //     return assetRegistryObject
-        // }
-        // if (assetIdKey == "Native" && assetIdValue === "BNC") {
-        //     let colorLocation = await getColorLocation(assetIdKey, assetIdValue);
-        //     let assetRegistryObject: MyAssetRegistryObject = {
-        //         tokenData: asset,
-        //         hasLocation: true,
-        //         tokenLocation: colorLocation
-        //     }
-        //     return assetRegistryObject
-        // }
+
         const assetLocation = bncAssetLocations.find((location) => {
             let [locationIdKey, locationIdValue] = Object.entries(location[1])[0];
             if (locationIdKey.toLocaleLowerCase() == assetIdKey.toLocaleLowerCase() && locationIdValue == assetIdValue) {
@@ -97,14 +65,9 @@ export async function saveAssets() {
             console.log(asset.tokenLocation)
         }
     })
-    // console.log(assetRegistry.length)
-    //Save to file
-    // fs.writeFileSync(`../../assets/bnc/asset_registry.json`, JSON.stringify(assetRegistry, null, 2));
-    const filePath = path.join(__dirname, 'asset_registry/bnc_assets.json');
+    const filePath = path.join(__dirname, 'asset_registry/bnc_polkadot_assets.json');
     fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2));
-    // function writeToFile(assetRegistry) {
-    //     fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2));
-    // }
+
 
 }
 
@@ -318,4 +281,4 @@ async function main() {
     process.exit(0)
 }
 
-main()
+// main()

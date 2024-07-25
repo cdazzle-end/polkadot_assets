@@ -6,15 +6,26 @@ import path from 'path';
 import bn, { BigNumber } from 'bignumber.js'
 import { parse } from 'path'
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import { GlobalState, MyLp } from '../types';
-import { altDexContractAbi, dexAbiMap, dexAbis, wsProvider, xcTokenAbi } from './glmrConsts';
+import { GlobalState, MyLp } from '../types.ts';
+import { altDexContractAbi, dexAbiMap, dexAbis, wsProvider, xcTokenAbi } from './glmrConsts.ts';
 import { TickMath } from '@uniswap/v3-sdk';
 import { getAlgebraTickData, getSolarData, getUni3TickData, rewriteAbi, saveAllInitializedTicks, saveAllInitializedTicksMultiCall } from './moonbeamUtils.ts'
+
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
 const rpc1 = 'wss://moonbeam.public.blastapi.io';
+const __dirname = path.dirname(__filename);
 const rpc2 = 'wss://moonbeam-rpc.dwellir.com';
 // const rpc3 = 'wss://moonriver.api.onfinality.io/public-ws';
 const rpc4 = 'wss://moonbeam.unitedbloc.com'
 const testZenContract = "0x94F9EB420174B8d7396A87c27073f74137B40Fe2"
+
+// FraxSwap if Price0 or Price1 is 0, then it is not a valid LP
+const unTradeable = [
+    "0x905240818bc230a532f6a84e1c3ae1916e70fdd3",
+    "0xd4f1931f818e60b084fe13a40c31a05a44ed70cf",
+    "0xd068746785b27c16748732ef7bcc3725c589f41e",
+]
 
 interface LpData {
     address: string,
@@ -149,6 +160,17 @@ export async function saveLps() {
         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
     })
     // console.log(lps)
+    lps.forEach((lp, index) => {
+        
+        if(unTradeable.includes(lp.contractAddress)){
+            console.log(`Removing untradeable LP: ${lp.contractAddress}`)
+            let updatedLp = lp
+            updatedLp.liquidityStats = ["0", "0"]
+            lps[index] = updatedLp
+        }
+    })
+
+
     fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
 }
 
@@ -647,7 +669,7 @@ async function main() {
 
     await saveLps()
     // await saveAllInitializedTicks()
-    await saveAllInitializedTicksMultiCall()
+    // await saveAllInitializedTicksMultiCall()
     // rewriteAbi()
     process.exit(0)
 }

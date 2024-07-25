@@ -1,11 +1,18 @@
 import * as fs from 'fs';
-import {MyLp, StableSwapPool} from '../types'
-const { ApiPromise, WsProvider } = require('@polkadot/api');
-const { options } = require('@acala-network/api');
+import {MyLp, StableSwapPool} from '../types.ts'
+// const { ApiPromise, WsProvider } = require('@polkadot/api');
+import { ApiPromise, WsProvider } from '@polkadot/api';
+// const { options } = require('@acala-network/api');
+import { options } from '@acala-network/api';
 import bn, { BigNumber } from 'bignumber.js' 
+// import { getApiForNode } 
 // import { BigNumber } from 'bignumber.js';
 import path from 'path';
-import { getApiForNode } from '../utils';
+import { getApiForNode } from './../../xcm-test/scripts/instructions/apiUtils.ts';
+
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const endpoint1 = 'wss://karura.api.onfinality.io/public-ws';
 const endpoint2 = 'wss://karura-rpc-2.aca-api.network/ws';
 const endpoint6 = 'wss://karura-rpc.dwellir.com'
@@ -24,6 +31,9 @@ export async function updateLps(chopsticks: boolean) {
     let provider = new WsProvider(rpc);
     let api = new ApiPromise(options({ provider })); 
     await api.isReady;
+
+    // const api = await getApiForNode("Karura", chopsticks)
+    // await api.isReady;
 
     let stables = updateStables(api);
     const parachainId = await api.query.parachainInfo?.parachainId();
@@ -161,22 +171,25 @@ async function updateStables(api: any) {
             // console.log(matchedAsset.localId)
             return matchedAsset.localId
         })
-        let A;
+        // let A;
         let aPrecision = 100
+        let poolId;
         // Special handling for Ksm/Lksm pool
         if (matchedAssets.length === 2) {
+            poolId =0;
             let ksmLksmLiq = await getKsmLksmBalance(api);
             liquidity.push(ksmLksmLiq[0]);
             liquidity.push(ksmLksmLiq[1]);
             liquidity = liquidity.map((l: any) => {
                 return l.toString().replace(/,/g, "")
             })
-            A = 0.03 * aPrecision;
+            // A = 0.03 * aPrecision;
         } else {
+            poolId = 1
             liquidity = liquidity.map((l: any) => {
                 return l.toString().replace(/,/g, "")
             })
-            A = 100 * aPrecision;
+            // A = 100 * aPrecision;
         }
         let tokenPrecisions = valueData.precisions.map((p: any) => {
             return p.toString().replace(/,/g, "")
@@ -184,11 +197,12 @@ async function updateStables(api: any) {
         let newStablePool: StableSwapPool = {
             chainId: parachainId.toJSON() as number,
             dexType: 'stable',
+            poolId: poolId.toString(),
             poolAssets: matchedAssets,
             liquidityStats: liquidity,
             tokenPrecisions: tokenPrecisions,
             swapFee: valueData.swapFee.replace(/,/g, ""),
-            a: A,
+            a: valueData.a.replace(/,/g, ""),
             aPrecision: aPrecision,
             aBlock: valueData.aBlock.replace(/,/g, ""),
             futureA: valueData.futureA.replace(/,/g, ""),
@@ -508,6 +522,7 @@ async function main() {
     // await queryStableLps(api);
     // await swapKsmLksm(api);
     // await updateLps()
+    await updateLps(false)
 
     process.exit(0)
 }

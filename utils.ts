@@ -2,7 +2,7 @@ import * as paraspell from '@paraspell/sdk'
 import { ApiPromise, WsProvider } from '@polkadot/api'
 export const ksmRpc = "wss://kusama-rpc.dwellir.com"
 import {Mangata } from "@mangata-finance/sdk"
-import { localRpcs } from './consts';
+import { localRpcs } from './consts.ts';
 export async function getApiForNode(node: paraspell.TNode | "Kusama", chopsticks: boolean){
     console.log("Getting api for node : ", node, "Chopsticks: ", chopsticks)
     let apiEndpoint: string[];
@@ -16,14 +16,14 @@ export async function getApiForNode(node: paraspell.TNode | "Kusama", chopsticks
     // if(chopsticks){
     //     apiEndpoint = localRpcs
     // }
-
+    console.log("Getting local RPC")
     if(chopsticks){
         let localRpc = localRpcs[node]
         if(localRpc){
             apiEndpoint = [localRpc]
         }
     }
-
+    
     console.log("Node RPC: ", apiEndpoint[0])
     let api: ApiPromise;
     let apiConnected = false;
@@ -64,8 +64,10 @@ export async function getApiForNode(node: paraspell.TNode | "Kusama", chopsticks
             // return api
         }
     } else {
-        let endpointIndex = 1;
-        
+        let endpointIndex = 0;
+        if(node == "Moonbeam" && !chopsticks){
+            endpointIndex = 1 // Currently the working endpoint for moonbeam
+        }
         while(endpointIndex < apiEndpoint.length && !apiConnected){
             console.log("Connecting to api: ", apiEndpoint[endpointIndex])
             try{
@@ -96,4 +98,31 @@ export async function getApiForNode(node: paraspell.TNode | "Kusama", chopsticks
     }
     return api
     
+}
+
+export function deepEqual(obj1: any, obj2: any) {
+    // console.log("***** DEEP EQUAL *****")
+    // console.log("obj1: " + JSON.stringify(obj1))
+    // console.log("obj2: " + JSON.stringify(obj2))
+    if (obj1 === obj2) {
+        return true;
+    }
+    if (typeof obj1 !== 'object' || typeof obj2 !== 'object' || obj1 == null || obj2 == null) {
+        return false;
+    }
+
+    const keys1 = Object.keys(obj1);
+    const keys2 = Object.keys(obj2);
+
+    if (keys1.length !== keys2.length) {
+        return false;
+    }
+
+    for (let key of keys1) {
+        if (!keys2.includes(key) || !deepEqual(obj1[key], obj2[key])) {
+            return false;
+        }
+    }
+
+    return true;
 }

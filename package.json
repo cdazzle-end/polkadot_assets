@@ -9,6 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "@acala-network/api": "^6.1.0",
     "@mangata-finance/sdk": "^1.16.1",

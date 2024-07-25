@@ -184,4 +184,4 @@ async function main() {
     // getAssets()
 }
 
-main()
+// main()

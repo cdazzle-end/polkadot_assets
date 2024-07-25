@@ -81,6 +81,7 @@ export interface TickData {
 export interface MyLp{
     chainId: number,
     dexType: string,
+    
     contractAddress?: string,
     abi?: string,
     poolAssets: any[]
@@ -100,19 +101,29 @@ export interface CexLp{
     priceDecimals: [number, number],
 }
 
+export interface TokenRate {
+    numerator: string,
+    denominator: string,
+}
+
 export interface StableSwapPool{
     chainId: number,
     dexType: String,
+    poolId?: string,
+    shareIssuance?: string,
     contractAddress?: string,
     poolAssets: any[],
+    tokenRates?: TokenRate[],
+    tokenShares?: string[],
     liquidityStats: string[],
     tokenPrecisions: string[],
     swapFee: string,
+    feePrecision?: string,
     a: number,
     aPrecision: number,
-    aBlock: number,
-    futureA: number,
-    futureABlock: number,
+    aBlock: string,
+    futureA: string,
+    futureABlock: string,
     totalSupply: string,
     poolPrecision: string,
 }

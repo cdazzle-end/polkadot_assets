@@ -76,11 +76,8 @@ async function updatePolkadotLps(chopsticks: boolean) {
         bncPolkadotHandler.updateLps(chopsticks).then(() => console.log("bnc polkadot complete")),
         paraHandler.updateLps(chopsticks).then(() => console.log("para complete")),
         acaHandler.updateLps(chopsticks).then(() => console.log("aca complete")),
-        // kucoinHandler.updateLps().then(() => console.log("kucoin complete")),
-        // mgxHandler.updateLps(chopsticks).then(() => console.log("mgx complete")),
         hdxHandler.updateLps(chopsticks).then(() => console.log("hdx complete")),
-        glmrHandler.saveLps().then(() => console.log("glmr complete")),
-        // sdnHandler.updateLps().then(() => console.log("sdn complete"))
+        glmrHandler.saveLps().then(() => console.log("glmr complete"))
     ]);
 }
 
@@ -97,6 +94,7 @@ async function updateKusamaLps(chopsticks: boolean) {
     ]);
 }
 
+// RUN with args RELAY, CHOPSTICKS. ts-node all_lps.ts polkadot true
 async function main() {
 
     // let chopsticks = await process.argv.includes("true")

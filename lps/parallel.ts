@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types';
-import {MyLp} from '../types';
+import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types.ts';
+import {MyLp} from '../types.ts';
 // import { Keyring, ApiPromise, WsProvider, } from '@polkadot/api';
 // import { options } from '@parallel-finance/api';
 // import { CurrencyId, Pool, Balance } from '@parallel-finance/types/interfaces';
@@ -11,15 +11,21 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 import {BN} from '@polkadot/util';
 import { getApiForNode } from './../utils.ts';
 
-const localRpc = "ws://172.26.130.75:8012"
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+// import { localRpcs } from 'consts.ts';
+
+// const localRpc = localRpcs["Parallel"]
 const liveRpc = 'wss://parallel-rpc.dwellir.com'
 
 export async function updateLps(chopsticks: boolean) {
     // let api = await getApiForNode("Parallel", chopsticks);
-    let rpc = chopsticks ? localRpc : liveRpc
+    // let rpc = chopsticks ? localRpc : liveRpc
 
-    const provider = new WsProvider(rpc);
-    const api = new ApiPromise({ provider });
+    // const provider = new WsProvider(rpc);
+    // const api = new ApiPromise({ provider });
+    let api = await getApiForNode("Parallel", chopsticks);
     await api.isReady;
     // await api.isReady;
 
@@ -78,12 +84,12 @@ async function saveLps() {
 
 
         const lp = lpData.toHuman()
-        console.log(lp)
+        // console.log(lp)
         // const pool: Pool = api.createType('Pool', lp)
         let pool = lp as any
         const [baseAmount, quoteAmount] = [pool.baseAmount.replace(/,/g, ""), pool.quoteAmount.replace(/,/g, "")]
-        console.log(baseAmount)
-        console.log(quoteAmount)
+        // console.log(baseAmount)
+        // console.log(quoteAmount)
         const poolAssetIds = [(poolAssetIdData[0].toHuman() as any).replace(/,/g, ""), (poolAssetIdData[1].toHuman() as any).replace(/,/g, "")]
         const [baseAsset, quoteAsset] = poolAssetIds.map((poolAssetId: any) => {
             const matchedAsset = assets.find((asset: any) => {

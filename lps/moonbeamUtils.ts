@@ -6,14 +6,19 @@ import path from 'path';
 import bn, { BigNumber } from 'bignumber.js'
 import { parse } from 'path'
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import { GlobalState, MyLp, Slot0, TickData } from '../types';
-import { altDexContractAbi, dexAbiMap, dexAbis, selectedHttpEndpoint, selectedWsEndpoint, wsProvider, xcTokenAbi } from './glmrConsts';
+import { GlobalState, MyLp, Slot0, TickData } from '../types.ts';
+import { altDexContractAbi, dexAbiMap, dexAbis, selectedHttpEndpoint, selectedWsEndpoint, wsProvider, xcTokenAbi } from './glmrConsts.ts';
 import { TickMath } from '@uniswap/v3-sdk';
 import {
     Multicall,
     ContractCallResults,
     ContractCallContext,
   } from 'ethereum-multicall';
+
+  import { fileURLToPath } from 'url';
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+
 
 // Query all intialized ticks through multicall
 export async function getUni3TickData(contractAddress){

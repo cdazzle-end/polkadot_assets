@@ -1,12 +1,16 @@
 import * as fs from 'fs';
 import path from 'path';
-import {MyLp, StableSwapPool} from '../types';
+import {MyLp, StableSwapPool, TokenRate} from '../types';
 import {ApiPromise, WsProvider} from '@polkadot/api';
 // const { ApiPromise, WsProvider } = ('@polkadot/api');
 // const { options } = require('@acala-network/api');
 import { options } from '@acala-network/api';
 // import { BigNumber } from 'bignumber.js';
 import { getApiForNode } from './../utils.ts';
+
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const endpoint1 = 'wss://karura.api.onfinality.io/public-ws';
 const endpoint2 = 'wss://karura-rpc-2.aca-api.network/ws';
 const endpoint6 = 'wss://karura-rpc.dwellir.com'
@@ -14,13 +18,16 @@ const endpoint3 = 'wss://karura-rpc-0.aca-api.network'
 const endpoint4 = 'wss://karura-rpc-1.aca-api.network'
 const endpoint5 = 'wss://karura-rpc-2.aca-api.network/ws'
 // wss://karura-rpc-3.aca-api.network/ws
-
+const FEE_PRECISION = 10000000000
 declare const fetch: any;
 const localRpc = "ws://172.26.130.75:8008"
 const liveRpc = endpoint2
 export async function updateLps(chopsticks: boolean) {
     let api = await getApiForNode("Acala", chopsticks);
     await api.isReady;
+
+    let number = await api.query.system.number();
+    // console.log("Block number: ", number.toString());
 
     let stables = updateStables(api);
     const parachainId = await api.query.parachainInfo?.parachainId();
@@ -147,9 +154,21 @@ async function updateStables(api: any) {
     });
     const lpEntries = await api.query.stableAsset.pools.entries();
     let pools = await Promise.all(lpEntries.map(async ([key, value]: any) => {
+        let poolId = key.args[0].toHuman();
+        // console.log(`Pool ID: ${poolId}`)
+
         let valueData = value.toHuman() as any;
         let assets = valueData.assets;
-        let liquidity = valueData.balances;
+        let tokenShares = valueData.balances;
+        let a = valueData.a.replace(/,/g, "");
+        let swapFee = valueData.swapFee.replace(/,/g, "");
+        let aPrecision = 100;
+        let poolAccount = valueData.accountId;
+        let tokenRates = [1,1]
+
+        // console.log(`Pool account: ${poolAccount}`)
+
+        // console.log(`Liquidities: ${JSON.stringify(liquidity)}`)
 
         let matchedAssets = assets.map((assetId: any) => {
             const matchedAsset = assetRegistry.find((asset: any) => {
@@ -170,34 +189,61 @@ async function updateStables(api: any) {
             // console.log(matchedAsset.localId)
             return matchedAsset.localId
         })
-        let A;
-        let aPrecision = 100
-        // Special handling for Ksm/Lksm pool
-        if (matchedAssets.length === 2) {
-            let ksmLksmLiq = await getKsmLksmBalance(api);
-            liquidity.push(ksmLksmLiq[0]);
-            liquidity.push(ksmLksmLiq[1]);
-            liquidity = liquidity.map((l: any) => {
-                return l.toString().replace(/,/g, "")
-            })
-            A = 0.03 * aPrecision;
-        } else {
-            liquidity = liquidity.map((l: any) => {
-                return l.toString().replace(/,/g, "")
-            })
-            A = 100 * aPrecision;
+        // console.log(`Queried assets: ${JSON.stringify(assets, null, 2)}`)
+        // console.log(`Matched assets: ${JSON.stringify(matchedAssets, null, 2)}`)
+        // let accountBalances = await api.query.tokens.accounts(poolAccount, matchedAssets);
+        // console.log(`Account balances: ${JSON.stringify(accountBalances)}`)
+        let tokenReserves = []
+        for (let asset of assets) {
+            let accountBalances = await api.query.tokens.accounts(poolAccount, asset);
+            let tokenBalance = accountBalances.toHuman().free.toString().replace(/,/g, "");
+            tokenReserves.push(tokenBalance)
         }
+        tokenShares = tokenShares.map((shares: any) => {
+            return shares.toString().replace(/,/g, "")
+        })
+
+        // console.log(`Token Reserves: ${JSON.stringify(tokenReserves)}`)
+        // console.log(`Token Shares: ${JSON.stringify(tokenShares)}`)
+        // let A;
+        // let aPrecision = 100
+        // Special handling for Ksm/Lksm pool
+        // if (matchedAssets.length === 2) {
+        //     let dotLdotBalances = await getDotLdotBalance(api);
+        //     tokenShares.push(dotLdotBalances[0]); // Adding in order of tokens in pool, which is Dot then LDot
+        //     tokenShares.push(dotLdotBalances[1]);
+        //     tokenShares = tokenShares.map((l: any) => {
+        //         return l.toString().replace(/,/g, "")
+        //     })
+        //     // A = 0.03 * aPrecision;
+        // } else {
+        //     tokenShares = tokenShares.map((l: any) => {
+        //         return l.toString().replace(/,/g, "")
+        //     })
+        //     // A = 100 * aPrecision;
+        // }
         let tokenPrecisions = valueData.precisions.map((p: any) => {
             return p.toString().replace(/,/g, "")
+        })
+        let formattedTokenRates = tokenRates.map((rate: any) => {
+            let tokenRate: TokenRate = {
+                numerator: "1000",
+                denominator: "1000"
+            }
+            return tokenRate
         })
         let newStablePool: StableSwapPool = {
             chainId: parachainId.toJSON() as number,
             dexType: 'stable',
+            poolId: "0",
             poolAssets: matchedAssets,
-            liquidityStats: liquidity,
+            liquidityStats: tokenReserves,
+            tokenShares: tokenShares,
             tokenPrecisions: tokenPrecisions,
-            swapFee: valueData.swapFee.replace(/,/g, ""),
-            a: A,
+            tokenRates: formattedTokenRates,
+            swapFee: swapFee,
+            feePrecision: FEE_PRECISION.toString(),
+            a: a,
             aPrecision: aPrecision,
             aBlock: valueData.aBlock.replace(/,/g, ""),
             futureA: valueData.futureA.replace(/,/g, ""),
@@ -205,6 +251,7 @@ async function updateStables(api: any) {
             totalSupply: valueData.totalSupply.replace(/,/g, ""),
             poolPrecision: valueData.precision.replace(/,/g, "")
         }
+        // console.log(`New Stable Pool: ${JSON.stringify(newStablePool, null, 2)}`)
         return newStablePool
     }));
 
@@ -251,7 +298,7 @@ async function queryStableLps(api: any) {
         let aPrecision = 100
         // Special handling for Ksm/Lksm pool
         if (matchedAssets.length === 2) {
-            let ksmRealLiq = await getKsmLksmBalance(api);
+            let ksmRealLiq = await getDotLdotBalance(api);
             liquidity.push(ksmRealLiq[0])
             liquidity.push(ksmRealLiq[1])
             liquidity = liquidity.map((l: any) => {
@@ -270,6 +317,7 @@ async function queryStableLps(api: any) {
         let newStablePool: StableSwapPool = {
             chainId: parachainId.toJSON() as number,
             dexType: 'stable',
+            poolId: "0",
             poolAssets: matchedAssets,
             liquidityStats: liquidity,
             tokenPrecisions: tokenPrecisions,
@@ -318,33 +366,31 @@ async function queryStableLps(api: any) {
 //     // i++;
 // }
 
-async function getKsmLksmBalance(api: any) {
+async function getDotLdotBalance(api: any) {
     // const provider = new WsProvider('wss://karura.api.onfinality.io/public-ws');
     // const api = new ApiPromise(options({ provider }));
     await api.isReady;
-    const ksmLksmPool = 'qmmNug1GQstpimAXBphJPSbDawH47vwMmhuSUq9xRqAsDAr';
-    const ksm = {
-        Token: "KSM"
+    const dotLdotPool = '23M5ttkp2zdM8qa6LFak4BySWZDsAVByjepAfr7kt929S1U9';
+    const dot = {
+        Token: "DOT"
     }
-    const lksm = {
-        Token: "LKSM"
+    const lDot = {
+        Token: "LDOT"
     }
-    let ksmBalance = await api.query.tokens.accounts(ksmLksmPool, ksm);
-    let lksmBalance = await api.query.tokens.accounts(ksmLksmPool, lksm);
-    // console.log(ksmBalance.toHuman())
-    // console.log(lksmBalance.toJSON())
-    let ksmFormatted = ksmBalance.toHuman().free.toString().replace(/,/g, "");
-    let lksmFormatted = lksmBalance.toHuman().free.toString().replace(/,/g, "");
-    // console.log(ksmFormatted)
-    // console.log(lksmFormatted)
-    return [ksmFormatted, lksmFormatted]
+    let dotBalance = await api.query.tokens.accounts(dotLdotPool, dot);
+    let lDotBalance = await api.query.tokens.accounts(dotLdotPool, lDot);
+    let dotFormatted = dotBalance.toHuman().free.toString().replace(/,/g, "");
+    let lDotFormatted = lDotBalance.toHuman().free.toString().replace(/,/g, "");
+    return [dotFormatted, lDotFormatted]
 }
 
 async function main() {
 
     let api = await getApiForNode("Acala", false);
-    await queryStableLps(api)
+    // await updateLps(false);
+    await updateStables(api);
 
     process.exit(0)
 }
+
 // main()

@@ -1,7 +1,11 @@
 import * as fs from 'fs';
-import { MyLp } from '../types';
+import { MyLp } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import path from 'path';
+
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 // import { BigNumber } from 'bignumber.js';
 const localRpc = "ws://172.26.130.75:8010"
 const liveRpc = 'wss://basilisk-rpc.dwellir.com'

@@ -4,6 +4,10 @@ import { MyAsset, MyAssetRegistryObject, MyLp, OmniPool, StableSwapPool } from '
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import { getApiForNode } from './../utils.ts';
 import bn from 'bignumber.js';
+
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const localRpc = "ws://172.26.130.75:8010"
 const liveRpc = 'wss://basilisk-rpc.dwellir.com'
 // const hdxOmniPoolAccount = "7L53bUTBbfuj14UpdCNPwmgzzHSsrsTWBHX5pys32mVWM3C1"
@@ -17,6 +21,7 @@ type StableAccountKey = '100' | '101' | '102';
 const MAX_D_ITERATIONS = 64
 const MAX_Y_ITERATIONS = 128
 const TARGET_PRECISION = new bn(18)
+const FEE_PRECISION = 10000000000
 
 const stableAccountMap: Record<StableAccountKey, string> = {
     '100': hdx4Pool,
@@ -122,7 +127,7 @@ async function saveLps() {
 
         return newLp
     }))
-    console.log(lps)
+    // console.log(lps)
     fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_lps.json"), JSON.stringify(lps, null, 2), "utf8");
     api.disconnect()
 }
@@ -136,12 +141,12 @@ async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
 
     
     let stableSwapPools = stablePools.map(async (pool) => {
-        console.log(pool[0].toHuman(), pool[1].toHuman())
+        // console.log(pool[0].toHuman(), pool[1].toHuman())
         let poolId = pool[0].toHuman() as any
         // poolId = poolId[0]
         let poolData = pool[1].toHuman() as any
         let assets = poolData.assets
-        let initialAmplification = new bn(poolData.initialAmplification).toNumber()
+        let initialAmplification = poolData.initialAmplification.replace(/,/g, '')
         let finalAmplification = poolData.finalAmplification.replace(/,/g, '')
         let swapFee = new bn(poolData.fee.replace(/%/g, '')).div(new bn(10).pow(2)).toFixed()
         let initialBlock = new bn(poolData.initialBlock.replace(/,/g, '')).toFixed()
@@ -154,7 +159,7 @@ async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
         // let liquidityStats = await api.query.tokens.accounts.entries(stablePoolAccount);
 
         let assetStats = assets.map(async (assetId: any) => {
-            console.log(assetId)
+            // console.log(assetId)
             // console.log(assetId.toHuman())
             let assetLiquidity = await api.query.tokens.accounts(stablePoolAccount, assetId)
             let assetLiquidityString = assetLiquidity.toHuman() as any
@@ -171,10 +176,17 @@ async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
         stats.forEach(([assetId, stat]) => {
             poolAssetIds.push(assetId)
             poolLiquidityStats.push(stat)
-            tokenPrecisions.push('1')
+
+            let asset = getAssetById(assetId.toString())
+            let tokenData = asset.tokenData as MyAsset
+            let assetDecimals = tokenData.decimals
+            let precision = TARGET_PRECISION.minus(assetDecimals)
+            let tokenPrecision = new bn(10).pow(precision.toNumber())
+            
+            tokenPrecisions.push(tokenPrecision.toFixed())
         })
-        console.log(poolAssetIds)
-        console.log(poolLiquidityStats)
+        // console.log(poolAssetIds)
+        // console.log(poolLiquidityStats)
 
         // console.log(`Final A: ${finalAmplification}`)
 
@@ -185,6 +197,9 @@ async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
         let shareIssuance = await api.query.tokens.totalIssuance(poolIdString)
         let shareIssuanceFixed = new bn(shareIssuance.toString()).toFixed()
 
+        // let feePrecision = 10000000000
+        swapFee = new bn(swapFee).times(FEE_PRECISION).toFixed()
+
         let stableSwapPool: StableSwapPool = {
             chainId: 2034,
             dexType: "stable",
@@ -194,8 +209,9 @@ async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
             liquidityStats: reserveString,
             tokenPrecisions: tokenPrecisions,
             swapFee: swapFee,
+            feePrecision: FEE_PRECISION.toString(),
             a: initialAmplification,
-            aPrecision: 0,
+            aPrecision: 1,
             aBlock: initialBlock,
             futureA: finalAmplification,
             futureABlock: finalBlock,
@@ -239,8 +255,11 @@ async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
 
     let allOmnipools:OmniPool[] = []
     let omniPoolsAsLps: MyLp[] = []
+    // console.log(`OMNIPOOL: ${JSON.stringify(omnipool, null, 2)}`)
     omnipool.forEach((pool) => {
         let poolAsset = pool[0].toHuman() as any
+        // console.log("Getting asset Object for:")
+        // console.log(poolAsset)
         let asset = hdxAssets.find((asset) => {
             let tokenData = asset.tokenData as MyAsset
             return tokenData.localId == poolAsset[0]
@@ -399,9 +418,22 @@ function hasConverged(v0: bn, v1: bn){
 //     // let formatted_input = 
 
 // }
+function getAssetById(assetId: String): MyAssetRegistryObject{
+    let assets: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hdx_assets.json'), 'utf8'));
+    let asset = assets.find((asset) => {
+        let tokenData = asset.tokenData as MyAsset
+        return tokenData.chain == 2034 && tokenData.localId == assetId
+    })
+    if(!asset){
+        throw new Error(`No pool found for asset ${assetId}`)
+    }
+    return asset
+}
+
 
 async function main() {
-    await saveLps()
+    // await saveLps()
+    await updateLps(false)
     // await calculateSwap()
 }
 

@@ -11,8 +11,12 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 // import Keyring from '@polkadot/keyring';
 // import { u8aToHex, stringToHex, numberToHex } from '@polkadot/util';
 // import { mnemonicToLegacySeed, hdEthereum } from '@polkadot/util-crypto';
-import { MyLp } from '../types';
+import { MyLp } from '../types.ts';
 import path from 'path';
+
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const rpc1 = 'wss://wss.moonriver.moonbeam.network';
 const rpc2 = 'wss://moonriver.public.blastapi.io';
 const rpc3 = 'wss://moonriver.api.onfinality.io/public-ws';

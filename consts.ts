@@ -27,6 +27,7 @@ export const localRpcs = {
     "Zeitgeist": "ws://172.26.130.75:9009",
     "BifrostPolkadot": "ws://172.26.130.75:9010",
     "Parallel": "ws://172.26.130.75:9011",
+    "Unique": "ws://172.26.130.75:9012",
     // "BifrostPolkadot": "ws://172.26.130.75:9010",
     // "BifrostPolkadot": "ws://172.26.130.75:9010",
     // "BifrostPolkadot": "ws://172.26.130.75:9010",

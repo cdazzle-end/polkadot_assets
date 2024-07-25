@@ -11,7 +11,14 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 // import apiHelper from '../parachains/api_utils'
 // import Keyring from '@polkadot/keyring';
 import { u8aToHex, stringToHex , numberToHex} from '@polkadot/util';
-import { getApiForNode } from './../utils.ts';
+import { deepEqual, getApiForNode } from './../utils.ts';
+import { ethers } from 'ethers'
+import bn, { BigNumber } from 'bignumber.js'
+import {
+    Multicall,
+    ContractCallResults,
+    ContractCallContext,
+  } from 'ethereum-multicall';
 // import { mnemonicToLegacySeed, hdEthereum } from '@polkadot/util-crypto';
 const rpc1 = 'wss://wss.moonriver.moonbeam.network';
 const rpc2 = 'wss://moonriver.public.blastapi.io';
@@ -193,10 +200,10 @@ async function queryLocations(api:ApiPromise) {
     assetLocations.push([movrLocation, "MOVR"])
     assetLocations.push([zlkLocation, "ZLK"])
 
-    assetLocations.forEach(([location, id]) => {
-        console.log(id)
-        console.log(JSON.stringify(location))
-    })
+    // assetLocations.forEach(([location, id]) => {
+    //     console.log(id)
+    //     console.log(JSON.stringify(location))
+    // })
 
     return assetLocations;
 }
@@ -232,7 +239,7 @@ async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
             isFrozen: assetData.isFrozen,
             contractAddress: evmContractAddress,
         }
-        console.log(newAsset)
+        // console.log(newAsset)
         return newAsset
     }))
     const movrAsset: MyAsset = {
@@ -255,13 +262,155 @@ async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
     }
     assets.push(movrAsset)
     assets.push(zlkAsset)
-    console.log(assets.length)
+    // console.log(assets.length)
     return assets
+}
+
+async function updateRegistry(){
+    let glmrLpRegistry = JSON.parse(fs.readFileSync("./../lps/lp_registry/glmr_lps.json", "utf-8")) as any
+    let assetRegistry = JSON.parse(fs.readFileSync("asset_registry/glmr_assets.json", "utf-8")) as any
+    console.log("assets in registry: ", assetRegistry.length)
+
+    let api = await getApiForNode("Moonbeam", false)
+    let queriedAssets = await queryAssets(api) as any
+    const locations = await queryLocations(api);
+    let queriedAssetObjects = queriedAssets.map((asset) => {
+        const matchedLocation = locations.find((location) => location[1] == asset.localId)
+        // console.log(asset.localId + " " + matchedLocation)
+        const newAssetRegistryObject: MyAssetRegistryObject = matchedLocation ? {
+            tokenData: asset,
+            hasLocation: true,
+            tokenLocation: matchedLocation[0]
+        } : {
+            tokenData: asset,
+            hasLocation: false,
+        }
+        return newAssetRegistryObject
+    })
+    let newAssets = []
+    queriedAssetObjects.forEach((queriedAsset) => {
+        let foundMatchingAsset = false
+        assetRegistry.forEach((assetRegistryAsset, index) => {
+            if(queriedAsset.tokenData.localId === assetRegistryAsset.tokenData.localId){
+                foundMatchingAsset = true
+                if(!deepEqual(queriedAsset, assetRegistryAsset)){
+                    console.log("Replacing asset: ", queriedAsset.tokenData.localId)
+                    assetRegistry[index] = queriedAsset
+                }
+            }
+        });
+        if(!foundMatchingAsset){
+            newAssets.push(queriedAsset)
+        }
+    })
+
+    console.log("Asset registry: ", assetRegistry.length)
+    console.log("new assets: ", newAssets.length)
+
+    assetRegistry = assetRegistry.concat(newAssets)
+
+    console.log("Updated registry length: ", assetRegistry.length)
+
+    // fs.writeFileSync("asset_registry/glmr_assets.json", JSON.stringify(assetRegistry, null, 2))
+
+    process.exit(0)
+
+}
+
+async function getNonXcmAssetData(){
+    let glmrLpRegistry = JSON.parse(fs.readFileSync("./../lps/lp_registry/glmr_lps.json", "utf-8")) as any
+    let assetRegistry = JSON.parse(fs.readFileSync("asset_registry/glmr_assets.json", "utf-8")) as any
+
+    let ignoreAssets = [
+        "0xFFfffFFecB45aFD30a637967995394Cc88C0c194", // POOP
+    ]
+    let unregisteredLpAssets = []
+
+    glmrLpRegistry.forEach((lp: any) => {
+        lp.poolAssets.forEach((poolAssetId: any) => {
+            let foundAsset = assetRegistry.find((asset: any) => asset.tokenData.localId === poolAssetId)
+            if(!foundAsset && !unregisteredLpAssets.includes(poolAssetId) && !ignoreAssets.includes(poolAssetId)){
+                unregisteredLpAssets.push(poolAssetId)
+            }
+        })
+    })
+
+    console.log("Unregistered LP assets: ", unregisteredLpAssets.length)
+
+    const defaultRpc = "https://moonbeam.public.blastapi.io"
+    let xcTokenAbi = JSON.parse(fs.readFileSync("./../lps/glmr_abis/xcTokenAbi.json", "utf-8"))
+    let rpcProvider = new ethers.JsonRpcProvider(defaultRpc)
+
+    let tokenDatas: MyAsset[] = await queryTokenData(unregisteredLpAssets, xcTokenAbi, rpcProvider)
+
+    let newAssetObjects: MyAssetRegistryObject[] = tokenDatas.map((tokenData) => {
+        let assetRegistryObject: MyAssetRegistryObject = {
+            tokenData: tokenData,
+            hasLocation: false
+        }
+        return assetRegistryObject
+    })
+
+    fs.writeFileSync("asset_registry/glmr_evm_assets.json", JSON.stringify(newAssetObjects, null, 2))
+
+}
+
+export async function queryTokenData(contractAddresses: string[], tokenAbi, provider){
+    // let addresses = contractAddresses.slice(0, 10)
+    const united_block_http="https://moonbeam.unitedbloc.com"
+    let callContexts: ContractCallContext[] = contractAddresses.map((contractAddress) => {
+        let calls = [];
+        calls.push({reference: `tokenData`, methodName: `name`, methodParameters: []})
+        calls.push({reference: `tokenData`, methodName: `symbol`, methodParameters: []})
+        calls.push({reference: `tokenData`, methodName: `decimals`, methodParameters: []})
+
+        let context: ContractCallContext = {
+            reference: contractAddress,
+            contractAddress: contractAddress,
+            abi: tokenAbi,
+            calls: calls
+        }
+        return context
+
+    })
+    const multicall = new Multicall({ nodeUrl: united_block_http, tryAggregate: true });
+
+    try{
+
+        const results: ContractCallResults = await multicall.call(callContexts);
+
+        let tokenDatas: MyAsset[] = contractAddresses.map((contractAddress) => {
+            let callResponse = results.results[contractAddress].callsReturnContext
+            // console.log(JSON.stringify(callResponse, null, 2))
+
+            let name = callResponse[0].returnValues[0]
+            let symbol = callResponse[1].returnValues[0]
+            let decimals = callResponse[2].returnValues[0]
+
+            console.log(`Name: ${name}, Symbol: ${symbol}, Decimals: ${decimals}`)
+            let tokenData: MyAsset = {
+                "network": "polkadot",
+                "localId": contractAddress,
+                "chain": 2004,
+                "name": name,
+                "symbol": symbol,
+                "decimals": decimals.toString(),
+                "contractAddress": contractAddress
+            }
+            return tokenData
+        })
+        return tokenDatas
+    } catch(e){
+        // console.log(`FAILED: ${contractAddress}`)
+        console.log(e)
+    }
 }
 
 async function main() {
     // queryAssets()
-    await saveAssets()
+    // await saveAssets()
+    // await updateRegistry()
+    await getNonXcmAssetData()
     // await queryLocations()
     process.exit(0)
 }

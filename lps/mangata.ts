@@ -1,8 +1,12 @@
 import {Mangata } from "@mangata-finance/sdk"
-import { MyLp } from '../types';
+import { MyLp } from '../types.ts';
 import * as fs from 'fs';
 import path from 'path';
-import { getApiForNode } from '../utils';
+import { getApiForNode } from '../utils.ts';
+
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const localRpc = "ws://172.26.130.75:8011"
 const liveRpc = 'wss://kusama-rpc.mangata.online'

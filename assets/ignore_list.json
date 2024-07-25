@@ -1,0 +1,146 @@
+[
+    {
+        "tokenData": {
+          "network": "polkadot",
+          "chain": 2012,
+          "localId": "120",
+          "name": "INTR",
+          "symbol": "INTR",
+          "decimals": "10",
+          "deposit": "0",
+          "isFrozen": false
+        },
+        "hasLocation": true,
+        "tokenLocation": {
+          "X2": [
+            {
+              "Parachain": "2032"
+            },
+            {
+              "GeneralKey": {
+                "length": "2",
+                "data": "0x0002000000000000000000000000000000000000000000000000000000000000"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tokenData": {
+          "network": "polkadot",
+          "chain": 2012,
+          "localId": "122",
+          "name": "IBTC",
+          "symbol": "IBTC",
+          "decimals": "8",
+          "deposit": "0",
+          "isFrozen": false
+        },
+        "hasLocation": true,
+        "tokenLocation": {
+          "X2": [
+            {
+              "Parachain": "2032"
+            },
+            {
+              "GeneralKey": {
+                "length": "2",
+                "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tokenData": {
+          "network": "polkadot",
+          "chain": 2004,
+          "localId": "187224307232923873519830480073807488153",
+          "name": "Equilibrium Dollar",
+          "symbol": "xcEQD",
+          "decimals": "9",
+          "deposit": "0",
+          "isFrozen": false,
+          "contractAddress": "0xFFFFFFFF8cda1707baf23834d211b08726b1e499"
+        },
+        "hasLocation": true,
+        "tokenLocation": {
+          "X2": [
+            {
+              "Parachain": "2011"
+            },
+            {
+              "GeneralKey": {
+                "length": "3",
+                "data": "0x6571640000000000000000000000000000000000000000000000000000000000"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tokenData": {
+          "network": "polkadot",
+          "chain": 2004,
+          "localId": "190590555344745888270686124937537713878",
+          "name": "Equilibrium Token",
+          "symbol": "xcEQ",
+          "decimals": "9",
+          "deposit": "0",
+          "isFrozen": false,
+          "contractAddress": "0xFFFFFFFF8f6267e040d8a0638c576dfba4f0f6d6"
+        },
+        "hasLocation": true,
+        "tokenLocation": {
+          "X1": {
+            "Parachain": "2011"
+          }
+        }
+      },
+      {
+        "tokenData": {
+          "network": "polkadot",
+          "localId": {
+            "ForeignAssetId": "7"
+          },
+          "name": "Equilibrium",
+          "symbol": "EQ",
+          "decimals": "9",
+          "minimalBalance": "1000000000",
+          "chain": 2000
+        },
+        "hasLocation": true,
+        "tokenLocation": {
+          "X1": {
+            "Parachain": "2011"
+          }
+        }
+      },
+      {
+        "tokenData": {
+          "network": "polkadot",
+          "localId": {
+            "ForeignAssetId": "8"
+          },
+          "name": "Equilibrium USD",
+          "symbol": "EQD",
+          "decimals": "9",
+          "minimalBalance": "1000000000",
+          "chain": 2000
+        },
+        "hasLocation": true,
+        "tokenLocation": {
+          "X2": [
+            {
+              "Parachain": "2011"
+            },
+            {
+              "GeneralKey": {
+                "length": "3",
+                "data": "0x6571640000000000000000000000000000000000000000000000000000000000"
+              }
+            }
+          ]
+        }
+      }
+  ]
