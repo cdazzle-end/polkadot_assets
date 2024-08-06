@@ -290,6 +290,7 @@ async function updateAssetRegistry(){
     let assetData = await queryAssets(api);
     let assetLocations = await queryLocations(api);
 
+    // Query all assets from api
     let currentAssets: MyAssetRegistryObject[] = await assetData.map(([asset, assetId]: any) => {
         let matchedLocation = assetLocations.find(([location, locationId]: any) => {
             if(assetId == locationId){
@@ -316,32 +317,34 @@ async function updateAssetRegistry(){
         }
     });
 
+    console.log(`Number of queried assets from api: ${currentAssets.length}`)
+
     let newAssets: MyAssetRegistryObject[] = []
 
+    // Get all assets from our registry
     let hydraRegistry: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), 'utf8'));
-    currentAssets.forEach((asset: MyAssetRegistryObject) => {
-        let assetFound = hydraRegistry.find((assetHere) => {
-            return deepEqual(asset, assetHere);
+    console.log(`Number of assets in registry: ${hydraRegistry.length}`)
+
+    // Go through current assets, find matching asset by deep equal in registry
+    currentAssets.forEach((currentAsset: MyAssetRegistryObject) => {
+        let currentAssetData = currentAsset.tokenData as MyAsset
+        let assetFound = hydraRegistry.find((registryAsset) => {
+            let registryAssetData = registryAsset.tokenData as MyAsset
+            if(registryAssetData.localId == currentAssetData.localId){
+                return true
+            } else {
+                return false
+            }
+            // return deepEqual(currentAsset, registryAsset);
         });
         if (!assetFound) {
-            newAssets.push(asset);
+            newAssets.push(currentAsset);
         }
     })
 
-    // newAssets.forEach((newAsset: MyAssetRegistryObject) => {
-    //     let existingAsset = hydraRegistry.find((registryAsset, index) => {
-    //         let registryAssetData = registryAsset.tokenData as MyAsset;
-    //         let newAssetData = newAsset.tokenData as MyAsset;
-    //         if(registryAssetData.localId == newAssetData.localId){
-    //             // console.log(`Asset already exists in registry: ${newAssetData.localId}`)
-    //             // console.log(JSON.stringify(newAsset, null, 2))
-    //             // console.log(JSON.stringify(registryAsset, null, 2)) 
-    //             hydraRegistry[index] = newAsset
-    //             return true
-    //         }
-    //     })
-    // })
+    console.log(`Number of new assets ${newAssets.length}`)
 
+    // ** EDGE Where not deep equal but matching ID. See if new asset has matching asset id in registry, and replace it. 
     for (let asset of newAssets) {
         for(let i = 0; i < hydraRegistry.length; i++){
             let registryAsset = hydraRegistry[i].tokenData as MyAsset
@@ -353,21 +356,6 @@ async function updateAssetRegistry(){
     }
 
     console.log("Updated Registry")
-
-    newAssets.forEach((newAsset: MyAssetRegistryObject) => {
-        let existingAsset = hydraRegistry.find((registryAsset, index) => {
-            let registryAssetData = registryAsset.tokenData as MyAsset;
-            let newAssetData = newAsset.tokenData as MyAsset;
-            if(registryAssetData.localId == newAssetData.localId){
-                if(!deepEqual(registryAsset, newAsset)){
-                    console.log(`Asset same id but not equal`)
-                    console.log(JSON.stringify(registryAsset, null, 2))
-                    console.log(JSON.stringify(newAsset, null, 2))
-                    throw new Error(`Asset same id but not equal`)
-                }
-            }
-        })
-    })
 
     let assetRegistryUpdated = hydraRegistry
     newAssets.forEach((newAsset: MyAssetRegistryObject) => {
@@ -402,7 +390,7 @@ async function removeRegistryDuplicates(){
         }
     })
     console.log(`Number of assets: ${updatedRegistry.length}`)
-    // fs.writeFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), JSON.stringify(updatedRegistry, null, 2))
+    fs.writeFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), JSON.stringify(updatedRegistry, null, 2))
 
 }
 
@@ -438,13 +426,7 @@ function getAssetHubData(hydraRegistry: MyAssetRegistryObject[]){
         let tokenData = hydraAsset.tokenData as MyAsset;
         if(tokenData.symbol == null || tokenData.name == null || tokenData.decimals == null){
             // Filter out assets that aren't in LP registry
-            // assetsMissingData.push(asset)
-            // let tokenData = hydraAsset.tokenData as MyAsset;
-            console.log(`Hydra Asset ${JSON.stringify(hydraAsset, null, 2)}`)
             let parachain = findValueByKey(hydraAsset.tokenLocation, "Parachain");
-            console.log("Parachain: ", parachain)
-            // console.log(`Asset missing data: ${tokenData.localId} -- ${parachain}`)
-    
             // Find asset hub token data. If not found, check if it exists in LP registry. If its in lp registry, but cant find data, throw errpr
             if (parachain == "1000"){
                 let assetHubAsset = assetHubRegistry.find((assetHubAsset: any) => {
@@ -475,7 +457,7 @@ function getAssetHubData(hydraRegistry: MyAssetRegistryObject[]){
         
                     hydraRegistry[index].tokenData = newTokenData;
 
-                    console.log(`Updated asset: ${JSON.stringify(newTokenData, null, 2)}`)
+                    // console.log(`Updated asset: ${JSON.stringify(newTokenData, null, 2)}`)
                 }
     
     
@@ -497,9 +479,9 @@ function getBncAssetData(hydraRegistry: MyAssetRegistryObject[]){
             // Filter out assets that aren't in LP registry
             // assetsMissingData.push(asset)
             // let tokenData = hydraAsset.tokenData as MyAsset;
-            console.log(`Hydra Asset ${JSON.stringify(hydraAsset, null, 2)}`)
+            // console.log(`Hydra Asset ${JSON.stringify(hydraAsset, null, 2)}`)
             let parachain = findValueByKey(hydraAsset.tokenLocation, "Parachain");
-            console.log("Parachain: ", parachain)
+            // console.log("Parachain: ", parachain)
             // console.log(`Asset missing data: ${tokenData.localId} -- ${parachain}`)
     
             // Find asset hub token data. If not found, check if it exists in LP registry. If its in lp registry, but cant find data, throw errpr
@@ -533,7 +515,7 @@ function getBncAssetData(hydraRegistry: MyAssetRegistryObject[]){
         
                     hydraRegistry[index].tokenData = newTokenData;
 
-                    console.log(`Updated asset: ${JSON.stringify(newTokenData, null, 2)}`)
+                    // console.log(`Updated asset: ${JSON.stringify(newTokenData, null, 2)}`)
                 }
     
     
@@ -561,15 +543,12 @@ async function removeAssetsWithoutData(hydraRegistry: MyAssetRegistryObject[]){
             let lpRegistryContainsAsset = hydraLpRegistry.find((lp: any) => {
                 lp.poolAssets.forEach((poolAsset: any) => {
                     if(poolAsset.localId == tokenData.localId){
-                        // console.log(`Asset found in LP registry: ${tokenData.localId}`)
-                        // console.log(JSON.stringify(lp, null, 2))
                         return true
                     }
                 })
             })
             if(!lpRegistryContainsAsset){
-                // console.log(`Asset found in LP registry: ${tokenData.localId}`)
-                // console.log(JSON.stringify(lpRegistryContainsAsset, null, 2))
+                console.log(`Removing asset: ${tokenData.localId}`)
                 return false
             }
         }

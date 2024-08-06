@@ -255,11 +255,8 @@ async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
 
     let allOmnipools:OmniPool[] = []
     let omniPoolsAsLps: MyLp[] = []
-    // console.log(`OMNIPOOL: ${JSON.stringify(omnipool, null, 2)}`)
     omnipool.forEach((pool) => {
         let poolAsset = pool[0].toHuman() as any
-        // console.log("Getting asset Object for:")
-        // console.log(poolAsset)
         let asset = hdxAssets.find((asset) => {
             let tokenData = asset.tokenData as MyAsset
             return tokenData.localId == poolAsset[0]
@@ -275,19 +272,31 @@ async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
 
         let tokenReserve = omnipoolBalances[poolAsset[0]]
 
+        // console.log("Get asset fee for ", poolAsset[0])
+
         let fee = fees.find((fee) => {
             let feeAsset = fee[0].toHuman() as any
             return feeAsset == poolAsset[0]
         })
-        let feeStats = fee?.[1].toHuman() as any
-        let assetFee = feeStats.assetFee as string
-        let protocolFee = feeStats.protocolFee as string
-        assetFee = assetFee.slice(0, assetFee.length - 1)
-        protocolFee = protocolFee.slice(0, protocolFee.length - 1)
-        let assetFeeNumber = parseFloat(assetFee)
-        let protocolFeeNumber = parseFloat(protocolFee)
-        assetFeeNumber = assetFeeNumber * 1000
-        protocolFeeNumber = protocolFeeNumber * 1000
+        let assetFee, protocolFee, assetFeeNumber, protocolFeeNumber
+        if(!fee){
+            // Default amounts if omnipool asset is not registered in dynamic fees registry
+            assetFeeNumber = 250
+            protocolFeeNumber = 50
+        } else {
+            let feeStats = fee?.[1].toHuman() as any
+            assetFee = feeStats.assetFee as string
+            protocolFee = feeStats.protocolFee as string
+            assetFee = assetFee.slice(0, assetFee.length - 1)
+            protocolFee = protocolFee.slice(0, protocolFee.length - 1)
+            assetFeeNumber = parseFloat(assetFee)
+            protocolFeeNumber = parseFloat(protocolFee)
+            assetFeeNumber = assetFeeNumber * 1000
+            protocolFeeNumber = protocolFeeNumber * 1000
+        }
+        // console.log(`Asset fee number: ${assetFeeNumber} | Protocol Fee number: ${protocolFeeNumber}`)
+
+
 
         let poolStats = pool[1].toHuman() as any
         let hubReserve = poolStats.hubReserve as string
@@ -433,7 +442,9 @@ function getAssetById(assetId: String): MyAssetRegistryObject{
 
 async function main() {
     // await saveLps()
-    await updateLps(false)
+    // await updateLps(false)
+    // let api = await getApiForNode("HydraDX", true)
+    // await getOmnipoolData(api)
     // await calculateSwap()
 }
 
