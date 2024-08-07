@@ -66,7 +66,7 @@ async function queryAssets(){
 
 }
 
-async function updateRegistry(){
+export async function updateRegistryAssetHub(){
     let queriedAssets = await queryAssets() as any
     let assetRegistry = JSON.parse(fs.readFileSync("asset_registry/asset_hub_polkadot_assets.json", "utf-8")) as any
     console.log("assets in registry: ", assetRegistry.length)
@@ -87,8 +87,8 @@ async function updateRegistry(){
 
 async function main(){
     // await queryAssets()
-    await updateRegistry()
+    await updateRegistryAssetHub()
     process.exit(0)
 }
 
-main()
+// main()
