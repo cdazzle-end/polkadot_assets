@@ -13,4 +13,14 @@
     - [ ] Clover
     - [ ] Crust
     - [ ] Darwinia
-    - [ ] Interlay
+    - [ ] Interlay -- {Token: INTR/IBTC/DOT}
+
+## Interlay 
+
+XTokens input params
+assetRegistry.metadata provides id a number. Native tokens not in assetRegistry
+Need to format XToken params as {ForeignAsset: <id>}
+
+consts.currency for native asset id's INT/IBTC/DOT
+Native, Relay, and Wrapped currency id's => {Token: <id>}
+
