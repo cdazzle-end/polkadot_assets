@@ -576,6 +576,46 @@ async function queryAssetsAndLocations(api: ApiPromise){
 //             }
 //         }
 }
+type AssetType = 'Erc20' | 'Token' | 'LiquidCrowdloan' | 'StableAssetPoolToken' | 'ForeignAsset';
+async function testLocalIdTypes(){
+    const filePath = path.join(__dirname, './asset_registry/aca_assets.json')
+    const acalaAssets: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+
+    acalaAssets.forEach((asset) => {
+        const tokenData = asset.tokenData as MyAsset
+        const id = tokenData.localId
+        console.log(`ID: ${id}`)
+
+        const assetType = determineAssetType(tokenData)
+        console.log(`Determined Asset Type: ${assetType}`)
+    })
+}
+function determineAssetType(tokenData: MyAsset): AssetType {
+  const { localId } = tokenData;
+
+  if ('Erc20' in localId) {
+    return 'Erc20';
+  }
+
+  if ('NativeAssetId' in localId) {
+    if (localId.NativeAssetId && 'Token' in localId.NativeAssetId) {
+      return 'Token';
+    }
+    if (localId.NativeAssetId && 'LiquidCrowdloan' in localId.NativeAssetId) {
+      return 'LiquidCrowdloan';
+    }
+  }
+
+  if ('StableAssetId' in localId) {
+    return 'StableAssetPoolToken';
+  }
+
+  if ('ForeignAssetId' in localId) {
+    return 'ForeignAsset';
+  }
+
+  throw new Error('Unknown asset type');
+}
 async function main() {
     // const provider = new WsProvider('wss://karura.api.onfinality.io/public-ws');
     // const api = new ApiPromise(options({ provider }));
@@ -584,14 +624,15 @@ async function main() {
     // if(!api){
     //     throw new Error("API not connected")
     // }
-    await saveAssets()
+    // await saveAssets()
     // await queryAssetsAndLocations(api)
     // getAssets()
     // await saveAssets()
     // await queryLocations(api)
     // getAssetLocations(api)
     // await queryAssets(api)
+    await testLocalIdTypes()
     process.exit(0)
 }
 
-// main()
+main()
