@@ -587,32 +587,47 @@ async function testLocalIdTypes(){
         console.log(`ID: ${JSON.stringify(id)}`)
 
         const [assetType, assetId] = determineAssetType(tokenData.localId)
-        console.log(`Determined Asset Type: ${assetType} | ${assetId}`)
+        // console.log(`Determined Asset Type: ${assetType} | ${assetId}`)
+
+        const formattedAssetParameter = {
+            [assetType]: assetId
+        }
+        console.log(`${JSON.stringify(formattedAssetParameter)}`)
+        console.log('--------------------------------')
     })
 }
 function determineAssetType(localId: any): [AssetType, string] {
 //   const { localId } = tokenData;
 
-    if ('Erc20' in localId) {
-        return ['Erc20', localId.Erc20!];
-    }
+//     if ('Erc20' in localId) {
+//         return ['Erc20', localId.Erc20!];
+//     }
 
-  if ('NativeAssetId' in localId) {
-    if (localId.NativeAssetId && 'Token' in localId.NativeAssetId) {
-      return ['Token', localId.NativeAssetId.Token!];
-    }
-    if (localId.NativeAssetId && 'LiquidCrowdloan' in localId.NativeAssetId) {
-      return ['LiquidCrowdloan', localId.NativeAssetId.LiquidCrowdloan!];
-    }
-  }
+//   if ('NativeAssetId' in localId) {
+//     if (localId.NativeAssetId && 'Token' in localId.NativeAssetId) {
+//       return ['Token', localId.NativeAssetId.Token!];
+//     }
+//     if (localId.NativeAssetId && 'LiquidCrowdloan' in localId.NativeAssetId) {
+//       return ['LiquidCrowdloan', localId.NativeAssetId.LiquidCrowdloan!];
+//     }
+//   }
 
-  if ('StableAssetId' in localId) {
-    return ['StableAssetPoolToken', localId.StableAssetId!];
-  }
+//   if ('StableAssetId' in localId) {
+//     return ['StableAssetPoolToken', localId.StableAssetId!];
+//   }
 
-  if ('ForeignAssetId' in localId) {
-    return ['ForeignAsset', localId.ForeignAssetId!];
+//   if ('ForeignAssetId' in localId) {
+//     return ['ForeignAsset', localId.ForeignAssetId!];
+//   }
+
+//   throw new Error('Unknown asset type');
+if ('NativeAssetId' in localId) {
+    if (localId.NativeAssetId !== undefined && 'Token' in localId.NativeAssetId) return ['Token', localId.NativeAssetId.Token];
+    if (localId.NativeAssetId !== undefined && 'LiquidCrowdloan' in localId.NativeAssetId) return ['LiquidCrowdloan', localId.NativeAssetId.LiquidCrowdloan];
   }
+  if ('ForeignAssetId' in localId) return ['ForeignAsset', localId.ForeignAssetId];
+  if ('StableAssetId' in localId) return ['StableAssetPoolToken', localId.StableAssetId];
+  if ('Erc20' in localId) return ['Erc20', localId.Erc20];
 
   throw new Error('Unknown asset type');
 }
