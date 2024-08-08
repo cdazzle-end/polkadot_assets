@@ -10,6 +10,7 @@
     - [ ] Interlay
     - [ ] Kinstugi
     - [ ] Manta
+    - [ ] Pendulum
 
 ## Asset Registry to add
 
@@ -23,6 +24,7 @@
     - [ ] Khala
     - [ ] Manta
     - [ ] NeuroWeb
+    - [ ] Pendulum
 
 ## Interlay 
 
@@ -40,3 +42,11 @@ INTR dexGeneral.swap params are formatted the same.
 ## Origin Trail
 
 Polkadot parachain => NeuroWeb
+
+# Manta
+
+Evm dexes - Zenlink, Manta
+
+# Pendulum
+
+Zenlink dex
