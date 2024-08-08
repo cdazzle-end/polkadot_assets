@@ -9,6 +9,7 @@
     - [ ] Centrifuge
     - [ ] Interlay
     - [ ] Kinstugi
+    - [ ] Manta
 
 ## Asset Registry to add
 
@@ -20,6 +21,7 @@
     - [ ] Interlay -- {Token: INTR/IBTC/DOT}
     - [ ] Phala
     - [ ] Khala
+    - [ ] Manta
 
 ## Interlay 
 
