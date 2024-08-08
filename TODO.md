@@ -14,6 +14,8 @@
     - [ ] Crust
     - [ ] Darwinia
     - [ ] Interlay -- {Token: INTR/IBTC/DOT}
+    - [ ] Phala
+    - [ ] Khala
 
 ## Interlay 
 
