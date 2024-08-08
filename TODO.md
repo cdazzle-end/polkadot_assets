@@ -22,6 +22,7 @@
     - [ ] Phala
     - [ ] Khala
     - [ ] Manta
+    - [ ] NeuroWeb
 
 ## Interlay 
 
