@@ -1,10 +1,14 @@
 # Parachains
 
+    - [ ] Create script to collect Kusama assets
+    - [ ] Create allAssetsKusamaCollected.json
+
 ## LP Registry to add
 
     - [ ] Composable
     - [ ] Centrifuge
     - [ ] Interlay
+    - [ ] Kinstugi
 
 ## Asset Registry to add
 
