@@ -586,32 +586,32 @@ async function testLocalIdTypes(){
         const id = tokenData.localId
         console.log(`ID: ${JSON.stringify(id)}`)
 
-        const assetType = determineAssetType(tokenData.localId)
-        console.log(`Determined Asset Type: ${assetType}`)
+        const [assetType, assetId] = determineAssetType(tokenData.localId)
+        console.log(`Determined Asset Type: ${assetType} | ${assetId}`)
     })
 }
-function determineAssetType(localId: any): AssetType {
+function determineAssetType(localId: any): [AssetType, string] {
 //   const { localId } = tokenData;
 
-  if ('Erc20' in localId) {
-    return 'Erc20';
+if ('Erc20' in localId) {
+    return ['Erc20', localId.Erc20!];
   }
 
   if ('NativeAssetId' in localId) {
     if (localId.NativeAssetId && 'Token' in localId.NativeAssetId) {
-      return 'Token';
+      return ['Token', localId.NativeAssetId.Token!];
     }
     if (localId.NativeAssetId && 'LiquidCrowdloan' in localId.NativeAssetId) {
-      return 'LiquidCrowdloan';
+      return ['LiquidCrowdloan', localId.NativeAssetId.LiquidCrowdloan!];
     }
   }
 
   if ('StableAssetId' in localId) {
-    return 'StableAssetPoolToken';
+    return ['StableAssetPoolToken', localId.StableAssetId!];
   }
 
   if ('ForeignAssetId' in localId) {
-    return 'ForeignAsset';
+    return ['ForeignAsset', localId.ForeignAssetId!];
   }
 
   throw new Error('Unknown asset type');
