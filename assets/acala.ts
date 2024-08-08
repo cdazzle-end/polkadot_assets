@@ -586,12 +586,12 @@ async function testLocalIdTypes(){
         const id = tokenData.localId
         console.log(`ID: ${JSON.stringify(id)}`)
 
-        const assetType = determineAssetType(tokenData)
+        const assetType = determineAssetType(tokenData.localId)
         console.log(`Determined Asset Type: ${assetType}`)
     })
 }
-function determineAssetType(tokenData: MyAsset): AssetType {
-  const { localId } = tokenData;
+function determineAssetType(localId: any): AssetType {
+//   const { localId } = tokenData;
 
   if ('Erc20' in localId) {
     return 'Erc20';
