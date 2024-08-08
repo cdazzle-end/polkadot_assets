@@ -43,10 +43,10 @@ INTR dexGeneral.swap params are formatted the same.
 
 Polkadot parachain => NeuroWeb
 
-# Manta
+## Manta
 
 Evm dexes - Zenlink, Manta
 
-# Pendulum
+## Pendulum
 
 Zenlink dex
