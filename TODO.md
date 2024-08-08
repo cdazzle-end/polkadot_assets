@@ -4,6 +4,7 @@
 
     - [ ] Composable
     - [ ] Centrifuge
+    - [ ] Interlay
 
 ## Asset Registry to add
 
@@ -12,3 +13,4 @@
     - [ ] Clover
     - [ ] Crust
     - [ ] Darwinia
+    - [ ] Interlay
