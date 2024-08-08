@@ -584,7 +584,7 @@ async function testLocalIdTypes(){
     acalaAssets.forEach((asset) => {
         const tokenData = asset.tokenData as MyAsset
         const id = tokenData.localId
-        console.log(`ID: ${id}`)
+        console.log(`ID: ${JSON.stringify(id)}`)
 
         const assetType = determineAssetType(tokenData)
         console.log(`Determined Asset Type: ${assetType}`)
