@@ -593,9 +593,9 @@ async function testLocalIdTypes(){
 function determineAssetType(localId: any): [AssetType, string] {
 //   const { localId } = tokenData;
 
-if ('Erc20' in localId) {
-    return ['Erc20', localId.Erc20!];
-  }
+    if ('Erc20' in localId) {
+        return ['Erc20', localId.Erc20!];
+    }
 
   if ('NativeAssetId' in localId) {
     if (localId.NativeAssetId && 'Token' in localId.NativeAssetId) {
