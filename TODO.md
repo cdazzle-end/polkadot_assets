@@ -28,7 +28,7 @@
     - [ ] Pendulum
     - [ ] Polkadex
     - [ ] Unique
-    - [ ] 
+    - [ ] Quartz
 
 ## Interlay 
 
@@ -58,3 +58,7 @@ Zenlink dex
 ## Polkadex
 
 Assets located in xcmHelper.parachainAssets
+
+## Unique/Quartz
+
+Need to figure out how asset system works. UNQ currencyID === 0
