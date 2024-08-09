@@ -11,6 +11,7 @@
     - [ ] Kinstugi
     - [ ] Manta
     - [ ] Pendulum
+    - [ ] Polkadex
 
 ## Asset Registry to add
 
@@ -25,6 +26,7 @@
     - [ ] Manta
     - [ ] NeuroWeb
     - [ ] Pendulum
+    - [ ] Polkadex
 
 ## Interlay 
 
