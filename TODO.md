@@ -12,6 +12,7 @@
     - [ ] Manta
     - [ ] Pendulum
     - [ ] Polkadex
+    - [ ] Amplitude
 
 ## Asset Registry to add
 
@@ -29,6 +30,7 @@
     - [ ] Polkadex
     - [ ] Unique
     - [ ] Quartz
+    - [ ] Amplitude
 
 ## Interlay 
 
