@@ -52,3 +52,7 @@ Evm dexes - Zenlink, Manta
 ## Pendulum
 
 Zenlink dex
+
+## Polkadex
+
+Assets located in xcmHelper.parachainAssets
