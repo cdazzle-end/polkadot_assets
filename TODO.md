@@ -32,6 +32,7 @@
     - [ ] Quartz
     - [ ] Amplitude
     - [ ] Crust Shadow
+    - [ ] Zeitgeist
 
 ## Interlay 
 
