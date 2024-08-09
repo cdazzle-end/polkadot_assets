@@ -13,6 +13,7 @@
     - [ ] Pendulum
     - [ ] Polkadex
     - [ ] Amplitude
+    - [ ] Zeitgeist
 
 ## Asset Registry to add
 
