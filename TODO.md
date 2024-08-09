@@ -14,6 +14,7 @@
     - [ ] Polkadex
     - [ ] Amplitude
     - [ ] Zeitgeist
+    - [ ] Picasso
 
 ## Asset Registry to add
 
@@ -34,6 +35,7 @@
     - [ ] Amplitude
     - [ ] Crust Shadow
     - [ ] Zeitgeist
+    - [ ] Picasso
 
 ## Interlay 
 
