@@ -15,6 +15,8 @@
     - [ ] Amplitude
     - [ ] Zeitgeist
     - [ ] Picasso
+    - [ ] Astar
+    - [ ] Shiden
 
 ## Asset Registry to add
 
@@ -36,6 +38,8 @@
     - [ ] Crust Shadow
     - [ ] Zeitgeist
     - [ ] Picasso
+    - [ ] Astar
+    - [ ] Shiden
 
 ## Interlay 
 
