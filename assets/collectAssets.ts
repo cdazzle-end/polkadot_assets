@@ -25,6 +25,7 @@ const polkadotAssetFiles = [
     "hdx_assets.json",
     "other_polkadot_assets.json",
     "para_assets.json",
+    "asset_hub_polkadot_assets.json"
 ]
 
 const kusamaAssetFiles = [
@@ -35,6 +36,7 @@ const kusamaAssetFiles = [
     "mgx_assets.json",
     "movr_assets.json",
     "other_assets.json",
+    "asset_hub_kusama_assets.json"
 
 ]
 
