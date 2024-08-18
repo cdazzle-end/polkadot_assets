@@ -67,7 +67,7 @@ async function compareAssetRegistry(){
     console.log(`Number of missing assets: ${assetList.length}`)
 }
 
-async function saveCollectedAssetRegistry(){
+export async function saveCollectedAssetRegistry(){
     let assetRegistryCollected = await buildAssetsFromFiles();
     fs.writeFileSync("asset_registry/allAssetsPolkadotCollected.json", JSON.stringify(assetRegistryCollected, null, 2))
 }

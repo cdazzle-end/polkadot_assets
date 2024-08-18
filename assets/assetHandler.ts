@@ -9,6 +9,7 @@ import { getApiForNode } from '../utils.ts';
 import { fileURLToPath } from 'url';
 import { updateRegistryAssetHub as updateAssetRegistryAssetHub } from './assetHubPolkadot.ts';
 import { updateAssetRegistryHydra } from './hydra.ts';
+import { saveCollectedAssetRegistry } from './collectAssets.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -16,6 +17,7 @@ const __dirname = path.dirname(__filename);
 async function updateAssetRegistry(){
     await updateAssetRegistryAssetHub()
     await updateAssetRegistryHydra()
+    await saveCollectedAssetRegistry()
 }
 
 async function main(){
