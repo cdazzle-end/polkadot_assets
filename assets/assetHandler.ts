@@ -21,6 +21,18 @@ async function updateAssetRegistry(){
 }
 
 async function main(){
+    let args = process.argv
+    let relay = args[2]
+    let chopsticks = args[3]
+    console.log(JSON.stringify(args))
+    console.log("relay: " + relay)
+    console.log("chopsticks: " + chopsticks)
+    let runWithChopsticks
+    if (chopsticks === "true") {
+        runWithChopsticks = true
+    } else {
+        runWithChopsticks = false
+    }
     await updateAssetRegistry()
     process.exit(0)
 }
