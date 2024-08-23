@@ -11,8 +11,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function queryAssets(){
-    let chopsticks = false
+async function queryAssets(chopsticks: boolean){
+    // let chopsticks = false
     let api = await getApiForNode("AssetHubPolkadot", chopsticks)
     const allAssets = await api.query.assets.metadata.entries();
     // console.log(allAssets);
@@ -66,8 +66,8 @@ async function queryAssets(){
 
 }
 
-export async function updateRegistryAssetHub(){
-    let queriedAssets = await queryAssets() as any
+export async function updateRegistryAssetHub(chopsticks: boolean){
+    let queriedAssets = await queryAssets(chopsticks) as any
     let assetRegistry = JSON.parse(fs.readFileSync("asset_registry/asset_hub_polkadot_assets.json", "utf-8")) as any
     console.log("assets in registry: ", assetRegistry.length)
 
@@ -87,7 +87,7 @@ export async function updateRegistryAssetHub(){
 
 async function main(){
     // await queryAssets()
-    await updateRegistryAssetHub()
+    await updateRegistryAssetHub(false)
     process.exit(0)
 }
 

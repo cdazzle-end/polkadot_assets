@@ -15,8 +15,8 @@ const __dirname = path.dirname(__filename);
 
 // Update AssetHub and HyrdraDX, as these are the only ones that change often. Could change to update others if needed
 async function updatePolkadotAssetRegistry(chopsticks: boolean){
-    await updateAssetRegistryAssetHub()
-    await updateAssetRegistryHydra()
+    await updateAssetRegistryAssetHub(chopsticks)
+    await updateAssetRegistryHydra(chopsticks)
     await saveCollectedAssetRegistry()
 }
 
