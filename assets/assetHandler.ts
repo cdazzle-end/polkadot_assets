@@ -14,7 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Update AssetHub and HyrdraDX, as these are the only ones that change often. Could change to update others if needed
-async function updateAssetRegistry(){
+async function updatePolkadotAssetRegistry(chopsticks: boolean){
     await updateAssetRegistryAssetHub()
     await updateAssetRegistryHydra()
     await saveCollectedAssetRegistry()
@@ -33,7 +33,15 @@ async function main(){
     } else {
         runWithChopsticks = false
     }
-    await updateAssetRegistry()
+    if(relay === "polkadot") {
+        await updatePolkadotAssetRegistry(runWithChopsticks)
+    } else if(relay === "kusama") {
+        // await updateKusamaLps(runWithChopsticks)
+    } else {
+        console.log("Invalid relay")
+        process.exit(0)
+    }
+    // await updatePolkadotAssetRegistry()
     process.exit(0)
 }
 
