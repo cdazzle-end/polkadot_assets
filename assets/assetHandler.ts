@@ -9,10 +9,12 @@ const __dirname = path.dirname(__filename);
 
 async function updateAssetRegistry(chopsticks: boolean, relay: Relay){
     if(relay === "polkadot") {
+        console.log(`Updating POLKADOT assets`)
         // Update AssetHub and HyrdraDX, as these are the only ones that change often. Could change to update others if needed
         await updateAssetRegistryAssetHub(chopsticks)
         await updateAssetRegistryHydra(chopsticks)
     } else {
+        console.log(`Updating OTHER assets`)
         // Functions to update kusama asset's here...
 
     }
