@@ -35,7 +35,7 @@ const kusamaAssetFiles = [
     "kar_assets.json",
     "mgx_assets.json",
     "movr_assets.json",
-    "other_assets.json",
+    "other_kusama_assets.json",
     "asset_hub_kusama_assets.json"
 
 ]
@@ -132,4 +132,4 @@ async function run(){
     // await buildAssetsFromFiles()
 }
 
-run()
+// run()
