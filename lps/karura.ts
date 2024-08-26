@@ -8,7 +8,6 @@ import bn, { BigNumber } from 'bignumber.js'
 // import { getApiForNode } 
 // import { BigNumber } from 'bignumber.js';
 import path from 'path';
-import { getApiForNode } from './../../xcm-test/scripts/instructions/apiUtils.ts';
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
