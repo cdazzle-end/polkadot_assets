@@ -1,0 +1,21 @@
+import { ethers } from 'ethers';
+import { BigNumber } from 'bignumber.js';
+import { MyLp, TickData } from '../types.ts';
+export declare function getUni3TickData(contractAddress: any): Promise<MyLp>;
+export declare function getAlgebraTickData(contractAddress: any): Promise<MyLp>;
+export declare function getSolarData(contractAddress: any): Promise<MyLp>;
+export declare function queryTickData(contractAddress: string, ticks: number[], abi: string): Promise<{
+    tick: number;
+    liquidityTotal: string;
+    liquidityDelta: string;
+    intialized: boolean;
+}[]>;
+export declare function queryUpperLowerTicksUni3(tick: BigNumber, tickSpacing: BigNumber, pool: ethers.Contract): Promise<[TickData[], TickData[]]>;
+export declare function queryUpperLowerTicksAlgebra(tick: BigNumber, tickSpacing: BigNumber, pool: ethers.Contract): Promise<[TickData[], TickData[]]>;
+export declare function getUpperLowerTicks(currentTick: BigNumber, tickSpacing: BigNumber): [BigNumber, BigNumber];
+export declare function getTicksUni(contractAddress: string): Promise<number[]>;
+export declare function getTicksAlgebra(contractAddress: string): Promise<number[]>;
+export declare function saveAllInitializedTicks(): Promise<void>;
+export declare function saveAllInitializedTicksMultiCall(): Promise<void>;
+export declare function rewriteAbi(): void;
+export declare function writeTempFile(contractAddress: string, ticks: any): Promise<void>;
