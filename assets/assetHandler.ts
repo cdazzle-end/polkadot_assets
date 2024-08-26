@@ -36,7 +36,7 @@ async function main(){
     console.log("relay: " + relay)
     console.log("chopsticks: " + runWithChopsticks)
 
-    updateAssetRegistry(runWithChopsticks, relay)
+    await updateAssetRegistry(runWithChopsticks, relay)
     process.exit(0)
 }
 
