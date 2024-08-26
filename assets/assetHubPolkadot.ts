@@ -85,6 +85,8 @@ export async function updateRegistryAssetHub(chopsticks: boolean){
 
 }
 
+
+
 async function main(){
     // await queryAssets()
     await updateRegistryAssetHub(false)

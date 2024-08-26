@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types.ts';
+import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation, Relay } from '../types.ts';
 import { getNativeAsset, getStableAsset } from './acaNativeAssets.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 // import {WsProvider } from '@polkadot/rpc-provider'
@@ -20,23 +20,33 @@ async function updatePolkadotAssetRegistry(chopsticks: boolean){
     await saveCollectedAssetRegistry()
 }
 
+async function updateKusamaAssetRegistry(chopsticks: boolean){
+    await updateAssetRegistryAssetHub(chopsticks)
+    await updateAssetRegistryHydra(chopsticks)
+    await saveCollectedAssetRegistry()
+}
+
 async function main(){
     let args = process.argv
-    let relay = args[2]
-    let chopsticks = args[3]
+    let relay: Relay = args[2] as Relay
+    if (relay !== 'polkadot' && relay !== 'kusama') {
+        throw new Error(`Argument for relay incorrect: ${relay} | Must be 'kusama' or 'polkadot'`)
+    }
+
+    let chopsticks = args[3]; // Keep as string
+    if (chopsticks !== 'true' && chopsticks !== 'false') {
+        throw new Error(`Argument for chopsticks not correct: ${chopsticks}. Must be true or false.`);
+    }
+    let runWithChopsticks: boolean = (chopsticks === 'true'); // Convert to boolean
+
     console.log(JSON.stringify(args))
     console.log("relay: " + relay)
     console.log("chopsticks: " + chopsticks)
-    let runWithChopsticks
-    if (chopsticks === "true") {
-        runWithChopsticks = true
-    } else {
-        runWithChopsticks = false
-    }
+
     if(relay === "polkadot") {
         await updatePolkadotAssetRegistry(runWithChopsticks)
     } else if(relay === "kusama") {
-        // await updateKusamaLps(runWithChopsticks)
+        await updateKusamaAssetRegistry(runWithChopsticks)
     } else {
         console.log("Invalid relay")
         process.exit(0)

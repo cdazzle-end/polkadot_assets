@@ -1,7 +1,7 @@
 
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types.ts';
+import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation, Relay } from '../types.ts';
 import { getNativeAsset, getStableAsset } from './acaNativeAssets.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 // import {WsProvider } from '@polkadot/rpc-provider'
@@ -44,7 +44,7 @@ const kusamaAssetFiles = [
 async function compareAssetRegistry(){
     let assetRegistryHere: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync("asset_registry/allAssetsPolkadot.json", "utf-8"))
     let assetRegistryExecutor: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync("asset_registry/allAssetsPolkadotMain.json", "utf-8"))
-    let assetRegistryFromFiles: MyAssetRegistryObject[] = await buildAssetsFromFiles();
+    let assetRegistryFromFiles: MyAssetRegistryObject[] = await buildPolkadotAssetsFromFiles();
 
     let commonAssets: AssetEntry[] = [];
     let uniqueAssets: AssetEntry[] = [];
@@ -67,15 +67,30 @@ async function compareAssetRegistry(){
     console.log(`Number of missing assets: ${assetList.length}`)
 }
 
-export async function saveCollectedAssetRegistry(){
-    let assetRegistryCollected = await buildAssetsFromFiles();
-    fs.writeFileSync("asset_registry/allAssetsPolkadotCollected.json", JSON.stringify(assetRegistryCollected, null, 2))
+export async function saveCollectedAssetRegistry(relay: Relay){
+    if (relay === 'polkadot'){
+        let assetRegistryCollected = await buildPolkadotAssetsFromFiles();
+        fs.writeFileSync("asset_registry/allAssetsPolkadotCollected.json", JSON.stringify(assetRegistryCollected, null, 2))    
+    } else {
+        let assetRegistryCollected = await buildKusamaAssetsFromFiles();
+        fs.writeFileSync("asset_registry/allAssetsKusamaCollected.json", JSON.stringify(assetRegistryCollected, null, 2))    
+    }
 }
 
-async function buildAssetsFromFiles(){
+async function buildPolkadotAssetsFromFiles(){
     let assetRegistryFolder = path.join(__dirname, "/asset_registry/");
     let assetRegistryCollected = [];
     polkadotAssetFiles.forEach((file) => {
+        let assetRegistryFile: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(assetRegistryFolder + file, "utf-8"));
+        assetRegistryCollected = assetRegistryCollected.concat(assetRegistryFile);
+    })
+
+    return assetRegistryCollected;
+}
+async function buildKusamaAssetsFromFiles(){
+    let assetRegistryFolder = path.join(__dirname, "/asset_registry/");
+    let assetRegistryCollected = [];
+    kusamaAssetFiles.forEach((file) => {
         let assetRegistryFile: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(assetRegistryFolder + file, "utf-8"));
         assetRegistryCollected = assetRegistryCollected.concat(assetRegistryFile);
     })
@@ -111,7 +126,7 @@ export function deepEqual(obj1: any, obj2: any) {
 }
 async function run(){
     // await compareAssetRegistry()
-    await saveCollectedAssetRegistry()
+    await saveCollectedAssetRegistry('kusama')
     // await buildAssetsFromFiles()
 }
 
