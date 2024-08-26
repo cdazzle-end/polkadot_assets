@@ -13,17 +13,23 @@ import { saveCollectedAssetRegistry } from './collectAssets.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Update AssetHub and HyrdraDX, as these are the only ones that change often. Could change to update others if needed
-async function updatePolkadotAssetRegistry(chopsticks: boolean){
-    await updateAssetRegistryAssetHub(chopsticks)
-    await updateAssetRegistryHydra(chopsticks)
-    await saveCollectedAssetRegistry()
-}
 
-async function updateKusamaAssetRegistry(chopsticks: boolean){
-    await updateAssetRegistryAssetHub(chopsticks)
-    await updateAssetRegistryHydra(chopsticks)
-    await saveCollectedAssetRegistry()
+// async function updatePolkadotAssetRegistry(chopsticks: boolean){
+//     await updateAssetRegistryAssetHub(chopsticks)
+//     await updateAssetRegistryHydra(chopsticks)
+//     await saveCollectedAssetRegistry()
+// }
+
+async function updateAssetRegistry(chopsticks: boolean, relay: Relay){
+    if(relay === "polkadot") {
+        // Update AssetHub and HyrdraDX, as these are the only ones that change often. Could change to update others if needed
+        await updateAssetRegistryAssetHub(chopsticks)
+        await updateAssetRegistryHydra(chopsticks)
+    } else {
+        // Functions to update kusama asset's here...
+
+    }
+    await saveCollectedAssetRegistry(relay)
 }
 
 async function main(){
@@ -41,17 +47,9 @@ async function main(){
 
     console.log(JSON.stringify(args))
     console.log("relay: " + relay)
-    console.log("chopsticks: " + chopsticks)
+    console.log("chopsticks: " + runWithChopsticks)
 
-    if(relay === "polkadot") {
-        await updatePolkadotAssetRegistry(runWithChopsticks)
-    } else if(relay === "kusama") {
-        await updateKusamaAssetRegistry(runWithChopsticks)
-    } else {
-        console.log("Invalid relay")
-        process.exit(0)
-    }
-    // await updatePolkadotAssetRegistry()
+    updateAssetRegistry(runWithChopsticks, relay)
     process.exit(0)
 }
 
