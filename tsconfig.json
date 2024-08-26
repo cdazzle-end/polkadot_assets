@@ -13,7 +13,7 @@
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "emitDeclarationOnly": true,
-        "outDir": "build",
+        "outDir": "./dist",
         "typeRoots": ["./node_modules/@polkadot/ts", "./node_modules/@types"],
         "jsx": "preserve",
         "declaration": true,
@@ -25,5 +25,5 @@
     },
     // Include and exclude can be adjusted as per your project's structure
     "include": ["./**/*"],
-    "exclude": ["dist"]
+    "exclude": ["dist", "./lps/moonbeamTestFunctions.ts"]
 }
