@@ -69,9 +69,11 @@ async function compareAssetRegistry(){
 
 export async function saveCollectedAssetRegistry(relay: Relay){
     if (relay === 'polkadot'){
+        console.log(`Saving POLKADOT assets`)
         let assetRegistryCollected = await buildPolkadotAssetsFromFiles();
         fs.writeFileSync("asset_registry/allAssetsPolkadotCollected.json", JSON.stringify(assetRegistryCollected, null, 2))    
     } else {
+        console.log(`Saving OTHER assets`)
         let assetRegistryCollected = await buildKusamaAssetsFromFiles();
         fs.writeFileSync("asset_registry/allAssetsKusamaCollected.json", JSON.stringify(assetRegistryCollected, null, 2))    
     }
