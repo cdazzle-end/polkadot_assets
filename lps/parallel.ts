@@ -6,9 +6,6 @@ import {MyLp} from '../types.ts';
 // import { options } from '@parallel-finance/api';
 // import { CurrencyId, Pool, Balance } from '@parallel-finance/types/interfaces';
 import { ApiPromise, WsProvider } from '@polkadot/api';
-// import { WsProvider } from '@polkadot/rpc-provider';
-// import { BigNumber } from 'ethers';
-import {BN} from '@polkadot/util';
 import { getApiForNode } from './../utils.ts';
 
 import { fileURLToPath } from 'url';

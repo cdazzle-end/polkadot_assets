@@ -13,7 +13,7 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 import { u8aToHex, stringToHex , numberToHex} from '@polkadot/util';
 import { deepEqual, getApiForNode } from './../utils.ts';
 import { ethers } from 'ethers'
-import bn, { BigNumber } from 'bignumber.js'
+import bn from 'bignumber.js'
 import {
     Multicall,
     ContractCallResults,

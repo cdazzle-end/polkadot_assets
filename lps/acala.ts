@@ -5,7 +5,6 @@ import {ApiPromise, WsProvider} from '@polkadot/api';
 // const { ApiPromise, WsProvider } = ('@polkadot/api');
 // const { options } = require('@acala-network/api');
 import { options } from '@acala-network/api';
-// import { BigNumber } from 'bignumber.js';
 import { getApiForNode } from './../utils.ts';
 
 import { fileURLToPath } from 'url';

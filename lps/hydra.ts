@@ -380,53 +380,7 @@ function hasConverged(v0: bn, v1: bn){
     return (v1 <= v0 && diff < new bn(1)) || (v1 > v0 && diff <= new bn(1))
 }
 
-// async function getStablePoolData(api: ApiPromise){
-//     let stablePools = await api.query.stablePools.poolData.entries()
-//     let stablePoolData: any = {}
-//     stablePools.forEach((pool) => {
-//         let poolData = pool[1].toHuman() as any
-//         let poolId = pool[0].toHuman() as any
-//         stablePoolData[poolId] = poolData
-//     })
-//     return stablePoolData
-// }
 
-// async function calculateSwap() {
-//     let bsx_assets = JSON.parse(fs.readFileSync("../../assets/bsx/asset_registry.json", "utf8"));
-//     // let input_ksm = 1 * 10 ** 12;
-//     let input_amount = BigNumber(1);
-
-//     let pools = JSON.parse(fs.readFileSync("./lps.json", "utf8"));
-//     let bsxKsmPool = pools[5];
-//     console.log(bsxKsmPool)
-//     let bsxLiq = BigNumber(bsxKsmPool.liquidityStats[0]).div(BigNumber(10).pow(12));
-//     let ksmLiq = BigNumber(bsxKsmPool.liquidityStats[1]).div(BigNumber(10).pow(12));
-//     let input_index = 1
-//     let output_index = 0
-//     let inputLiq = BigNumber(bsxKsmPool.liquidityStats[input_index]).div(BigNumber(10).pow(12))
-//     // let inputLiq = bsxKsmPool[input_index]
-//     let outputLiq = BigNumber(bsxKsmPool.liquidityStats[output_index]).div(BigNumber(10).pow(12))
-
-//     let increments = input_amount.div(BigNumber(100));
-//     let totalOut = BigNumber(0);
-//     console.log("Input liq: " + inputLiq)
-//     console.log("Output liq: " + outputLiq)
-//     console.log("Input amount: " + input_amount)
-//     for (let i = 0; i < 100; i++) {
-//         let out = outputLiq.times(increments).div(inputLiq.plus(increments));
-//         // console.log(out)
-//         let slip = (out.div(outputLiq)).times(out);
-//         totalOut = totalOut.plus(out.minus(slip));
-//         outputLiq= outputLiq.minus(out.minus(slip));
-//         inputLiq = inputLiq.plus(increments);
-//     }
-//     // totalOut = totalOut / 10 ** 12;
-//     let swapFee = totalOut.times(0.003);
-//     totalOut = totalOut.minus(swapFee);
-//     console.log("Total out: " + totalOut);
-//     // let formatted_input = 
-
-// }
 function getAssetById(assetId: String): MyAssetRegistryObject{
     let assets: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hdx_assets.json'), 'utf8'));
     let asset = assets.find((asset) => {

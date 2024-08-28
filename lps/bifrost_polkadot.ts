@@ -9,7 +9,7 @@ import { ModuleBApi, BifrostConfig } from '@zenlink-dex/sdk-api';
 import { Percent, Token, TokenAmount, TradeType, StandardPair, StandardPool, StablePair, StableSwap,  AssetMeta } from '@zenlink-dex/sdk-core';
 import { firstValueFrom } from 'rxjs';
 import { localRpcs } from './../consts.ts';
-import bn, { BigNumber } from 'bignumber.js';
+import bn from 'bignumber.js';
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);

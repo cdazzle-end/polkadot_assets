@@ -2,8 +2,7 @@ import { ethers } from 'ethers'
 import * as fs from 'fs';  
 import readline from 'readline';
 import path from 'path';
-// import { BigNumber } from 'ethers'; // ← used to convert bn object to Ethers BigNumber standard 
-import bn, { BigNumber } from 'bignumber.js'
+import bn from 'bignumber.js'
 import { parse } from 'path'
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { GlobalState, MyLp, Slot0, TickData } from '../types.ts';
@@ -219,7 +218,7 @@ export async function queryTickData(contractAddress: string, ticks: number[], ab
     }
 }
 
-export async function queryUpperLowerTicksUni3(tick: BigNumber, tickSpacing: BigNumber, pool: ethers.Contract): Promise<[TickData[], TickData[]]>{
+export async function queryUpperLowerTicksUni3(tick: bn, tickSpacing: bn, pool: ethers.Contract): Promise<[TickData[], TickData[]]>{
     let [lower, upper] = await getUpperLowerTicks(tick, tickSpacing)
     let lowerTicks = [lower]
     let current = new bn(lower)
@@ -266,7 +265,7 @@ export async function queryUpperLowerTicksUni3(tick: BigNumber, tickSpacing: Big
     return [lowerTickDatas, upperTickDatas]
 }
 
-export async function queryUpperLowerTicksAlgebra(tick: BigNumber, tickSpacing: BigNumber, pool: ethers.Contract) : Promise<[TickData[], TickData[]]>{
+export async function queryUpperLowerTicksAlgebra(tick: bn, tickSpacing: bn, pool: ethers.Contract) : Promise<[TickData[], TickData[]]>{
     let [lower, upper] = await getUpperLowerTicks(tick, tickSpacing)
     let lowerTicks = [lower]
     let current = new bn(lower)
@@ -313,7 +312,7 @@ export async function queryUpperLowerTicksAlgebra(tick: BigNumber, tickSpacing: 
     return [lowerTickDatas, upperTickDatas]
 }
 
-export function getUpperLowerTicks(currentTick: BigNumber, tickSpacing: BigNumber): [BigNumber, BigNumber]{
+export function getUpperLowerTicks(currentTick: bn, tickSpacing: bn): [bn, bn]{
     let currentTickAbs = currentTick.abs()
     let mod = currentTickAbs.mod(tickSpacing)
     let lowerTick = currentTickAbs.minus(mod)

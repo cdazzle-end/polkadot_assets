@@ -2,9 +2,6 @@ import { ethers } from 'ethers'
 import * as fs from 'fs';  
 import readline from 'readline';
 import path from 'path';
-// import { BigNumber } from 'ethers'; // ← used to convert bn object to Ethers BigNumber standard 
-// import bn from 'bignumber.js'  
-// import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../asset_types';
 import { parse } from 'path'
 // import { formatUnits } from 'ethers/lib/utils';
 // import {hexToDec2, decToHex2} from '../../parachains/hex'

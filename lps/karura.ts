@@ -4,9 +4,9 @@ import {MyLp, StableSwapPool} from '../types.ts'
 import { ApiPromise, WsProvider } from '@polkadot/api';
 // const { options } = require('@acala-network/api');
 import { options } from '@acala-network/api';
-import bn, { BigNumber } from 'bignumber.js' 
+import bn from 'bignumber.js' 
 // import { getApiForNode } 
-// import { BigNumber } from 'bignumber.js';
+// import { bn } from 'bignumber.js';
 import path from 'path';
 
 import { fileURLToPath } from 'url';
@@ -427,10 +427,10 @@ async function readStables() {
 //     let out = await getSwapAmount2(ksmPool, 1, 0, 7.751364477999, 30)
 //     // let out = await getSwapAmount2(ksmPool, 0, 1, 1, 30)
 //     console.log(`LKSM pool 1 : ${ksmPool.liquidityStats[1]} pool 2: ${ksmPool2[1]}`)
-//     let lksmRation = BigNumber(ksmPool2[1]).div(BigNumber(ksmPool.liquidityStats[1]))
-//     // let totalOut = BigNumber(out).div(lksmRation)
-//     // let totalOutToLksm = lksmRation.times(BigNumber(out))
-//     let totalOutToKsm = BigNumber(out).div(lksmRation)
+//     let lksmRation = bn(ksmPool2[1]).div(bn(ksmPool.liquidityStats[1]))
+//     // let totalOut = bn(out).div(lksmRation)
+//     // let totalOutToLksm = lksmRation.times(bn(out))
+//     let totalOutToKsm = bn(out).div(lksmRation)
 //     console.log("Lksm Ratio: " + lksmRation)
 //     console.log("Out LKSM: " + out)
 //     console.log("Total Out: " + totalOutToKsm)
@@ -441,10 +441,10 @@ async function readStables() {
 // async function getSwapAmount2(pool: StableSwapPool, tokenIn: number, tokenOut: number, input: number, A: number) {
 //     let poolBalances = (pool.liquidityStats as any).map((liq: any) => {
 //         // return liq / (10 ** 12)
-//         return BigNumber(liq)
+//         return bn(liq)
 //     });
-//     let a = BigNumber(A);
-//     let dx = BigNumber(input);
+//     let a = bn(A);
+//     let dx = bn(input);
 //     console.log("Pool Balances")
 //     console.log(poolBalances)
 //     let d = await getD2(poolBalances, A);
@@ -454,8 +454,8 @@ async function readStables() {
 //     console.log("poolBalances[tokenOut]: " + poolBalances[tokenOut])
 //     console.log("y                     : " + y)
 
-//     let swapFee = BigNumber(pool.swapFee.replace(/,/g, "") as any as number);
-//     let feePrecisions = BigNumber(10000000000);
+//     let swapFee = bn(pool.swapFee.replace(/,/g, "") as any as number);
+//     let feePrecisions = bn(10000000000);
 //     let feeAmount = dy.times(swapFee).div(feePrecisions);
 //     console.log("Fee: " + feeAmount)
 
@@ -600,7 +600,7 @@ function testSwap(){
     console.log(`New Balances: ${balances.map((b) => b.toString() + " | ")}`)
 }
 
-function stableGetSwapAmount(poolInfo: any, inputIndex: number, outputIndex: number, inputAmount: BigNumber){
+function stableGetSwapAmount(poolInfo: any, inputIndex: number, outputIndex: number, inputAmount: bn){
     let zero = new bn(0)
     let one = new bn(1)
     // let mintFee = new bn(0)
@@ -731,19 +731,19 @@ function getY(balances: any[], outputIndex, d, a){
 }
 
 function getYBN(
-    balances: BigNumber[],
+    balances: bn[],
     tokenIndex: number,
-    targetD: BigNumber,
-    amplitude: BigNumber
-  ): BigNumber | null {
-    const one = new BigNumber(1);
-    const two = new BigNumber(2);
-    let c = new BigNumber(targetD);
-    let sum = new BigNumber(0);
-    let ann = new BigNumber(amplitude);
-    const balanceSize = new BigNumber(balances.length);
-    const targetDU512 = new BigNumber(targetD);
-    const aPrecisionU512 = new BigNumber(100); // Replace with actual precision value if needed
+    targetD: bn,
+    amplitude: bn
+  ): bn | null {
+    const one = new bn(1);
+    const two = new bn(2);
+    let c = new bn(targetD);
+    let sum = new bn(0);
+    let ann = new bn(amplitude);
+    const balanceSize = new bn(balances.length);
+    const targetDU512 = new bn(targetD);
+    const aPrecisionU512 = new bn(100); // Replace with actual precision value if needed
     console.log(`C: ${c} | Sum: ${sum} | Ann: ${ann} | BalanceSize: ${balanceSize} | TargetDU512: ${targetDU512} | aPrecisionU512: ${aPrecisionU512}`)
   
     balances.forEach((balance, i) => {
@@ -759,7 +759,7 @@ function getYBN(
     c = c.multipliedBy(targetDU512).multipliedBy(aPrecisionU512).dividedBy(ann.multipliedBy(balanceSize));
     console.log("C: ", c.toString())
     const b = sum.plus(targetDU512.multipliedBy(aPrecisionU512).dividedBy(ann));
-    let prevY = new BigNumber(0);
+    let prevY = new bn(0);
     let y = targetDU512;
     console.log("B: ", b.toString())
     console.log("Y Start: ", y.toString())
@@ -778,21 +778,21 @@ function getYBN(
   }
 
 // async function getD2(balances: any, A: any) {
-//     let sum = BigNumber(0);
-//     let one = BigNumber(1);
+//     let sum = bn(0);
+//     let one = bn(1);
 //     let i = 0;
 //     // let _A = 1;
-//     let Ann = BigNumber(A);
-//     let balance_size = BigNumber(0);
+//     let Ann = bn(A);
+//     let balance_size = bn(0);
 //     console.log("A: " + A);
 //     if (A == 30) {
-//         balance_size = BigNumber(balances.length - 2);
+//         balance_size = bn(balances.length - 2);
 //         for (i = 0; i < balance_size.toNumber(); i++) {
 //             sum = sum.plus(balances[i]);
 //             Ann = Ann.times(balance_size);
 //         }
 //     } else {
-//         balance_size = BigNumber(balances.length);
+//         balance_size = bn(balances.length);
 //         for (i = 0; i < balance_size.toNumber(); i++) {
 //             sum = sum.plus(balances[i]);
 //             Ann = Ann.times(balance_size);
@@ -802,7 +802,7 @@ function getYBN(
 //     console.log("balance size: " + balance_size.toNumber())
     
 
-//     let prevD = BigNumber(0);
+//     let prevD = bn(0);
 //     let D = sum;
 //     console.log("Start D: " + D);
 //     for (i = 0; i < 256; i++) {
@@ -837,17 +837,17 @@ function getYBN(
 //     }
 //     return D;
 // }
-// function getY2(balances: BigNumber[], j: number, D: BigNumber, A: any) {
+// function getY2(balances: bn[], j: number, D: bn, A: any) {
 //     let c = D;
-//     let S = BigNumber(0);
+//     let S = bn(0);
 //     let Ann = A;
-//     let one = BigNumber(1);
+//     let one = bn(1);
 //     let i = 0;
-//     let balance_size = BigNumber(0);
+//     let balance_size = bn(0);
 
 //     console.log("A y: " + A)
 //     if (A == 30) {
-//         balance_size = BigNumber(balances.length - 2);
+//         balance_size = bn(balances.length - 2);
 //         console.log("Balance size y: " + balance_size)
 //         for (i = 0; i < balance_size.toNumber(); i++) {
 //             Ann = Ann.times(balance_size);
@@ -857,7 +857,7 @@ function getYBN(
 //             console.log("c: " + c)
 //         }
 //     } else {
-//         balance_size = BigNumber(balances.length);
+//         balance_size = bn(balances.length);
 //         for (i = 0; i < balance_size.toNumber(); i++) {
 //             Ann = Ann.times(balance_size);
 //             if (i == j) continue
@@ -873,7 +873,7 @@ function getYBN(
 //     let x = D.div(Ann);
 //     console.log("Ann: " + Ann)
 //     console.log("X: " + x)
-//     let prevY = BigNumber(0);
+//     let prevY = bn(0);
 //     let y = D;
 //     console.log(`c: ${c}, b: ${b}, y: ${y}`);
 //     for (i = 0; i < 256; i++) {

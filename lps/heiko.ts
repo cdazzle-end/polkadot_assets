@@ -7,8 +7,6 @@ import { MyLp, MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } fro
 import { ApiPromise, WsProvider } from '@polkadot/api';
 // import { WsProvider } from '@polkadot/rpc-provider';
 import path from 'path';
-// import { BigNumber } from 'ethers';
-import {BN} from '@polkadot/util';
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);

@@ -2,8 +2,7 @@ import { ethers } from 'ethers'
 import * as fs from 'fs';  
 import readline from 'readline';
 import path from 'path';
-// import { BigNumber } from 'ethers'; // ← used to convert bn object to Ethers BigNumber standard 
-import bn, { BigNumber } from 'bignumber.js'
+import bn from 'bignumber.js'
 import { parse } from 'path'
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { GlobalState, MyLp } from '../types.ts';
@@ -303,7 +302,7 @@ async function saveLpsAdvanced(){
     let sqrtUpper = TickMath.getSqrtRatioAtTick(tickUpper.toNumber())
     console.log(`Lower sqrt: ${sqrtLower} - Upper sqrt: ${sqrtUpper}`)
 }
-function calculateAmount0(liq: BigNumber, pa: BigNumber, pb: BigNumber){
+function calculateAmount0(liq: bn, pa: bn, pb: bn){
     if(pa > pb){
         [pa, pb] = [pb, pa]
     }
@@ -311,7 +310,7 @@ function calculateAmount0(liq: BigNumber, pa: BigNumber, pb: BigNumber){
     return amount
 }
 
-function calculateAmount1(liq: BigNumber, pa: BigNumber, pb: BigNumber){
+function calculateAmount1(liq: bn, pa: bn, pb: bn){
     if(pa > pb){
         [pa, pb] = [pb, pa]
     }

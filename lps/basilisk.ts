@@ -5,8 +5,7 @@ import path from 'path';
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-// import { BigNumber } from 'bignumber.js';
+const __dirname = path.dirname(__filename);;
 const localRpc = "ws://172.26.130.75:8010"
 const liveRpc = 'wss://basilisk-rpc.dwellir.com'
 export async function updateLps(chopsticks: boolean) {
@@ -114,43 +113,6 @@ async function saveLps() {
     fs.writeFileSync("./lps.json", JSON.stringify(lps, null, 2), "utf8");
     api.disconnect()
 }
-
-// async function calculateSwap() {
-//     let bsx_assets = JSON.parse(fs.readFileSync("../../assets/bsx/asset_registry.json", "utf8"));
-//     // let input_ksm = 1 * 10 ** 12;
-//     let input_amount = BigNumber(1);
-
-//     let pools = JSON.parse(fs.readFileSync("./lps.json", "utf8"));
-//     let bsxKsmPool = pools[5];
-//     console.log(bsxKsmPool)
-//     let bsxLiq = BigNumber(bsxKsmPool.liquidityStats[0]).div(BigNumber(10).pow(12));
-//     let ksmLiq = BigNumber(bsxKsmPool.liquidityStats[1]).div(BigNumber(10).pow(12));
-//     let input_index = 1
-//     let output_index = 0
-//     let inputLiq = BigNumber(bsxKsmPool.liquidityStats[input_index]).div(BigNumber(10).pow(12))
-//     // let inputLiq = bsxKsmPool[input_index]
-//     let outputLiq = BigNumber(bsxKsmPool.liquidityStats[output_index]).div(BigNumber(10).pow(12))
-
-//     let increments = input_amount.div(BigNumber(100));
-//     let totalOut = BigNumber(0);
-//     console.log("Input liq: " + inputLiq)
-//     console.log("Output liq: " + outputLiq)
-//     console.log("Input amount: " + input_amount)
-//     for (let i = 0; i < 100; i++) {
-//         let out = outputLiq.times(increments).div(inputLiq.plus(increments));
-//         // console.log(out)
-//         let slip = (out.div(outputLiq)).times(out);
-//         totalOut = totalOut.plus(out.minus(slip));
-//         outputLiq= outputLiq.minus(out.minus(slip));
-//         inputLiq = inputLiq.plus(increments);
-//     }
-//     // totalOut = totalOut / 10 ** 12;
-//     let swapFee = totalOut.times(0.003);
-//     totalOut = totalOut.minus(swapFee);
-//     console.log("Total out: " + totalOut);
-//     // let formatted_input = 
-
-// }
 
 async function main() {
     await saveLps()
