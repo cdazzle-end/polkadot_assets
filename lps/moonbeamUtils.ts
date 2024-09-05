@@ -67,14 +67,17 @@ export async function getUni3TickData(contractAddress){
 
     let upperTickDatas = []
     let lowerTickDatas = []
-    tickDatas.forEach(tickData => {
-        if(tickData.tick < currentTick.toNumber()){
-            lowerTickDatas.unshift(tickData)
-        } else {
-            upperTickDatas.push(tickData)
-        }   
-    })
-
+    try {
+        tickDatas.forEach(tickData => {
+            if(tickData.tick < currentTick.toNumber()){
+                lowerTickDatas.unshift(tickData)
+            } else {
+                upperTickDatas.push(tickData)
+            }   
+        })
+    } catch (e) {
+        throw new Error(`Error querying tick data for ${contractAddress} | Tick datas: ${JSON.stringify(tickDatas, null, 2)}`)
+    }
     let newLpData: MyLp = {
         chainId: 2004,
         dexType: "uni3",
@@ -133,16 +136,21 @@ export async function getAlgebraTickData(contractAddress){
     let tickDatas = await queryTickData(contractAddress, initializedTicks, 'algebra')
     
 
-
     let upperTickDatas = []
     let lowerTickDatas = []
-    tickDatas.forEach(tickData => {
-        if(tickData.tick < currentTick.toNumber()){
-            lowerTickDatas.unshift(tickData)
-        } else {
-            upperTickDatas.push(tickData)
-        }   
-    })
+    try {
+        tickDatas.forEach(tickData => {
+            if(tickData.tick < currentTick.toNumber()){
+                lowerTickDatas.unshift(tickData)
+            } else {
+                upperTickDatas.push(tickData)
+            }   
+        })
+    } catch (e) {
+        throw new Error(`Error querying tick data for ${contractAddress} | Tick datas: ${JSON.stringify(tickDatas, null, 2)}`)
+    }
+
+
 
     let newLpData: MyLp = {
         chainId: 2004,
