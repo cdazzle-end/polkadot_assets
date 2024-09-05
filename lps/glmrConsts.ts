@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 import { MyLp } from '../types.ts';
 export const rpc1 = 'wss://moonbeam.public.blastapi.io';
-export const rpc2 = 'wss://moonbeam-rpc.dwellir.com';
+export const rpc2 = 'wss://moonbeam-rpc.dwellir.com'; // Usual main
 // const rpc3 = 'wss://moonriver.api.onfinality.io/public-ws';
 export const rpc4 = 'wss://moonbeam.unitedbloc.com'
 export const testZenContract = "0x94F9EB420174B8d7396A87c27073f74137B40Fe2"
@@ -33,7 +33,7 @@ export const RPC_1_WS = process.env.RPC_1_WS
 export const ON_FINALITY_WS = process.env.ON_FINALITY_WS
 export const BLAST_WS = process.env.BLAST_WS
 
-export const selectedWsEndpoint = rpc2
+export const selectedWsEndpoint = rpc4
 export const selectedHttpEndpoint = united_block_http
 export const wsProvider = new ethers.WebSocketProvider(selectedWsEndpoint);
 

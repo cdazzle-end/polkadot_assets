@@ -94,6 +94,11 @@ async function updateKusamaLps(chopsticks: boolean) {
     ]);
 }
 
+async function testGlmr(){
+    await glmrHandler.saveLps()
+    console.log("Updated moonbeam")
+}
+
 // RUN with args RELAY, CHOPSTICKS. ts-node all_lps.ts polkadot true
 async function main() {
 
@@ -126,3 +131,4 @@ async function main() {
 }
 
 main()
+// testGlmr()

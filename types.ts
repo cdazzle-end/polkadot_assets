@@ -77,7 +77,7 @@ export interface TickData {
     tick: string,
     liquidityTotal: string,
     liquidityDelta: string,
-    intialized: boolean
+    initialized: boolean
 }
 
 export interface MyLp{

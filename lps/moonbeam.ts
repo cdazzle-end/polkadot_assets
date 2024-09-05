@@ -5,10 +5,10 @@ import path from 'path';
 import bn from 'bignumber.js'
 import { parse } from 'path'
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import { GlobalState, MyLp } from '../types.ts';
+import { GlobalState, MyLp, Slot0 } from '../types.ts';
 import { altDexContractAbi, dexAbiMap, dexAbis, wsProvider, xcTokenAbi } from './glmrConsts.ts';
 import { TickMath } from '@uniswap/v3-sdk';
-import { getAlgebraTickData, getSolarData, getUni3TickData, rewriteAbi, saveAllInitializedTicks, saveAllInitializedTicksMultiCall } from './moonbeamUtils.ts'
+import { ContractTickQuery, ContractTickQueryResult, getAlgebraTickData, getSolarData, getUni3TickData, queryAllContractsTickData, rewriteAbi, saveAllInitializedTicks, saveAllInitializedTicksMultiCall } from './moonbeamUtils.ts'
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -131,25 +131,330 @@ interface Lp {
 //     // fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
 // }
 
-export async function saveLps() {
+/**
+ * Can rewrite this when rested
+ * 
+ * Combines all contract tick queries into one multicall
+ * 
+ * Saves all lps as MyLp[]
+ * 
+ * REVIEW INITIALIZED TICK DATA, because were just pulling them from already existing data and not querying them
+ */
+export async function combinedQuery(): Promise<MyLp[]>{
+    console.log('starting')
     const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), 'utf8'))
+    const glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+    const lpMap: Map<string, MyLp> = new Map(glmrLps.map(lp => [lp.contractAddress, lp]));
+    
     // let lpPromises = []
+    let lps: MyLp[] = []
+    let contractQueries: ContractTickQuery[] = []
 
     let lpsPromise = await lpContractAddresses.map(async (lpContract: any) => {
         let newLp: MyLp;
-        if(lpContract.abi == 'algebra'){
-            newLp =await getAlgebraTickData(lpContract.contractAddress)
-        } else if (lpContract.abi == 'uni3'){
-            newLp = await getUni3TickData(lpContract.contractAddress)
+
+        if(lpContract.abi == 'algebra' || lpContract.abi == 'uni3'){
+            // console.log(`Algebra or uni ${lpContract.contractAddress}`)
+            let context: Context = await getContext(lpContract.contractAddress, lpContract.abi, lpMap)
+            if(context.contractTickQuery != null){
+                contractQueries.push(context.contractTickQuery)
+                lps.push(context.myLp)
+            } else {
+                lps.push(context.myLp)
+            }
         } else {
             newLp = await getSolarData(lpContract.contractAddress)
+            lps.push(newLp)
         }
-        // lpPromises.push(newLp)
-        return newLp
     })
+
+    await Promise.all(lpsPromise)
+    await Promise.all(contractQueries)
+    // console.log(`Contract queries: ${JSON.stringify(contractQueries, null, 2)}`)
+    let queryResults: ContractTickQueryResult[] = await queryAllContractsTickData(contractQueries)
+    let tickLps = queryResults.map((result) => {
+        if(result.abi == 'uni3'){
+            let upperTickDatas = []
+            let lowerTickDatas = []
+            let lp = lps.find((lp) => lp.contractAddress == result.contractAddress)
+            let currentTick = new bn(lp.currentTick)
+            try {
+                result.tickDatas.forEach(tickData => {
+                    if(tickData.tick < currentTick.toNumber()){
+                        lowerTickDatas.unshift(tickData)
+                    } else {
+                        upperTickDatas.push(tickData)
+                    }   
+                })
+            } catch (e) {
+                throw new Error(`Error querying tick data for ${result.contractAddress} | Tick datas: ${JSON.stringify(result.tickDatas, null, 2)}`)
+            }
+            lp.upperTicks = upperTickDatas
+            lp.lowerTicks = lowerTickDatas
+
+        } else if(result.abi == 'algebra'){
+            let upperTickDatas = []
+            let lowerTickDatas = []
+            let lp = lps.find((lp) => lp.contractAddress == result.contractAddress)
+            let currentTick = new bn(lp.currentTick)
+            try {
+                result.tickDatas.forEach(tickData => {
+                    if(tickData.tick < currentTick.toNumber()){
+                        lowerTickDatas.unshift(tickData)
+                    } else {
+                        upperTickDatas.push(tickData)
+                    }   
+                })
+            } catch (e) {
+                throw new Error(`Error querying tick data for ${result.contractAddress} | Tick datas: ${JSON.stringify(result.tickDatas, null, 2)}`)
+            }
+            lp.upperTicks = upperTickDatas
+            lp.lowerTicks = lowerTickDatas
+
+        } else {
+            throw new Error(`Incorrect abi ${result.abi}`)
+        }
+    })
+    return lps
+}
+
+export interface Context {
+    contractTickQuery: ContractTickQuery | null,
+    myLp: MyLp
+}
+
+async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<string, MyLp>): Promise<Context> {
+    // let glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+    // let thisGlmrLp = glmrLps.find((lp) => {
+    //     return lp.contractAddress == address
+    // })
+    let thisGlmrLp = lpMap.get(address)
+    if(!thisGlmrLp){
+        throw new Error("Cant find GLMR lp")
+    }
+    let initializedTicks = thisGlmrLp.initializedTicks
+
+    let pool
+    let token0
+    let token1 
+    let activeLiquidity
+    let feeRate
+    let currentTick
+
+    if(abi == 'algebra'){
+        pool = await new ethers.Contract(address, dexAbiMap[abi], wsProvider);
+        token0 = await pool.token0();
+        token1 = await pool.token1();
+        activeLiquidity = new bn(await pool.liquidity());
+    
+        let poolInfo: GlobalState = await pool.globalState();
+        feeRate = new bn(poolInfo.fee)
+        currentTick = new bn(poolInfo.tick)
+    } else {
+        pool = await new ethers.Contract(address, dexAbiMap[abi], wsProvider);
+        token0 = await pool.token0();
+        token1 = await pool.token1();
+        activeLiquidity = new bn(await pool.liquidity());
+        feeRate = new bn(await pool.fee())
+    
+        let poolInfo: Slot0 = await pool.slot0();
+        currentTick =new bn(poolInfo.tick)
+    }
+    let newLpData: MyLp = {
+        chainId: 2004,
+        dexType: abi,
+        contractAddress: address,
+        abi: abi,
+        poolAssets: [token0, token1],
+        liquidityStats: ["0"],
+        currentTick: currentTick.toString(),
+        activeLiquidity: activeLiquidity.toFixed(),
+        feeRate: feeRate.toString(),
+        initializedTicks: initializedTicks,
+        lowerTicks: [],
+        upperTicks: [],
+
+    }
+    if(initializedTicks.length == 0){
+        let returnContext: Context = {
+            contractTickQuery: null,
+            myLp: newLpData
+        }
+        return returnContext
+    } else {
+        let query: ContractTickQuery = {
+            address: address,
+            ticks: initializedTicks,
+            abi: abi
+        }
+        let returnContext: Context = {
+            contractTickQuery: query,
+            myLp: newLpData
+        }
+        return returnContext
+    }
+
+}
+async function getAlgebraContext(address: string):Promise<Context>{
+        // console.log(`Algebra: ${contractAddress}`)
+        let glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+        let thisGlmrLp = glmrLps.find((lp) => {
+            return lp.contractAddress == address
+        })
+        if(!thisGlmrLp){
+            throw new Error("Cant find GLMR lp")
+        }
+        let initializedTicks = thisGlmrLp.initializedTicks
+    
+        const pool = await new ethers.Contract(address, dexAbiMap['algebra'], wsProvider);
+        let token0 = await pool.token0();
+        let token1 = await pool.token1();
+        let activeLiquidity = new bn(await pool.liquidity());
+    
+        let poolInfo: GlobalState = await pool.globalState();
+        let feeRate = new bn(poolInfo.fee)
+        let currentTick = new bn(poolInfo.tick)
+    
+        if(initializedTicks.length == 0){
+            let newLpData: MyLp = {
+                chainId: 2004,
+                dexType: "algebra",
+                contractAddress: address,
+                abi: 'algebra',
+                poolAssets: [token0, token1],
+                liquidityStats: ["0"],
+                currentTick: currentTick.toString(),
+                activeLiquidity: activeLiquidity.toFixed(),
+                feeRate: feeRate.toString(),
+                initializedTicks: initializedTicks,
+                lowerTicks: [],
+                upperTicks: []
+            }
+            let returnContext: Context = {
+                contractTickQuery: null,
+                myLp: newLpData
+            }
+            return returnContext
+        }
+        let newLpData: MyLp = {
+            chainId: 2004,
+            dexType: "algebra",
+            contractAddress: address,
+            abi: 'algebra',
+            poolAssets: [token0, token1],
+            liquidityStats: ["0"],
+            currentTick: currentTick.toString(),
+            activeLiquidity: activeLiquidity.toFixed(),
+            feeRate: feeRate.toString(),
+            initializedTicks: initializedTicks,
+            lowerTicks: [],
+            upperTicks: []
+        }
+        let query: ContractTickQuery = {
+            address: address,
+            ticks: initializedTicks,
+            abi: 'algebra'
+        }
+        let returnContext: Context = {
+            contractTickQuery: query,
+            myLp: newLpData
+        }
+        return returnContext
+}
+
+async function getUniContext(contractAddress: string): Promise<Context>{
+    let glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+    let thisGlmrLp = glmrLps.find((lp) => {
+        return lp.contractAddress == contractAddress
+    })
+    if(!thisGlmrLp){
+        throw new Error("Cant find GLMR lp")
+    }
+
+    
+    let initializedTicks = thisGlmrLp.initializedTicks
+    const pool = await new ethers.Contract(contractAddress, dexAbiMap['uni3'], wsProvider);
+    let token0 = await pool.token0();
+    let token1 = await pool.token1();
+    let activeLiquidity = new bn(await pool.liquidity());
+    // let tickSpacing = new bn(await pool.tickSpacing());
+    let feeRate = new bn(await pool.fee())
+
+    let poolInfo: Slot0 = await pool.slot0();
+    let currentTick =new bn(poolInfo.tick)
+    // console.log(`Current tick: ${currentTick}`)
+    // let [lowerTickDatas, upperTickDatas] = await queryUpperLowerTicksUni3(currentTick, tickSpacing, pool)
+    // let intializedTicks = await getTicksUni(contractAddress)
+    // let tickDatas = await queryTickData(contractAddress, intializedTicks)
+    if(initializedTicks.length == 0){
+        let newLpData: MyLp = {
+            chainId: 2004,
+            dexType: 'uni3',
+            contractAddress: contractAddress,
+            abi: 'uni3',
+            poolAssets: [token0, token1],
+            liquidityStats: ["0"],
+            currentTick: currentTick.toString(),
+            activeLiquidity: activeLiquidity.toFixed(),
+            feeRate: feeRate.toString(),
+            initializedTicks: initializedTicks,
+            lowerTicks: [],
+            upperTicks: [],
+
+        }
+        let returnContext: Context = {
+            contractTickQuery: null,
+            myLp: newLpData
+        }
+        return returnContext
+    }
+    let newLpData: MyLp = {
+        chainId: 2004,
+        dexType: 'uni3',
+        contractAddress: contractAddress,
+        abi: 'uni3',
+        poolAssets: [token0, token1],
+        liquidityStats: ["0"],
+        currentTick: currentTick.toString(),
+        activeLiquidity: activeLiquidity.toFixed(),
+        feeRate: feeRate.toString(),
+        initializedTicks: initializedTicks,
+        lowerTicks: [],
+        upperTicks: [],
+
+    }
+    let query: ContractTickQuery = {
+        address: contractAddress,
+        ticks: initializedTicks,
+        abi: 'uni3'
+    }
+    let returnContext: Context = {
+        contractTickQuery: query,
+        myLp: newLpData
+    }
+    return returnContext
+}
+
+export async function saveLps() {
+    // const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), 'utf8'))
+    // // let lpPromises = []
+
+    // let lpsPromise = await lpContractAddresses.map(async (lpContract: any) => {
+    //     let newLp: MyLp;
+    //     if(lpContract.abi == 'algebra'){
+    //         newLp = await getAlgebraTickData(lpContract.contractAddress)
+    //     } else if (lpContract.abi == 'uni3'){
+    //         newLp = await getUni3TickData(lpContract.contractAddress)
+    //     } else {
+    //         newLp = await getSolarData(lpContract.contractAddress)
+    //     }
+    //     // lpPromises.push(newLp)
+    //     return newLp
+    // })
+    let lps = await combinedQuery()
     // let lpsFor = await Promise.all(lpPromises)
     // console.log(lpsFor)
-    let lps = await Promise.all(lpsPromise)
+    // let lps = await Promise.all(lpsPromise)
     lps = lps.filter((lp) => lp != undefined)
     // console.log(lps)
     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
@@ -665,12 +970,13 @@ async function isDex(dexAddress: any) {
 async function main() {
     // await testUni3Data()
     // await testDex3Data()
-
+    // await combinedQuery()
     await saveLps()
+    // await saveLps()
     // await saveAllInitializedTicks()
     // await saveAllInitializedTicksMultiCall()
     // rewriteAbi()
     process.exit(0)
 }
 
-// main()
+main()
