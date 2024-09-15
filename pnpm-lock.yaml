@@ -9,8 +9,8 @@ dependencies:
     specifier: ^6.1.0
     version: 6.1.0(@polkadot/api@12.1.1)
   '@mangata-finance/sdk':
-    specifier: ^1.16.1
-    version: 1.21.9
+    specifier: file:../mangata-sdk
+    version: file:../mangata-sdk(@polkadot/api@12.1.1)(@polkadot/types@10.11.2)
   '@paraspell/sdk':
     specifier: file:../xcm-sdk
     version: file:../xcm-sdk(@polkadot/api-base@10.11.2)(@polkadot/api@12.1.1)(@polkadot/apps-config@0.133.1)(@polkadot/types@10.11.2)(@polkadot/util@12.6.2)
@@ -542,20 +542,6 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@mangata-finance/sdk@1.21.9:
-    resolution: {integrity: sha512-ElxZMbhFFTE2NN7WJ1mmD3cpIi9eScDqDD433siBjN13t+yjpyZ1QBnxBM3Jz/z2cNHkLaZXi3acf93/9CJqMg==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dependencies:
-      '@mangata-finance/types': 0.23.0
-      '@polkadot/api': 10.11.2
-      big.js: 6.2.1
-      uuid: 9.0.1
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-    dev: false
-
   /@mangata-finance/sdk@2.2.0(@polkadot/api@12.1.1)(@polkadot/types@10.11.2):
     resolution: {integrity: sha512-TDM6W8nL1c+laq14YwL+uiNAxKFkVBRnRh5ezsqQDoAsLt9k/fWNEYl1KEASptTD4oXpZfVcT0ORrULW3ogzTg==}
     engines: {node: '>=18.0.0'}
@@ -571,6 +557,15 @@ packages:
       - '@polkadot/types'
     dev: false
 
+  /@mangata-finance/type-definitions@1.0.0(@polkadot/types@10.11.2):
+    resolution: {integrity: sha512-WfEEtddpPEXrYhsA77aPWdgbjh660lAEv7bRa9U6AUk4fmN57YaQhnwp3o2X9/NgG1+UChsbttCxoa1QkFfV+w==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      '@polkadot/types': ^10.7.3
+    dependencies:
+      '@polkadot/types': 10.11.2
+    dev: false
+
   /@mangata-finance/type-definitions@2.1.2(@polkadot/types@10.11.2):
     resolution: {integrity: sha512-kr4mVMuQ6DqZ0H72z0YI8tcdlk4XD4vUgRVYYfTJdXFJhRsfS4YRxfs/iiQPNzWKgoQZKcDqsbQD3xz9T1gELw==}
     engines: {node: '>=18.0.0'}
@@ -578,16 +573,6 @@ packages:
       '@polkadot/types': ^10.9.1
     dependencies:
       '@polkadot/types': 10.11.2
-    dev: false
-
-  /@mangata-finance/types@0.23.0:
-    resolution: {integrity: sha512-7eNdZ837fqZi82/rZz0LsI6cYi5xfxSaSoH3jz/qf1fIF8pB1ryvQWitIe5TT4Xt3QA6U25pEicN0IOgvHgOgg==}
-    dependencies:
-      '@polkadot/api-base': 9.14.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
     dev: false
 
   /@metamask/eth-sig-util@4.0.1:
@@ -5175,6 +5160,22 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  file:../mangata-sdk(@polkadot/api@12.1.1)(@polkadot/types@10.11.2):
+    resolution: {directory: ../mangata-sdk, type: directory}
+    id: file:../mangata-sdk
+    name: '@mangata-finance/sdk'
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@polkadot/api': ^10.7.3
+    dependencies:
+      '@mangata-finance/type-definitions': 1.0.0(@polkadot/types@10.11.2)
+      '@polkadot/api': 12.1.1
+      big.js: 6.2.1
+      tslog: 4.8.2
+    transitivePeerDependencies:
+      - '@polkadot/types'
     dev: false
 
   file:../xcm-sdk(@polkadot/api-base@10.11.2)(@polkadot/api@12.1.1)(@polkadot/apps-config@0.133.1)(@polkadot/types@10.11.2)(@polkadot/util@12.6.2):
