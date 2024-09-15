@@ -27,7 +27,7 @@ async function updateAssetRegistry(chopsticks: boolean, relay: Relay){
     await saveCollectedAssetRegistry(relay)
 }
 
-export async function updateAssetRegistryWithMap(chopsticks: boolean, relay: Relay, apiMap: Map<PNode, ApiPromise>){
+export async function updateAssetRegistryWithMap(chopsticks: boolean, relay: Relay, apiMap?: Map<PNode, ApiPromise>){
     if(apiMap){
         setApiMap(apiMap)
     }
