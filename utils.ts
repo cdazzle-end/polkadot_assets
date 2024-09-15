@@ -6,11 +6,15 @@ import {Mangata } from "@mangata-finance/sdk"
 import { localRpcs } from './consts.ts';
 
 export type PNode = TNode | 'Polkadot' | 'Kusama' 
+let apiMap: Map<PNode, ApiPromise> = new Map<PNode, ApiPromise>();
 
+export async function setApiMap(map: Map<PNode, ApiPromise>) {
+    apiMap = map;
+}
 
-export async function getApiForNode(node: PNode, chopsticks: boolean, apiMap?: Map<PNode, ApiPromise>): Promise<ApiPromise> {
+export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<ApiPromise> {
 
-    if (apiMap && apiMap.has(node)) {
+    if (apiMap.has(node)) {
         console.log("Returning existing api for node: ", node);
         return apiMap.get(node) as ApiPromise;
     }
@@ -106,10 +110,8 @@ export async function getApiForNode(node: PNode, chopsticks: boolean, apiMap?: M
     if(!apiConnected){
         throw new Error("Could not connect to api")
     }
-    if (apiMap) {
-        apiMap.set(node, api)
-    }
-    
+    apiMap.set(node, api)
+
     return api
     
 }
