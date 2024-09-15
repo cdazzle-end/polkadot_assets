@@ -39,7 +39,7 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
     }
     
     console.log("Node RPC: ", apiEndpoint[0])
-    let api: ApiPromise;
+    let api: ApiPromise | undefined;
     let apiConnected = false;
     
     if(node == "Mangata"){
@@ -100,7 +100,7 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
     }
 
     console.log("NODE: ", node, "API CONNECTED: ", apiConnected)
-    if(!apiConnected){
+    if(!apiConnected || !api){
         throw new Error("Could not connect to api")
     }
     apiMap.set(node, api)
