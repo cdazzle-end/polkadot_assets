@@ -1,11 +1,15 @@
 import path from 'path';
-import { Relay } from '../types.ts';
+import { ApiMap, Relay } from '../types.ts';
 import { fileURLToPath } from 'url';
 import { updateRegistryAssetHub as updateAssetRegistryAssetHub } from './assetHubPolkadot.ts';
 import { saveCollectedAssetRegistry } from './collectAssets.ts';
 import { updateAssetRegistryHydra } from './hydra.ts';
 import { PNode, setApiMap } from './../utils.ts';
 import { ApiPromise } from '@polkadot/api';
+import { ModuleBApi } from '@zenlink-dex/sdk-api';
+
+
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -27,7 +31,7 @@ async function updateAssetRegistry(chopsticks: boolean, relay: Relay){
     await saveCollectedAssetRegistry(relay)
 }
 
-export async function updateAssetRegistryWithMap(chopsticks: boolean, relay: Relay, apiMap?: Map<PNode, ApiPromise>){
+export async function updateAssetRegistryWithMap(chopsticks: boolean, relay: Relay, apiMap?: ApiMap){
     if(apiMap){
         setApiMap(apiMap)
     }

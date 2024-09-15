@@ -5,11 +5,12 @@ export const dotRpc = "wss://polkadot-rpc.dwellir.com"
 import {Mangata } from "@mangata-finance/sdk"
 import { localRpcs } from './consts.ts';
 import { BifrostConfig, ModuleBApi } from '@zenlink-dex/sdk-api'
+import { ApiMap } from './types.ts'
 
 export type PNode = TNode | 'Polkadot' | 'Kusama' 
-let apiMap: Map<PNode, ApiPromise> = new Map<PNode, ApiPromise>();
+let apiMap: ApiMap = new Map<PNode, ApiPromise | ModuleBApi>();
 
-export async function setApiMap(map: Map<PNode, ApiPromise>) {
+export async function setApiMap(map: ApiMap) {
     apiMap = map;
 }
 
