@@ -43,29 +43,23 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
     let apiConnected = false;
     
     if(node == "Mangata"){
-        console.log("Connecting to Mangata API")
         try{
-            let mgxEndpoint = "wss://kusama-rpc.mangata.online"
-            // const MangataSDK = await import('@mangata-finance/sdk')
-            // api = await MangataSDK.Mangata.instance([apiEndpoint[0]]).api()
-            // api = await MangataSDK.Mangata.instance([mgxEndpoint]).api()
-            let api = await Mangata.getInstance([apiEndpoint[0]]).getApi()
-            // api = await Mangata.instance([apiEndpoint[0]]).api()
+            const MangataSDK = await import('@mangata-finance/sdk')
+            api = await MangataSDK.Mangata.instance([apiEndpoint[0]]).api()
             await api.isReady
             if(api.isConnected) {
-                console.log("API is connected: TRUE")
+                // console.log("API is connected: TRUE")
             } else {
-                console.log("API is connected: FALSE")
+                console.log("EDGE CASE | INVESTIGATE: API is connected: FALSE")
                 await api.connect()
                 console.log("API now connected")
             }
             apiConnected = true;
-            // return api
+            
         } catch(e){
             console.log(`Error connecting mangata api ${apiEndpoint[0]}, trying next endpoint`)
-            // const MangataSDK = await import('@mangata-finance/sdk')
-            // api = await MangataSDK.Mangata.instance([apiEndpoint[1]]).api()
-            api = await Mangata.getInstance([apiEndpoint[0]]).getApi()
+            const MangataSDK = await import('@mangata-finance/sdk')
+            api = await MangataSDK.Mangata.instance([apiEndpoint[1]]).api()
             await api.isReady
             if(api.isConnected) {
                 console.log("API is connected: TRUE")
@@ -75,7 +69,6 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
                 console.log("API now connected")
             }
             apiConnected = true;
-            // return api
         }
     } else {
         let endpointIndex = 0;
