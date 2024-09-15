@@ -31,7 +31,7 @@ export async function getUni3TickData(contractAddress){
     }
 
     
-    let initializedTicks = thisGlmrLp.initializedTicks
+    let initializedTicks = thisGlmrLp.initializedTicks!
     const pool = await new ethers.Contract(contractAddress, dexAbiMap['uni3'], wsProvider);
     let token0 = await pool.token0();
     let token1 = await pool.token1();
@@ -105,7 +105,7 @@ export async function getAlgebraTickData(contractAddress){
     if(!thisGlmrLp){
         throw new Error("Cant find GLMR lp")
     }
-    let initializedTicks = thisGlmrLp.initializedTicks
+    let initializedTicks = thisGlmrLp.initializedTicks!
 
     const pool = await new ethers.Contract(contractAddress, dexAbiMap['algebra'], wsProvider);
     let token0 = await pool.token0();
@@ -519,7 +519,7 @@ export async function saveAllInitializedTicks(){
     let lpIndex = 0
     let dexIndexes: number[]= []
     glmrLps.forEach((lp) => {
-        if((lp.dexType === 'uni3' || lp.dexType === 'algebra') && !lp.initializedTicks){
+        if((lp.dexType === 'uni3' || lp.dexType === 'algebra') && !lp.initializedTicks!){
             dexIndexes.push(lpIndex)
         }
         lpIndex++
@@ -536,10 +536,10 @@ export async function saveAllInitializedTicks(){
     
         const promises = batch.map((myGlmrLp) => {
             console.log(`Querying ticks for ${myGlmrLp.contractAddress} | ABI: ${myGlmrLp.dexType}`);
-            if (myGlmrLp.dexType === 'algebra' && !myGlmrLp.initializedTicks) {
+            if (myGlmrLp.dexType === 'algebra' && !myGlmrLp.initializedTicks!) {
                 console.log("Getting ticks for algebra");
                 return getTicksAlgebra(myGlmrLp.contractAddress).then(ticks => ({ success: true, ticks })).catch(error => ({ success: false, ticks: []}));
-            } else if (myGlmrLp.dexType === 'uni3' && !myGlmrLp.initializedTicks) {
+            } else if (myGlmrLp.dexType === 'uni3' && !myGlmrLp.initializedTicks!) {
                 console.log("Getting ticks for uni3");
                 return getTicksUni(myGlmrLp.contractAddress).then(ticks => ({ success: true, ticks })).catch(error => ({ success: false, ticks: [] }));
             }
@@ -550,7 +550,7 @@ export async function saveAllInitializedTicks(){
         const results = await Promise.allSettled(promises);
         results.forEach((result, index) => {
             if (result.status === 'fulfilled' && result.value.success) {
-                glmrLpsToQuery[i + index].initializedTicks = result.value.ticks;
+                glmrLpsToQuery[i + index].initializedTicks! = result.value.ticks;
                 console.log(`Success: ${glmrLpsToQuery[i + index].contractAddress}`, result.value.ticks);
             } else if (result.status === 'fulfilled' && !result.value.success) {
                 console.log(`Failed: ${glmrLpsToQuery[i + index].contractAddress}`);

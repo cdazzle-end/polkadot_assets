@@ -10,6 +10,7 @@ import bn from 'bignumber.js'
 import path from 'path';
 
 import { fileURLToPath } from 'url';
+import { getApiForNode } from './../utils.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const endpoint1 = 'wss://karura.api.onfinality.io/public-ws';
@@ -26,10 +27,7 @@ const localRpc = "ws://172.26.130.75:8008"
 const liveRpc = endpoint2
 export async function updateLps(chopsticks: boolean) {
     // let api = await getApiForNode("Karura", chopsticks);
-    let rpc = chopsticks === true ?  localRpc : liveRpc;
-    let provider = new WsProvider(rpc);
-    let api = new ApiPromise(options({ provider })); 
-    await api.isReady;
+    let api = await getApiForNode("Karura", chopsticks)
 
     // const api = await getApiForNode("Karura", chopsticks)
     // await api.isReady;
@@ -91,9 +89,7 @@ export async function updateLps(chopsticks: boolean) {
 }
 
 async function saveLps() {
-    const provider = new WsProvider('wss://karura.api.onfinality.io/public-ws');
-    const api = new ApiPromise(options({ provider }));
-    await api.isReady;
+    let api = await getApiForNode("Karura", false);
 
     const parachainId = await api.query.parachainInfo?.parachainId();
     const assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../../assets/asset_registry/kar_assets.json'), 'utf8')).map((asset: any) => {
@@ -591,7 +587,7 @@ function testSwap(){
 
     let balances = poolInfo.balances.map((b) => new bn(b) )
     balances[inputIndex] = balanceI,
-    balances[outputIndex] = y
+    balances[outputIndex] = y!
 
     let dxFormatted = dx.div(new bn(10).pow(6))
     let dyFormatted = dy.div(new bn(10).pow(12))
