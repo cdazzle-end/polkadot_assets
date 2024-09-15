@@ -44,7 +44,7 @@ const kusamaAssetFiles = [
 async function compareAssetRegistry(){
     let assetRegistryHere: IMyAsset[] = JSON.parse(fs.readFileSync("asset_registry/allAssetsPolkadot.json", "utf-8"))
     let assetRegistryExecutor: IMyAsset[] = JSON.parse(fs.readFileSync("asset_registry/allAssetsPolkadotMain.json", "utf-8"))
-    let assetRegistryFromFiles: IMyAsset[] = await buildPolkadotAssetsFromFiles();
+    let assetRegistryFromFiles: IMyAsset[] = await buildAssetsFromFiles('polkadot');
 
     let commonAssets: AssetEntry[] = [];
     let uniqueAssets: AssetEntry[] = [];
@@ -68,31 +68,17 @@ async function compareAssetRegistry(){
 }
 
 export async function saveCollectedAssetRegistry(relay: Relay){
-    if (relay === 'polkadot'){
-        console.log(`Saving POLKADOT assets`)
-        let assetRegistryCollected = await buildPolkadotAssetsFromFiles();
-        fs.writeFileSync("asset_registry/allAssetsPolkadotCollected.json", JSON.stringify(assetRegistryCollected, null, 2))    
-    } else {
-        console.log(`Saving OTHER assets`)
-        let assetRegistryCollected = await buildKusamaAssetsFromFiles();
-        fs.writeFileSync("asset_registry/allAssetsKusamaCollected.json", JSON.stringify(assetRegistryCollected, null, 2))    
-    }
+    console.log(`Saving collected asset registry for ${relay}`)
+    let assetFilePath = relay === 'polkadot' ? "asset_registry/allAssetsPolkadot.json" : "asset_registry/allAssetsKusama.json";
+    let assetRegistryCollected = await buildAssetsFromFiles(relay);
+    fs.writeFileSync(assetFilePath, JSON.stringify(assetRegistryCollected, null, 2))
 }
-
-async function buildPolkadotAssetsFromFiles(){
+async function buildAssetsFromFiles(relay: Relay){
     let assetRegistryFolder = path.join(__dirname, "/asset_registry/");
-    let assetRegistryCollected = [];
-    polkadotAssetFiles.forEach((file) => {
-        let assetRegistryFile: IMyAsset[] = JSON.parse(fs.readFileSync(assetRegistryFolder + file, "utf-8"));
-        assetRegistryCollected = assetRegistryCollected.concat(assetRegistryFile);
-    })
+    let assetFiles = relay === 'polkadot' ? polkadotAssetFiles : kusamaAssetFiles;
 
-    return assetRegistryCollected;
-}
-async function buildKusamaAssetsFromFiles(){
-    let assetRegistryFolder = path.join(__dirname, "/asset_registry/");
-    let assetRegistryCollected = [];
-    kusamaAssetFiles.forEach((file) => {
+    let assetRegistryCollected: IMyAsset[] = [];
+    assetFiles.forEach((file) => {
         let assetRegistryFile: IMyAsset[] = JSON.parse(fs.readFileSync(assetRegistryFolder + file, "utf-8"));
         assetRegistryCollected = assetRegistryCollected.concat(assetRegistryFile);
     })
