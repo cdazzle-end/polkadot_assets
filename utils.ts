@@ -4,6 +4,7 @@ export const ksmRpc = "wss://kusama-rpc.dwellir.com"
 export const dotRpc = "wss://polkadot-rpc.dwellir.com"
 import {Mangata } from "@mangata-finance/sdk"
 import { localRpcs } from './consts.ts';
+import { BifrostConfig, ModuleBApi } from '@zenlink-dex/sdk-api'
 
 export type PNode = TNode | 'Polkadot' | 'Kusama' 
 let apiMap: Map<PNode, ApiPromise> = new Map<PNode, ApiPromise>();
@@ -70,6 +71,19 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
             }
             apiConnected = true;
         }
+    } else if (node === "BifrostPolkadot") {
+        const provider = new WsProvider(apiEndpoint);
+        const dexApi = new ModuleBApi(
+          provider,
+          BifrostConfig
+        );
+        await provider.isReady;
+        await dexApi.initApi(); // init the api;
+        if(!dexApi.api){
+            throw new Error("BNC Polkadot dexApi.api is undefined")
+          }
+          apiConnected = true;
+          api = dexApi.api as unknown as ApiPromise
     } else {
         let endpointIndex = 0;
         if(node == "Moonbeam" && !chopsticks){
