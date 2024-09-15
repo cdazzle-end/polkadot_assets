@@ -68,7 +68,7 @@ async function queryAssets(chopsticks: boolean): Promise<IMyAsset[]> {
 
 export async function updateRegistryAssetHub(chopsticks: boolean){
     let queriedAssets = await queryAssets(chopsticks) as any
-    let assetRegistry = JSON.parse(fs.readFileSync("asset_registry/asset_hub_polkadot_assets.json", "utf-8")) as any
+    let assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, "asset_registry/asset_hub_polkadot_assets.json"), "utf-8")) as any
     console.log("assets in registry: ", assetRegistry.length)
 
     // Create a map of existing asset IDs for quick lookup
