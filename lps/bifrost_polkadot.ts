@@ -12,7 +12,7 @@ import { localRpcs } from './../consts.ts';
 import bn from 'bignumber.js';
 
 import { fileURLToPath } from 'url';
-import { getBifrostDexApi } from 'utils.ts';
+import { getBifrostDexApi } from './../utils.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -45,8 +45,8 @@ export async function updateLps(chopsticks: boolean) {
     });
     const bncAssets = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/bnc_polkadot_assets.json'), 'utf8'))
 
-    const standardPairs = await firstValueFrom(dexApi.standardPairOfTokens(zenTokens));
-    const standardPools = await firstValueFrom(dexApi.standardPoolOfPairs(standardPairs));
+    const standardPairs: any[] = await firstValueFrom(dexApi.standardPairOfTokens(zenTokens));
+    const standardPools: any[] = await firstValueFrom(dexApi.standardPoolOfPairs(standardPairs));
     const lps = standardPools.map((pool: any) => {
         let token0Symbol = pool.tokenAmounts[0].token.symbol
         let token1Symbol = pool.tokenAmounts[1].token.symbol
@@ -75,7 +75,7 @@ export async function updateLps(chopsticks: boolean) {
 
     await saveBncStablePoolData(dexApi)
 
-    dexApi.api?.disconnect();
+    dexApi.api!.disconnect();
 }
 
 export async function saveLps() {
@@ -159,8 +159,10 @@ async function saveBncStablePoolData(dexApi: ModuleBApi){
     // );
     // await dexApi.initApi()
 
-    let stablePools = await dexApi.api.query.stableAsset.pools.entries();
-    let stablePoolTokenRates = await dexApi.api.query.stableAsset.tokenRateCaches.entries()
+    let bncApi = dexApi.api!
+
+    let stablePools = await bncApi.query.stableAsset.pools.entries();
+    let stablePoolTokenRates = await bncApi.query.stableAsset.tokenRateCaches.entries()
     stablePoolTokenRates.forEach((rate) => {
         // console.log(`Pool Rate Key: ${JSON.stringify(rate[0].toHuman(), null, 2)} | Pool Rate Value: ${JSON.stringify(rate[1].toHuman(), null, 2)}`)    
     })
@@ -184,7 +186,7 @@ async function saveBncStablePoolData(dexApi: ModuleBApi){
         let stablePoolAccount = poolData.accountId;
 
         let assetStats = assets.map(async (assetId: any) => {
-            let assetLiquidity = await dexApi.api.query.tokens.accounts(stablePoolAccount, assetId)
+            let assetLiquidity = await bncApi.query.tokens.accounts(stablePoolAccount, assetId)
             let assetLiquidityString = assetLiquidity.toHuman() as any
             return [assetId, assetLiquidityString.free]
         })

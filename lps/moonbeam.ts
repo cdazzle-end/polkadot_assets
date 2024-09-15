@@ -510,7 +510,7 @@ async function parseCSV(directory, file){
 
 async function parseCSVFilesInDirectory() {
     let directoryPath = path.join(__dirname, './token_holders');
-    let filesParse = []
+    let filesParse: any[] = []
     console.log("WRui")
     // let fileNames = []
     let fileNames = fs.readdirSync(directoryPath)
@@ -716,7 +716,7 @@ async function saveLpDataResults(lpDataResults: LpData[]){
 async function writeConfirmedLpAddresses(){
     let glmrLps = readGlmrLps()
     let otherLps = readOtherLps()
-    let confirmedLps = []
+    let confirmedLps: any[] = []
     Object.entries(glmrLps).forEach(([address, result]) => {
         if(result == true){
             confirmedLps.push(address)

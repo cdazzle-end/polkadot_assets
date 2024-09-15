@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { MyLp, MyJunction, TokenData, IMyAsset, MyMultiLocation } from 'types.ts';
+import { MyLp, MyJunction, TokenData, IMyAsset, MyMultiLocation } from './../types.ts';
 // import {} from '../types';
 // import { Keyring, ApiPromise, WsProvider, } from '@polkadot/api';
 // import { options } from '@parallel-finance/api';
