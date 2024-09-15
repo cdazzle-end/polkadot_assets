@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import { updateRegistryAssetHub as updateAssetRegistryAssetHub } from './assetHubPolkadot.ts';
 import { saveCollectedAssetRegistry } from './collectAssets.ts';
 import { updateAssetRegistryHydra } from './hydra.ts';
-import { PNode, setApiMap } from 'utils.ts';
+import { PNode, setApiMap } from './../utils.ts';
 import { ApiPromise } from '@polkadot/api';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
