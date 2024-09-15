@@ -144,7 +144,7 @@ export async function combinedQuery(): Promise<MyLp[]>{
     console.log('starting')
     const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), 'utf8'))
     const glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
-    const lpMap: Map<string, MyLp> = new Map(glmrLps.map(lp => [lp.contractAddress, lp]));
+    const lpMap: Map<string, MyLp> = new Map(glmrLps.map(lp => [lp.contractAddress!, lp]));
     
     // let lpPromises = []
     let lps: MyLp[] = []
@@ -176,7 +176,7 @@ export async function combinedQuery(): Promise<MyLp[]>{
         if(result.abi == 'uni3'){
             let upperTickDatas = []
             let lowerTickDatas = []
-            let lp = lps.find((lp) => lp.contractAddress == result.contractAddress)
+            let lp = lps.find((lp) => lp.contractAddress == result.contractAddress)!
             let currentTick = new bn(lp.currentTick)
             try {
                 result.tickDatas.forEach(tickData => {
