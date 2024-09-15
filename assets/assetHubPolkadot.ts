@@ -6,14 +6,14 @@ import { getNativeAsset, getStableAsset } from './acaNativeAssets.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 // import {WsProvider } from '@polkadot/rpc-provider'
 import { options } from '@acala-network/api'
-import { getApiForNode } from '../utils.ts';
+import { getApiForNode, PNode } from '../utils.ts';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function queryAssets(chopsticks: boolean){
+async function queryAssets(chopsticks: boolean, apiMap?: Map<PNode, ApiPromise>): Promise<MyAssetRegistryObject[]> {
     // let chopsticks = false
-    let api = await getApiForNode("AssetHubPolkadot", chopsticks)
+    let api = await getApiForNode("AssetHubPolkadot", chopsticks, apiMap)
     const allAssets = await api.query.assets.metadata.entries();
     // console.log(allAssets);
 
@@ -66,8 +66,8 @@ async function queryAssets(chopsticks: boolean){
 
 }
 
-export async function updateRegistryAssetHub(chopsticks: boolean){
-    let queriedAssets = await queryAssets(chopsticks) as any
+export async function updateRegistryAssetHub(chopsticks: boolean, apiMap?: Map<PNode, ApiPromise>){
+    let queriedAssets = await queryAssets(chopsticks, apiMap) as any
     let assetRegistry = JSON.parse(fs.readFileSync("asset_registry/asset_hub_polkadot_assets.json", "utf-8")) as any
     console.log("assets in registry: ", assetRegistry.length)
 

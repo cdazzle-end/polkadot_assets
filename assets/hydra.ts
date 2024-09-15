@@ -285,7 +285,7 @@ async function queryLocations(api:any) {
 }
 
 // Updates asset registry, requires Assethub and BifrostPolkadot registries to be up to date in order to properly format data
-export async function updateAssetRegistryHydra(chopsticks: boolean){
+export async function updateAssetRegistryHydra(chopsticks: boolean, apiMap){
     let api = await getApiForNode("HydraDX", chopsticks);
     await api.isReady;
     let assetData = await queryAssets(api);
