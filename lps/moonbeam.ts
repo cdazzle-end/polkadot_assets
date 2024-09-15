@@ -174,10 +174,10 @@ export async function combinedQuery(): Promise<MyLp[]>{
     let queryResults: ContractTickQueryResult[] = await queryAllContractsTickData(contractQueries)
     let tickLps = queryResults.map((result) => {
         if(result.abi == 'uni3'){
-            let upperTickDatas = []
-            let lowerTickDatas = []
+            let upperTickDatas: any[] = []
+            let lowerTickDatas: any[] = []
             let lp = lps.find((lp) => lp.contractAddress == result.contractAddress)!
-            let currentTick = new bn(lp.currentTick)
+            let currentTick = new bn(lp.currentTick!)
             try {
                 result.tickDatas.forEach(tickData => {
                     if(tickData.tick < currentTick.toNumber()){
@@ -193,10 +193,10 @@ export async function combinedQuery(): Promise<MyLp[]>{
             lp.lowerTicks = lowerTickDatas
 
         } else if(result.abi == 'algebra'){
-            let upperTickDatas = []
-            let lowerTickDatas = []
-            let lp = lps.find((lp) => lp.contractAddress == result.contractAddress)
-            let currentTick = new bn(lp.currentTick)
+            let upperTickDatas: any[] = []
+            let lowerTickDatas: any[] = []
+            let lp = lps.find((lp) => lp.contractAddress == result.contractAddress)!
+            let currentTick = new bn(lp.currentTick!)
             try {
                 result.tickDatas.forEach(tickData => {
                     if(tickData.tick < currentTick.toNumber()){
@@ -308,8 +308,8 @@ export async function saveLps() {
         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
     })
     lps.forEach((lp, index) => {
-        if(unTradeable.includes(lp.contractAddress)){
-            console.log(`Removing untradeable LP: ${lp.contractAddress}`)
+        if(unTradeable.includes(lp.contractAddress!)){
+            console.log(`Removing untradeable LP: ${lp.contractAddress!}`)
             let updatedLp = lp
             updatedLp.liquidityStats = ["0", "0"]
             lps[index] = updatedLp
