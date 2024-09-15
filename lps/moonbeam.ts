@@ -232,7 +232,7 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
     if(!thisGlmrLp){
         throw new Error("Cant find GLMR lp")
     }
-    let initializedTicks = thisGlmrLp.initializedTicks
+    let initializedTicks = thisGlmrLp.initializedTicks!
 
     let pool
     let token0
