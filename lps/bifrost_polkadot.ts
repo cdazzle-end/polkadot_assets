@@ -36,7 +36,7 @@ export async function updateLps(chopsticks: boolean) {
     //     BifrostPolkadotConfig
     // );
     // await dexApi.initApi();
-    const dexApi = await getBifrostDexApi(chopsticks)
+    const dexApi = await getBifrostDexApi('polkadot', chopsticks)
     const response = await axios.get('https://raw.githubusercontent.com/zenlinkpro/token-list/main/tokens/bifrost-polkadot.json');
     const tokensMeta = response.data.tokens;
 

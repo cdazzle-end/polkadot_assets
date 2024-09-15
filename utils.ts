@@ -5,7 +5,7 @@ export const dotRpc = "wss://polkadot-rpc.dwellir.com"
 import {Mangata } from "@mangata-finance/sdk"
 import { localRpcs } from './consts.ts';
 import { BifrostConfig, ModuleBApi } from '@zenlink-dex/sdk-api'
-import { ApiMap } from './types.ts'
+import { ApiMap, Relay } from './types.ts'
 
 export type PNode = TNode | 'Polkadot' | 'Kusama' 
 let apiMap: ApiMap = new Map<PNode, ApiPromise | ModuleBApi>();
@@ -23,20 +23,22 @@ export async function setApiMap(map: ApiMap) {
  * 
  * @returns 
  */
-export async function getBifrostDexApi(chopsticks: boolean): Promise<ModuleBApi>{
+export async function getBifrostDexApi(relay: Relay, chopsticks: boolean): Promise<ModuleBApi>{
     let map = apiMap
 
-    let endpoint = chopsticks ? localRpcs["BifrostPolkadot"] : getAllNodeProviders("BifrostPolkadot")
+    let node: TNode = relay === "polkadot" ? "BifrostPolkadot" : "BifrostKusama"
 
-    if(map.has("BifrostPolkadot")){
+    let endpoint = chopsticks ? localRpcs[node] : getAllNodeProviders(node)
+
+    if(map.has(node)){
         console.log(`Returning dex api for BifrostPolkadot`)
-        return map.get("BifrostPolkadot") as ModuleBApi
+        return map.get(node) as ModuleBApi
     } else {
         let provider = new WsProvider(endpoint)
         let dexApi = new ModuleBApi(provider, BifrostConfig)
         await provider.isReady
         await dexApi.initApi()
-        map.set("BifrostPolkadot", dexApi)
+        map.set(node, dexApi)
         return dexApi
     }
 }
