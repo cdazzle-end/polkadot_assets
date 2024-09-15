@@ -139,7 +139,7 @@ export async function getAlgebraTickData(contractAddress){
     let upperTickDatas: any[] = []
     let lowerTickDatas: any[] = []
     try {
-        tickDatas.forEach(tickData => {
+        tickDatas!.forEach(tickData => {
             if(tickData.tick < currentTick.toNumber()){
                 lowerTickDatas.unshift(tickData)
             } else {
@@ -570,7 +570,7 @@ export async function saveAllInitializedTicks(){
 // Batch all tick queries into a single multicall
 export async function saveAllInitializedTicksMultiCall(){
     const glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
-    let dexes = []
+    let dexes: MyLp[] = []
     let lpIndex = 0;
     glmrLps.forEach((lp) => {
         if(lp.dexType === 'algebra' || lp.dexType === 'uni3'){
@@ -583,7 +583,7 @@ export async function saveAllInitializedTicksMultiCall(){
     let wordArrays:any[] = []
     let callContractContexts: ContractCallContext[] = []
     for(let i = 0; i < dexes.length; i++){
-        let lp = dexes[i]
+        let lp = dexes[i]!
         // let ticks = await getTicksAlgebra(lp.contractAddress!)
         // lp.initializedTicks = ticks
         // console.log(`Ticks for ${lp.contractAddress!}: ${ticks}`)
@@ -591,7 +591,7 @@ export async function saveAllInitializedTicksMultiCall(){
         let tickSpacing = await pool.tickSpacing();
         let method = lp.dexType === 'algebra' ? 'tickTable' : 'tickBitmap'
         let wordPosIndices: number[] = []
-        let currentCalls = []
+        let currentCalls: any[] = []
         for (let i = minWord; i <= maxWord; i++) {
             wordPosIndices.push(i)
             let call = {reference: `tickBitmap`, methodName: method, methodParameters: [i]}
