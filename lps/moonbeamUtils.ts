@@ -68,7 +68,7 @@ export async function getUni3TickData(contractAddress){
     let upperTickDatas: any[] = []
     let lowerTickDatas: any[] = []
     try {
-        tickDatas.forEach(tickData => {
+        tickDatas!.forEach(tickData => {
             if(tickData.tick < currentTick.toNumber()){
                 lowerTickDatas.unshift(tickData)
             } else {
