@@ -13,9 +13,6 @@ export async function getApiForNode(node: paraspell.TNode | "Kusama", chopsticks
         apiEndpoint = paraspell.getAllNodeProviders(node)
     }
 
-    // if(chopsticks){
-    //     apiEndpoint = localRpcs
-    // }
     console.log("Getting local RPC")
     if(chopsticks){
         let localRpc = localRpcs[node]
