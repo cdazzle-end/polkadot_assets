@@ -14,6 +14,33 @@ export async function setApiMap(map: ApiMap) {
     apiMap = map;
 }
 
+/**
+ * Using this to get/set dex API for bifrost, so we dont have to change return type of main function
+ * 
+ * Main function will also get and set dex api, but return ApiPromise
+ * 
+ * This will return the actual entry in the apiMap for bifrost, which is a ModuleBApi
+ * 
+ * @returns 
+ */
+export async function getBifrostDexApi(chopsticks: boolean): Promise<ModuleBApi>{
+    let map = apiMap
+
+    let endpoint = chopsticks ? localRpcs["BifrostPolkadot"] : getAllNodeProviders("BifrostPolkadot")
+
+    if(map.has("BifrostPolkadot")){
+        return map.get("BifrostPolkadot") as ModuleBApi
+    } else {
+        let provider = new WsProvider(endpoint)
+        let dexApi = new ModuleBApi(provider, BifrostConfig)
+        await provider.isReady
+        await dexApi.initApi()
+        map.set("BifrostPolkadot", dexApi)
+        return dexApi
+    }
+}
+
+
 export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<ApiPromise> {
 
     if (apiMap.has(node)) {
