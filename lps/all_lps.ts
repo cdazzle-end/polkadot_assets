@@ -16,6 +16,8 @@ import * as bsxHandler from './basilisk.ts'
 // import * as kucoinHandler from './kucoin/lp_handler'
 import * as mgxHandler from './mangata.ts'
 import * as hdxHandler from './hydra.ts'
+import { ApiPromise } from '@polkadot/api';
+import { PNode } from 'utils.ts';
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
     timeZone: 'America/New_York',
@@ -69,6 +71,18 @@ async function updateLpTimeStamp() {
     const date = new Date();
     const startTime = date.toLocaleString('en-US', dateTimeOptions);
     fs.appendFileSync("lp_timestamps.txt", "LPs updated at: " + startTime + "\n");
+}
+
+export async function updateLpsWithMap(chopsticks: boolean, relay: string, apiMap: Map<PNode, ApiPromise>) {
+    if (relay === "polkadot") {
+        await updatePolkadotLps(chopsticks)
+    } else if (relay === "kusama") {
+        await updateKusamaLps(chopsticks)
+    } else {
+        console.log("Invalid relay")
+        process.exit(0)
+    }
+
 }
 
 async function updatePolkadotLps(chopsticks: boolean) {
@@ -130,5 +144,5 @@ async function main() {
     process.exit(0)
 }
 
-main()
+// main()
 // testGlmr()
