@@ -63,10 +63,10 @@ export async function getUni3TickData(contractAddress){
         }
         return newLpData
     }
-    let tickDatas = await queryTickData(contractAddress, initializedTicks, 'uni3')
+    let tickDatas = await queryTickData(contractAddress, initializedTicks, 'uni3')!
 
-    let upperTickDatas = []
-    let lowerTickDatas = []
+    let upperTickDatas: any[] = []
+    let lowerTickDatas: any[] = []
     try {
         tickDatas.forEach(tickData => {
             if(tickData.tick < currentTick.toNumber()){
@@ -133,11 +133,11 @@ export async function getAlgebraTickData(contractAddress){
         }
         return newLpData
     }
-    let tickDatas = await queryTickData(contractAddress, initializedTicks, 'algebra')
+    let tickDatas = await queryTickData(contractAddress, initializedTicks, 'algebra')!
     
 
-    let upperTickDatas = []
-    let lowerTickDatas = []
+    let upperTickDatas: any[] = []
+    let lowerTickDatas: any[] = []
     try {
         tickDatas.forEach(tickData => {
             if(tickData.tick < currentTick.toNumber()){
@@ -535,13 +535,13 @@ export async function saveAllInitializedTicks(){
         const batch = glmrLpsToQuery.slice(i, i + batchSize);
     
         const promises = batch.map((myGlmrLp) => {
-            console.log(`Querying ticks for ${myGlmrLp.contractAddress} | ABI: ${myGlmrLp.dexType}`);
+            console.log(`Querying ticks for ${myGlmrLp.contractAddress!} | ABI: ${myGlmrLp.dexType}`);
             if (myGlmrLp.dexType === 'algebra' && !myGlmrLp.initializedTicks!) {
                 console.log("Getting ticks for algebra");
-                return getTicksAlgebra(myGlmrLp.contractAddress).then(ticks => ({ success: true, ticks })).catch(error => ({ success: false, ticks: []}));
+                return getTicksAlgebra(myGlmrLp.contractAddress!).then(ticks => ({ success: true, ticks })).catch(error => ({ success: false, ticks: []}));
             } else if (myGlmrLp.dexType === 'uni3' && !myGlmrLp.initializedTicks!) {
                 console.log("Getting ticks for uni3");
-                return getTicksUni(myGlmrLp.contractAddress).then(ticks => ({ success: true, ticks })).catch(error => ({ success: false, ticks: [] }));
+                return getTicksUni(myGlmrLp.contractAddress!).then(ticks => ({ success: true, ticks })).catch(error => ({ success: false, ticks: [] }));
             }
             return Promise.resolve({ success: false, ticks: [] }); // Return an object indicating no action was taken
         });
@@ -551,11 +551,11 @@ export async function saveAllInitializedTicks(){
         results.forEach((result, index) => {
             if (result.status === 'fulfilled' && result.value.success) {
                 glmrLpsToQuery[i + index].initializedTicks! = result.value.ticks;
-                console.log(`Success: ${glmrLpsToQuery[i + index].contractAddress}`, result.value.ticks);
+                console.log(`Success: ${glmrLpsToQuery[i + index].contractAddress!}`, result.value.ticks);
             } else if (result.status === 'fulfilled' && !result.value.success) {
-                console.log(`Failed: ${glmrLpsToQuery[i + index].contractAddress}`);
+                console.log(`Failed: ${glmrLpsToQuery[i + index].contractAddress!}`);
             } else {
-                console.log(`Error getting ticks for ${glmrLpsToQuery[i + index].contractAddress}:`);
+                console.log(`Error getting ticks for ${glmrLpsToQuery[i + index].contractAddress!}:`);
             }
         });
     
@@ -580,14 +580,14 @@ export async function saveAllInitializedTicksMultiCall(){
     })
 
     // let calls: any[] = []
-    let wordArrays = []
+    let wordArrays:any[] = []
     let callContractContexts: ContractCallContext[] = []
     for(let i = 0; i < dexes.length; i++){
         let lp = dexes[i]
-        // let ticks = await getTicksAlgebra(lp.contractAddress)
+        // let ticks = await getTicksAlgebra(lp.contractAddress!)
         // lp.initializedTicks = ticks
-        // console.log(`Ticks for ${lp.contractAddress}: ${ticks}`)
-        const pool = await new ethers.Contract(lp.contractAddress, dexAbiMap['algebra'], wsProvider);
+        // console.log(`Ticks for ${lp.contractAddress!}: ${ticks}`)
+        const pool = await new ethers.Contract(lp.contractAddress!, dexAbiMap['algebra'], wsProvider);
         let tickSpacing = await pool.tickSpacing();
         let method = lp.dexType === 'algebra' ? 'tickTable' : 'tickBitmap'
         let wordPosIndices: number[] = []
