@@ -603,7 +603,7 @@ export async function saveAllInitializedTicksMultiCall(){
         const contractCallContext: ContractCallContext = 
             {
                 reference: `tickTable${i}`,
-                contractAddress: lp.contractAddress,
+                contractAddress: lp.contractAddress!,
                 abi: dexAbiMap[lp.dexType],
                 calls: currentCalls
             }
