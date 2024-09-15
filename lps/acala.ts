@@ -192,7 +192,7 @@ async function updateStables(api: any) {
         // console.log(`Matched assets: ${JSON.stringify(matchedAssets, null, 2)}`)
         // let accountBalances = await api.query.tokens.accounts(poolAccount, matchedAssets);
         // console.log(`Account balances: ${JSON.stringify(accountBalances)}`)
-        let tokenReserves = []
+        let tokenReserves: any[] = []
         for (let asset of assets) {
             let accountBalances = await api.query.tokens.accounts(poolAccount, asset);
             let tokenBalance = accountBalances.toHuman().free.toString().replace(/,/g, "");
