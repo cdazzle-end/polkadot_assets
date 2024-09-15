@@ -4,6 +4,8 @@ import { fileURLToPath } from 'url';
 import { updateRegistryAssetHub as updateAssetRegistryAssetHub } from './assetHubPolkadot.ts';
 import { saveCollectedAssetRegistry } from './collectAssets.ts';
 import { updateAssetRegistryHydra } from './hydra.ts';
+import { PNode } from 'utils.ts';
+import { ApiPromise } from '@polkadot/api';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -21,7 +23,7 @@ async function updateAssetRegistry(chopsticks: boolean, relay: Relay){
     await saveCollectedAssetRegistry(relay)
 }
 
-export async function updateAssetRegistryWithMap(chopsticks: boolean, relay: Relay){
+export async function updateAssetRegistryWithMap(chopsticks: boolean, relay: Relay, apiMap: Map<PNode, ApiPromise>){
     if(relay === "polkadot") {
         console.log(`Updating POLKADOT assets`)
         // Update AssetHub and HyrdraDX, as these are the only ones that change often. Could change to update others if needed

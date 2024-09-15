@@ -1,16 +1,29 @@
-import * as paraspell from '@paraspell/sdk'
+import { TNode, getAllNodeProviders } from '@paraspell/sdk'
 import { ApiPromise, WsProvider } from '@polkadot/api'
 export const ksmRpc = "wss://kusama-rpc.dwellir.com"
+export const dotRpc = "wss://polkadot-rpc.dwellir.com"
 import {Mangata } from "@mangata-finance/sdk"
 import { localRpcs } from './consts.ts';
-export async function getApiForNode(node: paraspell.TNode | "Kusama", chopsticks: boolean){
+
+export type PNode = TNode | 'Polkadot' | 'Kusama' 
+
+
+export async function getApiForNode(node: PNode, chopsticks: boolean, apiMap?: Map<PNode, ApiPromise>): Promise<ApiPromise> {
+
+    if (apiMap && apiMap.has(node)) {
+        console.log("Returning existing api for node: ", node);
+        return apiMap.get(node) as ApiPromise;
+    }
+
     console.log("Getting api for node : ", node, "Chopsticks: ", chopsticks)
     let apiEndpoint: string[];
 
     if(node == "Kusama"){
         apiEndpoint = [ksmRpc]
+    } else if (node == "Polkadot"){ 
+        apiEndpoint = [dotRpc]
     } else{
-        apiEndpoint = paraspell.getAllNodeProviders(node)
+        apiEndpoint = getAllNodeProviders(node)
     }
 
     console.log("Getting local RPC")
@@ -93,6 +106,10 @@ export async function getApiForNode(node: paraspell.TNode | "Kusama", chopsticks
     if(!apiConnected){
         throw new Error("Could not connect to api")
     }
+    if (apiMap) {
+        apiMap.set(node, api)
+    }
+    
     return api
     
 }

@@ -6,6 +6,8 @@
 
 export type Relay = 'polkadot' | 'kusama'
 
+
+
 //This is the interface for the asset registry object. Combines token metadata and token location
 export interface MyAssetRegistryObject {
     tokenData: MyAsset | CexAsset,
