@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { MyAsset, MyAssetRegistryObject, MyLp, OmniPool, StableSwapPool } from '../types.ts';
+import { TokenData, IMyAsset, MyLp, OmniPool, StableSwapPool } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import { getApiForNode } from './../utils.ts';
 import bn from 'bignumber.js';
@@ -178,7 +178,7 @@ async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
             poolLiquidityStats.push(stat)
 
             let asset = getAssetById(assetId.toString())
-            let tokenData = asset.tokenData as MyAsset
+            let tokenData = asset.tokenData as TokenData
             let assetDecimals = tokenData.decimals
             let precision = TARGET_PRECISION.minus(assetDecimals)
             let tokenPrecision = new bn(10).pow(precision.toNumber())
@@ -232,7 +232,7 @@ async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
 async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
     const fees = await api.query.dynamicFees.assetFee.entries()
     let omnipool = await api.query.omnipool.assets.entries();
-    let hdxAssets: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hdx_assets.json'), 'utf8'));
+    let hdxAssets: IMyAsset[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hdx_assets.json'), 'utf8'));
     let omnipoolHdxBalance = await api.query.system.account(hdxOmniPoolAccount)
     let omnipoolTokenBalances = await api.query.tokens.accounts.entries(hdxOmniPoolAccount)
 
@@ -258,7 +258,7 @@ async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
     omnipool.forEach((pool) => {
         let poolAsset = pool[0].toHuman() as any
         let asset = hdxAssets.find((asset) => {
-            let tokenData = asset.tokenData as MyAsset
+            let tokenData = asset.tokenData as TokenData
             return tokenData.localId == poolAsset[0]
         })
         // console.log(asset)
@@ -266,7 +266,7 @@ async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
             throw new Error("Asset not found")
         }
         let lrnaAsset = hdxAssets.find((asset) => {
-            let tokenData = asset.tokenData as MyAsset
+            let tokenData = asset.tokenData as TokenData
             return tokenData.localId == 1
         })
 
@@ -310,7 +310,7 @@ async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
 
         // console.log(`Hub Reserve: ${hubReserve} | Asset Amount: ${assetAmount} | Protocol Reserve: ${protocolAmount} | Cap: ${capAmount} | Asset Fee: ${assetFeeNumber} | Protocol Fee: ${protocolFeeNumber}`)
 
-        let tokenData = asset.tokenData as MyAsset
+        let tokenData = asset.tokenData as TokenData
         let omniPoolEntry: OmniPool = {
             assetId: tokenData.localId,
             tokenAmount: tokenReserve,
@@ -322,7 +322,7 @@ async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
             cap: capAmount
         }
         allOmnipools.push(omniPoolEntry)
-        let lrnaAssetData = lrnaAsset?.tokenData as MyAsset
+        let lrnaAssetData = lrnaAsset?.tokenData as TokenData
         let omniPoolAsLpEntry: MyLp = {
             chainId: 2034,
             dexType: "omnipool",
@@ -381,10 +381,10 @@ function hasConverged(v0: bn, v1: bn){
 }
 
 
-function getAssetById(assetId: String): MyAssetRegistryObject{
-    let assets: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hdx_assets.json'), 'utf8'));
+function getAssetById(assetId: String): IMyAsset{
+    let assets: IMyAsset[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hdx_assets.json'), 'utf8'));
     let asset = assets.find((asset) => {
-        let tokenData = asset.tokenData as MyAsset
+        let tokenData = asset.tokenData as TokenData
         return tokenData.chain == 2034 && tokenData.localId == assetId
     })
     if(!asset){

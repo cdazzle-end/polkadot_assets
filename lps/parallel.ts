@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 import {MyLp} from '../types.ts';
 // import { Keyring, ApiPromise, WsProvider, } from '@polkadot/api';
 // import { options } from '@parallel-finance/api';
@@ -28,7 +28,7 @@ export async function updateLps(chopsticks: boolean) {
 
     const parachainId = await (await api.query.parachainInfo.parachainId()).toJSON() as number;
     const lpEntries = await api.query.amm.pools.entries();
-    let assets: MyAsset[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/para_assets.json'), 'utf8')).map((asset: any) => {
+    let assets: TokenData[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/para_assets.json'), 'utf8')).map((asset: any) => {
         return asset.tokenData
     })
     let lps = lpEntries.map(([assetData, lpData]) => {
@@ -70,7 +70,7 @@ async function saveLps() {
     
     // console.log(JSON.stringify(lpEntries, null, 2))
 
-    let assets: MyAsset[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/para_assets.json'), 'utf8')).map((asset: any) => {
+    let assets: TokenData[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/para_assets.json'), 'utf8')).map((asset: any) => {
         return asset.tokenData
     })
     let lps = lpEntries.map(([assetData, lpData]) => {

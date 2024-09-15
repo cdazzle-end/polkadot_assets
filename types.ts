@@ -9,8 +9,8 @@ export type Relay = 'polkadot' | 'kusama'
 
 
 //This is the interface for the asset registry object. Combines token metadata and token location
-export interface MyAssetRegistryObject {
-    tokenData: MyAsset | CexAsset,
+export interface IMyAsset {
+    tokenData: TokenData | CexAsset,
     hasLocation: boolean,
     tokenLocation?: any
 }
@@ -25,7 +25,7 @@ export interface CexAsset {
 }
 
 //This is the unifying interface for all asset from all chains
-export interface MyAsset {
+export interface TokenData {
     network: "kusama" | "polkadot"
     chain: number,
     localId: any,

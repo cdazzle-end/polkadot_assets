@@ -1,7 +1,7 @@
 // import { ethers } from 'ethers'
 import path from 'path'
 import * as fs from 'fs';
-import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 // import { parse } from 'path'
 // import { formatUnits } from 'ethers/lib/utils';
 // import {hexToDec2, decToHex2} from '../../parachains/hex'
@@ -78,7 +78,7 @@ export async function saveAssets() {
     let assetRegistry = assets.map((asset) => {
         const matchedLocation = locations.find((location) => location[1] == asset.localId)
         // console.log(asset.localId + " " + matchedLocation)
-        const newAssetRegistryObject: MyAssetRegistryObject = matchedLocation ? {
+        const newAssetRegistryObject: IMyAsset = matchedLocation ? {
             tokenData: asset,
             hasLocation: true,
             tokenLocation: matchedLocation[0]
@@ -93,7 +93,7 @@ export async function saveAssets() {
     process.exit(0)
 }
 
-export async function getAssets(): Promise<MyAssetRegistryObject[]> {
+export async function getAssets(): Promise<IMyAsset[]> {
     const assetRegistry = JSON.parse(fs.readFileSync('../assets/movr/asset_registry.json', 'utf8'));
     return assetRegistry
 }
@@ -208,7 +208,7 @@ async function queryLocations(api:ApiPromise) {
     return assetLocations;
 }
 
-async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
+async function queryAssets(api: ApiPromise): Promise<TokenData[]> {
     // const provider = new WsProvider('wss://moonriver.api.onfinality.io/public-ws');
     // const api = await ApiPromise.create({ provider: provider });
     await api.isReady
@@ -228,7 +228,7 @@ async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
         let evmContractAddress = "0xFFFFFFFF" + hex;
 
 
-        const newAsset: MyAsset = {
+        const newAsset: TokenData = {
             network: "polkadot",
             chain: parachainId,
             localId: (assetId.toHuman() as any)[0].replace(/,/g, ""),
@@ -242,7 +242,7 @@ async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
         // console.log(newAsset)
         return newAsset
     }))
-    const movrAsset: MyAsset = {
+    const movrAsset: TokenData = {
         network: "polkadot",
         chain: parachainId,
         localId: "MOVR",
@@ -251,7 +251,7 @@ async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
         decimals: "18",
         contractAddress: "0x98878B06940aE243284CA214f92Bb71a2b032B8A"
     }
-    const zlkAsset: MyAsset = {
+    const zlkAsset: TokenData = {
         network: "polkadot",
         chain: parachainId,
         localId: "ZLK",
@@ -277,7 +277,7 @@ async function updateRegistry(){
     let queriedAssetObjects = queriedAssets.map((asset) => {
         const matchedLocation = locations.find((location) => location[1] == asset.localId)
         // console.log(asset.localId + " " + matchedLocation)
-        const newAssetRegistryObject: MyAssetRegistryObject = matchedLocation ? {
+        const newAssetRegistryObject: IMyAsset = matchedLocation ? {
             tokenData: asset,
             hasLocation: true,
             tokenLocation: matchedLocation[0]
@@ -341,10 +341,10 @@ async function getNonXcmAssetData(){
     let xcTokenAbi = JSON.parse(fs.readFileSync("./../lps/glmr_abis/xcTokenAbi.json", "utf-8"))
     let rpcProvider = new ethers.JsonRpcProvider(defaultRpc)
 
-    let tokenDatas: MyAsset[] = await queryTokenData(unregisteredLpAssets, xcTokenAbi, rpcProvider)
+    let tokenDatas: TokenData[] = await queryTokenData(unregisteredLpAssets, xcTokenAbi, rpcProvider)
 
-    let newAssetObjects: MyAssetRegistryObject[] = tokenDatas.map((tokenData) => {
-        let assetRegistryObject: MyAssetRegistryObject = {
+    let newAssetObjects: IMyAsset[] = tokenDatas.map((tokenData) => {
+        let assetRegistryObject: IMyAsset = {
             tokenData: tokenData,
             hasLocation: false
         }
@@ -379,7 +379,7 @@ export async function queryTokenData(contractAddresses: string[], tokenAbi, prov
 
         const results: ContractCallResults = await multicall.call(callContexts);
 
-        let tokenDatas: MyAsset[] = contractAddresses.map((contractAddress) => {
+        let tokenDatas: TokenData[] = contractAddresses.map((contractAddress) => {
             let callResponse = results.results[contractAddress].callsReturnContext
             // console.log(JSON.stringify(callResponse, null, 2))
 
@@ -388,7 +388,7 @@ export async function queryTokenData(contractAddresses: string[], tokenAbi, prov
             let decimals = callResponse[2].returnValues[0]
 
             console.log(`Name: ${name}, Symbol: ${symbol}, Decimals: ${decimals}`)
-            let tokenData: MyAsset = {
+            let tokenData: TokenData = {
                 "network": "polkadot",
                 "localId": contractAddress,
                 "chain": 2004,

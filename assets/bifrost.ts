@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 // import { ApiOptions,  } from '@polkadot/api/types';
 // import { WsProvider  } from '@polkadot/rpc-provider'
@@ -25,14 +25,14 @@ export async function saveAssets() {
     let api = await getApiForNode("BifrostPolkadot", false);
     await api.isReady;
     const parachainId = await (await api.query.parachainInfo.parachainId()).toJSON() as number;
-    const bncAssets: MyAsset[] = await queryAssets(api);
+    const bncAssets: TokenData[] = await queryAssets(api);
     bncAssets.forEach((asset) => {
         console.log(asset)
     });
     const bncAssetLocations = await queryLocations(api);
 
     //Match assets with their locations
-    const assetRegistry = await Promise.all(bncAssets.map(async (asset: MyAsset) => {
+    const assetRegistry = await Promise.all(bncAssets.map(async (asset: TokenData) => {
         let [assetIdKey, assetIdValue] = Object.entries(asset.localId)[0];
 
         const assetLocation = bncAssetLocations.find((location) => {
@@ -41,7 +41,7 @@ export async function saveAssets() {
                 return true
             }
         }) 
-        let assetRegistryObject:MyAssetRegistryObject = assetLocation ? {
+        let assetRegistryObject:IMyAsset = assetLocation ? {
             tokenData: asset,
             hasLocation: true,
             tokenLocation: assetLocation[0]
@@ -58,7 +58,7 @@ export async function saveAssets() {
 
     })
     assetRegistry.forEach((asset) => {
-        let data = asset.tokenData as MyAsset;
+        let data = asset.tokenData as TokenData;
         console.log(data.localId)
         console.log(asset.hasLocation)
         if(asset.hasLocation){
@@ -94,7 +94,7 @@ async function queryZenAssets() {
         let tokenSymbol = token.symbol as string
         if (tokenSymbol.toLowerCase() == "ausd") {
             // console.log(token)
-            const newAsset: MyAsset = {
+            const newAsset: TokenData = {
                 network: "polkadot",
                 chain: 2030,
                 localId: tokenId,
@@ -104,7 +104,7 @@ async function queryZenAssets() {
             }
             return newAsset
         } else {
-            const newAsset: MyAsset = {
+            const newAsset: TokenData = {
                 network: "polkadot",
                 chain: 2030,
                 localId: tokenId,
@@ -216,7 +216,7 @@ async function queryLocations(api: ApiPromise) {
 
 }
 
-async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
+async function queryAssets(api: ApiPromise): Promise<TokenData[]> {
     // const provider = new WsProvider('wss://bifrost-parachain.api.onfinality.io/public-ws');
     // const api = await ApiPromise.create({ provider: provider });
     await api.isReady;
@@ -235,7 +235,7 @@ async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
                 })
             }
         }
-        const asset: MyAsset = {
+        const asset: TokenData = {
             network: "polkadot",
             chain: parachainId,
             localId: localString,
@@ -269,7 +269,7 @@ async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
 //     return locationInterior
 // }
 
-export async function getAssets(): Promise<MyAssetRegistryObject[]> {
+export async function getAssets(): Promise<IMyAsset[]> {
     return JSON.parse(fs.readFileSync(`../assets/bnc/asset_registry.json`, 'utf8'));
 }
 

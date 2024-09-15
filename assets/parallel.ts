@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types';
 // import { Keyring, ApiPromise, WsProvider, } from '@polkadot/api';
 
 // import { options } from '@parallel-finance/api/index';
@@ -31,13 +31,13 @@ export async function saveAssets() {
         })
         // console.log(matchedLocation)
         if (matchedLocation == undefined) {
-            const newAssetRegistryObject: MyAssetRegistryObject = {
+            const newAssetRegistryObject: IMyAsset = {
                 tokenData: asset,
                 hasLocation: false
             }
             return newAssetRegistryObject
         } else {
-            const newAssetRegistryObject: MyAssetRegistryObject = {
+            const newAssetRegistryObject: IMyAsset = {
                 tokenData: asset,
                 hasLocation: true,
                 tokenLocation: matchedLocation[0]
@@ -55,22 +55,22 @@ export async function saveAssets() {
     fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2));
 }
 
-export async function getAssets(): Promise < MyAssetRegistryObject[] > {
+export async function getAssets(): Promise < IMyAsset[] > {
     return JSON.parse(fs.readFileSync('../assets/hko/asset_registry.json', 'utf8'));
 }
 
-async function queryAssets(api: ApiPromise): Promise<MyAsset[]> {
+async function queryAssets(api: ApiPromise): Promise<TokenData[]> {
     // const provider = new WsProvider('wss://heiko-rpc.parallel.fi');
     // const api = new ApiPromise(options({ provider }));
     await api.isReady;
     const parachainId = await (await api.query.parachainInfo.parachainId()).toJSON() as number;
     let testData = await api.query.assetRegistry.assetIdType.entries();
     let xcAssetData = await api.query.assets.metadata.entries();
-    let paraAssets: MyAsset[] = xcAssetData.map(([key, value]) => {
+    let paraAssets: TokenData[] = xcAssetData.map(([key, value]) => {
         const currencyId = (key.toHuman() as any)[0].replace(/,/g, "");
         // api.createType('CurrencyId', currencyId)
         const assetValue = value.toHuman() as any;
-        const asset: MyAsset = {
+        const asset: TokenData = {
             network: "polkadot",
             chain: parachainId,
             localId: currencyId,

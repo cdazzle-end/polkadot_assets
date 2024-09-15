@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 import { getNativeAsset, getStableAsset } from './acaNativeAssets.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 // import {WsProvider } from '@polkadot/rpc-provider'
@@ -109,8 +109,8 @@ export async function saveAssets() {
                             X1: newJunction
                         }
                     }
-                    const newAssetRegistryObject: MyAssetRegistryObject = {
-                        tokenData: asset as MyAsset,
+                    const newAssetRegistryObject: IMyAsset = {
+                        tokenData: asset as TokenData,
                         hasLocation: true,
                         tokenLocation: newLocation
                     }
@@ -137,7 +137,7 @@ export async function saveAssets() {
                     const newLocation: MyMultiLocation = {
                         [junction]: junctionList
                     }
-                    let newAssetRegistryObject: MyAssetRegistryObject = {
+                    let newAssetRegistryObject: IMyAsset = {
                         tokenData: asset,
                         hasLocation: true,
                         tokenLocation: newLocation
@@ -154,8 +154,8 @@ export async function saveAssets() {
             console.log(JSON.stringify(assetId))
             console.log(JSON.stringify(locationData))
             if (locationData == "here") {
-                const newAssetRegistryObject: MyAssetRegistryObject = {
-                    tokenData: asset as MyAsset,
+                const newAssetRegistryObject: IMyAsset = {
+                    tokenData: asset as TokenData,
                     hasLocation: true,
                     tokenLocation: locationData
                 }
@@ -184,8 +184,8 @@ export async function saveAssets() {
                         X1: newJunction
                     }
                 }
-                const newAssetRegistryObject: MyAssetRegistryObject = {
-                    tokenData: asset as MyAsset,
+                const newAssetRegistryObject: IMyAsset = {
+                    tokenData: asset as TokenData,
                     hasLocation: true,
                     tokenLocation: newLocation
                 }
@@ -212,7 +212,7 @@ export async function saveAssets() {
                 const newLocation: MyMultiLocation = {
                     [junction]: junctionList
                 }
-                let newAssetRegistryObject: MyAssetRegistryObject = {
+                let newAssetRegistryObject: IMyAsset = {
                     tokenData: asset,
                     hasLocation: true,
                     tokenLocation: newLocation
@@ -224,8 +224,8 @@ export async function saveAssets() {
             const assetId = Object.values(Object.values(asset.localId)[0])[0]
             const locationData = await getStableAsset(assetId);
             if (locationData == "here") {
-                const newAssetRegistryObject: MyAssetRegistryObject = {
-                    tokenData: asset as MyAsset,
+                const newAssetRegistryObject: IMyAsset = {
+                    tokenData: asset as TokenData,
                     hasLocation: true,
                     tokenLocation: locationData
                 }
@@ -252,8 +252,8 @@ export async function saveAssets() {
                         X1: newJunction
                     }
                 }
-                const newAssetRegistryObject: MyAssetRegistryObject = {
-                    tokenData: asset as MyAsset,
+                const newAssetRegistryObject: IMyAsset = {
+                    tokenData: asset as TokenData,
                     hasLocation: true,
                     tokenLocation: newLocation
                 }
@@ -280,7 +280,7 @@ export async function saveAssets() {
                 const newLocation: MyMultiLocation = {
                     [junction]: junctionList
                 }
-                let newAssetRegistryObject: MyAssetRegistryObject = {
+                let newAssetRegistryObject: IMyAsset = {
                     tokenData: asset,
                     hasLocation: true,
                     tokenLocation: newLocation
@@ -288,8 +288,8 @@ export async function saveAssets() {
                 return newAssetRegistryObject
             }
         } else if (Object.keys(asset.localId)[0] == "Erc20") {
-            const newAssetRegistryObject: MyAssetRegistryObject = {
-                tokenData: asset as MyAsset,
+            const newAssetRegistryObject: IMyAsset = {
+                tokenData: asset as TokenData,
                 hasLocation: false,
             }
             return newAssetRegistryObject
@@ -579,10 +579,10 @@ async function queryAssetsAndLocations(api: ApiPromise){
 type AssetType = 'Erc20' | 'Token' | 'LiquidCrowdloan' | 'StableAssetPoolToken' | 'ForeignAsset';
 async function testLocalIdTypes(){
     const filePath = path.join(__dirname, './asset_registry/aca_assets.json')
-    const acalaAssets: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+    const acalaAssets: IMyAsset[] = JSON.parse(fs.readFileSync(filePath, 'utf8'))
 
     acalaAssets.forEach((asset) => {
-        const tokenData = asset.tokenData as MyAsset
+        const tokenData = asset.tokenData as TokenData
         const id = tokenData.localId
         console.log(`ID: ${JSON.stringify(id)}`)
 

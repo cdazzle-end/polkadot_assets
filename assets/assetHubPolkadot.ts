@@ -1,7 +1,7 @@
 
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 import { getNativeAsset, getStableAsset } from './acaNativeAssets.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 // import {WsProvider } from '@polkadot/rpc-provider'
@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function queryAssets(chopsticks: boolean): Promise<MyAssetRegistryObject[]> {
+async function queryAssets(chopsticks: boolean): Promise<IMyAsset[]> {
     // let chopsticks = false
     let api = await getApiForNode("AssetHubPolkadot", chopsticks)
     const allAssets = await api.query.assets.metadata.entries();
@@ -25,7 +25,7 @@ async function queryAssets(chopsticks: boolean): Promise<MyAssetRegistryObject[]
         let assetDecimals = assetData.decimals
         let assetName = assetData.name
 
-        let assetObject: MyAsset = {
+        let assetObject: TokenData = {
             network: "polkadot",
             chain: 1000,
             localId: assetId,
@@ -48,7 +48,7 @@ async function queryAssets(chopsticks: boolean): Promise<MyAssetRegistryObject[]
             ]
           }
 
-        let assetRegistryObject: MyAssetRegistryObject = {
+        let assetRegistryObject: IMyAsset = {
             tokenData: assetObject,
             hasLocation: true,
             tokenLocation: assetLocation

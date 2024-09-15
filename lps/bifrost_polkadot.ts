@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyLp, MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation, TokenRate, StableSwapPool } from '../types.ts';
+import { MyLp, MyJunction, TokenData, IMyAsset, MyMultiLocation, TokenRate, StableSwapPool } from '../types.ts';
 // import { MyLp } from '../lp_types';
 // const axios = require('axios').default;
 import axios from 'axios';
@@ -257,7 +257,7 @@ async function getLps(): Promise<MyLp[]> {
     return JSON.parse(fs.readFileSync('./hko/lps.json', 'utf8'));
 }
 
-async function queryAssets(): Promise<MyAsset[]> {
+async function queryAssets(): Promise<TokenData[]> {
     const provider = new WsProvider('wss://bifrost-parachain.api.onfinality.io/public-ws');
     const api = await ApiPromise.create({ provider: provider });
     await api.isReady;
@@ -276,7 +276,7 @@ async function queryAssets(): Promise<MyAsset[]> {
                 })
             }
         }
-        const asset: MyAsset = {
+        const asset: TokenData = {
             network: "polkadot",
             chain: parachainId,
             localId: localString,
