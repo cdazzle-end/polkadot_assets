@@ -81,7 +81,7 @@ export async function updateRegistryAssetHub(chopsticks: boolean){
     assetRegistry.push(...newAssets);
     console.log("assets in registry after update: ", assetRegistry.length)
 
-    fs.writeFileSync("asset_registry/asset_hub_polkadot_assets.json", JSON.stringify(assetRegistry, null, 2))
+    fs.writeFileSync(path.join(__dirname, "asset_registry/asset_hub_polkadot_assets.json"), JSON.stringify(assetRegistry, null, 2))
 
 }
 
