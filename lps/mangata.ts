@@ -17,9 +17,7 @@ export async function updateLps(chopsticks: boolean) {
     const MAINNET_3 = 'wss://mangatax.api.onfinality.io/public-ws'
     const MAINNET_4 = 'wss://prod-kusama-collator-02.mangatafinance.cloud'
     const MAINNET_5 = 'wss://kusama-rpc.mangata.online'
-    // const mangata = Mangata.getInstance([MAINNET_1, MAINNET_2])
-    const mangata = Mangata.getInstance([liveRpc])
-    let api = await mangata.getApi()
+    let api = await getApiForNode("Mangata", chopsticks);
     // let api = await getApiForNode("Mangata", chopsticks);
     await api.isReady;
 
