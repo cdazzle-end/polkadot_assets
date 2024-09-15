@@ -1,3 +1,36 @@
 ASTAR in para assets has no location
 
 **** Need to add vaaults to possible evm lps
+
+Old config
+
+{
+    "ts-node": {
+        "esm": true,
+    },
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "esnext",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "allowImportingTsExtensions": true,
+        // ... other options from Bridge's tsconfig ...
+        // "baseUrl": ".",
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "noEmit": true,
+        "emitDeclarationOnly": true,
+        "outDir": "./dist",
+        "typeRoots": ["./node_modules/@polkadot/ts", "./node_modules/@types"],
+        "jsx": "preserve",
+        "declaration": true,
+        "strict":  false,
+        "noImplicitAny": false,
+        // "noUnusedLocals": true,
+        // "noImplicitReturns": true,
+        "moduleResolution": "Node",
+    },
+    // Include and exclude can be adjusted as per your project's structure
+    "include": ["./**/*"],
+    "exclude": ["dist", "src/lps/moonbeamTestFunctions.ts", "node_modules"]
+}

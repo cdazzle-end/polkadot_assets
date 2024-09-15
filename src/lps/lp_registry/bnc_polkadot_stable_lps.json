@@ -1,0 +1,266 @@
+[
+  {
+    "chainId": 2030,
+    "dexType": "stable",
+    "poolId": "0",
+    "poolAssets": [
+      {
+        "Token2": "0"
+      },
+      {
+        "VToken2": "0"
+      }
+    ],
+    "tokenRates": [
+      {
+        "numerator": "1000",
+        "denominator": "1000"
+      },
+      {
+        "numerator": "61978621464189429",
+        "denominator": "86084693036297121"
+      }
+    ],
+    "liquidityStats": [
+      "4687156118710714",
+      "4952565679633589"
+    ],
+    "tokenShares": [
+      "4687156118710714",
+      "6878825088416856"
+    ],
+    "tokenPrecisions": [
+      "1",
+      "1"
+    ],
+    "swapFee": "30000000",
+    "a": "5000",
+    "aPrecision": 100,
+    "feePrecision": "10000000000",
+    "aBlock": "3266022",
+    "futureA": "5000",
+    "futureABlock": "3266022",
+    "totalSupply": "11563849839202833",
+    "poolPrecision": "10000000000"
+  },
+  {
+    "chainId": 2030,
+    "dexType": "stable",
+    "poolId": "4",
+    "poolAssets": [
+      {
+        "Token2": "0"
+      },
+      {
+        "VSToken2": "0"
+      }
+    ],
+    "tokenRates": [
+      {
+        "numerator": "1",
+        "denominator": "2"
+      },
+      {
+        "numerator": "1",
+        "denominator": "1"
+      }
+    ],
+    "liquidityStats": [
+      "52563356907869",
+      "122415673896768"
+    ],
+    "tokenShares": [
+      "105126713815738",
+      "122415673896768"
+    ],
+    "tokenPrecisions": [
+      "1",
+      "1"
+    ],
+    "swapFee": "30000000",
+    "a": "5000",
+    "aPrecision": 100,
+    "feePrecision": "10000000000",
+    "aBlock": "3266022",
+    "futureA": "5000",
+    "futureABlock": "3266022",
+    "totalSupply": "227535847357649",
+    "poolPrecision": "10000000000"
+  },
+  {
+    "chainId": 2030,
+    "dexType": "stable",
+    "poolId": "2",
+    "poolAssets": [
+      {
+        "Token2": "1"
+      },
+      {
+        "VToken2": "1"
+      }
+    ],
+    "tokenRates": [
+      {
+        "numerator": "1000",
+        "denominator": "1000"
+      },
+      {
+        "numerator": "1252435400433734892036300",
+        "denominator": "1441320587078434625830639"
+      }
+    ],
+    "liquidityStats": [
+      "275365381082504736715274",
+      "403511443356794414336333"
+    ],
+    "tokenShares": [
+      "275365381082504736715274",
+      "464276496009648734042086"
+    ],
+    "tokenPrecisions": [
+      "1",
+      "1"
+    ],
+    "swapFee": "30000000",
+    "a": "5000",
+    "aPrecision": 100,
+    "feePrecision": "10000000000",
+    "aBlock": "3266022",
+    "futureA": "5000",
+    "futureABlock": "3266022",
+    "totalSupply": "739386611891719531384791",
+    "poolPrecision": "1000000000000000000"
+  },
+  {
+    "chainId": 2030,
+    "dexType": "stable",
+    "poolId": "5",
+    "poolAssets": [
+      {
+        "Token2": "8"
+      },
+      {
+        "VToken2": "8"
+      }
+    ],
+    "tokenRates": [
+      {
+        "numerator": "1000",
+        "denominator": "1000"
+      },
+      {
+        "numerator": "6871722761476290567035627",
+        "denominator": "7973716837702976017271396"
+      }
+    ],
+    "liquidityStats": [
+      "1436781316934544268728",
+      "1781412628721719638977"
+    ],
+    "tokenShares": [
+      "1436781316934544268728",
+      "2065844929836085854550"
+    ],
+    "tokenPrecisions": [
+      "1",
+      "1"
+    ],
+    "swapFee": "30000000",
+    "a": "5000",
+    "aPrecision": 100,
+    "feePrecision": "10000000000",
+    "aBlock": "3881015",
+    "futureA": "5000",
+    "futureABlock": "3881015",
+    "totalSupply": "3502048590689828063104",
+    "poolPrecision": "1000000000000000000"
+  },
+  {
+    "chainId": 2030,
+    "dexType": "stable",
+    "poolId": "1",
+    "poolAssets": [
+      {
+        "Token2": "4"
+      },
+      {
+        "VToken2": "4"
+      }
+    ],
+    "tokenRates": [
+      {
+        "numerator": "1000",
+        "denominator": "1000"
+      },
+      {
+        "numerator": "35538696055645065546376",
+        "denominator": "40816196336996789765302"
+      }
+    ],
+    "liquidityStats": [
+      "146941706092487803067",
+      "7719169084898188992993"
+    ],
+    "tokenShares": [
+      "146941706092487803067",
+      "8865466544815286871072"
+    ],
+    "tokenPrecisions": [
+      "1",
+      "1"
+    ],
+    "swapFee": "30000000",
+    "a": "5000",
+    "aPrecision": 100,
+    "feePrecision": "10000000000",
+    "aBlock": "3266022",
+    "futureA": "5000",
+    "futureABlock": "3266022",
+    "totalSupply": "8471413023924265837073",
+    "poolPrecision": "1000000000000000000"
+  },
+  {
+    "chainId": 2030,
+    "dexType": "stable",
+    "poolId": "3",
+    "poolAssets": [
+      {
+        "Token2": "3"
+      },
+      {
+        "VToken2": "3"
+      }
+    ],
+    "tokenRates": [
+      {
+        "numerator": "1000",
+        "denominator": "1000"
+      },
+      {
+        "numerator": "30353863439792751398899152",
+        "denominator": "34609176751881488178509584"
+      }
+    ],
+    "liquidityStats": [
+      "5233107193434920136214",
+      "9439900425909595185778"
+    ],
+    "tokenShares": [
+      "5233107193434920136214",
+      "10738231050402380918873"
+    ],
+    "tokenPrecisions": [
+      "1",
+      "1"
+    ],
+    "swapFee": "30000000",
+    "a": "5000",
+    "aPrecision": 100,
+    "feePrecision": "10000000000",
+    "aBlock": "3266022",
+    "futureA": "5000",
+    "futureABlock": "3266022",
+    "totalSupply": "15960699071058346490742",
+    "poolPrecision": "1000000000000000000"
+  }
+]

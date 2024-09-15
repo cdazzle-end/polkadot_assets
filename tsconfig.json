@@ -1,29 +1,33 @@
 {
     "ts-node": {
-        "esm": true,
-    },
+      "esm": true,
+  },
     "compilerOptions": {
-        "target": "ESNext",
-        "module": "esnext",
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "allowImportingTsExtensions": true,
-        // ... other options from Bridge's tsconfig ...
-        "baseUrl": ".",
-        "resolveJsonModule": true,
-        "skipLibCheck": true,
-        "emitDeclarationOnly": true,
-        "outDir": "./dist",
-        "typeRoots": ["./node_modules/@polkadot/ts", "./node_modules/@types"],
-        "jsx": "preserve",
-        "declaration": true,
-        "strict":  false,
-        "noImplicitAny": false,
-        // "noUnusedLocals": true,
-        // "noImplicitReturns": true,
-        "moduleResolution": "Node",
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "strictNullChecks": true,
+      "skipLibCheck": true,
+      // "declaration": true,
+      "emitDeclarationOnly": false,
+      "noEmit": true,
+      "typeRoots": ["./node_modules/@polkadot/ts", "./node_modules/@types"],
+      "allowImportingTsExtensions": true,
+      "noImplicitAny": false,
+      "strict": false,
+      "allowSyntheticDefaultImports": true,
+      "outDir": "./dist",
+      "jsx": "preserve",
+      "declaration": false,
+      // "declarationDir": "./dist/types",
+      "sourceMap": true,
+      "inlineSources": true,
+      "preserveSymlinks": true
+        
     },
-    // Include and exclude can be adjusted as per your project's structure
-    "include": ["./**/*"],
-    "exclude": ["dist", "./lps/moonbeamTestFunctions.ts"]
-}
+    "include": ["src"],
+    "exclude": ["src/lps/moonbeamTestFunctions.ts"]
+  }
+  

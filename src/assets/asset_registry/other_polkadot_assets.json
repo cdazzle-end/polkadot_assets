@@ -1,0 +1,538 @@
+[
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 0,
+      "localId": "DOT",
+      "name": "DOT",
+      "symbol": "DOT",
+      "decimals": "10",
+      "minimalBalance": "100000000"
+    },
+    "hasLocation": true,
+    "tokenLocation": "here"
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2035,
+      "localId": "PHA",
+      "name": "Phala Native Token",
+      "symbol": "PHA",
+      "decimals": "12",
+      "minimalBalance": "40000000000"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2035"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2026,
+      "localId": "NODL",
+      "name": "Nodle",
+      "symbol": "NODL",
+      "decimals": "11"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2026"
+        },
+        {
+          "PalletInstance": "2"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2104,
+      "localId": "1",
+      "name": "Manta",
+      "symbol": "MANTA",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+          "Parachain": "2104"
+        }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2101,
+      "localId": "SUB",
+      "name": "Subsocial",
+      "symbol": "SUB",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2101"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2046,
+      "localId": "RING",
+      "name": "Darwinia Parachain Token",
+      "symbol": "RING",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2046"
+        },
+        {
+          "PalletInstance": "5"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2031,
+      "localId": "Native",
+      "name": "Centrifuge",
+      "symbol": "CFG",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2031"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+    {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2092,
+      "localId": "ZTG",
+      "name": "Zeitgeist",
+      "symbol": "ZTG",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2092"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2006,
+      "localId": "ASTR",
+      "name": "Astar",
+      "symbol": "ASTR",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2006"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2094,
+      "localId": "Native",
+      "name": "Pendulum",
+      "symbol": "PEN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2094"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2037,
+      "localId": "0",
+      "name": "Unique network",
+      "symbol": "UNQ",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2037"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "CRU",
+      "name": "Crust Parachain Native Token",
+      "symbol": "CRU",
+      "decimals": "12",
+      "minimalBalance": "10000000000",
+      "chain": 2008
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2008"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 1000,
+      "localId": "1984",
+      "name": "Tether USD",
+      "symbol": "USDt",
+      "decimals": "6",
+      "deposit": "6,693,999,660",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1984"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 1000,
+      "localId": "1337",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6",
+      "deposit": "6,693,999,660",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1337"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 1000,
+      "localId": "8",
+      "name": "RMRK",
+      "symbol": "RMRK",
+      "decimals": "10",
+      "deposit": "6,693,999,660",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "8"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2035,
+      "localId": "PHA",
+      "name": "Phala Native Token",
+      "symbol": "PHA",
+      "decimals": "12",
+      "minimalBalance": "40000000000"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2035"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Token": "INTR"
+      },
+      "name": "Interlay",
+      "symbol": "INTR",
+      "decimals": "10",
+      "minimalBalance": "1000000000",
+      "chain": 2032
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0002000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Token": "IBTC"
+      },
+      "name": "interBTC",
+      "symbol": "IBTC",
+      "decimals": "8",
+      "minimalBalance": "100",
+      "chain": 2032
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 1000,
+      "localId": "DOT",
+      "name": "DOT",
+      "symbol": "DOT",
+      "decimals": "10",
+      "minimalBalance": "100000000"
+    },
+    "hasLocation": true,
+    "tokenLocation": "here"
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2043,
+      "localId": "NEURO",
+      "name": "NEURO",
+      "symbol": "NEURO",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2043"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2043,
+      "localId": "1",
+      "name": "TRAC",
+      "symbol": "TRAC",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2043"
+        },
+        {
+          "PalletInstance": "1"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2040,
+      "localId": "Polkadex",
+      "name": "Polkadex",
+      "symbol": "PDEX",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2040"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 3388,
+      "localId": "XRT",
+      "name": "Robonomics",
+      "symbol": "XRT",
+      "decimals": "9"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "3388"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2039,
+      "localId": "TEER",
+      "name": "TEER",
+      "symbol": "TEER",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2039"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2039,
+      "localId": "79228162514264337593543950338",
+      "name": "Composable Finance",
+      "symbol": "LAYR",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2019"
+        },
+        {
+          "PalletInstance": "59"
+        },
+        {
+          "GeneralIndex": "79228162514264337593543950338"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2124,
+      "localId": "Native",
+      "name": "Amplitude",
+      "symbol": "AMPE",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2124"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "ASTR",
+      "name": "Astar Native Token",
+      "symbol": "ASTR",
+      "decimals": "18",
+      "chain": 2006,
+      "contractAddress": "0xaeaaf0e2c81af264101b9129c00f4440ccf0f720"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2006"
+      }
+    }
+  }
+]

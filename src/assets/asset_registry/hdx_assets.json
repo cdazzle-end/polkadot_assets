@@ -1,0 +1,9681 @@
+[
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "100",
+      "name": "4-Pool",
+      "symbol": "4-Pool",
+      "decimals": "18"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "0",
+      "name": "Hydration",
+      "symbol": "HDX",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2034"
+        },
+        {
+          "GeneralIndex": "0"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "10",
+      "name": "USDT (Polkadot Asset Hub)",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1984"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "4",
+      "name": "Ethereum (Acala Wormhole)",
+      "symbol": "WETH",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "21",
+            "data": "0x025a4d6acdc4e3e5ab15717f407afe957f7a2425780000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "21",
+      "name": "USD Coin (Moonbeam Wormhole)",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2004"
+        },
+        {
+          "PalletInstance": "110"
+        },
+        {
+          "AccountKey20": {
+            "network": null,
+            "key": "0x931715fee2d06333043d11f658c8ce934ac61d0c"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "28",
+      "name": "KILT",
+      "symbol": "KILT",
+      "decimals": "15"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2086"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "29",
+      "name": "Polimec",
+      "symbol": "PLMC",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "3344"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "30",
+      "name": "Mythos",
+      "symbol": "MYTH",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "3369"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "31",
+      "name": "Darwinia Network RING",
+      "symbol": "RING",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2046"
+        },
+        {
+          "PalletInstance": "5"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "20",
+      "name": "Ethereum (Moonbeam Wormhole)",
+      "symbol": "WETH",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2004"
+        },
+        {
+          "PalletInstance": "110"
+        },
+        {
+          "AccountKey20": {
+            "network": null,
+            "key": "0xab3f0245b83feb11d15aaffefd7ad465a59817ed"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "101",
+      "name": "2-Pool",
+      "symbol": "2-Pool",
+      "decimals": "18"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "16",
+      "name": "Glimmer",
+      "symbol": "GLMR",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2004"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "11",
+      "name": "interBTC",
+      "symbol": "iBTC",
+      "decimals": "8"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000099",
+      "name": "Acala",
+      "symbol": "ACA",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "14",
+      "name": "Bifrost Native Coin",
+      "symbol": "BNC",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "6",
+      "name": "ApeCoin (Acala Wormhole)",
+      "symbol": "APE",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "21",
+            "data": "0x02f4c723e61709d90f89939c1852f516e373d418a80000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "19",
+      "name": "Bitcoin (Moonbeam Wormhole)",
+      "symbol": "WBTC",
+      "decimals": "8"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2004"
+        },
+        {
+          "PalletInstance": "110"
+        },
+        {
+          "AccountKey20": {
+            "network": null,
+            "key": "0xe57ebd2d67b462e9926e04a8e33f01cd0d64346d"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "15",
+      "name": "Bifrost Voucher DOT",
+      "symbol": "vDOT",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0900000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "2",
+      "name": "DAI (Acala Wormhole)",
+      "symbol": "DAI",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "21",
+            "data": "0x0254a37a01cd75b616d63e0ab665bffdb0143c52ae0000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "13",
+      "name": "Centrifuge",
+      "symbol": "CFG",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2031"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "27",
+      "name": "Crust",
+      "symbol": "CRU",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2008"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "102",
+      "name": "2-Pool-Stbl",
+      "symbol": "2-Pool",
+      "decimals": "18"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "5",
+      "name": "Polkadot",
+      "symbol": "DOT",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": "here"
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "18",
+      "name": "DAI (Moonbeam Wormhole)",
+      "symbol": "DAI",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2004"
+        },
+        {
+          "PalletInstance": "110"
+        },
+        {
+          "AccountKey20": {
+            "network": null,
+            "key": "0x06e605775296e851ff43b4daa541bb0984e9d6fd"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "7",
+      "name": "USD Coin (Acala Wormhole)",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "21",
+            "data": "0x0207df96d1341a7d16ba1ad431e2c847d978bc2bce0000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "26",
+      "name": "Nodle",
+      "symbol": "NODL",
+      "decimals": "11"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2026"
+        },
+        {
+          "PalletInstance": "2"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "22",
+      "name": "USDC (Polkadot Asset Hub)",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1337"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "24",
+      "name": "Subsocial",
+      "symbol": "SUB",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2101"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "8",
+      "name": "Phala",
+      "symbol": "PHA",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2035"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000100",
+      "name": "Liquid DOT",
+      "symbol": "LDOT",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0003000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1",
+      "name": "H2O",
+      "symbol": "H2O",
+      "decimals": "12"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "12",
+      "name": "Zeitgeist",
+      "symbol": "ZTG",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2092"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000081",
+      "name": "Pendulum",
+      "symbol": "PEN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2094"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "3",
+      "name": "Bitcoin (Acala Wormhole)",
+      "symbol": "WBTC",
+      "decimals": "8"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "21",
+            "data": "0x02c80084af223c8b598536178d9361dc55bfda68180000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "17",
+      "name": "Interlay",
+      "symbol": "INTR",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0002000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "25",
+      "name": "Unique network",
+      "symbol": "UNQ",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2037"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "23",
+      "name": "USDT (Moonbeam Wormhole)",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2004"
+        },
+        {
+          "PalletInstance": "110"
+        },
+        {
+          "AccountKey20": {
+            "network": null,
+            "key": "0xc30e9ca94cf52f3bf5692aacf81353a27052c46f"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "9",
+      "name": "Astar",
+      "symbol": "ASTR",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2006"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000021",
+      "name": "PINK",
+      "symbol": "PINK",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "23"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000027",
+      "name": "web3.online",
+      "symbol": "web3",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "11"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000124",
+      "name": "JAM DUNA Token on Polkadot",
+      "symbol": "JAM",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1107"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000177",
+      "name": "BUNS",
+      "symbol": "BUNS",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1234"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000197",
+      "name": "Apillon",
+      "symbol": "NCTR",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1024"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000078",
+      "name": "CHAOS",
+      "symbol": "CHAOS",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "6666"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000187",
+      "name": "SHIB",
+      "symbol": "SHIB",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "38"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000076",
+      "name": "Dot Leap",
+      "symbol": "LEAP",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "14"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000139",
+      "name": "MOON",
+      "symbol": "MOON",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "19"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000110",
+      "name": "GAVIN",
+      "symbol": "GAVIN",
+      "decimals": "0"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1980"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000186",
+      "name": "Cypress Capital",
+      "symbol": "Cypress",
+      "decimals": "0"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "99"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000077",
+      "name": "COLA",
+      "symbol": "COLA",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "16"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000080",
+      "name": "Pirate's Booty",
+      "symbol": "BOOTY",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "8888"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000193",
+      "name": "Cypress Stable Coin",
+      "symbol": "StabCP",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000170",
+      "name": "Mr. Beast Coin",
+      "symbol": "BEAST",
+      "decimals": "8"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000120",
+      "name": "ClayOnDot",
+      "symbol": "CLAY",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "32"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000158",
+      "name": "HydraCoin",
+      "symbol": "HYDRA",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "2020"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000082",
+      "name": "dog wif dots",
+      "symbol": "WIFD",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "17"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000129",
+      "name": "JAM DODGER",
+      "symbol": "JAMD",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "2828"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000104",
+      "name": "GAME",
+      "symbol": "GAME",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "555"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000085",
+      "name": "GAVUN WUD",
+      "symbol": "WUD",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "31337"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000153",
+      "name": "KrakenKash",
+      "symbol": "KRAK",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1180"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000118",
+      "name": "DED is skem",
+      "symbol": "SKEM",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "2121"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000060",
+      "name": "The Answer",
+      "symbol": "PJS",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "42"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000148",
+      "name": "BORK",
+      "symbol": "BORK",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "690"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000171",
+      "name": "CATNIP",
+      "symbol": "CATNIP",
+      "decimals": "20"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "71"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000136",
+      "name": "WOOD",
+      "symbol": "WOOD",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "31"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000053",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "100"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000094",
+      "name": "Dalmation",
+      "symbol": "DAL",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "69"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000150",
+      "name": "0x50455045e280a24f4ee280a2444f54e280a2544fe280a2544845e280a24d4f4f4e20",
+      "symbol": "PEPE",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "46"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000134",
+      "name": "COCOA",
+      "symbol": "COCOA",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "33"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000199",
+      "name": "Kolkadot",
+      "symbol": "KOL",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "86"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000159",
+      "name": "HydraCoin",
+      "symbol": "HYDRA",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "45"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000162",
+      "name": "UNION",
+      "symbol": "UNION",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "56"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000117",
+      "name": "GAME",
+      "symbol": "GAME",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "555"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000123",
+      "name": "GRELIVE",
+      "symbol": "GRL",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "660301"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000028",
+      "name": "Polkadot Index",
+      "symbol": "PINT",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "9"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000054",
+      "name": "Leemo",
+      "symbol": "LEEMO",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "6969"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000106",
+      "name": "Tomcoin",
+      "symbol": "TOM",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "9999"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000089",
+      "name": "CLAY",
+      "symbol": "clay",
+      "decimals": "20"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "404"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000184",
+      "name": "POLKADOT-USDT",
+      "symbol": "USDT",
+      "decimals": "16"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "202406"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000163",
+      "name": "Dotty the Polkadot",
+      "symbol": "DOTTY",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1212"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000140",
+      "name": "COCA",
+      "symbol": "COCA",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "78"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000070",
+      "name": "WOOD",
+      "symbol": "WOOD",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "2024"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000091",
+      "name": "BANDIT the CAT",
+      "symbol": "BNDT",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "8889"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000059",
+      "name": "AssetX",
+      "symbol": "ASX",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "888"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000151",
+      "name": "PEPE ON POLKADOT TO THE MOON",
+      "symbol": "PEPE",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "40"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "32",
+      "name": "Ajuna Network",
+      "symbol": "AJUN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2051"
+        },
+        {
+          "GeneralKey": {
+            "length": "4",
+            "data": "0x414a554e00000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000058",
+      "name": "COLA",
+      "symbol": "COLA",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "16"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000102",
+      "name": "BOMB",
+      "symbol": "BOMB",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "9001"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000196",
+      "name": "Cypress Meme",
+      "symbol": "Meme",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "15"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000142",
+      "name": "OpenGov Drama",
+      "symbol": "GOVD",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "80"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000125",
+      "name": "PixelPulse",
+      "symbol": "PXPS",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "5318008"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000034",
+      "name": "STINK",
+      "symbol": "STINK",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "42069"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000185",
+      "name": "WUD",
+      "symbol": "WUD",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "201"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000146",
+      "name": "DOGE",
+      "symbol": "DOGE",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "66"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000073",
+      "name": "Gabe's Stable BILLCOIN",
+      "symbol": "GBILL",
+      "decimals": "8"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "2230"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000029",
+      "name": "Danger Coin",
+      "symbol": "DANGER",
+      "decimals": "8"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "666"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000202",
+      "name": "gold",
+      "symbol": "gold",
+      "decimals": "20"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "999"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000065",
+      "name": "Polkadog",
+      "symbol": "PDOG",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "4157"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000191",
+      "name": "GAVIN",
+      "symbol": "GVN",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "81"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000167",
+      "name": "ClayOnDot",
+      "symbol": "CLAY",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "36"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000103",
+      "name": "PLAY",
+      "symbol": "PLAY",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "9000"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000038",
+      "name": "DOTA",
+      "symbol": "DOTA",
+      "decimals": "4"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "18"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000173",
+      "name": "NIPPIE",
+      "symbol": "NIPS",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1970"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000138",
+      "name": "NIFFLER",
+      "symbol": "NFLR",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1001"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000095",
+      "name": "FUN",
+      "symbol": "FUM",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "7777"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000179",
+      "name": "JUNK",
+      "symbol": "JUNK",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1864"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000105",
+      "name": "TAPE",
+      "symbol": "TAPE",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "9002"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000069",
+      "name": "T54",
+      "symbol": "T54",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "25"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000128",
+      "name": "DAO",
+      "symbol": "DAO",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "2000"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000055",
+      "name": "KANARY",
+      "symbol": "KNRY",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000144",
+      "name": "STEEBOOOOORRR",
+      "symbol": "STEEBOR",
+      "decimals": "20"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "70"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000019",
+      "name": "DED",
+      "symbol": "DED",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "30"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000035",
+      "name": "BEER",
+      "symbol": "BEER",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "25518"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000155",
+      "name": "DOGE (Polkadot Asset Hub)",
+      "symbol": "DOGE",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "35"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000025",
+      "name": "DOT is Dead",
+      "symbol": "DED",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "30035"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000096",
+      "name": "HASHONOMICS",
+      "symbol": "HASH",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "5417"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000036",
+      "name": "BEEFY",
+      "symbol": "BEEFY",
+      "decimals": "2"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "420"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000195",
+      "name": "PEPE",
+      "symbol": "PEPE",
+      "decimals": "6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "39"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000174",
+      "name": "DUCK_DOT",
+      "symbol": "DUCK",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "2222"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000119",
+      "name": "CLAY",
+      "symbol": "clay",
+      "decimals": "20"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "404"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000062",
+      "name": "GABE",
+      "symbol": "GABE",
+      "decimals": "20"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "69420"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000131",
+      "name": "CAT WIF SWEATER",
+      "symbol": "CATWIF",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "50"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000023",
+      "name": "IceCreamToken",
+      "symbol": "ICE",
+      "decimals": "20"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "256"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000178",
+      "name": "Wrapped Bitcoin",
+      "symbol": "WBTC",
+      "decimals": "8"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "21"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000026",
+      "name": "Efinity Token",
+      "symbol": "EFI",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "4"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000165",
+      "name": "0x92420f004844549b420f00",
+      "symbol": "1000165",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000079",
+      "name": "0x050000004844548e420f00",
+      "symbol": "1000079",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000113",
+      "name": "0x53420f0048445492420f00",
+      "symbol": "1000113",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000200",
+      "name": "0x0000000048445410000000",
+      "symbol": "1000200",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000075",
+      "name": "0x62420f0048445489420f00",
+      "symbol": "1000075",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000046",
+      "name": "0x000000004844541a000000",
+      "symbol": "1000046",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000043",
+      "name": "0x1000000048445453420f00",
+      "symbol": "1000043",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000097",
+      "name": "0x55420f0048445495420f00",
+      "symbol": "1000097",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000031",
+      "name": "0x53420f0048445455420f00",
+      "symbol": "1000031",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000101",
+      "name": "0x0500000048445492420f00",
+      "symbol": "1000101",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000145",
+      "name": "0x90420f004844549b420f00",
+      "symbol": "1000145",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000188",
+      "name": "0x0a00000048445417000000",
+      "symbol": "1000188",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000063",
+      "name": "0x000000004844540a000000",
+      "symbol": "1000063",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000127",
+      "name": "0x00000000484454bd420f00",
+      "symbol": "1000127",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000067",
+      "name": "0x55420f0048445466420f00",
+      "symbol": "1000067",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000141",
+      "name": "0x05000000484454a8420f00",
+      "symbol": "1000141",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000149",
+      "name": "0x92420f00484454d4420f00",
+      "symbol": "1000149",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000161",
+      "name": "0xd9420f00484454db420f00",
+      "symbol": "1000161",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000130",
+      "name": "0x0a000000484454bd420f00",
+      "symbol": "1000130",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000132",
+      "name": "0x89420f00484454bd420f00",
+      "symbol": "1000132",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000072",
+      "name": "0x050000004844540d000000",
+      "symbol": "1000072",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000147",
+      "name": "0x1a00000048445455420f00",
+      "symbol": "1000147",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000192",
+      "name": "0x62420f00484454d0420f00",
+      "symbol": "1000192",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000114",
+      "name": "0x55420f004844549b420f00",
+      "symbol": "1000114",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000135",
+      "name": "0x7c420f00484454bc420f00",
+      "symbol": "1000135",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000064",
+      "name": "0x76420f004844547e420f00",
+      "symbol": "1000064",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000154",
+      "name": "0x05000000484454d9420f00",
+      "symbol": "1000154",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000156",
+      "name": "0x05000000484454db420f00",
+      "symbol": "1000156",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000047",
+      "name": "0x0500000048445462420f00",
+      "symbol": "1000047",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000051",
+      "name": "0x4f420f002e3035e8be92010000",
+      "symbol": "1000051",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000175",
+      "name": "0x0000000048445495420f00",
+      "symbol": "1000175",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000074",
+      "name": "0x7e420f0048445489420f00",
+      "symbol": "1000074",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000068",
+      "name": "0x62420f004844547e420f00",
+      "symbol": "1000068",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000061",
+      "name": "0x53420f0048445466420f00",
+      "symbol": "1000061",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000152",
+      "name": "0x05000000484454d7420f00",
+      "symbol": "1000152",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000090",
+      "name": "0x76420f004844547c420f00",
+      "symbol": "1000090",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000011",
+      "name": "0x0500000048445418000000",
+      "symbol": "1000011",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000143",
+      "name": "0x05000000484454ce420f00",
+      "symbol": "1000143",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000160",
+      "name": "0x05000000484454df420f00",
+      "symbol": "1000160",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000050",
+      "name": "0x000000002e0897a0b3a6010000",
+      "symbol": "1000050",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000133",
+      "name": "0x0500000048445464420f00",
+      "symbol": "1000133",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000010",
+      "name": "0x000000002e3035e8be92010000",
+      "symbol": "1000010",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000115",
+      "name": "0x190000004844541a000000",
+      "symbol": "1000115",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000086",
+      "name": "0x0500000048445495420f00",
+      "symbol": "1000086",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000016",
+      "name": "0x0a00000048445419000000",
+      "symbol": "1000016",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000176",
+      "name": "0x53420f0048445495420f00",
+      "symbol": "1000176",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000164",
+      "name": "0x05000000484454e3420f00",
+      "symbol": "1000164",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000040",
+      "name": "0x0a00000048445453420f00",
+      "symbol": "1000040",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000092",
+      "name": "0x050000004844549b420f00",
+      "symbol": "1000092",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000107",
+      "name": "0x00000000484454aa420f00",
+      "symbol": "1000107",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000012",
+      "name": "0x000000004844544a420f00",
+      "symbol": "1000012",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000137",
+      "name": "0x05000000484454c3420f00",
+      "symbol": "1000137",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000109",
+      "name": "0x55420f0048445492420f00",
+      "symbol": "1000109",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000017",
+      "name": "0x0500000048445419000000",
+      "symbol": "1000017",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000049",
+      "name": "0x55420f0048445462420f00",
+      "symbol": "1000049",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000057",
+      "name": "0x0500000048445466420f00",
+      "symbol": "1000057",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000093",
+      "name": "0x1800000048445453420f00",
+      "symbol": "1000093",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000126",
+      "name": "0x05000000484454bd420f00",
+      "symbol": "1000126",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000201",
+      "name": "0x0500000048445407430f00",
+      "symbol": "1000201",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000087",
+      "name": "0x62420f0048445495420f00",
+      "symbol": "1000087",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000018",
+      "name": "0x050000004844541a000000",
+      "symbol": "1000018",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000022",
+      "name": "0x0e00000048445454420f00",
+      "symbol": "1000022",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000030",
+      "name": "0x0500000048445455420f00",
+      "symbol": "1000030",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000111",
+      "name": "0x7c420f0048445495420f00",
+      "symbol": "1000111",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000183",
+      "name": "0x05000000484454f1420f00",
+      "symbol": "1000183",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000169",
+      "name": "0x0500000048445491420f00",
+      "symbol": "1000169",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000116",
+      "name": "0x000000004844541b000000",
+      "symbol": "1000116",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000168",
+      "name": "0x05000000484454e7420f00",
+      "symbol": "1000168",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000032",
+      "name": "0x0000000048445455420f00",
+      "symbol": "1000032",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000066",
+      "name": "0x000000004844547c420f00",
+      "symbol": "1000066",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000084",
+      "name": "0x050000004844547b420f00",
+      "symbol": "1000084",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000015",
+      "name": "0x000000004844544e420f00",
+      "symbol": "1000015",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000056",
+      "name": "0x0000000048445466420f00",
+      "symbol": "1000056",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000098",
+      "name": "0x0a00000048445495420f00",
+      "symbol": "1000098",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000024",
+      "name": "0x0500000048445453420f00",
+      "symbol": "1000024",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000014",
+      "name": "0x000000004844544d420f00",
+      "symbol": "1000014",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000037",
+      "name": "0x000000004844540c000000",
+      "symbol": "1000037",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000112",
+      "name": "0x0000000048445492420f00",
+      "symbol": "1000112",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000088",
+      "name": "0x7e420f0048445495420f00",
+      "symbol": "1000088",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000044",
+      "name": "0x0500000048445410000000",
+      "symbol": "1000044",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000157",
+      "name": "0x00000000484454db420f00",
+      "symbol": "1000157",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000013",
+      "name": "0x000000002e30e71e2f94010000",
+      "symbol": "1000013",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000083",
+      "name": "0x0a0000004844547b420f00",
+      "symbol": "1000083",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000048",
+      "name": "0x0000000048445462420f00",
+      "symbol": "1000048",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000039",
+      "name": "0x0000000048445411000000",
+      "symbol": "1000039",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000045",
+      "name": "0x050000004844540f000000",
+      "symbol": "1000045",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000194",
+      "name": "0x0000000048445405000000",
+      "symbol": "1000194",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000041",
+      "name": "0x0a00000048445455420f00",
+      "symbol": "1000041",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000033",
+      "name": "0x0000000048445453420f00",
+      "symbol": "1000033",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000020",
+      "name": "bncs-20 inscription token BNCS",
+      "symbol": "BNCS",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0809000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000205",
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1010"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000204",
+      "name": "0x000000004844540b430f00",
+      "symbol": "1000204",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "33",
+      "name": "Voucher ASTR",
+      "symbol": "vASTR",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0903000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000203",
+      "name": "MemeTest",
+      "symbol": "MeTest",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "34"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000209",
+      "name": "Polkadot Bitcoin",
+      "symbol": "PBTC",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "2203"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000190",
+      "name": "Bitcoin (Snowbridge)",
+      "symbol": "WBTC",
+      "decimals": "8"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "GlobalConsensus": {
+            "Ethereum": {
+              "chainId": "1"
+            }
+          }
+        },
+        {
+          "AccountKey20": {
+            "network": null,
+            "key": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000218",
+      "name": "0x0000000048445419430f00",
+      "symbol": "1000218",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000213",
+      "name": "0x0500000048445413430f00",
+      "symbol": "1000213",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000189",
+      "name": "Ethereum (Snowbridge)",
+      "symbol": "WETH",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "GlobalConsensus": {
+            "Ethereum": {
+              "chainId": "1"
+            }
+          }
+        },
+        {
+          "AccountKey20": {
+            "network": null,
+            "key": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000212",
+      "name": "0x0000000048445411430f00",
+      "symbol": "1000212",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000206",
+      "name": "ETH",
+      "symbol": "ETH",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090105"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000208",
+      "name": "TEST",
+      "symbol": "test1",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090110"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000210",
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090107"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000211",
+      "name": "Sol Ethereum",
+      "symbol": "SOLETH",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090112"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000219",
+      "name": "Pink Pengui",
+      "symbol": "PP",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090125"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000217",
+      "name": "TestMeme6",
+      "symbol": "TeMe6",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "47"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000214",
+      "name": "TestMeme3",
+      "symbol": "TeMe3",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "97"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000216",
+      "name": "TestMeme4",
+      "symbol": "TeMe4",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "41"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000207",
+      "name": "TEST",
+      "symbol": "test1",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090124"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000215",
+      "name": "TestMeme5",
+      "symbol": "TeMe5",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "43"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000227",
+      "name": "0x050000004844541e000000",
+      "symbol": "1000227",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000222",
+      "name": "TRUMP",
+      "symbol": "NOTDED",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090118"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000223",
+      "name": "0x050000004844541e430f00",
+      "symbol": "1000223",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000225",
+      "name": "0x0000000048445407430f00",
+      "symbol": "1000225",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000224",
+      "name": "0x0500000048445419430f00",
+      "symbol": "1000224",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000232",
+      "name": "0x95420f0048445427430f00",
+      "symbol": "1000232",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000233",
+      "name": "0x05000000484454a4420f00",
+      "symbol": "1000233",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000234",
+      "name": "0x05000000484454a3420f00",
+      "symbol": "1000234",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000237",
+      "name": "0x0500000048445405430f00",
+      "symbol": "1000237",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000236",
+      "name": "0x000000004844542b430f00",
+      "symbol": "1000236",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000235",
+      "name": "TestMeme8",
+      "symbol": "TeMe8",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "52"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000229",
+      "name": "DONT MUZZLE THE OX",
+      "symbol": "DMX",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090135"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000228",
+      "name": "Deer Wif Hat",
+      "symbol": "DWH",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "7777777"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000231",
+      "name": "GAVUN WOOD",
+      "symbol": "GAVUN",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "4242"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000226",
+      "name": "TestMeme7",
+      "symbol": "TeMe7",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "49"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000221",
+      "name": "Dotcoin",
+      "symbol": "DOTCOIN",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090134"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000244",
+      "name": "OK",
+      "symbol": "OK",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "59"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000250",
+      "name": "Cypress Coin",
+      "symbol": "CPcoin",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "64"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000240",
+      "name": "Micro",
+      "symbol": "MCP",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "57"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000253",
+      "name": "0x050000004844543c430f00",
+      "symbol": "1000253",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000248",
+      "name": "JUSTBUYME",
+      "symbol": "JBM",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "63"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000242",
+      "name": "MDMA",
+      "symbol": "MDMA",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "58"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000249",
+      "name": "0x0500000048445438430f00",
+      "symbol": "1000249",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000238",
+      "name": "TestMeme9",
+      "symbol": "TeMe9",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "53"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000246",
+      "name": "Cypress Polkadot",
+      "symbol": "CPDOT",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "62"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000252",
+      "name": "TestMeme11",
+      "symbol": "TeMe11",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "65"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000241",
+      "name": "0x0500000048445430430f00",
+      "symbol": "1000241",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000245",
+      "name": "0x0500000048445434430f00",
+      "symbol": "1000245",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000243",
+      "name": "0x0500000048445432430f00",
+      "symbol": "1000243",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000247",
+      "name": "0x0500000048445436430f00",
+      "symbol": "1000247",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000239",
+      "name": "Chuggin Wif Chad",
+      "symbol": "CHUG",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090144"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000251",
+      "name": "0x050000004844543a430f00",
+      "symbol": "1000251",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000255",
+      "name": "0x000000004844543a430f00",
+      "symbol": "1000255",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000254",
+      "name": "0x76420f0048445495420f00",
+      "symbol": "1000254",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000256",
+      "name": "Coin68",
+      "symbol": "Coin68",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "68"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000309",
+      "name": "LURPIS",
+      "symbol": "LURPIS",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222023"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000346",
+      "name": "0x0500000048445499430f00",
+      "symbol": "1000346",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000272",
+      "name": "0xe98193e998bbe4b894e995bfefbc8ce6b8a9e69a96e59d9ae5ae9a2de788b1e683852f6c6f7665",
+      "symbol": "love",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222005"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000305",
+      "name": "Big Balls Ben",
+      "symbol": "BBB",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222021"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000275",
+      "name": "Salt",
+      "symbol": "NaCl",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222007"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000338",
+      "name": "0x0500000048445491430f00",
+      "symbol": "1000338",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000306",
+      "name": "0x0500000048445471430f00",
+      "symbol": "1000306",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000303",
+      "name": "Costco Hotdog",
+      "symbol": "CDOG",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222020"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000285",
+      "name": "0x050000004844545c430f00",
+      "symbol": "1000285",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000308",
+      "name": "0x0500000048445473430f00",
+      "symbol": "1000308",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000292",
+      "name": "BASTI",
+      "symbol": "B",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222015"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000301",
+      "name": "Polkadot Insider",
+      "symbol": "PI",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222019"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000344",
+      "name": "0x95420f0048445484430f00",
+      "symbol": "1000344",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000266",
+      "name": "TestMemeLast",
+      "symbol": "TeMeL",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222002"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000290",
+      "name": "GIOTTO",
+      "symbol": "GIT",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222014"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000271",
+      "name": "GameCoin",
+      "symbol": "GAME",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "108"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000268",
+      "name": "TestMeme2L",
+      "symbol": "TeMe2L",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222003"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000287",
+      "name": "0x050000004844545e430f00",
+      "symbol": "1000287",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000300",
+      "name": "0x050000004844546b430f00",
+      "symbol": "1000300",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000304",
+      "name": "0x050000004844546f430f00",
+      "symbol": "1000304",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000261",
+      "name": "TestMeme13",
+      "symbol": "TeMe13",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "74"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000322",
+      "name": "dotdog",
+      "symbol": "dog",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222029"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000345",
+      "name": "DOTCAST",
+      "symbol": "DTS",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222039"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000259",
+      "name": "TestMeme12",
+      "symbol": "TeMe12",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "73"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000280",
+      "name": "china",
+      "symbol": "china",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222009"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000284",
+      "name": "Polkadot Mexico",
+      "symbol": "PM",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222011"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000323",
+      "name": "0x0500000048445482430f00",
+      "symbol": "1000323",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000313",
+      "name": "0x0500000048445478430f00",
+      "symbol": "1000313",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000315",
+      "name": "0x050000004844547a430f00",
+      "symbol": "1000315",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000325",
+      "name": "0x0500000048445484430f00",
+      "symbol": "1000325",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000335",
+      "name": "DOT wif Hat",
+      "symbol": ".WH",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222035"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000343",
+      "name": "0x0500000048445496430f00",
+      "symbol": "1000343",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000295",
+      "name": "Mr. Shekels",
+      "symbol": "MRSHE",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222016"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000302",
+      "name": "0x050000004844546d430f00",
+      "symbol": "1000302",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000310",
+      "name": "0x0500000048445475430f00",
+      "symbol": "1000310",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000314",
+      "name": "XCM_Shib",
+      "symbol": "XCMS",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222025"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000337",
+      "name": "Poop",
+      "symbol": "Shit",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222036"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000327",
+      "name": "0x0500000048445486430f00",
+      "symbol": "1000327",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000288",
+      "name": "Trump meme",
+      "symbol": "TM",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222013"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000262",
+      "name": "TestMeme14",
+      "symbol": "TeMe14",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "75"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000281",
+      "name": "0x0500000048445458430f00",
+      "symbol": "1000281",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000332",
+      "name": "0x050000004844548b430f00",
+      "symbol": "1000332",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000289",
+      "name": "0x0500000048445460430f00",
+      "symbol": "1000289",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000298",
+      "name": "0x0500000048445469430f00",
+      "symbol": "1000298",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000347",
+      "name": "0x84430f004844548b430f00",
+      "symbol": "1000347",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000330",
+      "name": "0x0500000048445489430f00",
+      "symbol": "1000330",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000340",
+      "name": "0x0500000048445493430f00",
+      "symbol": "1000340",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000257",
+      "name": "Elona Musk",
+      "symbol": "ELONA",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090142"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000336",
+      "name": "0x050000004844548f430f00",
+      "symbol": "1000336",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000334",
+      "name": "0x050000004844548d430f00",
+      "symbol": "1000334",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000264",
+      "name": "OhMyGod2",
+      "symbol": "OMG2",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222001"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000317",
+      "name": "0x0000000048445467430f00",
+      "symbol": "1000317",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000265",
+      "name": "0x0500000048445448430f00",
+      "symbol": "1000265",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000312",
+      "name": "Polkadot  Insider",
+      "symbol": "POLISD",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222024"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000307",
+      "name": "X",
+      "symbol": "X",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222022"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000341",
+      "name": "0x55420f0048445484430f00",
+      "symbol": "1000341",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000277",
+      "name": "0x0500000048445452430f00",
+      "symbol": "1000277",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000260",
+      "name": "0x0500000048445443430f00",
+      "symbol": "1000260",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000276",
+      "name": "0x0500000048445453430f00",
+      "symbol": "1000276",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000318",
+      "name": "Donkey DOT",
+      "symbol": "DDOT",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222026"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000326",
+      "name": "Viresinnumeris",
+      "symbol": "VRN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222031"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000333",
+      "name": "F*c*Giotto",
+      "symbol": "0xf09f9980",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222034"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000274",
+      "name": "Let's Fucking Go",
+      "symbol": "LFG",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222006"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000297",
+      "name": "SantaDOT",
+      "symbol": "SANTA",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222017"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000269",
+      "name": "TestMemeLast3",
+      "symbol": "TeMeL3",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222004"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000263",
+      "name": "OHMYGOD",
+      "symbol": "OMG",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222000"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000316",
+      "name": "0x000000004844547a430f00",
+      "symbol": "1000316",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000331",
+      "name": "OG Block H@SH",
+      "symbol": "H@SH",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222033"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000293",
+      "name": "0x0500000048445464430f00",
+      "symbol": "1000293",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000273",
+      "name": "0x0500000048445450430f00",
+      "symbol": "1000273",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000258",
+      "name": "DEDISDED",
+      "symbol": "DEDX",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090117"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000270",
+      "name": "0x050000004844544d430f00",
+      "symbol": "1000270",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000283",
+      "name": "0x050000004844545a430f00",
+      "symbol": "1000283",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000328",
+      "name": "0x0000000048445484430f00",
+      "symbol": "1000328",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000321",
+      "name": "0x0500000048445480430f00",
+      "symbol": "1000321",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000282",
+      "name": "Trump President meme",
+      "symbol": "TP",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222010"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000279",
+      "name": "0x0500000048445456430f00",
+      "symbol": "1000279",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000299",
+      "name": "WOLF",
+      "symbol": "WOLF",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222018"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000339",
+      "name": "KUSAMA",
+      "symbol": "KSM",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222037"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000291",
+      "name": "0x0500000048445462430f00",
+      "symbol": "1000291",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000320",
+      "name": "TODODECRIPTO",
+      "symbol": "TDC",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222027"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000329",
+      "name": "FREE KIM DOTCOM",
+      "symbol": "FKDC",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222032"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000296",
+      "name": "0x0500000048445467430f00",
+      "symbol": "1000296",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000286",
+      "name": "DamnCoin",
+      "symbol": "DAMN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222012"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000324",
+      "name": "Pink Pigs",
+      "symbol": "PIGS",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222030"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000319",
+      "name": "0x050000004844547e430f00",
+      "symbol": "1000319",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000267",
+      "name": "0x050000004844544a430f00",
+      "symbol": "1000267",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000278",
+      "name": "ALIEN",
+      "symbol": "ALIEN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222008"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000342",
+      "name": "VORY",
+      "symbol": "VOR",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222038"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000311",
+      "name": "Polkacaine",
+      "symbol": "COKE",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222028"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000350",
+      "name": "MEMEPAD NO FUN",
+      "symbol": "PAD",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222041"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000361",
+      "name": "Gavwifhat",
+      "symbol": "GWIF",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222047"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000364",
+      "name": "0x05000000484454ab430f00",
+      "symbol": "1000364",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000362",
+      "name": "0x05000000484454a9430f00",
+      "symbol": "1000362",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000351",
+      "name": "0x050000004844549e430f00",
+      "symbol": "1000351",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000363",
+      "name": "Polkasharks",
+      "symbol": "PKSK",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222048"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000349",
+      "name": "0x050000004844549c430f00",
+      "symbol": "1000349",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000354",
+      "name": "DIGITAL DOT",
+      "symbol": "DDT",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222043"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000356",
+      "name": "Singularity Block",
+      "symbol": "DONUT",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222044"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000348",
+      "name": "MEMEPAD NOFUN",
+      "symbol": "NOFUN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222040"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000355",
+      "name": "0x05000000484454a2430f00",
+      "symbol": "1000355",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000357",
+      "name": "Singularity",
+      "symbol": "O",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222045"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000352",
+      "name": "The Core",
+      "symbol": "CORE",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222042"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000353",
+      "name": "0x05000000484454a0430f00",
+      "symbol": "1000353",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000359",
+      "name": "Steelers",
+      "symbol": "$PGH",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222046"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000360",
+      "name": "0x55420f0048445467430f00",
+      "symbol": "1000360",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000358",
+      "name": "0x62420f0048445484430f00",
+      "symbol": "1000358",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000365",
+      "name": "Lucky 777",
+      "symbol": "LUCKY",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222049"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000366",
+      "name": "0x05000000484454ad430f00",
+      "symbol": "1000366",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000367",
+      "name": "CLOTHES OFF",
+      "symbol": "SHIVER",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222050"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000368",
+      "name": "0x05000000484454af430f00",
+      "symbol": "1000368",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000384",
+      "name": "Donkey",
+      "symbol": "DON",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222054"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000375",
+      "name": "0x95420f004844547a430f00",
+      "symbol": "1000375",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000377",
+      "name": "0x05000000484454b8430f00",
+      "symbol": "1000377",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000380",
+      "name": "0xb1430f00484454b8430f00",
+      "symbol": "1000380",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000370",
+      "name": "0x05000000484454b1430f00",
+      "symbol": "1000370",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000385",
+      "name": "0x05000000484454c0430f00",
+      "symbol": "1000385",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000372",
+      "name": "0x84430f00484454b1430f00",
+      "symbol": "1000372",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000373",
+      "name": "0x55420f004844547a430f00",
+      "symbol": "1000373",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000379",
+      "name": "0x84430f00484454b8430f00",
+      "symbol": "1000379",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000378",
+      "name": "0x8b430f00484454b8430f00",
+      "symbol": "1000378",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000383",
+      "name": "0x05000000484454be430f00",
+      "symbol": "1000383",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000386",
+      "name": "0x0000000048445416000000",
+      "symbol": "1000386",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000381",
+      "name": "0x100000004844541f000000",
+      "symbol": "1000381",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000376",
+      "name": "Quant Full Potato.AI",
+      "symbol": "MODE",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222052"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000374",
+      "name": "0x67430f004844547a430f00",
+      "symbol": "1000374",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000371",
+      "name": "0x8b430f00484454b1430f00",
+      "symbol": "1000371",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000369",
+      "name": "synergy AI",
+      "symbol": "NIN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222051"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000387",
+      "name": "0x0900000048445410000000",
+      "symbol": "1000387",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000382",
+      "name": "DOTZILLA",
+      "symbol": "DOTZ",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222053"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000397",
+      "name": "Idiom.AI",
+      "symbol": "DIO",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222057"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000392",
+      "name": "TOP",
+      "symbol": "TOP",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222055"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000393",
+      "name": "KEK",
+      "symbol": "KEK",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222056"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000396",
+      "name": "0xc8430f00484454c9430f00",
+      "symbol": "1000396",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000391",
+      "name": "BOYS",
+      "symbol": "BOYS",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "83"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000395",
+      "name": "0x05000000484454c9430f00",
+      "symbol": "1000395",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000398",
+      "name": "0x05000000484454cd430f00",
+      "symbol": "1000398",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000390",
+      "name": "ANGRY",
+      "symbol": "ANGRY",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "82"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000394",
+      "name": "0x05000000484454c8430f00",
+      "symbol": "1000394",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000388",
+      "name": "0x00000000484454a3420f00",
+      "symbol": "1000388",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000389",
+      "name": "0x7a430f0048445484430f00",
+      "symbol": "1000389",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000408",
+      "name": "Pleasance",
+      "symbol": "PLS",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222058"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000401",
+      "name": "0x7a430f00484454c9430f00",
+      "symbol": "1000401",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000409",
+      "name": "0x05000000484454d8430f00",
+      "symbol": "1000409",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000411",
+      "name": "0x05000000484454da430f00",
+      "symbol": "1000411",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000405",
+      "name": "0x84430f00484454c9430f00",
+      "symbol": "1000405",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000414",
+      "name": "0x64420f00484454da430f00",
+      "symbol": "1000414",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000400",
+      "name": "0x00000000484454d4420f00",
+      "symbol": "1000400",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000415",
+      "name": "0x62420f00484454da430f00",
+      "symbol": "1000415",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000399",
+      "name": "0x0a00000048445492420f00",
+      "symbol": "1000399",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000402",
+      "name": "0x95420f00484454c0430f00",
+      "symbol": "1000402",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000412",
+      "name": "0x00000000484454c0430f00",
+      "symbol": "1000412",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000404",
+      "name": "0x67430f00484454c9430f00",
+      "symbol": "1000404",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000407",
+      "name": "0xc9430f00484454cd430f00",
+      "symbol": "1000407",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000403",
+      "name": "0x64420f00484454c0430f00",
+      "symbol": "1000403",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000413",
+      "name": "0x95420f00484454da430f00",
+      "symbol": "1000413",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000410",
+      "name": "Goodman",
+      "symbol": "GOOD",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222059"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000406",
+      "name": "0x8b430f00484454c9430f00",
+      "symbol": "1000406",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000422",
+      "name": "0x95420f0048445475430f00",
+      "symbol": "1000422",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000421",
+      "name": "0x50430f0048445475430f00",
+      "symbol": "1000421",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000423",
+      "name": "0x34430f0048445458430f00",
+      "symbol": "1000423",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000424",
+      "name": "0x50430f0048445458430f00",
+      "symbol": "1000424",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000425",
+      "name": "0xc8430f00484454e2430f00",
+      "symbol": "1000425",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000419",
+      "name": "0x05000000484454e2430f00",
+      "symbol": "1000419",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000426",
+      "name": "0x8b430f00484454e2430f00",
+      "symbol": "1000426",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000418",
+      "name": "Autonomus Deity.AI",
+      "symbol": "MONAD",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222061"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000420",
+      "name": "0xc9430f00484454e2430f00",
+      "symbol": "1000420",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000416",
+      "name": "Thunderdome",
+      "symbol": "TATE",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222060"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000417",
+      "name": "0x05000000484454e0430f00",
+      "symbol": "1000417",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000427",
+      "name": "0x00000000484454da430f00",
+      "symbol": "1000427",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000435",
+      "name": "BIG BBQ",
+      "symbol": "BBQ",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222065"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000436",
+      "name": "0x05000000484454f3430f00",
+      "symbol": "1000436",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000433",
+      "name": "See-Saw",
+      "symbol": "RIDEMY",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222064"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000432",
+      "name": "0x05000000484454ef430f00",
+      "symbol": "1000432",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000430",
+      "name": "0x05000000484454ed430f00",
+      "symbol": "1000430",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000437",
+      "name": "0x66000000484454a3420f00",
+      "symbol": "1000437",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000434",
+      "name": "0x05000000484454f1430f00",
+      "symbol": "1000434",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000429",
+      "name": "Alpha Investoor",
+      "symbol": "ALPHA",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222062"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000428",
+      "name": "0x16000000484454a3420f00",
+      "symbol": "1000428",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000431",
+      "name": "White Panther Max",
+      "symbol": "MAXCAT",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222063"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000445",
+      "name": "0x05000000484454fc430f00",
+      "symbol": "1000445",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000444",
+      "name": "ZALUPA",
+      "symbol": "ZALUPA",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222067"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000438",
+      "name": "0x000000004844545e430f00",
+      "symbol": "1000438",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000441",
+      "name": "0x05000000484454f8430f00",
+      "symbol": "1000441",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000440",
+      "name": "Inverse WUD",
+      "symbol": "DUW",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222066"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000439",
+      "name": "0x00000000484454d8430f00",
+      "symbol": "1000439",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000442",
+      "name": "0x64000000484454a3420f00",
+      "symbol": "1000442",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000443",
+      "name": "0x5e430f00484454d8430f00",
+      "symbol": "1000443",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000446",
+      "name": "0x92420f00484454d8430f00",
+      "symbol": "1000446",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000450",
+      "name": "0x0500000048445401440f00",
+      "symbol": "1000450",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000448",
+      "name": "0x05000000484454ff430f00",
+      "symbol": "1000448",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000447",
+      "name": "Victory!",
+      "symbol": "V",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222068"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000449",
+      "name": "Inu Zeta 1",
+      "symbol": "HELLO",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222069"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000462",
+      "name": "0x64430f00484454d8430f00",
+      "symbol": "1000462",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000464",
+      "name": "0xf1420f00484454d8430f00",
+      "symbol": "1000464",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000463",
+      "name": "0x0a000000484454d8430f00",
+      "symbol": "1000463",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000454",
+      "name": "0x0500000048445405440f00",
+      "symbol": "1000454",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000466",
+      "name": "0x66420f004844545e430f00",
+      "symbol": "1000466",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000460",
+      "name": "0x1b000000484454d8430f00",
+      "symbol": "1000460",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000465",
+      "name": "0x090000004844540c000000",
+      "symbol": "1000465",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000461",
+      "name": "0x95420f00484454d8430f00",
+      "symbol": "1000461",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000458",
+      "name": "0x1e000000484454d8430f00",
+      "symbol": "1000458",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000452",
+      "name": "0x66420f00484454d8430f00",
+      "symbol": "1000452",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000451",
+      "name": "0xd4420f00484454d8430f00",
+      "symbol": "1000451",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000456",
+      "name": "0x0000000048445401430f00",
+      "symbol": "1000456",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000455",
+      "name": "0x01430f0048445405440f00",
+      "symbol": "1000455",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000453",
+      "name": "Million",
+      "symbol": "Mill",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222070"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000457",
+      "name": "0x95420f00484454f8430f00",
+      "symbol": "1000457",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000459",
+      "name": "0x0c000000484454d8430f00",
+      "symbol": "1000459",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000483",
+      "name": "0x65000000484454d8430f00",
+      "symbol": "1000483",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000475",
+      "name": "0x0900000048445419440f00",
+      "symbol": "1000475",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000480",
+      "name": "0x050000004844541f440f00",
+      "symbol": "1000480",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000485",
+      "name": "0x0000000048445419000000",
+      "symbol": "1000485",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000468",
+      "name": "0x0500000048445413440f00",
+      "symbol": "1000468",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000474",
+      "name": "0x0500000048445419440f00",
+      "symbol": "1000474",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000484",
+      "name": "0x0900000048445401440f00",
+      "symbol": "1000484",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000481",
+      "name": "0x95420f004844541f440f00",
+      "symbol": "1000481",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000473",
+      "name": "0x4b61696279c58d",
+      "symbol": "0x4b61696279c58d",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222073"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000469",
+      "name": "0xf8430f0048445413440f00",
+      "symbol": "1000469",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000470",
+      "name": "usdc",
+      "symbol": "usdc",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "12345"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000477",
+      "name": "JAM",
+      "symbol": "$JAM",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222074"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000476",
+      "name": "0x0000000048445405440f00",
+      "symbol": "1000476",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000478",
+      "name": "0x050000004844541d440f00",
+      "symbol": "1000478",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000472",
+      "name": "0x0500000048445417440f00",
+      "symbol": "1000472",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000482",
+      "name": "0x13440f004844541f440f00",
+      "symbol": "1000482",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000467",
+      "name": "R2D2100 WUD FUD",
+      "symbol": "WUDFUD",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222071"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000479",
+      "name": "Inverse_WUD",
+      "symbol": "DUD",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222075"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000471",
+      "name": "BEAN GUY",
+      "symbol": "BNG",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222072"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000494",
+      "name": "JAMTON",
+      "symbol": "JAMTON",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222078"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000491",
+      "name": "0x3a430f0048445405440f00",
+      "symbol": "1000491",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000500",
+      "name": "0x14000000484454d8430f00",
+      "symbol": "1000500",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000496",
+      "name": "0x95420f004844542c440f00",
+      "symbol": "1000496",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000495",
+      "name": "0x050000004844542e440f00",
+      "symbol": "1000495",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000488",
+      "name": "0x0500000048445427440f00",
+      "symbol": "1000488",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000497",
+      "name": "0x1f440f004844542c440f00",
+      "symbol": "1000497",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000490",
+      "name": "0x0a00000048445427440f00",
+      "symbol": "1000490",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000487",
+      "name": "Apple",
+      "symbol": "AAPL",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222076"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000493",
+      "name": "0x050000004844542c440f00",
+      "symbol": "1000493",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000486",
+      "name": "0x92420f004844545e430f00",
+      "symbol": "1000486",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000499",
+      "name": "0xc0430f00484454d8430f00",
+      "symbol": "1000499",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000503",
+      "name": "Darth Vader Cat",
+      "symbol": "DVCAT",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090131"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000498",
+      "name": "0xd8430f00484454fc430f00",
+      "symbol": "1000498",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000489",
+      "name": "0x0000000048445427440f00",
+      "symbol": "1000489",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000502",
+      "name": "0x6f430f00484454d8430f00",
+      "symbol": "1000502",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000501",
+      "name": "0xd8430f0048445413440f00",
+      "symbol": "1000501",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000492",
+      "name": "Homosapien Sapien",
+      "symbol": "SAPIEN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222077"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000504",
+      "name": "0x3a430f00484454d8430f00",
+      "symbol": "1000504",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000522",
+      "name": "0x0500000048445449440f00",
+      "symbol": "1000522",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000516",
+      "name": "Naruto",
+      "symbol": "NAR",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222081"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000505",
+      "name": "0xd8430f0048445405440f00",
+      "symbol": "1000505",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000529",
+      "name": "0xd8430f00484454f8430f00",
+      "symbol": "1000529",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000512",
+      "name": "GreenNFT",
+      "symbol": "GREEN",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222080"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000525",
+      "name": "0x050000004844544c440f00",
+      "symbol": "1000525",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000523",
+      "name": "0xb1430f00484454d8430f00",
+      "symbol": "1000523",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000534",
+      "name": "0x55420f00484454d8430f00",
+      "symbol": "1000534",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000514",
+      "name": "0x0000000048445440440f00",
+      "symbol": "1000514",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000510",
+      "name": "0xd8430f004844543b440f00",
+      "symbol": "1000510",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000520",
+      "name": "0x0500000048445447440f00",
+      "symbol": "1000520",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000526",
+      "name": "0x99430f00484454d8430f00",
+      "symbol": "1000526",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000527",
+      "name": "Anunnaki",
+      "symbol": "ANU",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222085"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000515",
+      "name": "0x55420f004844543b440f00",
+      "symbol": "1000515",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000536",
+      "name": "0x58430f004844543b440f00",
+      "symbol": "1000536",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000519",
+      "name": "Axlo",
+      "symbol": "Ax",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222082"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000537",
+      "name": "0x50430f00484454d8430f00",
+      "symbol": "1000537",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000521",
+      "name": "TrumpAndGav",
+      "symbol": "TAG",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222083"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000533",
+      "name": "0x55420f0048445460430f00",
+      "symbol": "1000533",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000518",
+      "name": "Grifters",
+      "symbol": "Grift ",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090140"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000509",
+      "name": "0x000000004844543b440f00",
+      "symbol": "1000509",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000508",
+      "name": "0x050000004844543b440f00",
+      "symbol": "1000508",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000507",
+      "name": "GREECE",
+      "symbol": "GR",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222079"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000513",
+      "name": "0x0500000048445440440f00",
+      "symbol": "1000513",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000528",
+      "name": "0x050000004844544f440f00",
+      "symbol": "1000528",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000524",
+      "name": "Sophia",
+      "symbol": "SOPHIA",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222084"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000511",
+      "name": "0x75430f00484454d8430f00",
+      "symbol": "1000511",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000517",
+      "name": "0x0500000048445444440f00",
+      "symbol": "1000517",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000530",
+      "name": "Biff",
+      "symbol": "BIFF",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222086"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000535",
+      "name": "0x75430f004844543b440f00",
+      "symbol": "1000535",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000531",
+      "name": "0x0500000048445452440f00",
+      "symbol": "1000531",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000506",
+      "name": "0x95420f004844542e440f00",
+      "symbol": "1000506",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000532",
+      "name": "0x0d000000484454d8430f00",
+      "symbol": "1000532",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000539",
+      "name": "Make DOT Great Again",
+      "symbol": "MDGA",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090119"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000538",
+      "name": "0x50430f004844543b440f00",
+      "symbol": "1000538",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000542",
+      "name": "0x090000004844545c440f00",
+      "symbol": "1000542",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000540",
+      "name": "KAIBYO",
+      "symbol": "KAIBYO",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222087"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000541",
+      "name": "0x050000004844545c440f00",
+      "symbol": "1000541",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000544",
+      "name": "0x000000004844545a430f00",
+      "symbol": "1000544",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000543",
+      "name": "0x0000000048445460430f00",
+      "symbol": "1000543",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000545",
+      "name": "0x000000004844541e430f00",
+      "symbol": "1000545",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000548",
+      "name": "GREEN CANDLE",
+      "symbol": "PAMPIT",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "20090127"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000547",
+      "name": "0xd4420f004844543b440f00",
+      "symbol": "1000547",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000546",
+      "name": "DOTMATIONS",
+      "symbol": "DOTMA",
+      "decimals": "0"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "101"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000549",
+      "name": "0x7e420f004844543b440f00",
+      "symbol": "1000549",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000550",
+      "name": "KUSAMAOBAMAYOMAMA",
+      "symbol": "KOYM",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "22222088"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000552",
+      "name": "0x84430f00484454cd430f00",
+      "symbol": "1000552",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000551",
+      "name": "0x0500000048445466440f00",
+      "symbol": "1000551",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000553",
+      "name": "0xd8430f004844541d440f00",
+      "symbol": "1000553",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000554",
+      "name": "TRUST ME BRO",
+      "symbol": "BRO",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "696969"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000565",
+      "name": "0x1e430f004844541d440f00",
+      "symbol": "1000565",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000563",
+      "name": "0x99430f004844541d440f00",
+      "symbol": "1000563",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000566",
+      "name": "0x3a430f004844541d440f00",
+      "symbol": "1000566",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000557",
+      "name": "0x6f430f004844541d440f00",
+      "symbol": "1000557",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000567",
+      "name": "0x000000004844541d440f00",
+      "symbol": "1000567",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000560",
+      "name": "0xc0430f004844541d440f00",
+      "symbol": "1000560",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000558",
+      "name": "0xf8430f004844541d440f00",
+      "symbol": "1000558",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000559",
+      "name": "0x5a430f004844541d440f00",
+      "symbol": "1000559",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000561",
+      "name": "0xfc430f004844541d440f00",
+      "symbol": "1000561",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000564",
+      "name": "0x58430f004844541d440f00",
+      "symbol": "1000564",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000555",
+      "name": "0x60430f004844541d440f00",
+      "symbol": "1000555",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000556",
+      "name": "0x55420f004844541d440f00",
+      "symbol": "1000556",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2034,
+      "localId": "1000562",
+      "name": "0x1d440f004844543b440f00",
+      "symbol": "1000562",
+      "decimals": "0"
+    },
+    "hasLocation": false
+  }
+]

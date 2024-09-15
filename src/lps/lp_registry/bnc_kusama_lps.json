@@ -1,0 +1,178 @@
+[
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Native": "BNC"
+      },
+      {
+        "Token": "KSM"
+      }
+    ],
+    "liquidityStats": [
+      "215226942566595616",
+      "2133298437658112"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Native": "BNC"
+      },
+      {
+        "Token": "ZLK"
+      }
+    ],
+    "liquidityStats": [
+      "44948820791690612",
+      "579213477912978394533945"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Native": "BNC"
+      },
+      {
+        "Token2": "0"
+      }
+    ],
+    "liquidityStats": [
+      "35325393513411859",
+      "10704488214"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Native": "BNC"
+      },
+      {
+        "VToken": "BNC"
+      }
+    ],
+    "liquidityStats": [
+      "127256402365173196",
+      "115472224923605861"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Token": "KSM"
+      },
+      {
+        "Stable": "KUSD"
+      }
+    ],
+    "liquidityStats": [
+      "287907631571215",
+      "19147388440483012"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Token": "KSM"
+      },
+      {
+        "VSToken": "KSM"
+      }
+    ],
+    "liquidityStats": [
+      "157364202424344",
+      "319309372293847"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Token": "KSM"
+      },
+      {
+        "Token": "RMRK"
+      }
+    ],
+    "liquidityStats": [
+      "32702234259843",
+      "9125538278047"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "VToken": "KSM"
+      },
+      {
+        "Token": "KSM"
+      }
+    ],
+    "liquidityStats": [
+      "213147610620812",
+      "294945298120518"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Token": "KSM"
+      },
+      {
+        "Token2": "2"
+      }
+    ],
+    "liquidityStats": [
+      "335336854774",
+      "11645"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Token": "KAR"
+      },
+      {
+        "Token": "ZLK"
+      }
+    ],
+    "liquidityStats": [
+      "4671267451100517",
+      "20559654127244272660324"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "VToken": "KSM"
+      },
+      {
+        "Token2": "0"
+      }
+    ],
+    "liquidityStats": [
+      "207186408657357",
+      "8650326006"
+    ]
+  }
+]

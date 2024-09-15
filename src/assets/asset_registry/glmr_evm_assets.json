@@ -1,0 +1,6254 @@
+[
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x322E86852e492a7Ee17f28a78c663da38FB33bfb",
+      "chain": 2004,
+      "name": "Frax",
+      "symbol": "FRAX",
+      "decimals": "18",
+      "contractAddress": "0x322E86852e492a7Ee17f28a78c663da38FB33bfb"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x511aB53F793683763E5a8829738301368a2411E3",
+      "chain": 2004,
+      "name": "WELL",
+      "symbol": "WELL",
+      "decimals": "18",
+      "contractAddress": "0x511aB53F793683763E5a8829738301368a2411E3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xcd3B51D98478D53F4515A306bE565c6EebeF1D58",
+      "chain": 2004,
+      "name": "Beamswap Token",
+      "symbol": "GLINT",
+      "decimals": "18",
+      "contractAddress": "0xcd3B51D98478D53F4515A306bE565c6EebeF1D58"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE3e43888fa7803cDC7BEA478aB327cF1A0dc11a7",
+      "chain": 2004,
+      "name": "Flare Token",
+      "symbol": "FLARE",
+      "decimals": "18",
+      "contractAddress": "0xE3e43888fa7803cDC7BEA478aB327cF1A0dc11a7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0E358838ce72d5e61E0018a2ffaC4bEC5F4c88d2",
+      "chain": 2004,
+      "name": "StellaSwap",
+      "symbol": "STELLA",
+      "decimals": "18",
+      "contractAddress": "0x0E358838ce72d5e61E0018a2ffaC4bEC5F4c88d2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6021D2C27B6FBd6e7608D1F39B41398CAee2F824",
+      "chain": 2004,
+      "name": "Cypress",
+      "symbol": "CP",
+      "decimals": "18",
+      "contractAddress": "0x6021D2C27B6FBd6e7608D1F39B41398CAee2F824"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8f552a71EFE5eeFc207Bf75485b356A0b3f01eC9",
+      "chain": 2004,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6",
+      "contractAddress": "0x8f552a71EFE5eeFc207Bf75485b356A0b3f01eC9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b",
+      "chain": 2004,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6",
+      "contractAddress": "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x65b09ef8c5A096C5Fd3A80f1F7369E56eB932412",
+      "chain": 2004,
+      "name": "MoonBeans",
+      "symbol": "BEANS",
+      "decimals": "18",
+      "contractAddress": "0x65b09ef8c5A096C5Fd3A80f1F7369E56eB932412"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3Fd9b6C9A24E09F67b7b706d72864aEbb439100C",
+      "chain": 2004,
+      "name": "Zenlink Network Token",
+      "symbol": "ZLK",
+      "decimals": "18",
+      "contractAddress": "0x3Fd9b6C9A24E09F67b7b706d72864aEbb439100C"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4EEaa1fd27c50C64E77272BCdDe68c28F0A3c3D7",
+      "chain": 2004,
+      "name": "ORB token",
+      "symbol": "ORB",
+      "decimals": "18",
+      "contractAddress": "0x4EEaa1fd27c50C64E77272BCdDe68c28F0A3c3D7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x27292cf0016E5dF1d8b37306B2A98588aCbD6fCA",
+      "chain": 2004,
+      "name": "Axelar Wrapped ATOM",
+      "symbol": "axlATOM",
+      "decimals": "6",
+      "contractAddress": "0x27292cf0016E5dF1d8b37306B2A98588aCbD6fCA"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3405A1bd46B85c5C029483FbECf2F3E611026e45",
+      "chain": 2004,
+      "name": "Matic",
+      "symbol": "MATIC",
+      "decimals": "18",
+      "contractAddress": "0x3405A1bd46B85c5C029483FbECf2F3E611026e45"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4792C1EcB969B036eb51330c63bD27899A13D84e",
+      "chain": 2004,
+      "name": "Avalanche",
+      "symbol": "AVAX",
+      "decimals": "18",
+      "contractAddress": "0x4792C1EcB969B036eb51330c63bD27899A13D84e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8ECE0D14d619fE26e2C14C4a92c2F9E8634A039E",
+      "chain": 2004,
+      "name": "Blockchain Monster Coin",
+      "symbol": "BCMC",
+      "decimals": "18",
+      "contractAddress": "0x8ECE0D14d619fE26e2C14C4a92c2F9E8634A039E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xab3f0245B83feB11d15AAffeFD7AD465a59817eD",
+      "chain": 2004,
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": "18",
+      "contractAddress": "0xab3f0245B83feB11d15AAffeFD7AD465a59817eD"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE57eBd2d67B462E9926e04a8e33f01cD0D64346D",
+      "chain": 2004,
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": "8",
+      "contractAddress": "0xE57eBd2d67B462E9926e04a8e33f01cD0D64346D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1d4C2a246311bB9f827F4C768e277FF5787B7D7E",
+      "chain": 2004,
+      "name": "Moonriver",
+      "symbol": "MOVR",
+      "decimals": "18",
+      "contractAddress": "0x1d4C2a246311bB9f827F4C768e277FF5787B7D7E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x085416975fe14C2A731a97eC38B9bF8135231F62",
+      "chain": 2004,
+      "name": "Axelar Wrapped UST",
+      "symbol": "UST",
+      "decimals": "6",
+      "contractAddress": "0x085416975fe14C2A731a97eC38B9bF8135231F62"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x30D2a9F5FDf90ACe8c17952cbb4eE48a55D916A7",
+      "chain": 2004,
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": "18",
+      "contractAddress": "0x30D2a9F5FDf90ACe8c17952cbb4eE48a55D916A7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC19281F22A075E0F10351cd5D6Ea9f0AC63d4327",
+      "chain": 2004,
+      "name": "Fantom",
+      "symbol": "FTM",
+      "decimals": "18",
+      "contractAddress": "0xC19281F22A075E0F10351cd5D6Ea9f0AC63d4327"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xD10078FDbc835726c79533a4a19db40CFAd69d7f",
+      "chain": 2004,
+      "name": "Bananas",
+      "symbol": "GLMB",
+      "decimals": "18",
+      "contractAddress": "0xD10078FDbc835726c79533a4a19db40CFAd69d7f"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xCBABEe0658725b5B21e1512244734A5D5C6B51D6",
+      "chain": 2004,
+      "name": "Athos Finance Token",
+      "symbol": "ATH",
+      "decimals": "18",
+      "contractAddress": "0xCBABEe0658725b5B21e1512244734A5D5C6B51D6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x931715FEE2d06333043d11F658C8CE934aC61D0c",
+      "chain": 2004,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6",
+      "contractAddress": "0x931715FEE2d06333043d11F658C8CE934aC61D0c"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc9BAA8cfdDe8E328787E29b4B078abf2DaDc2055",
+      "chain": 2004,
+      "name": "Binance",
+      "symbol": "BNB",
+      "decimals": "18",
+      "contractAddress": "0xc9BAA8cfdDe8E328787E29b4B078abf2DaDc2055"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xfA9343C3897324496A05fC75abeD6bAC29f8A40f",
+      "chain": 2004,
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "decimals": "18",
+      "contractAddress": "0xfA9343C3897324496A05fC75abeD6bAC29f8A40f"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8b29344f368b5FA35595325903fE0eAab70C8E1F",
+      "chain": 2004,
+      "name": "Polkamarkets",
+      "symbol": "POLK",
+      "decimals": "18",
+      "contractAddress": "0x8b29344f368b5FA35595325903fE0eAab70C8E1F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA649325Aa7C5093d12D6F98EB4378deAe68CE23F",
+      "chain": 2004,
+      "name": "Binance-Peg BUSD Token",
+      "symbol": "BUSD",
+      "decimals": "18",
+      "contractAddress": "0xA649325Aa7C5093d12D6F98EB4378deAe68CE23F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1DC78Acda13a8BC4408B207c9E48CDBc096D95e0",
+      "chain": 2004,
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": "8",
+      "contractAddress": "0x1DC78Acda13a8BC4408B207c9E48CDBc096D95e0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xeb50C308177Df06685112b3f56E66761578eA9Bd",
+      "chain": 2004,
+      "name": "Cougar Token",
+      "symbol": "CGS",
+      "decimals": "18",
+      "contractAddress": "0xeb50C308177Df06685112b3f56E66761578eA9Bd"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98",
+      "chain": 2004,
+      "name": "USD Coin (Celer)",
+      "symbol": "USDC",
+      "decimals": "6",
+      "contractAddress": "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c",
+      "chain": 2004,
+      "name": "Tether USD (Celer)",
+      "symbol": "USDT",
+      "decimals": "6",
+      "contractAddress": "0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2758b57E3C052aE2B66be2E175c8F1980723d7aF",
+      "chain": 2004,
+      "name": "DPSDoubloon",
+      "symbol": "DOUBLOON",
+      "decimals": "18",
+      "contractAddress": "0x2758b57E3C052aE2B66be2E175c8F1980723d7aF"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xb564A5767A00Ee9075cAC561c427643286F8F4E1",
+      "chain": 2004,
+      "name": "XEN Crypto",
+      "symbol": "mbXEN",
+      "decimals": "18",
+      "contractAddress": "0xb564A5767A00Ee9075cAC561c427643286F8F4E1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB60590313975f0d98821B6Cab5Ea2a6d9641D7B6",
+      "chain": 2004,
+      "name": "Moonscape",
+      "symbol": "MSCP",
+      "decimals": "18",
+      "contractAddress": "0xB60590313975f0d98821B6Cab5Ea2a6d9641D7B6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9Fda7cEeC4c18008096C2fE2B85F05dc300F94d0",
+      "chain": 2004,
+      "name": "Lido DAO Token",
+      "symbol": "LDO",
+      "decimals": "18",
+      "contractAddress": "0x9Fda7cEeC4c18008096C2fE2B85F05dc300F94d0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xdFA46478F9e5EA86d57387849598dbFB2e964b02",
+      "chain": 2004,
+      "name": "Mai Stablecoin",
+      "symbol": "MAI",
+      "decimals": "18",
+      "contractAddress": "0xdFA46478F9e5EA86d57387849598dbFB2e964b02"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x922D641a426DcFFaeF11680e5358F34d97d112E1",
+      "chain": 2004,
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": "8",
+      "contractAddress": "0x922D641a426DcFFaeF11680e5358F34d97d112E1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5ada2e71C1568f4550be325fc5A35362Fc5caB25",
+      "chain": 2004,
+      "name": "GLMRDOGE INU",
+      "symbol": "GlmrDoge",
+      "decimals": "18",
+      "contractAddress": "0x5ada2e71C1568f4550be325fc5A35362Fc5caB25"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73",
+      "chain": 2004,
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": "6",
+      "contractAddress": "0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x735aBE48e8782948a37C7765ECb76b98CdE97B0F",
+      "chain": 2004,
+      "name": "Thorus",
+      "symbol": "THO",
+      "decimals": "18",
+      "contractAddress": "0x735aBE48e8782948a37C7765ECb76b98CdE97B0F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xBd174C9d2A564b2eB187BD6556ae1d12256D5adD",
+      "chain": 2004,
+      "name": "Galaxy",
+      "symbol": "GLX",
+      "decimals": "18",
+      "contractAddress": "0xBd174C9d2A564b2eB187BD6556ae1d12256D5adD"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4bDE98731149093a12579D71338fd3741fe6E5Ce",
+      "chain": 2004,
+      "name": "RiverBoat",
+      "symbol": "RIB",
+      "decimals": "18",
+      "contractAddress": "0x4bDE98731149093a12579D71338fd3741fe6E5Ce"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3D632d9e1a60a0880Dd45E61f279D919b5748377",
+      "chain": 2004,
+      "name": "ApeCoin",
+      "symbol": "APE",
+      "decimals": "18",
+      "contractAddress": "0x3D632d9e1a60a0880Dd45E61f279D919b5748377"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x31DAB3430f3081dfF3Ccd80F17AD98583437B213",
+      "chain": 2004,
+      "name": "Axelar Wrapped LUNA",
+      "symbol": "LUNA",
+      "decimals": "6",
+      "contractAddress": "0x31DAB3430f3081dfF3Ccd80F17AD98583437B213"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8e70cD5B4Ff3f62659049e74b6649c6603A0E594",
+      "chain": 2004,
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": "6",
+      "contractAddress": "0x8e70cD5B4Ff3f62659049e74b6649c6603A0E594"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE3434D4D7Fa39B9e1a004C0e53fa3b565aEE493D",
+      "chain": 2004,
+      "name": "SunFlower",
+      "symbol": "SUNF",
+      "decimals": "18",
+      "contractAddress": "0xE3434D4D7Fa39B9e1a004C0e53fa3b565aEE493D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x89781a51A44A42111BA5745a1151b84E121111F3",
+      "chain": 2004,
+      "name": "Shimmer",
+      "symbol": "SHMR",
+      "decimals": "18",
+      "contractAddress": "0x89781a51A44A42111BA5745a1151b84E121111F3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1e3683a205b7A0A4F0c8fE4Dbc7D4E6f7eE13fbE",
+      "chain": 2004,
+      "name": "Avalanche Token",
+      "symbol": "AVAX",
+      "decimals": "18",
+      "contractAddress": "0x1e3683a205b7A0A4F0c8fE4Dbc7D4E6f7eE13fbE"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0DB6729C03C85B0708166cA92801BcB5CAc781fC",
+      "chain": 2004,
+      "name": "Vested SolarBeam Token",
+      "symbol": "veSOLAR",
+      "decimals": "18",
+      "contractAddress": "0x0DB6729C03C85B0708166cA92801BcB5CAc781fC"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x11e4EBD5DbDF01478915eA400E740f8fcDcE1eBC",
+      "chain": 2004,
+      "name": "IRENE",
+      "symbol": "IRENE",
+      "decimals": "9",
+      "contractAddress": "0x11e4EBD5DbDF01478915eA400E740f8fcDcE1eBC"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc418B123885d732ED042b16e12e259741863F723",
+      "chain": 2004,
+      "name": "DBXen Token on Moonbeam",
+      "symbol": "mbDXN",
+      "decimals": "18",
+      "contractAddress": "0xc418B123885d732ED042b16e12e259741863F723"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xe88e37eA5Fef6580F065c27F61dB3eB28F4Edd7d",
+      "chain": 2004,
+      "name": "CRAP",
+      "symbol": "CRAP",
+      "decimals": "18",
+      "contractAddress": "0xe88e37eA5Fef6580F065c27F61dB3eB28F4Edd7d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB9Ef93F6217378a22A77a0015BE73D800eE1c26f",
+      "chain": 2004,
+      "name": "Investing Union",
+      "symbol": "IUD",
+      "decimals": "18",
+      "contractAddress": "0xB9Ef93F6217378a22A77a0015BE73D800eE1c26f"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x568e579A447ae1C6fEf3c7c0456C947Cb63aBC3e",
+      "chain": 2004,
+      "name": "CrystalToken",
+      "symbol": "CRYSTL",
+      "decimals": "18",
+      "contractAddress": "0x568e579A447ae1C6fEf3c7c0456C947Cb63aBC3e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA423E7eEB60547d9C7b65005477b63ae7CE67E62",
+      "chain": 2004,
+      "name": "Energyfi Token",
+      "symbol": "EFT",
+      "decimals": "18",
+      "contractAddress": "0xA423E7eEB60547d9C7b65005477b63ae7CE67E62"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xF2DC7653A5aF3512dD64a7dfb36f7A7ff9C0540D",
+      "chain": 2004,
+      "name": "DustyDunes Token",
+      "symbol": "DUSTY",
+      "decimals": "18",
+      "contractAddress": "0xF2DC7653A5aF3512dD64a7dfb36f7A7ff9C0540D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE065ffaf3f7dED69BB5cf5FDd1Fd1dDA2EEe8493",
+      "chain": 2004,
+      "name": "Take Flight Alpha",
+      "symbol": "TFA",
+      "decimals": "18",
+      "contractAddress": "0xE065ffaf3f7dED69BB5cf5FDd1Fd1dDA2EEe8493"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2Dfc76901bB2ac2A5fA5fc479590A490BBB10a5F",
+      "chain": 2004,
+      "name": "Cougar Token",
+      "symbol": "CGS",
+      "decimals": "18",
+      "contractAddress": "0x2Dfc76901bB2ac2A5fA5fc479590A490BBB10a5F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x28c3971794d95637218AA87159125b070Ce69664",
+      "chain": 2004,
+      "name": "LUNAR Token",
+      "symbol": "LUNAR",
+      "decimals": "18",
+      "contractAddress": "0x28c3971794d95637218AA87159125b070Ce69664"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xBd2949F67DcdC549c6Ebe98696449Fa79D988A9F",
+      "chain": 2004,
+      "name": "Wrapped MTRG on moonbeam by passport.meter.io",
+      "symbol": "MTRG",
+      "decimals": "18",
+      "contractAddress": "0xBd2949F67DcdC549c6Ebe98696449Fa79D988A9F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x595c8481c48894771CE8FaDE54ac6Bf59093F9E8",
+      "chain": 2004,
+      "name": "beefy.finance",
+      "symbol": "BIFI",
+      "decimals": "18",
+      "contractAddress": "0x595c8481c48894771CE8FaDE54ac6Bf59093F9E8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7d8aF5dc9E573156849f1d6E5Bbe6393E0ee324e",
+      "chain": 2004,
+      "name": "Matic Token",
+      "symbol": "MATIC",
+      "decimals": "18",
+      "contractAddress": "0x7d8aF5dc9E573156849f1d6E5Bbe6393E0ee324e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x87894a4Dd3228aBcb1891795Fd4d7C3719636220",
+      "chain": 2004,
+      "name": "GSHARE",
+      "symbol": "GSHARE",
+      "decimals": "18",
+      "contractAddress": "0x87894a4Dd3228aBcb1891795Fd4d7C3719636220"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xAF7Ef8782E8a5eE61c21Ab62b5bAeFcCBE2eBe72",
+      "chain": 2004,
+      "name": "Polkadog",
+      "symbol": "PDog",
+      "decimals": "9",
+      "contractAddress": "0xAF7Ef8782E8a5eE61c21Ab62b5bAeFcCBE2eBe72"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA75b059d93cC10F2A45800f36730Ea1de069d07A",
+      "chain": 2004,
+      "name": "Moonrocks",
+      "symbol": "MOON",
+      "decimals": "0",
+      "contractAddress": "0xA75b059d93cC10F2A45800f36730Ea1de069d07A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE6a991Ffa8CfE62B0bf6BF72959A3d4f11B2E0f5",
+      "chain": 2004,
+      "name": "VoltSwap Governance wrapped by passport.meter.io",
+      "symbol": "VOLT",
+      "decimals": "18",
+      "contractAddress": "0xE6a991Ffa8CfE62B0bf6BF72959A3d4f11B2E0f5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x89C36bB2E30efCA78bDEB99101C1Ac1FfcB6a30e",
+      "chain": 2004,
+      "name": "USDC from Moonriver wrapped by passport.meter.io",
+      "symbol": "USDC.movr",
+      "decimals": "6",
+      "contractAddress": "0x89C36bB2E30efCA78bDEB99101C1Ac1FfcB6a30e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xEa9cf27a2A4E14b4Ca78a939ffE0412e39D945f2",
+      "chain": 2004,
+      "name": "Deflationary Token",
+      "symbol": "DT",
+      "decimals": "9",
+      "contractAddress": "0xEa9cf27a2A4E14b4Ca78a939ffE0412e39D945f2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xcF363404Bc122FAe87A610a811B4AEe72832cCCd",
+      "chain": 2004,
+      "name": "PEPEBEAM",
+      "symbol": "PBM",
+      "decimals": "18",
+      "contractAddress": "0xcF363404Bc122FAe87A610a811B4AEe72832cCCd"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x19d2f0CF1FC41DE2b8fd4A98065AB9284E05Cf29",
+      "chain": 2004,
+      "name": "OneBeam",
+      "symbol": "1BEAM",
+      "decimals": "18",
+      "contractAddress": "0x19d2f0CF1FC41DE2b8fd4A98065AB9284E05Cf29"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x529A0FDAC61065F27363A7682EdB468ffcF7b87C",
+      "chain": 2004,
+      "name": "ShibaBeam",
+      "symbol": "SHIBM",
+      "decimals": "2",
+      "contractAddress": "0x529A0FDAC61065F27363A7682EdB468ffcF7b87C"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x252264a9b4A8829dA07CC89cfDf78f071ba374ce",
+      "chain": 2004,
+      "name": "GLMRFloki",
+      "symbol": "FLOKI",
+      "decimals": "9",
+      "contractAddress": "0x252264a9b4A8829dA07CC89cfDf78f071ba374ce"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3674D64AaB971aB974B2035667a4B3d09B5ec2B3",
+      "chain": 2004,
+      "name": "Wrapped ETH from Ethereum by passport.meter.io",
+      "symbol": "WETH",
+      "decimals": "18",
+      "contractAddress": "0x3674D64AaB971aB974B2035667a4B3d09B5ec2B3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2939644AF3CB4c868DbE616cf3Fd5cAAc5c0306c",
+      "chain": 2004,
+      "name": "$YUMI",
+      "symbol": "$YUMI",
+      "decimals": "18",
+      "contractAddress": "0x2939644AF3CB4c868DbE616cf3Fd5cAAc5c0306c"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7B37d0787A3424A0810E02b24743a45eBd5530B2",
+      "chain": 2004,
+      "name": "BUSD from BSC wrapped by passport.meter.io",
+      "symbol": "BUSD.bsc",
+      "decimals": "18",
+      "contractAddress": "0x7B37d0787A3424A0810E02b24743a45eBd5530B2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xdB41d1D672010C18c4658D416FbCA992EA9796B1",
+      "chain": 2004,
+      "name": "DogeBeam",
+      "symbol": "DOGE",
+      "decimals": "9",
+      "contractAddress": "0xdB41d1D672010C18c4658D416FbCA992EA9796B1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x605a1aC45d0924be0e1d4A2D1c091F59D3eD9c3E",
+      "chain": 2004,
+      "name": "Cheems MoonBeam",
+      "symbol": "CINUMB",
+      "decimals": "9",
+      "contractAddress": "0x605a1aC45d0924be0e1d4A2D1c091F59D3eD9c3E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x09D10065fD9Bf24C0FA697b8FE7390C53deeFD6D",
+      "chain": 2004,
+      "name": "BeamFinance",
+      "symbol": "BEFI",
+      "decimals": "18",
+      "contractAddress": "0x09D10065fD9Bf24C0FA697b8FE7390C53deeFD6D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3795C36e7D12A8c252A20C5a7B455f7c57b60283",
+      "chain": 2004,
+      "name": "Celer Network",
+      "symbol": "CELR",
+      "decimals": "18",
+      "contractAddress": "0x3795C36e7D12A8c252A20C5a7B455f7c57b60283"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x16b26B9328b1B64e4Aad6326C7cb94B2e8A96B4e",
+      "chain": 2004,
+      "name": "Omnisea",
+      "symbol": "OSEA",
+      "decimals": "18",
+      "contractAddress": "0x16b26B9328b1B64e4Aad6326C7cb94B2e8A96B4e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0B5B9806b1B202e22aA26Cfd527fDCafEF9eDAcf",
+      "chain": 2004,
+      "name": "MOVR from Moonriver wrapped by passport.meter.io",
+      "symbol": "MOVR",
+      "decimals": "18",
+      "contractAddress": "0x0B5B9806b1B202e22aA26Cfd527fDCafEF9eDAcf"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x726312Be83A6369e020a66d71Bb1eB2442484759",
+      "chain": 2004,
+      "name": "Moonriver Token",
+      "symbol": "MOVR",
+      "decimals": "18",
+      "contractAddress": "0x726312Be83A6369e020a66d71Bb1eB2442484759"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x78BE30F2a60d63244425AA2466B90CA677d5Aa77",
+      "chain": 2004,
+      "name": "GDXen Token",
+      "symbol": "GDXen",
+      "decimals": "18",
+      "contractAddress": "0x78BE30F2a60d63244425AA2466B90CA677d5Aa77"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x07E6dBB05116b153B08ecE5F731BCa802929E8e3",
+      "chain": 2004,
+      "name": "PEPE",
+      "symbol": "PEPE",
+      "decimals": "18",
+      "contractAddress": "0x07E6dBB05116b153B08ecE5F731BCa802929E8e3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xe4c90cebED25D390632fb2448a1739Bd44Eef1a1",
+      "chain": 2004,
+      "name": "BeamCamel",
+      "symbol": "CAMEL",
+      "decimals": "9",
+      "contractAddress": "0xe4c90cebED25D390632fb2448a1739Bd44Eef1a1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x176b1618EdEF17c75Fc084457252c896Dd2487b1",
+      "chain": 2004,
+      "name": "MoonPepe",
+      "symbol": "MPEPE",
+      "decimals": "18",
+      "contractAddress": "0x176b1618EdEF17c75Fc084457252c896Dd2487b1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4204cAd97732282d261FbB7088e07557810A6408",
+      "chain": 2004,
+      "name": "Beamshare Token",
+      "symbol": "SHARE",
+      "decimals": "18",
+      "contractAddress": "0x4204cAd97732282d261FbB7088e07557810A6408"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE3b841C3f96e647E6dc01b468d6D0AD3562a9eeb",
+      "chain": 2004,
+      "name": "Wrapped BNB",
+      "symbol": "WBNB",
+      "decimals": "18",
+      "contractAddress": "0xE3b841C3f96e647E6dc01b468d6D0AD3562a9eeb"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xaB02eE00148DA789d8B48378Bb2847cc58cA7E5e",
+      "chain": 2004,
+      "name": "Novabeam",
+      "symbol": "NOVA",
+      "decimals": "18",
+      "contractAddress": "0xaB02eE00148DA789d8B48378Bb2847cc58cA7E5e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8006320739fC281da67Ee62eB9b4Ef8ADD5C903a",
+      "chain": 2004,
+      "name": "Convergence",
+      "symbol": "CONV",
+      "decimals": "18",
+      "contractAddress": "0x8006320739fC281da67Ee62eB9b4Ef8ADD5C903a"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x75e0a0b85e5d755eA6A67166C081b0A646A88eA0",
+      "chain": 2004,
+      "name": "TEST05",
+      "symbol": "TEST05",
+      "decimals": "9",
+      "contractAddress": "0x75e0a0b85e5d755eA6A67166C081b0A646A88eA0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA98FcFDB684A894d26B91f85CEbFc4CD51f95875",
+      "chain": 2004,
+      "name": "Porkoink",
+      "symbol": "PORK",
+      "decimals": "18",
+      "contractAddress": "0xA98FcFDB684A894d26B91f85CEbFc4CD51f95875"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3eB58b4A88D63cbAdBf9c11e674F5aFedE010326",
+      "chain": 2004,
+      "name": "Dogebeam",
+      "symbol": "Dogebeam",
+      "decimals": "9",
+      "contractAddress": "0x3eB58b4A88D63cbAdBf9c11e674F5aFedE010326"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xcA631497d0b5dcfe2Da942f2caD01c238cDaB59c",
+      "chain": 2004,
+      "name": "OSHARE",
+      "symbol": "OSHARE",
+      "decimals": "18",
+      "contractAddress": "0xcA631497d0b5dcfe2Da942f2caD01c238cDaB59c"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x552486A85E157b88C19c37FB5D811B4DAA029373",
+      "chain": 2004,
+      "name": "MoreETH",
+      "symbol": "METH",
+      "decimals": "18",
+      "contractAddress": "0x552486A85E157b88C19c37FB5D811B4DAA029373"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7cd3e6e1A69409deF0D78D17a492e8e143F40eC5",
+      "chain": 2004,
+      "name": "ZooDAO",
+      "symbol": "ZOO",
+      "decimals": "18",
+      "contractAddress": "0x7cd3e6e1A69409deF0D78D17a492e8e143F40eC5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xf64FA5155D8cc578D473A21FB67507DDCbB80D21",
+      "chain": 2004,
+      "name": "WBTC from Etherem wrapped by passport.meter.io",
+      "symbol": "WBTC",
+      "decimals": "8",
+      "contractAddress": "0xf64FA5155D8cc578D473A21FB67507DDCbB80D21"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x00e4C3DfB33c3a90090C305679D1Ac805f461783",
+      "chain": 2004,
+      "name": "Jungle Points",
+      "symbol": "JPTS",
+      "decimals": "18",
+      "contractAddress": "0x00e4C3DfB33c3a90090C305679D1Ac805f461783"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x54598ABe01c422b018B34059B6Fa5364D7EB40A3",
+      "chain": 2004,
+      "name": "Glimmer Kongs Club Token",
+      "symbol": "KONGTOKEN",
+      "decimals": "18",
+      "contractAddress": "0x54598ABe01c422b018B34059B6Fa5364D7EB40A3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1b724DA08841fc1Ee3a3FE906274Ef0978320111",
+      "chain": 2004,
+      "name": "BeamSwap.org Token",
+      "symbol": "BMS",
+      "decimals": "2",
+      "contractAddress": "0x1b724DA08841fc1Ee3a3FE906274Ef0978320111"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8f2C7218f6b2c162b8bA60B5536E2830BaF0Ce4e",
+      "chain": 2004,
+      "name": "BEACON",
+      "symbol": "BEACON",
+      "decimals": "18",
+      "contractAddress": "0x8f2C7218f6b2c162b8bA60B5536E2830BaF0Ce4e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4c4BF319237D98a30A929A96112EfFa8DA3510EB",
+      "chain": 2004,
+      "name": "StakedThorus",
+      "symbol": "sTHO",
+      "decimals": "18",
+      "contractAddress": "0x4c4BF319237D98a30A929A96112EfFa8DA3510EB"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5bbBb76EC24dfA17e0441567C3C4308049735B5b",
+      "chain": 2004,
+      "name": "StarShot",
+      "symbol": "STAR",
+      "decimals": "9",
+      "contractAddress": "0x5bbBb76EC24dfA17e0441567C3C4308049735B5b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x975BA105fa6b14bdDc602cA222E0BC221c136422",
+      "chain": 2004,
+      "name": "Divvy",
+      "symbol": "XDV",
+      "decimals": "18",
+      "contractAddress": "0x975BA105fa6b14bdDc602cA222E0BC221c136422"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x11B01313799a50A460e703970168829EcBc1C04E",
+      "chain": 2004,
+      "name": "World Cup",
+      "symbol": "World Cup",
+      "decimals": "1",
+      "contractAddress": "0x11B01313799a50A460e703970168829EcBc1C04E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE7b75fD7c431D4DCaF8b4BBA096bA364F9C62c9D",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "tes",
+      "decimals": "18",
+      "contractAddress": "0xE7b75fD7c431D4DCaF8b4BBA096bA364F9C62c9D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x238d8d951aaC0608DBa71f4F835d479BDa1bfb11",
+      "chain": 2004,
+      "name": "DOGECOIN TOKEN",
+      "symbol": "DOGE",
+      "decimals": "18",
+      "contractAddress": "0x238d8d951aaC0608DBa71f4F835d479BDa1bfb11"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4dD0c86746E8C1CEf05A987b13079343A30E05eF",
+      "chain": 2004,
+      "name": "Moonbeam Ingots",
+      "symbol": "GOLD",
+      "decimals": "0",
+      "contractAddress": "0x4dD0c86746E8C1CEf05A987b13079343A30E05eF"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "chain": 2004,
+      "name": "FENIX",
+      "symbol": "mbFENIX",
+      "decimals": "18",
+      "contractAddress": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4282e8195d048591fC28833B81B5F9001934535E",
+      "chain": 2004,
+      "name": "THETESTOR",
+      "symbol": "THOR",
+      "decimals": "6",
+      "contractAddress": "0x4282e8195d048591fC28833B81B5F9001934535E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1f814cf3c58eb3c6a6f3bf8130b550b8d20D7a74",
+      "chain": 2004,
+      "name": "SHIBA MOONBEAM",
+      "symbol": "SHIBA MOONBEAM",
+      "decimals": "18",
+      "contractAddress": "0x1f814cf3c58eb3c6a6f3bf8130b550b8d20D7a74"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5B1b435A39FDE8817916FCa0E6d9Dc90Bb3d75E0",
+      "chain": 2004,
+      "name": "日内瓦",
+      "symbol": "日内瓦",
+      "decimals": "18",
+      "contractAddress": "0x5B1b435A39FDE8817916FCa0E6d9Dc90Bb3d75E0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA8c0453B31Fd1F9F03fdAA84A89845De43A68a3e",
+      "chain": 2004,
+      "name": "Moonbeam Ingots",
+      "symbol": "SILVER",
+      "decimals": "0",
+      "contractAddress": "0xA8c0453B31Fd1F9F03fdAA84A89845De43A68a3e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xD3AEc9510BFf1A43FeC0F96cCB78c857d84f020a",
+      "chain": 2004,
+      "name": "Moonbeam Ingots",
+      "symbol": "SILVER",
+      "decimals": "0",
+      "contractAddress": "0xD3AEc9510BFf1A43FeC0F96cCB78c857d84f020a"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2d5f85444D6699b77fEE834145975c71639A75D0",
+      "chain": 2004,
+      "name": "Moonbeam Ingots",
+      "symbol": "BRONZE",
+      "decimals": "0",
+      "contractAddress": "0x2d5f85444D6699b77fEE834145975c71639A75D0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0914437d4EfbbD3a98Bd4009953395Ec4492D905",
+      "chain": 2004,
+      "name": "Assetify",
+      "symbol": "ASF",
+      "decimals": "8",
+      "contractAddress": "0x0914437d4EfbbD3a98Bd4009953395Ec4492D905"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x765277EebeCA2e31912C9946eAe1021199B39C61",
+      "chain": 2004,
+      "name": "Dai Stablecoin",
+      "symbol": "DAI",
+      "decimals": "18",
+      "contractAddress": "0x765277EebeCA2e31912C9946eAe1021199B39C61"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3a3Fa22e7A5315Ae4f9550267a9E0EB0b82a6e5D",
+      "chain": 2004,
+      "name": "RomeDaoV2",
+      "symbol": "RomeDaoV2",
+      "decimals": "18",
+      "contractAddress": "0x3a3Fa22e7A5315Ae4f9550267a9E0EB0b82a6e5D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9247a24e1d789602F4B1FDD7D5c13a6733b8BC26",
+      "chain": 2004,
+      "name": "Yolotron",
+      "symbol": "YOLO",
+      "decimals": "18",
+      "contractAddress": "0x9247a24e1d789602F4B1FDD7D5c13a6733b8BC26"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xe99EA0AE576aFA134f9Fc64f528963C8b3171275",
+      "chain": 2004,
+      "name": "FigSwap Token",
+      "symbol": "FIG",
+      "decimals": "18",
+      "contractAddress": "0xe99EA0AE576aFA134f9Fc64f528963C8b3171275"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xBBe2b2737f0E7A6f8f6054a2D11De6F5E68d8eD8",
+      "chain": 2004,
+      "name": "Test AllianceBlock Token",
+      "symbol": "TBALBT",
+      "decimals": "18",
+      "contractAddress": "0xBBe2b2737f0E7A6f8f6054a2D11De6F5E68d8eD8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5AbCd412950A9De9F906DbE45F05817909B732ab",
+      "chain": 2004,
+      "name": "JOKER",
+      "symbol": "JK",
+      "decimals": "9",
+      "contractAddress": "0x5AbCd412950A9De9F906DbE45F05817909B732ab"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc806B0600cbAfA0B197562a9F7e3B9856866E9bF",
+      "chain": 2004,
+      "name": "Deuterium",
+      "symbol": "d2O",
+      "decimals": "18",
+      "contractAddress": "0xc806B0600cbAfA0B197562a9F7e3B9856866E9bF"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xBe84192683702CF9aF5910D5dB94413A36068DeB",
+      "chain": 2004,
+      "name": "Moonbeam Ingots",
+      "symbol": "COAL",
+      "decimals": "0",
+      "contractAddress": "0xBe84192683702CF9aF5910D5dB94413A36068DeB"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3a83254f5453f263Ad2EADFB5284c991a7DF976A",
+      "chain": 2004,
+      "name": "GLMRDOGE",
+      "symbol": "GLMRDOGE",
+      "decimals": "9",
+      "contractAddress": "0x3a83254f5453f263Ad2EADFB5284c991a7DF976A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB7F959F65ea04328f9254b8322FB5cbCeBFBa7c2",
+      "chain": 2004,
+      "name": "PEPE INU",
+      "symbol": "PEPE",
+      "decimals": "18",
+      "contractAddress": "0xB7F959F65ea04328f9254b8322FB5cbCeBFBa7c2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x06A3b410b681c82417A906993aCeFb91bAB6A080",
+      "chain": 2004,
+      "name": "XStella",
+      "symbol": "xStella",
+      "decimals": "18",
+      "contractAddress": "0x06A3b410b681c82417A906993aCeFb91bAB6A080"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xBE84B5e3DC929551E0F21871c4142881b1B12ECf",
+      "chain": 2004,
+      "name": "Just Play Just Enjoy",
+      "symbol": "JPJE",
+      "decimals": "18",
+      "contractAddress": "0xBE84B5e3DC929551E0F21871c4142881b1B12ECf"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xD4299b39555573FC64e839C5ee1BbCa21Ec0ca6B",
+      "chain": 2004,
+      "name": "LunarBomb",
+      "symbol": "LunarBomb",
+      "decimals": "0",
+      "contractAddress": "0xD4299b39555573FC64e839C5ee1BbCa21Ec0ca6B"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6451d46B76B73c3388b9a2262E9a274B739d1115",
+      "chain": 2004,
+      "name": "UnicornDAO",
+      "symbol": "UNIDAO",
+      "decimals": "9",
+      "contractAddress": "0x6451d46B76B73c3388b9a2262E9a274B739d1115"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8D52f97E0acEE427bBD68826bf8700cD4Ef97209",
+      "chain": 2004,
+      "name": "PumpkinMoon",
+      "symbol": "PMKIN",
+      "decimals": "9",
+      "contractAddress": "0x8D52f97E0acEE427bBD68826bf8700cD4Ef97209"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xf99Ad121420d60368956aEF4dD78C25617Ea846e",
+      "chain": 2004,
+      "name": "BlackBeam",
+      "symbol": "BlackBeam",
+      "decimals": "9",
+      "contractAddress": "0xf99Ad121420d60368956aEF4dD78C25617Ea846e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8805E55EC3e0579E03d5cef8B2A9d107f686371b",
+      "chain": 2004,
+      "name": "GLMRMOON",
+      "symbol": "GLMRMOON",
+      "decimals": "9",
+      "contractAddress": "0x8805E55EC3e0579E03d5cef8B2A9d107f686371b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8e669E5A9Ed9Eb3B0Bfc27b20202EBA4e942cBc4",
+      "chain": 2004,
+      "name": "ShibaBeam",
+      "symbol": "SBM",
+      "decimals": "9",
+      "contractAddress": "0x8e669E5A9Ed9Eb3B0Bfc27b20202EBA4e942cBc4"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2268123586111E4A43477E0871f029A676c31Fa3",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "test",
+      "decimals": "18",
+      "contractAddress": "0x2268123586111E4A43477E0871f029A676c31Fa3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc234A67a4F840E61adE794be47de455361b52413",
+      "chain": 2004,
+      "name": "Dai Stablecoin",
+      "symbol": "DAI",
+      "decimals": "18",
+      "contractAddress": "0xc234A67a4F840E61adE794be47de455361b52413"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC90DEEFEBBf54933AdF31F38394e68FAEcaB34e7",
+      "chain": 2004,
+      "name": "FEGBEAM",
+      "symbol": "FEGBEAM",
+      "decimals": "6",
+      "contractAddress": "0xC90DEEFEBBf54933AdF31F38394e68FAEcaB34e7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2Ec2aEdbD0351ce482A4C4Bf2027D6f24EcB0650",
+      "chain": 2004,
+      "name": "HELLOBEAM",
+      "symbol": "HELLOBEAM",
+      "decimals": "9",
+      "contractAddress": "0x2Ec2aEdbD0351ce482A4C4Bf2027D6f24EcB0650"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xECf2ADafF1De8A512f6e8bfe67a2C836EDb25Da3",
+      "chain": 2004,
+      "name": "xcRMRK",
+      "symbol": "xcRMRK",
+      "decimals": "10",
+      "contractAddress": "0xECf2ADafF1De8A512f6e8bfe67a2C836EDb25Da3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xb9400199e61a9798d92e67A5159bd7c34C7FC213",
+      "chain": 2004,
+      "name": "Alphadex",
+      "symbol": "Alpha",
+      "decimals": "18",
+      "contractAddress": "0xb9400199e61a9798d92e67A5159bd7c34C7FC213"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xEb2d7e52Cc7AB1989DCd3E1025a46B3F73adfe4A",
+      "chain": 2004,
+      "name": "Zenlink LP Token",
+      "symbol": "ZLK-LP",
+      "decimals": "18",
+      "contractAddress": "0xEb2d7e52Cc7AB1989DCd3E1025a46B3F73adfe4A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x98107093A1230bc77840ee7f870dB4AD0283690a",
+      "chain": 2004,
+      "name": "OneBeam",
+      "symbol": "1BEAM",
+      "decimals": "18",
+      "contractAddress": "0x98107093A1230bc77840ee7f870dB4AD0283690a"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xDEE649069a45b765bD85238d2A870B309e4c1486",
+      "chain": 2004,
+      "name": "Interstella Metaverse ",
+      "symbol": "INTM",
+      "decimals": "18",
+      "contractAddress": "0xDEE649069a45b765bD85238d2A870B309e4c1486"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9039662B135a7024eDE3718cCD3538c687448e67",
+      "chain": 2004,
+      "name": "Solar Inu",
+      "symbol": "SInu",
+      "decimals": "18",
+      "contractAddress": "0x9039662B135a7024eDE3718cCD3538c687448e67"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7b9372700a7aD3Ef2208dEf34d2aB335f916ccFC",
+      "chain": 2004,
+      "name": "FUNK",
+      "symbol": "FUNK",
+      "decimals": "18",
+      "contractAddress": "0x7b9372700a7aD3Ef2208dEf34d2aB335f916ccFC"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5c9c55e734D97652Bc4a6605103352BDfbC22481",
+      "chain": 2004,
+      "name": "TestContract",
+      "symbol": "TESTCONTRACT",
+      "decimals": "18",
+      "contractAddress": "0x5c9c55e734D97652Bc4a6605103352BDfbC22481"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xb963Ae1427B9ca08FC214CCcd7f5eA33BA821663",
+      "chain": 2004,
+      "name": "KING BEAM",
+      "symbol": "KINGBEAM",
+      "decimals": "9",
+      "contractAddress": "0xb963Ae1427B9ca08FC214CCcd7f5eA33BA821663"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA12D1399E9E46468f3c5A542C2b27eC778FcD1C7",
+      "chain": 2004,
+      "name": "Tovi",
+      "symbol": "TV",
+      "decimals": "9",
+      "contractAddress": "0xA12D1399E9E46468f3c5A542C2b27eC778FcD1C7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd3E561979f2D4E2F51792f3247db57A9eE92008a",
+      "chain": 2004,
+      "name": "WeebsBeam",
+      "symbol": "Weebs",
+      "decimals": "9",
+      "contractAddress": "0xd3E561979f2D4E2F51792f3247db57A9eE92008a"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2a111964505dC92e48b717bf176f11Bf4D340471",
+      "chain": 2004,
+      "name": "SafeMoonBeam",
+      "symbol": "SFMB",
+      "decimals": "6",
+      "contractAddress": "0x2a111964505dC92e48b717bf176f11Bf4D340471"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x10784a5D2fb19516299Fe350d55d44d61628bdf1",
+      "chain": 2004,
+      "name": "EUTH_3",
+      "symbol": "EUTH",
+      "decimals": "18",
+      "contractAddress": "0x10784a5D2fb19516299Fe350d55d44d61628bdf1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x82AE05624760e822cE133F91A2D1A0B702033145",
+      "chain": 2004,
+      "name": "SafeMoon",
+      "symbol": "SAFEMOON",
+      "decimals": "9",
+      "contractAddress": "0x82AE05624760e822cE133F91A2D1A0B702033145"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xf703d8BDe42A1f3829654fDa8fFf32E82b08e6f2",
+      "chain": 2004,
+      "name": "TESTTEST",
+      "symbol": "TEST",
+      "decimals": "18",
+      "contractAddress": "0xf703d8BDe42A1f3829654fDa8fFf32E82b08e6f2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xFA5d2C570CAB4c6980859C2E132fa1eba65b7BeD",
+      "chain": 2004,
+      "name": "MMX",
+      "symbol": "MMX",
+      "decimals": "18",
+      "contractAddress": "0xFA5d2C570CAB4c6980859C2E132fa1eba65b7BeD"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8710b94e30Fe635eC7eaC291551Db0187288B689",
+      "chain": 2004,
+      "name": "TEST06",
+      "symbol": "TEST06",
+      "decimals": "9",
+      "contractAddress": "0x8710b94e30Fe635eC7eaC291551Db0187288B689"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9639d79edbE26cf199C1aa8c79b87Fb82ed92C56",
+      "chain": 2004,
+      "name": "D. B. Coober",
+      "symbol": "DBC",
+      "decimals": "18",
+      "contractAddress": "0x9639d79edbE26cf199C1aa8c79b87Fb82ed92C56"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0eF548758d13348d5681AE7EAe3C702b1d721107",
+      "chain": 2004,
+      "name": "LaLaCoin",
+      "symbol": "LLC",
+      "decimals": "18",
+      "contractAddress": "0x0eF548758d13348d5681AE7EAe3C702b1d721107"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3f4e3479Bb6B3510496Ffea1DccFC88Bc4af50f6",
+      "chain": 2004,
+      "name": "DeNyAI",
+      "symbol": "DNIA",
+      "decimals": "18",
+      "contractAddress": "0x3f4e3479Bb6B3510496Ffea1DccFC88Bc4af50f6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC950dcDa78fA1a4cDe07bCA68266DEDCdcD4FE04",
+      "chain": 2004,
+      "name": "BoomToken",
+      "symbol": "BOOM",
+      "decimals": "18",
+      "contractAddress": "0xC950dcDa78fA1a4cDe07bCA68266DEDCdcD4FE04"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x05D6244554F689024aCC9D6f5963D338236bdCdd",
+      "chain": 2004,
+      "name": "Lovely Inu Finance",
+      "symbol": "LOVELY",
+      "decimals": "8",
+      "contractAddress": "0x05D6244554F689024aCC9D6f5963D338236bdCdd"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5cf33626855Aa70ce2Aab39CF06833791C43f3B8",
+      "chain": 2004,
+      "name": "MOONBEAMDAO",
+      "symbol": "MOONDAO",
+      "decimals": "9",
+      "contractAddress": "0x5cf33626855Aa70ce2Aab39CF06833791C43f3B8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd6f9d061B8C64b557AD2Db0F9E995F8a182A6F36",
+      "chain": 2004,
+      "name": "CAMEL Printer",
+      "symbol": "CAMELp",
+      "decimals": "6",
+      "contractAddress": "0xd6f9d061B8C64b557AD2Db0F9E995F8a182A6F36"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7Db4E097D1E18A1310685f0f816928DdA1062f14",
+      "chain": 2004,
+      "name": "GLMRSAFEDOGESHIBAINUELONMOON",
+      "symbol": "SDSIEM",
+      "decimals": "18",
+      "contractAddress": "0x7Db4E097D1E18A1310685f0f816928DdA1062f14"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2D8a720Ab46f3847a1F39De005872a5F7895161e",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "BM",
+      "decimals": "9",
+      "contractAddress": "0x2D8a720Ab46f3847a1F39De005872a5F7895161e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3b8C757DaFC8F409895bE6A2582EE0fc2626FfE6",
+      "chain": 2004,
+      "name": "GLMRUTIL",
+      "symbol": "UTIL",
+      "decimals": "9",
+      "contractAddress": "0x3b8C757DaFC8F409895bE6A2582EE0fc2626FfE6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x834De7FDDbE6e66A930D3e66cA2bBAC58683F73D",
+      "chain": 2004,
+      "name": "BuffWeb3",
+      "symbol": "BWEB3",
+      "decimals": "18",
+      "contractAddress": "0x834De7FDDbE6e66A930D3e66cA2bBAC58683F73D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x523AD83E587bb850A40C8dAaaFbbB0b77F479402",
+      "chain": 2004,
+      "name": "MOONBEAMFLOKI",
+      "symbol": "GLMRFLOKI",
+      "decimals": "9",
+      "contractAddress": "0x523AD83E587bb850A40C8dAaaFbbB0b77F479402"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x922F248B1D0608be9f60D52B56aE31923ddf4E59",
+      "chain": 2004,
+      "name": "TigerDex Token",
+      "symbol": "TIGER",
+      "decimals": "18",
+      "contractAddress": "0x922F248B1D0608be9f60D52B56aE31923ddf4E59"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xEDDe2b6340Bc014Fb1c57B1305D013064bC1e450",
+      "chain": 2004,
+      "name": "MoonDustCapital",
+      "symbol": "$MDC",
+      "decimals": "9",
+      "contractAddress": "0xEDDe2b6340Bc014Fb1c57B1305D013064bC1e450"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x46fa30C4f9a1350f7aE69A04c8c80Fc457bA71cb",
+      "chain": 2004,
+      "name": "TestCG Token",
+      "symbol": "CGS",
+      "decimals": "18",
+      "contractAddress": "0x46fa30C4f9a1350f7aE69A04c8c80Fc457bA71cb"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2867e57f549475F3b889cA71A4B330d84227df5a",
+      "chain": 2004,
+      "name": "SafeMoonBeam",
+      "symbol": "SFMB",
+      "decimals": "6",
+      "contractAddress": "0x2867e57f549475F3b889cA71A4B330d84227df5a"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xD5C830f8C680543A4356FB1B14798a0919CEc174",
+      "chain": 2004,
+      "name": "SAFEMOONBEAM",
+      "symbol": "SAFE",
+      "decimals": "9",
+      "contractAddress": "0xD5C830f8C680543A4356FB1B14798a0919CEc174"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5A6A3f66DbC402c0E09f930860fcfb8cb979f923",
+      "chain": 2004,
+      "name": "SHIBA MOONBEAM",
+      "symbol": "SHIBA",
+      "decimals": "9",
+      "contractAddress": "0x5A6A3f66DbC402c0E09f930860fcfb8cb979f923"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x50239e426462B88ADDDf48Ca6eeD23B8211D553e",
+      "chain": 2004,
+      "name": "GEMZSTONE",
+      "symbol": "GEMZS",
+      "decimals": "18",
+      "contractAddress": "0x50239e426462B88ADDDf48Ca6eeD23B8211D553e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7F5Ac0FC127bcf1eAf54E3cd01b00300a0861a62",
+      "chain": 2004,
+      "name": "Stella LP",
+      "symbol": "STELLA LP",
+      "decimals": "18",
+      "contractAddress": "0x7F5Ac0FC127bcf1eAf54E3cd01b00300a0861a62"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xdFf772186aCe9b5513FB46d7B05b36Efa0A4a20d",
+      "chain": 2004,
+      "name": "BNB from BSC wrapped by passport.meter.io",
+      "symbol": "BNB.bsc",
+      "decimals": "18",
+      "contractAddress": "0xdFf772186aCe9b5513FB46d7B05b36Efa0A4a20d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8d03c44a38B266080437c9f53BE4f13dc576EC26",
+      "chain": 2004,
+      "name": "SHIBA GLMR",
+      "symbol": "SHIBA",
+      "decimals": "6",
+      "contractAddress": "0x8d03c44a38B266080437c9f53BE4f13dc576EC26"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB1D7FD082b113A3a5a7b30a4710b59960D0d2421",
+      "chain": 2004,
+      "name": "DotOrdinals",
+      "symbol": "DORD",
+      "decimals": "18",
+      "contractAddress": "0xB1D7FD082b113A3a5a7b30a4710b59960D0d2421"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9CD00d67620E24204fccB68b6662215811eB6784",
+      "chain": 2004,
+      "name": "MoonBeamDoge",
+      "symbol": "MoonBeamDoge",
+      "decimals": "18",
+      "contractAddress": "0x9CD00d67620E24204fccB68b6662215811eB6784"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xe35cC8ce2ff81c4ab95BAEe6402B241323535344",
+      "chain": 2004,
+      "name": "SafeMoonGLMR",
+      "symbol": "SAFEMOONGLMR",
+      "decimals": "9",
+      "contractAddress": "0xe35cC8ce2ff81c4ab95BAEe6402B241323535344"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6DCCCDA54274Ee957d3c349AB017BA46a568f64A",
+      "chain": 2004,
+      "name": "Ready Player MOONBEAM",
+      "symbol": "GAMEON",
+      "decimals": "18",
+      "contractAddress": "0x6DCCCDA54274Ee957d3c349AB017BA46a568f64A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1353f8640cC217fccBb3C7b84501108A9D50e8d7",
+      "chain": 2004,
+      "name": "CONTROL DAO",
+      "symbol": "CTRL",
+      "decimals": "18",
+      "contractAddress": "0x1353f8640cC217fccBb3C7b84501108A9D50e8d7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1420E5CAb30D4406AEE70EA227b632B562B60eD9",
+      "chain": 2004,
+      "name": "SafeMoonBeam",
+      "symbol": "SMB",
+      "decimals": "9",
+      "contractAddress": "0x1420E5CAb30D4406AEE70EA227b632B562B60eD9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5d9a3948a688aa40b5F2e1Ab58B80872FfF038A7",
+      "chain": 2004,
+      "name": "Metronotes",
+      "symbol": "XMN",
+      "decimals": "9",
+      "contractAddress": "0x5d9a3948a688aa40b5F2e1Ab58B80872FfF038A7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3098076e4a0B7eB4A34A5F5E48D28e87300617Ee",
+      "chain": 2004,
+      "name": "MoonFrogs",
+      "symbol": "FROG",
+      "decimals": "9",
+      "contractAddress": "0x3098076e4a0B7eB4A34A5F5E48D28e87300617Ee"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x951613796D7b6ee3C51E8CAaB0cb28885230B6A5",
+      "chain": 2004,
+      "name": "BeamDoge",
+      "symbol": "BeamDoge",
+      "decimals": "18",
+      "contractAddress": "0x951613796D7b6ee3C51E8CAaB0cb28885230B6A5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x11B3762E99BB3C400eE1B587F4Cfc4bD01b475C9",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MOONDOGE",
+      "decimals": "9",
+      "contractAddress": "0x11B3762E99BB3C400eE1B587F4Cfc4bD01b475C9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7D98f7017C5001Bf859DaEeFFcf471F1c7f842b6",
+      "chain": 2004,
+      "name": "BRAZIL",
+      "symbol": "BRAZIL",
+      "decimals": "9",
+      "contractAddress": "0x7D98f7017C5001Bf859DaEeFFcf471F1c7f842b6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x330455979dEFAe1d04b677aed52C84A4467F522B",
+      "chain": 2004,
+      "name": "Binance-Peg BUSD Token",
+      "symbol": "BUSD",
+      "decimals": "18",
+      "contractAddress": "0x330455979dEFAe1d04b677aed52C84A4467F522B"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x999Df923d21379289623CEFa12ac570E57CB2343",
+      "chain": 2004,
+      "name": "sharkbaby",
+      "symbol": "SHBY",
+      "decimals": "18",
+      "contractAddress": "0x999Df923d21379289623CEFa12ac570E57CB2343"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2C49CceD17EA50830D520245f28E4520534051f7",
+      "chain": 2004,
+      "name": "Beamcat Farm",
+      "symbol": "CAT",
+      "decimals": "18",
+      "contractAddress": "0x2C49CceD17EA50830D520245f28E4520534051f7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9bB597f313c0Fc4F775D7287cB5B054De9895254",
+      "chain": 2004,
+      "name": "ELONBEAM",
+      "symbol": "ELON",
+      "decimals": "9",
+      "contractAddress": "0x9bB597f313c0Fc4F775D7287cB5B054De9895254"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xaD0623ce67Dcb075670C1570cA39c03ec5A23Fd1",
+      "chain": 2004,
+      "name": "Fantom Token",
+      "symbol": "FTM",
+      "decimals": "18",
+      "contractAddress": "0xaD0623ce67Dcb075670C1570cA39c03ec5A23Fd1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xAEfCAB0371FF04E6a06522D4B5145f3730fe18E4",
+      "chain": 2004,
+      "name": "Wrapped ONE",
+      "symbol": "WONE",
+      "decimals": "18",
+      "contractAddress": "0xAEfCAB0371FF04E6a06522D4B5145f3730fe18E4"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4c0384640F0B49e4951Cb1888Ffb1c6Ee055364b",
+      "chain": 2004,
+      "name": "Git Token",
+      "symbol": "GIT",
+      "decimals": "18",
+      "contractAddress": "0x4c0384640F0B49e4951Cb1888Ffb1c6Ee055364b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xD911de59d6baF5aF671bEC73304756518AE229dE",
+      "chain": 2004,
+      "name": "Wrapped CRO",
+      "symbol": "WCRO",
+      "decimals": "18",
+      "contractAddress": "0xD911de59d6baF5aF671bEC73304756518AE229dE"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2c840968D9Ec6E64a5639302c157248BE5dD0D37",
+      "chain": 2004,
+      "name": "FlokiDoge",
+      "symbol": "FlokiDoge",
+      "decimals": "9",
+      "contractAddress": "0x2c840968D9Ec6E64a5639302c157248BE5dD0D37"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x635E4C11EC3097a3b967C197d4c11503C81F8399",
+      "chain": 2004,
+      "name": "Bananaswap",
+      "symbol": "BAN",
+      "decimals": "18",
+      "contractAddress": "0x635E4C11EC3097a3b967C197d4c11503C81F8399"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1b351f4e741CB81b5a4329D9c9c77354261ce6D5",
+      "chain": 2004,
+      "name": "BeamDoge",
+      "symbol": "BEAMDOGE",
+      "decimals": "18",
+      "contractAddress": "0x1b351f4e741CB81b5a4329D9c9c77354261ce6D5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4987925A8455D43C5AfCf4eD080538b51A0d7563",
+      "chain": 2004,
+      "name": "MoonShiba",
+      "symbol": "Mshib",
+      "decimals": "5",
+      "contractAddress": "0x4987925A8455D43C5AfCf4eD080538b51A0d7563"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x21b9b3e2F4c0e100a85AB0d84De087FE97779Cf6",
+      "chain": 2004,
+      "name": "BeamPrism",
+      "symbol": "PRSM",
+      "decimals": "18",
+      "contractAddress": "0x21b9b3e2F4c0e100a85AB0d84De087FE97779Cf6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8F22D67Cea7C69fe8503dFE33f441BC317Ffa1d3",
+      "chain": 2004,
+      "name": "Glimmy Inu",
+      "symbol": "GINU",
+      "decimals": "9",
+      "contractAddress": "0x8F22D67Cea7C69fe8503dFE33f441BC317Ffa1d3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7c7805d9a8bF09A5D1A30F466ffee68333E86d73",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TST",
+      "decimals": "18",
+      "contractAddress": "0x7c7805d9a8bF09A5D1A30F466ffee68333E86d73"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3d6ceCA0C07fa589659014E09dD74aC5540E6Cb1",
+      "chain": 2004,
+      "name": "SafeBeam",
+      "symbol": "SafeBeam",
+      "decimals": "9",
+      "contractAddress": "0x3d6ceCA0C07fa589659014E09dD74aC5540E6Cb1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4613d1384FC7b6883eAddf72d9EEb22316Ad8427",
+      "chain": 2004,
+      "name": "SafeMoonBeam",
+      "symbol": "SFMB",
+      "decimals": "18",
+      "contractAddress": "0x4613d1384FC7b6883eAddf72d9EEb22316Ad8427"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3E185094167B37117937A8d3C7608E6BcFdd7160",
+      "chain": 2004,
+      "name": "GLMRPay",
+      "symbol": "GLMRP",
+      "decimals": "6",
+      "contractAddress": "0x3E185094167B37117937A8d3C7608E6BcFdd7160"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xaeA425D44EE3352ADd47b6EFd4E5fB2157377073",
+      "chain": 2004,
+      "name": "Safebeam",
+      "symbol": "Safebeam",
+      "decimals": "5",
+      "contractAddress": "0xaeA425D44EE3352ADd47b6EFd4E5fB2157377073"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4D5A919E3953b39784932fa075F37230EDD07dDB",
+      "chain": 2004,
+      "name": "Surfswap Rep Token",
+      "symbol": "rTIDE",
+      "decimals": "18",
+      "contractAddress": "0x4D5A919E3953b39784932fa075F37230EDD07dDB"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3bF486658a3720b1672CB21b5aeA03cE4A5CD718",
+      "chain": 2004,
+      "name": "dallauansparrow",
+      "symbol": "D",
+      "decimals": "18",
+      "contractAddress": "0x3bF486658a3720b1672CB21b5aeA03cE4A5CD718"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc3721a3DfeAE3018eB13566fE317F7057F5B4fC6",
+      "chain": 2004,
+      "name": "Moonbeam Doge",
+      "symbol": "Mdoge",
+      "decimals": "6",
+      "contractAddress": "0xc3721a3DfeAE3018eB13566fE317F7057F5B4fC6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x80a28E2D20a5Ff6f67f202F2E7547284d71917f5",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MOONDOGE",
+      "decimals": "18",
+      "contractAddress": "0x80a28E2D20a5Ff6f67f202F2E7547284d71917f5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0CaAAf2f88820235Dca86E00661CC6A6dEC47014",
+      "chain": 2004,
+      "name": "BeamSwap",
+      "symbol": "$GLINT",
+      "decimals": "9",
+      "contractAddress": "0x0CaAAf2f88820235Dca86E00661CC6A6dEC47014"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1CAD6126c774564b84236066394E083310BADe10",
+      "chain": 2004,
+      "name": "META",
+      "symbol": "META",
+      "decimals": "16",
+      "contractAddress": "0x1CAD6126c774564b84236066394E083310BADe10"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0e439Cb77ec8f2319275c4Ede5C71147Fd19D442",
+      "chain": 2004,
+      "name": "Solana",
+      "symbol": "SOL",
+      "decimals": "8",
+      "contractAddress": "0x0e439Cb77ec8f2319275c4Ede5C71147Fd19D442"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x22828d45998E1a214cCA788997118Bc562E16c27",
+      "chain": 2004,
+      "name": "test69",
+      "symbol": "tst69",
+      "decimals": "9",
+      "contractAddress": "0x22828d45998E1a214cCA788997118Bc562E16c27"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3bccb81261aBa479C1ecaB28Aa92A248AE2e130E",
+      "chain": 2004,
+      "name": "FakeOneBeam",
+      "symbol": "FAKE1BEAM",
+      "decimals": "18",
+      "contractAddress": "0x3bccb81261aBa479C1ecaB28Aa92A248AE2e130E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1c4AE7a088730A61bd652B501734b87C068dA376",
+      "chain": 2004,
+      "name": "Test contract 017 Moonbeam",
+      "symbol": "TESTGLMR",
+      "decimals": "7",
+      "contractAddress": "0x1c4AE7a088730A61bd652B501734b87C068dA376"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x42Fe6C65cC4d629751cfee7cDb45DF1ED358788a",
+      "chain": 2004,
+      "name": "t3st",
+      "symbol": "t3st",
+      "decimals": "18",
+      "contractAddress": "0x42Fe6C65cC4d629751cfee7cDb45DF1ED358788a"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5f49C1553FC2Fe64952991A3185dc898cf18DB9e",
+      "chain": 2004,
+      "name": "DONTBUY",
+      "symbol": "DBBB",
+      "decimals": "9",
+      "contractAddress": "0x5f49C1553FC2Fe64952991A3185dc898cf18DB9e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x54C51bDa1A5BE71A1FdF25C01607d87Fd225336f",
+      "chain": 2004,
+      "name": "TestToken",
+      "symbol": "TEST",
+      "decimals": "6",
+      "contractAddress": "0x54C51bDa1A5BE71A1FdF25C01607d87Fd225336f"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xEb813611a8B5E2f8559F1A156c20904426de1147",
+      "chain": 2004,
+      "name": "Energyfi Token",
+      "symbol": "EFT",
+      "decimals": "18",
+      "contractAddress": "0xEb813611a8B5E2f8559F1A156c20904426de1147"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xDCAE1F3E1aEF28d388db1ac2584a438f6374DC56",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TST",
+      "decimals": "18",
+      "contractAddress": "0xDCAE1F3E1aEF28d388db1ac2584a438f6374DC56"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6655d36FAD69B93f5d8749D5A4688e39D124bb94",
+      "chain": 2004,
+      "name": "DOT_web3",
+      "symbol": "web3",
+      "decimals": "18",
+      "contractAddress": "0x6655d36FAD69B93f5d8749D5A4688e39D124bb94"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xbe2cF059a0A62a178a81473dACeb3D6199F8AAeB",
+      "chain": 2004,
+      "name": "TInu123",
+      "symbol": "TInu123",
+      "decimals": "9",
+      "contractAddress": "0xbe2cF059a0A62a178a81473dACeb3D6199F8AAeB"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5e6A1B6A1B99a2C1B5fCf8a5Bf4e556E4D8ba6a1",
+      "chain": 2004,
+      "name": "DONTBUY",
+      "symbol": "DBBB",
+      "decimals": "9",
+      "contractAddress": "0x5e6A1B6A1B99a2C1B5fCf8a5Bf4e556E4D8ba6a1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x81044bB18A7211A902aa5f27320EDb6D77044eA5",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "T",
+      "decimals": "18",
+      "contractAddress": "0x81044bB18A7211A902aa5f27320EDb6D77044eA5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9864203A1D4f5C79E169b75F9Ac73947c6959973",
+      "chain": 2004,
+      "name": "Unique",
+      "symbol": "UNQ",
+      "decimals": "18",
+      "contractAddress": "0x9864203A1D4f5C79E169b75F9Ac73947c6959973"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x846191647BBA3bE9b84ba37Af7A1d19c7b40344A",
+      "chain": 2004,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "decimals": "8",
+      "contractAddress": "0x846191647BBA3bE9b84ba37Af7A1d19c7b40344A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4fCb8a7Df30A5db67058086F6ebaB7a0acD2A3F5",
+      "chain": 2004,
+      "name": "Huobi Token",
+      "symbol": "HT",
+      "decimals": "8",
+      "contractAddress": "0x4fCb8a7Df30A5db67058086F6ebaB7a0acD2A3F5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC1869c3B7abD15f036a72E90d281Bb573ee4fd54",
+      "chain": 2004,
+      "name": "OneBeam",
+      "symbol": "FAKE1BEAM",
+      "decimals": "18",
+      "contractAddress": "0xC1869c3B7abD15f036a72E90d281Bb573ee4fd54"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x57ea16E9f172856c72f78A56e07c70689865a349",
+      "chain": 2004,
+      "name": "StellarPad Test Token",
+      "symbol": "TEST",
+      "decimals": "18",
+      "contractAddress": "0x57ea16E9f172856c72f78A56e07c70689865a349"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8B2edd6d85DE641fE49947886422870C1E7a53a2",
+      "chain": 2004,
+      "name": "faf",
+      "symbol": "fdff",
+      "decimals": "18",
+      "contractAddress": "0x8B2edd6d85DE641fE49947886422870C1E7a53a2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA9a69E29a1b3A1977e1580eF36d23218E4574069",
+      "chain": 2004,
+      "name": "b",
+      "symbol": "b",
+      "decimals": "18",
+      "contractAddress": "0xA9a69E29a1b3A1977e1580eF36d23218E4574069"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC824a5934Ee48beC077B1cdFfE72b838DDC79279",
+      "chain": 2004,
+      "name": "SAND",
+      "symbol": "SAND",
+      "decimals": "18",
+      "contractAddress": "0xC824a5934Ee48beC077B1cdFfE72b838DDC79279"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0A5b4Bd7CB9bBf4e66d9CD46E6b022ca0C469a08",
+      "chain": 2004,
+      "name": "MoonbeamInu",
+      "symbol": "MBNINU",
+      "decimals": "9",
+      "contractAddress": "0x0A5b4Bd7CB9bBf4e66d9CD46E6b022ca0C469a08"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4c959B57682De845A77B00139972cA42dc7422eF",
+      "chain": 2004,
+      "name": "Cougar Token",
+      "symbol": "CGS",
+      "decimals": "18",
+      "contractAddress": "0x4c959B57682De845A77B00139972cA42dc7422eF"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x852fD2B079F5c07c743070e7bd6fD4fcEb11D49E",
+      "chain": 2004,
+      "name": "Shiba GLMR",
+      "symbol": "ShibaGLMR",
+      "decimals": "18",
+      "contractAddress": "0x852fD2B079F5c07c743070e7bd6fD4fcEb11D49E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x928eAb3b348A18F4A425a1c4F2B2d72981934Bd7",
+      "chain": 2004,
+      "name": "MoonGecko",
+      "symbol": "MG",
+      "decimals": "18",
+      "contractAddress": "0x928eAb3b348A18F4A425a1c4F2B2d72981934Bd7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3394b7707Dbf3e246Bba11ABBeacCFB9e39A2217",
+      "chain": 2004,
+      "name": "Glmrpad",
+      "symbol": "Glmrpad",
+      "decimals": "9",
+      "contractAddress": "0x3394b7707Dbf3e246Bba11ABBeacCFB9e39A2217"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7C2c83E9F992E8bfc9910b3F541658eb117D27e2",
+      "chain": 2004,
+      "name": "Beam Doge",
+      "symbol": "Bdoge",
+      "decimals": "5",
+      "contractAddress": "0x7C2c83E9F992E8bfc9910b3F541658eb117D27e2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9D5d41D8C03e38194A577347206F8829B9cF7C9a",
+      "chain": 2004,
+      "name": "athUSD",
+      "symbol": "athUSD",
+      "decimals": "18",
+      "contractAddress": "0x9D5d41D8C03e38194A577347206F8829B9cF7C9a"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8fd139C4633552D76bec6776C97DF5E01F86df3e",
+      "chain": 2004,
+      "name": "Beam Moon",
+      "symbol": "BM",
+      "decimals": "5",
+      "contractAddress": "0x8fd139C4633552D76bec6776C97DF5E01F86df3e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x099d6AA2ab0912A8C2d57C6b1Fb1C4DcD6d33186",
+      "chain": 2004,
+      "name": "Dogebeam",
+      "symbol": "Dogebeam",
+      "decimals": "9",
+      "contractAddress": "0x099d6AA2ab0912A8C2d57C6b1Fb1C4DcD6d33186"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4C70C051b89075b7E41D254705371508FCdd9121",
+      "chain": 2004,
+      "name": "MoonApe",
+      "symbol": "MoonApe",
+      "decimals": "18",
+      "contractAddress": "0x4C70C051b89075b7E41D254705371508FCdd9121"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7dD8Bb73b60A742640E39784BDD2E5b5051dAc9F",
+      "chain": 2004,
+      "name": "TestInu",
+      "symbol": "TestInu",
+      "decimals": "18",
+      "contractAddress": "0x7dD8Bb73b60A742640E39784BDD2E5b5051dAc9F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x86Dd72BbfA9954084989C8B4D5b5341765a8B72f",
+      "chain": 2004,
+      "name": "Safemoon Beam",
+      "symbol": "Safemoon Beam",
+      "decimals": "5",
+      "contractAddress": "0x86Dd72BbfA9954084989C8B4D5b5341765a8B72f"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2B800f2e1450aF93a2aCf561b310Cf14C427aA3F",
+      "chain": 2004,
+      "name": "Shiba GLMR",
+      "symbol": "ShibaGLMR",
+      "decimals": "18",
+      "contractAddress": "0x2B800f2e1450aF93a2aCf561b310Cf14C427aA3F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7d99aA208945C8Ab68B11C5028452ccF204a44cD",
+      "chain": 2004,
+      "name": "MoonDao",
+      "symbol": "MoonDao",
+      "decimals": "18",
+      "contractAddress": "0x7d99aA208945C8Ab68B11C5028452ccF204a44cD"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x127C86EDEd238cc790Db994dfBB080963d9461c8",
+      "chain": 2004,
+      "name": "Frog Token",
+      "symbol": "FROG",
+      "decimals": "18",
+      "contractAddress": "0x127C86EDEd238cc790Db994dfBB080963d9461c8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd5bE5A2Dd851816aA7e1782Eb560454C803daAa5",
+      "chain": 2004,
+      "name": "Test3 Token",
+      "symbol": "Test3",
+      "decimals": "9",
+      "contractAddress": "0xd5bE5A2Dd851816aA7e1782Eb560454C803daAa5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9a8741be520bb62065a1A12b94C4D83cBC9F91e3",
+      "chain": 2004,
+      "name": "t3st",
+      "symbol": "t3st",
+      "decimals": "18",
+      "contractAddress": "0x9a8741be520bb62065a1A12b94C4D83cBC9F91e3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x455b4AfC594B0B49b43ceC378a3A55d3Fad3f1A3",
+      "chain": 2004,
+      "name": "Test DOT",
+      "symbol": "TDOT",
+      "decimals": "18",
+      "contractAddress": "0x455b4AfC594B0B49b43ceC378a3A55d3Fad3f1A3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9B59956c1b274F5890D7953e576ea7Ba9C80dc98",
+      "chain": 2004,
+      "name": "MiniMoon",
+      "symbol": "MiniMoon",
+      "decimals": "18",
+      "contractAddress": "0x9B59956c1b274F5890D7953e576ea7Ba9C80dc98"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0DCd96a698e4B1D53FBe9cdb717157966009Fc6A",
+      "chain": 2004,
+      "name": "GlmrDAO",
+      "symbol": "GlmrDAO",
+      "decimals": "18",
+      "contractAddress": "0x0DCd96a698e4B1D53FBe9cdb717157966009Fc6A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x52e3a425dF0466BAF5144A2f73B74D6F64cDB962",
+      "chain": 2004,
+      "name": "PFE",
+      "symbol": "PFE",
+      "decimals": "18",
+      "contractAddress": "0x52e3a425dF0466BAF5144A2f73B74D6F64cDB962"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xf12bD5A7368ABdAFf85220287CcaD3A62CF53ba3",
+      "chain": 2004,
+      "name": "GatsBeam",
+      "symbol": "GATS",
+      "decimals": "9",
+      "contractAddress": "0xf12bD5A7368ABdAFf85220287CcaD3A62CF53ba3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x25012393b7D4307353744a1544De33393DD264b0",
+      "chain": 2004,
+      "name": "TheGenesisDAO",
+      "symbol": "GAO",
+      "decimals": "18",
+      "contractAddress": "0x25012393b7D4307353744a1544De33393DD264b0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6dfc6C2F36c2C1dCF783bD1b5Dec5943f8fFd69e",
+      "chain": 2004,
+      "name": "LUNAR token",
+      "symbol": "LUNAR",
+      "decimals": "18",
+      "contractAddress": "0x6dfc6C2F36c2C1dCF783bD1b5Dec5943f8fFd69e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x111D0aBbb1Cf0b9A6D3A9be43D5613F009f51a84",
+      "chain": 2004,
+      "name": "ConfortableDoge",
+      "symbol": "SufuDoge",
+      "decimals": "3",
+      "contractAddress": "0x111D0aBbb1Cf0b9A6D3A9be43D5613F009f51a84"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB21eF0baBFb56FBaE1f8Eff8196C78c2BCe50982",
+      "chain": 2004,
+      "name": "MoonTag Token",
+      "symbol": "MT",
+      "decimals": "18",
+      "contractAddress": "0xB21eF0baBFb56FBaE1f8Eff8196C78c2BCe50982"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5CA44c16920193F6b908f7f8422E26EEd755e816",
+      "chain": 2004,
+      "name": "FlokiBeam",
+      "symbol": "Beamfloki",
+      "decimals": "5",
+      "contractAddress": "0x5CA44c16920193F6b908f7f8422E26EEd755e816"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x692C57641fc054c2Ad6551Ccc6566EbA599de1BA",
+      "chain": 2004,
+      "name": "BUSD Token",
+      "symbol": "BUSD",
+      "decimals": "18",
+      "contractAddress": "0x692C57641fc054c2Ad6551Ccc6566EbA599de1BA"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xf1282368Ed74d02ac00F6B2653607EdF84CC85E6",
+      "chain": 2004,
+      "name": "SHIBA MOONBEAM",
+      "symbol": "SHIBA MOONBEAM",
+      "decimals": "18",
+      "contractAddress": "0xf1282368Ed74d02ac00F6B2653607EdF84CC85E6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x69E7dF64f4614338bCf2b96DAb26ae7cC74B686A",
+      "chain": 2004,
+      "name": "Moonbeam Banana",
+      "symbol": "MOONBANANA",
+      "decimals": "9",
+      "contractAddress": "0x69E7dF64f4614338bCf2b96DAb26ae7cC74B686A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xe102C206515061E80B77A64Dc06e8cFB23C0d3A3",
+      "chain": 2004,
+      "name": "DONTBUY",
+      "symbol": "DBBB",
+      "decimals": "9",
+      "contractAddress": "0xe102C206515061E80B77A64Dc06e8cFB23C0d3A3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8a4D00AA4b4427ad8A83FF1C7CE317Dd08ae5285",
+      "chain": 2004,
+      "name": "SafeMoonBeam",
+      "symbol": "SMB",
+      "decimals": "18",
+      "contractAddress": "0x8a4D00AA4b4427ad8A83FF1C7CE317Dd08ae5285"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0B5c93ca722A43c271fE388ABa90Ac4C041E7C70",
+      "chain": 2004,
+      "name": "CheemsBeam",
+      "symbol": "CB",
+      "decimals": "9",
+      "contractAddress": "0x0B5c93ca722A43c271fE388ABa90Ac4C041E7C70"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9E7075b60f6B400254669eAFD22ab662819aBa5b",
+      "chain": 2004,
+      "name": "StellaSwap",
+      "symbol": "TIGER",
+      "decimals": "18",
+      "contractAddress": "0x9E7075b60f6B400254669eAFD22ab662819aBa5b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9C228C039256e95cFA00d21Cb6B5c028B76d9e2a",
+      "chain": 2004,
+      "name": "Meta Moon Monster",
+      "symbol": "3M",
+      "decimals": "9",
+      "contractAddress": "0x9C228C039256e95cFA00d21Cb6B5c028B76d9e2a"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xCDB5654AA16bf7b19c75145497714EB9557D3A60",
+      "chain": 2004,
+      "name": "EFTTestToken",
+      "symbol": "EFTTest",
+      "decimals": "18",
+      "contractAddress": "0xCDB5654AA16bf7b19c75145497714EB9557D3A60"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x18241c25782C1B440dd75eAd4F5fC95a3001E7a9",
+      "chain": 2004,
+      "name": "Shiba GLMR",
+      "symbol": "SHIBAGLMR",
+      "decimals": "4",
+      "contractAddress": "0x18241c25782C1B440dd75eAd4F5fC95a3001E7a9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x02A006D1FBb528F4f9d0017734AA0C7e7f24731f",
+      "chain": 2004,
+      "name": "https://t.me/safemoonbeam",
+      "symbol": "SafeMoonBeam",
+      "decimals": "18",
+      "contractAddress": "0x02A006D1FBb528F4f9d0017734AA0C7e7f24731f"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0d51c6868E33F24aF61008540F86C6bd249781D1",
+      "chain": 2004,
+      "name": "Babydog",
+      "symbol": "Babydog",
+      "decimals": "18",
+      "contractAddress": "0x0d51c6868E33F24aF61008540F86C6bd249781D1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x45D1abD31151d51735700bE6141Db0509dEF5a6E",
+      "chain": 2004,
+      "name": "Galaxy",
+      "symbol": "GLX",
+      "decimals": "18",
+      "contractAddress": "0x45D1abD31151d51735700bE6141Db0509dEF5a6E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8BC0eafbEbE693D4D31D351eF85b0fe8c6c02E3A",
+      "chain": 2004,
+      "name": "Beam Game Change",
+      "symbol": "BGC",
+      "decimals": "18",
+      "contractAddress": "0x8BC0eafbEbE693D4D31D351eF85b0fe8c6c02E3A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xEf03e7004249E89983741001543c51B0f62B57F9",
+      "chain": 2004,
+      "name": "CC Token",
+      "symbol": "CCT",
+      "decimals": "18",
+      "contractAddress": "0xEf03e7004249E89983741001543c51B0f62B57F9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9427A2a738AffBc5880F0646b5251069c022e525",
+      "chain": 2004,
+      "name": "Global Transaction Payment Solution",
+      "symbol": "GTPS",
+      "decimals": "18",
+      "contractAddress": "0x9427A2a738AffBc5880F0646b5251069c022e525"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xb85DFEB724213F1B66212fcB0B70cf6855dD0D49",
+      "chain": 2004,
+      "name": "GlmrDao",
+      "symbol": "GlmrDao",
+      "decimals": "18",
+      "contractAddress": "0xb85DFEB724213F1B66212fcB0B70cf6855dD0D49"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xaE8b1588b637F74Ed55237cAFcEE8a7B3cAFaEE9",
+      "chain": 2004,
+      "name": "BeamPrism",
+      "symbol": "$PRSM",
+      "decimals": "9",
+      "contractAddress": "0xaE8b1588b637F74Ed55237cAFcEE8a7B3cAFaEE9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2f9A600fb99CF20f56189d67D782FbA5EA42dB7C",
+      "chain": 2004,
+      "name": "t3st",
+      "symbol": "t3st",
+      "decimals": "18",
+      "contractAddress": "0x2f9A600fb99CF20f56189d67D782FbA5EA42dB7C"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x550720f9F286892e1D8940F29d7AcBE6AC3E6C5b",
+      "chain": 2004,
+      "name": "Memed",
+      "symbol": "Memed",
+      "decimals": "18",
+      "contractAddress": "0x550720f9F286892e1D8940F29d7AcBE6AC3E6C5b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6B9Dbc70aa201acc13e3E1c832E0A7c3EF7dae3f",
+      "chain": 2004,
+      "name": "CombFinance",
+      "symbol": "COMB",
+      "decimals": "6",
+      "contractAddress": "0x6B9Dbc70aa201acc13e3E1c832E0A7c3EF7dae3f"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xbF31DC35C729a7849B3B682c00866aB5576DE37b",
+      "chain": 2004,
+      "name": "DogeBeam",
+      "symbol": "DOGEB",
+      "decimals": "18",
+      "contractAddress": "0xbF31DC35C729a7849B3B682c00866aB5576DE37b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9F4E54d1EdD5Bc61b4314923e10584f45F8b7c8B",
+      "chain": 2004,
+      "name": "GLMRsafeMars",
+      "symbol": "GSM",
+      "decimals": "18",
+      "contractAddress": "0x9F4E54d1EdD5Bc61b4314923e10584f45F8b7c8B"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x45328480F2d6fd1E27101bb352bdc73834b1F568",
+      "chain": 2004,
+      "name": "BeamDoge",
+      "symbol": "BeamDoge",
+      "decimals": "9",
+      "contractAddress": "0x45328480F2d6fd1E27101bb352bdc73834b1F568"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x163eC148A84F03ec8DF7dEb103726BaEDD9c4285",
+      "chain": 2004,
+      "name": "GlmrAkita",
+      "symbol": "GAkita",
+      "decimals": "5",
+      "contractAddress": "0x163eC148A84F03ec8DF7dEb103726BaEDD9c4285"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8d4C5b1077EFeb416A6dc997562849a6A7162055",
+      "chain": 2004,
+      "name": "BeamDoge",
+      "symbol": "BeamDoge",
+      "decimals": "18",
+      "contractAddress": "0x8d4C5b1077EFeb416A6dc997562849a6A7162055"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xda6A7ed5BDA77247EcA39C0f58E28638a228FE79",
+      "chain": 2004,
+      "name": "MoonbeamPrinter",
+      "symbol": "GMLRP",
+      "decimals": "9",
+      "contractAddress": "0xda6A7ed5BDA77247EcA39C0f58E28638a228FE79"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x62c45951c280CA04b8F1154449a55858082631d7",
+      "chain": 2004,
+      "name": "DAOZiLa",
+      "symbol": "DAOZiLa",
+      "decimals": "18",
+      "contractAddress": "0x62c45951c280CA04b8F1154449a55858082631d7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xb2d8C351Ac7Df489e89c85367C41768C60aEAa7e",
+      "chain": 2004,
+      "name": "BeamDoge",
+      "symbol": "Bdoge",
+      "decimals": "5",
+      "contractAddress": "0xb2d8C351Ac7Df489e89c85367C41768C60aEAa7e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xda7F451bC066f6c63db37974024C66d9D638B699",
+      "chain": 2004,
+      "name": "Cukcold Coin",
+      "symbol": "CCD",
+      "decimals": "18",
+      "contractAddress": "0xda7F451bC066f6c63db37974024C66d9D638B699"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xD44587fF87649E5CAFD3434d03d8fb1Cd91c39D7",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MoonDoge",
+      "decimals": "18",
+      "contractAddress": "0xD44587fF87649E5CAFD3434d03d8fb1Cd91c39D7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x77EccfF607571E9Cd6f9C3DD2b26FF9b8C3c263c",
+      "chain": 2004,
+      "name": "True Human Nature",
+      "symbol": "TRUEHN",
+      "decimals": "9",
+      "contractAddress": "0x77EccfF607571E9Cd6f9C3DD2b26FF9b8C3c263c"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2710FD79930964011deFa5Cf9c96eF8E7A14964D",
+      "chain": 2004,
+      "name": "BinaryDAO",
+      "symbol": "BYTE",
+      "decimals": "9",
+      "contractAddress": "0x2710FD79930964011deFa5Cf9c96eF8E7A14964D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA6aF85fc16211aA8B7cBd72eB64a69059a05f739",
+      "chain": 2004,
+      "name": "Babyglmr",
+      "symbol": "Babyglmr",
+      "decimals": "6",
+      "contractAddress": "0xA6aF85fc16211aA8B7cBd72eB64a69059a05f739"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xa2C036d292E482968F26711EcE7896055fAee9E3",
+      "chain": 2004,
+      "name": "StellaStar",
+      "symbol": "StellaStar",
+      "decimals": "18",
+      "contractAddress": "0xa2C036d292E482968F26711EcE7896055fAee9E3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x528Cd70ACC4d401D407ec852Cf0710855BB5E9E4",
+      "chain": 2004,
+      "name": "DustyDunesPrinter",
+      "symbol": "DUSTYP",
+      "decimals": "6",
+      "contractAddress": "0x528Cd70ACC4d401D407ec852Cf0710855BB5E9E4"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7b282Ab2671304a526e4bEe1F184206db9bFf184",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x7b282Ab2671304a526e4bEe1F184206db9bFf184"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x191cf2602Ca2e534c5Ccae7BCBF4C46a704bb949",
+      "chain": 2004,
+      "name": "Wrapped liquid staked DOT",
+      "symbol": "wstDOT",
+      "decimals": "10",
+      "contractAddress": "0x191cf2602Ca2e534c5Ccae7BCBF4C46a704bb949"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0f9cf146e871Ed2C1Af0503359F3250c33a401Be",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x0f9cf146e871Ed2C1Af0503359F3250c33a401Be"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9C4b8aaDD2128830DbC195b07866F7B41188e121",
+      "chain": 2004,
+      "name": "MoonbeamGrape",
+      "symbol": "GRAPE",
+      "decimals": "9",
+      "contractAddress": "0x9C4b8aaDD2128830DbC195b07866F7B41188e121"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB9f658bEa9011419495c3fC10391d2cfa6D8d13c",
+      "chain": 2004,
+      "name": "BeamPrism",
+      "symbol": "PRSM",
+      "decimals": "18",
+      "contractAddress": "0xB9f658bEa9011419495c3fC10391d2cfa6D8d13c"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xCf343b42794EA46b45cDa5a08F645E8F4e2A2ABE",
+      "chain": 2004,
+      "name": "ATTRACTOR",
+      "symbol": "ATTRACTOR",
+      "decimals": "18",
+      "contractAddress": "0xCf343b42794EA46b45cDa5a08F645E8F4e2A2ABE"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE4Cbc3e595474E7d745bc404A16B4977D6d7965c",
+      "chain": 2004,
+      "name": "BabyDogeMoon",
+      "symbol": "BabyDoge",
+      "decimals": "18",
+      "contractAddress": "0xE4Cbc3e595474E7d745bc404A16B4977D6d7965c"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9c943F09A7498d30E8f83334BC8Ae1B785c0929B",
+      "chain": 2004,
+      "name": "Stella LP",
+      "symbol": "STELLA LP",
+      "decimals": "18",
+      "contractAddress": "0x9c943F09A7498d30E8f83334BC8Ae1B785c0929B"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x72bEdC96a639840851dC6B770132F834f657f096",
+      "chain": 2004,
+      "name": "Eclipse",
+      "symbol": "ECLPS",
+      "decimals": "6",
+      "contractAddress": "0x72bEdC96a639840851dC6B770132F834f657f096"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x352d19908A90638184D6B55eE69E3B5a4b191Aff",
+      "chain": 2004,
+      "name": "Beam Moon",
+      "symbol": "BM",
+      "decimals": "6",
+      "contractAddress": "0x352d19908A90638184D6B55eE69E3B5a4b191Aff"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x825Eb25E0C9a0f811FFBF3200D4b0144edfc15b1",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "test",
+      "decimals": "9",
+      "contractAddress": "0x825Eb25E0C9a0f811FFBF3200D4b0144edfc15b1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x42e274e2cE602A348AaddB3299AB46Fc838A3D73",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x42e274e2cE602A348AaddB3299AB46Fc838A3D73"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA88dcE7bFe9A0b25Ef3d2A277bb15CE424737D39",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0xA88dcE7bFe9A0b25Ef3d2A277bb15CE424737D39"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xDc26c469584DC1747e3542c284014b8e7f8B86d3",
+      "chain": 2004,
+      "name": "BabyDoge",
+      "symbol": "BabyDoge",
+      "decimals": "18",
+      "contractAddress": "0xDc26c469584DC1747e3542c284014b8e7f8B86d3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc54A7EF62E6DB3Fb2EAAFA8ca7E3282428B596C4",
+      "chain": 2004,
+      "name": "GLMR FLOKI",
+      "symbol": "GLMR FLOKI",
+      "decimals": "18",
+      "contractAddress": "0xc54A7EF62E6DB3Fb2EAAFA8ca7E3282428B596C4"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xfe8fEe83cD677f83f7aAf48dDf4F0a3D6DFD8D59",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TEST",
+      "decimals": "9",
+      "contractAddress": "0xfe8fEe83cD677f83f7aAf48dDf4F0a3D6DFD8D59"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9A9a4d751c6201705EDB9850Dd5457163b4F2d9B",
+      "chain": 2004,
+      "name": "MoonBrownie",
+      "symbol": "MBROWNIE",
+      "decimals": "18",
+      "contractAddress": "0x9A9a4d751c6201705EDB9850Dd5457163b4F2d9B"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x80290Efd7f802C1Af7F1612f1732CefBC17e4D18",
+      "chain": 2004,
+      "name": "Beam Moon",
+      "symbol": "BM",
+      "decimals": "5",
+      "contractAddress": "0x80290Efd7f802C1Af7F1612f1732CefBC17e4D18"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9E399712275Fc179EB845e3dAb5c4Fd59763d8B9",
+      "chain": 2004,
+      "name": "Shiba moonbeam",
+      "symbol": "Shiba beam",
+      "decimals": "6",
+      "contractAddress": "0x9E399712275Fc179EB845e3dAb5c4Fd59763d8B9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xBe78d8818A5B82882Cf9B4834d99B04e53458ADC",
+      "chain": 2004,
+      "name": "t3st",
+      "symbol": "t3st",
+      "decimals": "18",
+      "contractAddress": "0xBe78d8818A5B82882Cf9B4834d99B04e53458ADC"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xDED8576697294664524A8A91537b4aF30e38EbDd",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TST",
+      "decimals": "18",
+      "contractAddress": "0xDED8576697294664524A8A91537b4aF30e38EbDd"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xb0e75F4AA2680b7B88F89d9Db65cEFCf31d781a7",
+      "chain": 2004,
+      "name": "DogeZillaGLMR",
+      "symbol": "DogeZilla",
+      "decimals": "18",
+      "contractAddress": "0xb0e75F4AA2680b7B88F89d9Db65cEFCf31d781a7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB0Bf7ac5eC69b465676222E560Ca189C4F617aD7",
+      "chain": 2004,
+      "name": "FakeOneBeam",
+      "symbol": "FAKE1BEAM",
+      "decimals": "18",
+      "contractAddress": "0xB0Bf7ac5eC69b465676222E560Ca189C4F617aD7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6Ab1bfeAAF4A1eA19c4aefd9276bACb64cfCC52E",
+      "chain": 2004,
+      "name": "CRAP",
+      "symbol": "CRAP",
+      "decimals": "18",
+      "contractAddress": "0x6Ab1bfeAAF4A1eA19c4aefd9276bACb64cfCC52E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xCbc61373F70646e7A39fefae347Ca9A828364ba8",
+      "chain": 2004,
+      "name": "TEST55 Token",
+      "symbol": "TEST55",
+      "decimals": "9",
+      "contractAddress": "0xCbc61373F70646e7A39fefae347Ca9A828364ba8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6894c5DfEb8e780dc9f8fcaa3a18E749d1ee3A6E",
+      "chain": 2004,
+      "name": "SafeMoonBeam",
+      "symbol": "SafeMoonBeam",
+      "decimals": "18",
+      "contractAddress": "0x6894c5DfEb8e780dc9f8fcaa3a18E749d1ee3A6E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7A42CFe30B40aEF7E307EbA4b6a7E4497c1CA0aE",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x7A42CFe30B40aEF7E307EbA4b6a7E4497c1CA0aE"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x99178a770bC3E6391d9AD03AADc599560Bd79dC0",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x99178a770bC3E6391d9AD03AADc599560Bd79dC0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1575352EE631cbEAAAAE0744B04578aB587243E6",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x1575352EE631cbEAAAAE0744B04578aB587243E6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5601A8978493d2a0D796915BA1752572376b94AB",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x5601A8978493d2a0D796915BA1752572376b94AB"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x440a7Ed93265b82785587f6e13C661FAD99f2751",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x440a7Ed93265b82785587f6e13C661FAD99f2751"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1EB198BCC08A5A0eC2d6d47ffDe19a68D2d137e3",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x1EB198BCC08A5A0eC2d6d47ffDe19a68D2d137e3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xe20BC1658FCe23713027816588057595ed712Bf1",
+      "chain": 2004,
+      "name": "t3st",
+      "symbol": "t3st",
+      "decimals": "18",
+      "contractAddress": "0xe20BC1658FCe23713027816588057595ed712Bf1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA85753331Ad7776a74E3a0F371deEA4795DE2653",
+      "chain": 2004,
+      "name": "t3st",
+      "symbol": "t3st",
+      "decimals": "18",
+      "contractAddress": "0xA85753331Ad7776a74E3a0F371deEA4795DE2653"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xcbD5Dcb96160cF4de077236E9545872036e0D22e",
+      "chain": 2004,
+      "name": "ref",
+      "symbol": "KEK",
+      "decimals": "18",
+      "contractAddress": "0xcbD5Dcb96160cF4de077236E9545872036e0D22e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8f1B3512373646170D41BCDbceF55E387ac08d31",
+      "chain": 2004,
+      "name": "TEST20",
+      "symbol": "test20",
+      "decimals": "18",
+      "contractAddress": "0x8f1B3512373646170D41BCDbceF55E387ac08d31"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xa683Ad3afBb3D22dD01ad9BCA7B3Ee7A920685Be",
+      "chain": 2004,
+      "name": "GLMRPRINTR",
+      "symbol": "GLMRPRINTR",
+      "decimals": "6",
+      "contractAddress": "0xa683Ad3afBb3D22dD01ad9BCA7B3Ee7A920685Be"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x71B41F1726C8cBf718cd07e298beA97C73345E33",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MDOGE",
+      "decimals": "18",
+      "contractAddress": "0x71B41F1726C8cBf718cd07e298beA97C73345E33"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA6E6dcebce66EC4Cf7E7d10E4743102465b4CfB1",
+      "chain": 2004,
+      "name": "DOGEBEAM",
+      "symbol": "DOGEBEAM",
+      "decimals": "1",
+      "contractAddress": "0xA6E6dcebce66EC4Cf7E7d10E4743102465b4CfB1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x204B3A633C855E9b545F65d00B104CA08A95b522",
+      "chain": 2004,
+      "name": "Energyfi Token",
+      "symbol": "EFT",
+      "decimals": "18",
+      "contractAddress": "0x204B3A633C855E9b545F65d00B104CA08A95b522"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x92d1034F33A2b37eF488600fC1D47Bdf27901794",
+      "chain": 2004,
+      "name": "TRUEHN GOLD",
+      "symbol": "TRUEHNG",
+      "decimals": "15",
+      "contractAddress": "0x92d1034F33A2b37eF488600fC1D47Bdf27901794"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC23b95E5EAF1BFF6589D333e8abe2d4425963F4E",
+      "chain": 2004,
+      "name": "BeamZilla",
+      "symbol": "BZ",
+      "decimals": "9",
+      "contractAddress": "0xC23b95E5EAF1BFF6589D333e8abe2d4425963F4E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE4d78Dee13eB25c0AC2C40E0FC2b201DdB4655BC",
+      "chain": 2004,
+      "name": "Usdcm",
+      "symbol": "Usdcm",
+      "decimals": "18",
+      "contractAddress": "0xE4d78Dee13eB25c0AC2C40E0FC2b201DdB4655BC"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xF75DA8C00AA34D143Afd49d8F531371beF28A36c",
+      "chain": 2004,
+      "name": "BeamSwap Token",
+      "symbol": "Glint",
+      "decimals": "18",
+      "contractAddress": "0xF75DA8C00AA34D143Afd49d8F531371beF28A36c"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8fD2551aA70cb936Abc6d2b4527483Ec3791Be87",
+      "chain": 2004,
+      "name": "GlmrDAO",
+      "symbol": "GlmrDAO",
+      "decimals": "18",
+      "contractAddress": "0x8fD2551aA70cb936Abc6d2b4527483Ec3791Be87"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd58ECAb4164FAD4f6aFf1250F8A888C2beE7b18d",
+      "chain": 2004,
+      "name": "Beamcat Farm",
+      "symbol": "CAT",
+      "decimals": "18",
+      "contractAddress": "0xd58ECAb4164FAD4f6aFf1250F8A888C2beE7b18d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xD0096e09851597C2886Ae897AcC25EC1d279A831",
+      "chain": 2004,
+      "name": "MoonbeamDAO",
+      "symbol": "MoonbeamDAO",
+      "decimals": "18",
+      "contractAddress": "0xD0096e09851597C2886Ae897AcC25EC1d279A831"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xD58FcD42027EA4ed7F83B0bbD7845Fe9Bb40098e",
+      "chain": 2004,
+      "name": "MoonBeamApe",
+      "symbol": "MBA",
+      "decimals": "18",
+      "contractAddress": "0xD58FcD42027EA4ed7F83B0bbD7845Fe9Bb40098e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x073Af3264c1F486c8cea4188167253F3b1e2A308",
+      "chain": 2004,
+      "name": "Astral Token",
+      "symbol": "ASTRAL",
+      "decimals": "18",
+      "contractAddress": "0x073Af3264c1F486c8cea4188167253F3b1e2A308"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB6680AF2af9eF6A48DE47EC932670bA84DA744ac",
+      "chain": 2004,
+      "name": "PeopleDAO",
+      "symbol": "People",
+      "decimals": "18",
+      "contractAddress": "0xB6680AF2af9eF6A48DE47EC932670bA84DA744ac"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1b4aBCB6acD00912B328ac8A9c86e81ccA4a5C52",
+      "chain": 2004,
+      "name": "Baby Flare Token",
+      "symbol": "BABYFLARE",
+      "decimals": "18",
+      "contractAddress": "0x1b4aBCB6acD00912B328ac8A9c86e81ccA4a5C52"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd92dfAF5dF59dd9E0C57197D68383d2730bf61DF",
+      "chain": 2004,
+      "name": "moonbeamwolf",
+      "symbol": "MOONWOLF",
+      "decimals": "9",
+      "contractAddress": "0xd92dfAF5dF59dd9E0C57197D68383d2730bf61DF"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x40cF3b06349D8E196E72c9ce60A9536B4F61388b",
+      "chain": 2004,
+      "name": "GLMR FLOKI",
+      "symbol": "GLMR FLOKI",
+      "decimals": "18",
+      "contractAddress": "0x40cF3b06349D8E196E72c9ce60A9536B4F61388b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x38d8629A3ba0BD519C9B8FF11bd4c89323783975",
+      "chain": 2004,
+      "name": "MoonFloki",
+      "symbol": "MoonFloki",
+      "decimals": "18",
+      "contractAddress": "0x38d8629A3ba0BD519C9B8FF11bd4c89323783975"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd3c435b57A251F37ec20781957DBd39DbDe8e6c8",
+      "chain": 2004,
+      "name": "SolarDEX",
+      "symbol": "Solar",
+      "decimals": "18",
+      "contractAddress": "0xd3c435b57A251F37ec20781957DBd39DbDe8e6c8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6f75Dfa2ae1629dd2aD411b3caa51C308e4785BC",
+      "chain": 2004,
+      "name": "EARN FLARE",
+      "symbol": "EARNF",
+      "decimals": "18",
+      "contractAddress": "0x6f75Dfa2ae1629dd2aD411b3caa51C308e4785BC"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9A78Da5B5BcE4723A61576610e480510410c3257",
+      "chain": 2004,
+      "name": "BabyShibaInu",
+      "symbol": "BabyShibaInu",
+      "decimals": "18",
+      "contractAddress": "0x9A78Da5B5BcE4723A61576610e480510410c3257"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6969694b671C4232cb9870d819ad90592e4f9CBb",
+      "chain": 2004,
+      "name": "BeamPrism",
+      "symbol": "PRSM",
+      "decimals": "18",
+      "contractAddress": "0x6969694b671C4232cb9870d819ad90592e4f9CBb"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE1BCC2D5305cfE03cd4ec87283Feac7003249678",
+      "chain": 2004,
+      "name": "gelaosi",
+      "symbol": "gls",
+      "decimals": "18",
+      "contractAddress": "0xE1BCC2D5305cfE03cd4ec87283Feac7003249678"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xFD56B4723c919187eC0Fc80261Aa4cae884A1F81",
+      "chain": 2004,
+      "name": "Floki Moonbeam",
+      "symbol": "FLOKBE",
+      "decimals": "18",
+      "contractAddress": "0xFD56B4723c919187eC0Fc80261Aa4cae884A1F81"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xf2c5b9294694403DB18830cb5423161710197146",
+      "chain": 2004,
+      "name": "MFLARE",
+      "symbol": "MFLARE",
+      "decimals": "18",
+      "contractAddress": "0xf2c5b9294694403DB18830cb5423161710197146"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE41647d4F18f4031dcE21a44cD85CD33fdba20C9",
+      "chain": 2004,
+      "name": "MOONBEAMFLARE",
+      "symbol": "MOONFLARE",
+      "decimals": "9",
+      "contractAddress": "0xE41647d4F18f4031dcE21a44cD85CD33fdba20C9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x14E3c380d39d0d383e8b1f1dD4B3C961d3D4227D",
+      "chain": 2004,
+      "name": "GRIMACE COIN",
+      "symbol": "GRIM",
+      "decimals": "9",
+      "contractAddress": "0x14E3c380d39d0d383e8b1f1dD4B3C961d3D4227D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd4175C438b392707D1ae70163Df2211d865151d2",
+      "chain": 2004,
+      "name": "Alpha",
+      "symbol": "Alpha",
+      "decimals": "18",
+      "contractAddress": "0xd4175C438b392707D1ae70163Df2211d865151d2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4e85Ac150638683Fa2Bc48d5D0B25666477e1822",
+      "chain": 2004,
+      "name": "DogeZiLa",
+      "symbol": "DogeZiLa",
+      "decimals": "18",
+      "contractAddress": "0x4e85Ac150638683Fa2Bc48d5D0B25666477e1822"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xe263a6C0880cbB3B3ed28F0743afA8517358e403",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MOONDOGE2",
+      "decimals": "3",
+      "contractAddress": "0xe263a6C0880cbB3B3ed28F0743afA8517358e403"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7E4Df326Ac7469fFC07366EF062f49420373fCb8",
+      "chain": 2004,
+      "name": "MOONSHARE",
+      "symbol": "MOONSHARE",
+      "decimals": "18",
+      "contractAddress": "0x7E4Df326Ac7469fFC07366EF062f49420373fCb8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x38837747Fc8170D8265f98506262004aC4F4EE4F",
+      "chain": 2004,
+      "name": "Web3DAO",
+      "symbol": "Web3",
+      "decimals": "16",
+      "contractAddress": "0x38837747Fc8170D8265f98506262004aC4F4EE4F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x469ab809E1c2a9660C843D207b8bE80E6Fe37626",
+      "chain": 2004,
+      "name": "Defl",
+      "symbol": "DFL",
+      "decimals": "18",
+      "contractAddress": "0x469ab809E1c2a9660C843D207b8bE80E6Fe37626"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3D290AF0Ba0a01D31DceC6D2d338B8c90A172F5d",
+      "chain": 2004,
+      "name": "Baby Flare",
+      "symbol": "BABYFLARE",
+      "decimals": "9",
+      "contractAddress": "0x3D290AF0Ba0a01D31DceC6D2d338B8c90A172F5d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB14C905A50fa54C6299626f14281669E9D9f3d03",
+      "chain": 2004,
+      "name": "MOONRISE",
+      "symbol": "MOONRISE",
+      "decimals": "18",
+      "contractAddress": "0xB14C905A50fa54C6299626f14281669E9D9f3d03"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x09896429f69a6710c110C8af041021a933477782",
+      "chain": 2004,
+      "name": "BeamBoy",
+      "symbol": "BB",
+      "decimals": "9",
+      "contractAddress": "0x09896429f69a6710c110C8af041021a933477782"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xFf15070D29Eda28876d873A66d11736952239403",
+      "chain": 2004,
+      "name": "Dogebeam",
+      "symbol": "Dogebeam",
+      "decimals": "9",
+      "contractAddress": "0xFf15070D29Eda28876d873A66d11736952239403"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x44DE9321819A04904514Dec12DeDBa9636Fc0A53",
+      "chain": 2004,
+      "name": "Moonoge",
+      "symbol": "Moonoge",
+      "decimals": "9",
+      "contractAddress": "0x44DE9321819A04904514Dec12DeDBa9636Fc0A53"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9745555a499857d38A7b7ca0C7936E3535061a97",
+      "chain": 2004,
+      "name": "Anyprinter",
+      "symbol": "ANYPRINTER",
+      "decimals": "9",
+      "contractAddress": "0x9745555a499857d38A7b7ca0C7936E3535061a97"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4B6A0aea5EdA608609F1f2031a23365C3328250E",
+      "chain": 2004,
+      "name": "BeamZiLa",
+      "symbol": "BeamZiLa",
+      "decimals": "18",
+      "contractAddress": "0x4B6A0aea5EdA608609F1f2031a23365C3328250E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x598c77B19D5978E5D88018188e48849EF448E586",
+      "chain": 2004,
+      "name": "DiamondBeam",
+      "symbol": "Diamond",
+      "decimals": "18",
+      "contractAddress": "0x598c77B19D5978E5D88018188e48849EF448E586"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xAAacb134F412308f7a0CC53bca6f2Ac78665c1DC",
+      "chain": 2004,
+      "name": "MoonFrogs",
+      "symbol": "FROG",
+      "decimals": "4",
+      "contractAddress": "0xAAacb134F412308f7a0CC53bca6f2Ac78665c1DC"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x852460aADA10fC4576B827F4AEe3C7d8c48EE900",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MOONDOGE",
+      "decimals": "18",
+      "contractAddress": "0x852460aADA10fC4576B827F4AEe3C7d8c48EE900"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3a7A28BE11bF070DD0Ce6D0A2001e3F0e72bf8eA",
+      "chain": 2004,
+      "name": "ThisWillRugInOneHour",
+      "symbol": "RUG_IN_1_HOUR",
+      "decimals": "9",
+      "contractAddress": "0x3a7A28BE11bF070DD0Ce6D0A2001e3F0e72bf8eA"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x809507cdBd93Ae6A1291e43CC552D573273e4fEd",
+      "chain": 2004,
+      "name": "SolarNEW",
+      "symbol": "NEW",
+      "decimals": "18",
+      "contractAddress": "0x809507cdBd93Ae6A1291e43CC552D573273e4fEd"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x08c98AD2d4856BEC0a0EaF18C2a06E7201613F90",
+      "chain": 2004,
+      "name": "Vested Flare Token",
+      "symbol": "veFLARE",
+      "decimals": "18",
+      "contractAddress": "0x08c98AD2d4856BEC0a0EaF18C2a06E7201613F90"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xF7926b71aA8f60a9CDD2408f8799bF65890F1038",
+      "chain": 2004,
+      "name": "BeamCat",
+      "symbol": "CAT",
+      "decimals": "4",
+      "contractAddress": "0xF7926b71aA8f60a9CDD2408f8799bF65890F1038"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1757aFDE05918694f2B49b0b41A26ae5c4266Da1",
+      "chain": 2004,
+      "name": "MOMMYCROGE",
+      "symbol": "MCROGE",
+      "decimals": "9",
+      "contractAddress": "0x1757aFDE05918694f2B49b0b41A26ae5c4266Da1"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1DF94fCABc6933075A2909b041A505a47F5750e5",
+      "chain": 2004,
+      "name": "Baby Beam",
+      "symbol": "BABY",
+      "decimals": "18",
+      "contractAddress": "0x1DF94fCABc6933075A2909b041A505a47F5750e5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x718b7357e68ccBD9e0e67A8D7d22a93d17ee21fD",
+      "chain": 2004,
+      "name": "SafeMoonBeam",
+      "symbol": "SafeMoonBeam",
+      "decimals": "18",
+      "contractAddress": "0x718b7357e68ccBD9e0e67A8D7d22a93d17ee21fD"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6871f83f7240dF29EBdbB06871D72382fe915624",
+      "chain": 2004,
+      "name": "DegenBros",
+      "symbol": "DaBROS",
+      "decimals": "18",
+      "contractAddress": "0x6871f83f7240dF29EBdbB06871D72382fe915624"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7d4f373153601A3B55cd302708Fe81F69A177dB2",
+      "chain": 2004,
+      "name": "MoonPrinter",
+      "symbol": "MoonPrinter",
+      "decimals": "6",
+      "contractAddress": "0x7d4f373153601A3B55cd302708Fe81F69A177dB2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x0400b59f630E5d88997F7c41D027BeCa87fb5813",
+      "chain": 2004,
+      "name": "Doge",
+      "symbol": "Doge",
+      "decimals": "9",
+      "contractAddress": "0x0400b59f630E5d88997F7c41D027BeCa87fb5813"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x60eBbE1eD151cD7214224d88e3b585DaB1f08B56",
+      "chain": 2004,
+      "name": "MOON PAY",
+      "symbol": "MPAY",
+      "decimals": "6",
+      "contractAddress": "0x60eBbE1eD151cD7214224d88e3b585DaB1f08B56"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xcF9e8841f7EBC5951652572af06Ea765b7af2C7d",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MOONDOGE",
+      "decimals": "9",
+      "contractAddress": "0xcF9e8841f7EBC5951652572af06Ea765b7af2C7d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC89A7c1db4230Ed7415f33B399d4Aa91aef8f61D",
+      "chain": 2004,
+      "name": "Wing Token",
+      "symbol": "WING",
+      "decimals": "18",
+      "contractAddress": "0xC89A7c1db4230Ed7415f33B399d4Aa91aef8f61D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xaFD0586CdD1675fDB46f40B915eF73B2fD09AC90",
+      "chain": 2004,
+      "name": "ShibaBeam",
+      "symbol": "Shibeam",
+      "decimals": "5",
+      "contractAddress": "0xaFD0586CdD1675fDB46f40B915eF73B2fD09AC90"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xcA35f91B9433467bEDCAb996225C8147aEa15756",
+      "chain": 2004,
+      "name": "TestUSDT",
+      "symbol": "TUSDT",
+      "decimals": "18",
+      "contractAddress": "0xcA35f91B9433467bEDCAb996225C8147aEa15756"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xf29125f6F7cB485213EfB9c13CD50547E0730D70",
+      "chain": 2004,
+      "name": "t3st",
+      "symbol": "t3st",
+      "decimals": "18",
+      "contractAddress": "0xf29125f6F7cB485213EfB9c13CD50547E0730D70"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xbce0a0CFf094001e2028BfA48214B8e5ACaA3aE5",
+      "chain": 2004,
+      "name": "FakeOneBeam",
+      "symbol": "FAKE1BEAM",
+      "decimals": "18",
+      "contractAddress": "0xbce0a0CFf094001e2028BfA48214B8e5ACaA3aE5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xCa01a1D0993565291051daFF390892518ACfAD3A",
+      "chain": 2004,
+      "name": "Axelar Wrapped USDC",
+      "symbol": "axlUSDC",
+      "decimals": "6",
+      "contractAddress": "0xCa01a1D0993565291051daFF390892518ACfAD3A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc661692fbE56d8eA5605c3917ae92fE53f9d0a07",
+      "chain": 2004,
+      "name": "BabyDoge",
+      "symbol": "BabyDoge",
+      "decimals": "9",
+      "contractAddress": "0xc661692fbE56d8eA5605c3917ae92fE53f9d0a07"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x322134DA839216900279fe46bc4ffa896983eF79",
+      "chain": 2004,
+      "name": "Silver DAO",
+      "symbol": "SILVER",
+      "decimals": "9",
+      "contractAddress": "0x322134DA839216900279fe46bc4ffa896983eF79"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x26465920b67e4A98642fDC340eeE57f6AC9A809E",
+      "chain": 2004,
+      "name": "MoonFrogs",
+      "symbol": "FROG",
+      "decimals": "2",
+      "contractAddress": "0x26465920b67e4A98642fDC340eeE57f6AC9A809E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8A468Da5b9621ce60064a3822ad948F682FDA81d",
+      "chain": 2004,
+      "name": "TestInu",
+      "symbol": "TestInu",
+      "decimals": "9",
+      "contractAddress": "0x8A468Da5b9621ce60064a3822ad948F682FDA81d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1E263063a642203b64712C190B07Fe58f0CB3663",
+      "chain": 2004,
+      "name": "Flufer",
+      "symbol": "flufer",
+      "decimals": "4",
+      "contractAddress": "0x1E263063a642203b64712C190B07Fe58f0CB3663"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xD08E4521559bbefe6c66174B6ecDE2ad4a8cB0aB",
+      "chain": 2004,
+      "name": "MonoX Protocol",
+      "symbol": "MONOX",
+      "decimals": "9",
+      "contractAddress": "0xD08E4521559bbefe6c66174B6ecDE2ad4a8cB0aB"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xDbfbAE9e7c208C60733493A59e992e0cadb7b0a4",
+      "chain": 2004,
+      "name": "FlareDAO",
+      "symbol": "FlareDAO",
+      "decimals": "18",
+      "contractAddress": "0xDbfbAE9e7c208C60733493A59e992e0cadb7b0a4"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8fa2a949E37207cE54f5a7127edbD26236699d73",
+      "chain": 2004,
+      "name": "Exiled Racers",
+      "symbol": "EXID",
+      "decimals": "18",
+      "contractAddress": "0x8fa2a949E37207cE54f5a7127edbD26236699d73"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4F1fd90746Ee1492a899FEDf63bD879e2D088279",
+      "chain": 2004,
+      "name": "MOONLOCK.ME",
+      "symbol": "MLOCK",
+      "decimals": "9",
+      "contractAddress": "0x4F1fd90746Ee1492a899FEDf63bD879e2D088279"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3032b9Ea46BdeCbAd7a0d3e99CAcf24F6202567C",
+      "chain": 2004,
+      "name": "GLMRMOON",
+      "symbol": "GLMRMOON",
+      "decimals": "9",
+      "contractAddress": "0x3032b9Ea46BdeCbAd7a0d3e99CAcf24F6202567C"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xfe61727d7B31625312A88f45549E7E6A7E3B37AB",
+      "chain": 2004,
+      "name": "CYBERBEAM INU",
+      "symbol": "CYBER",
+      "decimals": "9",
+      "contractAddress": "0xfe61727d7B31625312A88f45549E7E6A7E3B37AB"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8F4DbDF6FDdc1c4013b2932c814Fa5dd0003443A",
+      "chain": 2004,
+      "name": "LEMON",
+      "symbol": "LEMON",
+      "decimals": "18",
+      "contractAddress": "0x8F4DbDF6FDdc1c4013b2932c814Fa5dd0003443A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xdbA1987c8fF3373a1aF9d6119e346a4072aE69bE",
+      "chain": 2004,
+      "name": "FC",
+      "symbol": "FC",
+      "decimals": "9",
+      "contractAddress": "0xdbA1987c8fF3373a1aF9d6119e346a4072aE69bE"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc65EB1ffbBFD0e1c309151b51FBea1833b425b5b",
+      "chain": 2004,
+      "name": "Moonfarm Finance",
+      "symbol": "MOONFARM",
+      "decimals": "9",
+      "contractAddress": "0xc65EB1ffbBFD0e1c309151b51FBea1833b425b5b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xB32288E8eB2149B53f616DDD4b729411DD3AFa50",
+      "chain": 2004,
+      "name": "Floki GLMR",
+      "symbol": "FLOKIGLMR",
+      "decimals": "9",
+      "contractAddress": "0xB32288E8eB2149B53f616DDD4b729411DD3AFa50"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x9A89B492aEd3264CDF69b494a95e228B2B844f81",
+      "chain": 2004,
+      "name": "Dummy IDIA",
+      "symbol": "dIDIA",
+      "decimals": "18",
+      "contractAddress": "0x9A89B492aEd3264CDF69b494a95e228B2B844f81"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x52eE8da59a837E1EcF88DF40f68207CD5836Ee3B",
+      "chain": 2004,
+      "name": "Dogebeam",
+      "symbol": "Dogebeam",
+      "decimals": "9",
+      "contractAddress": "0x52eE8da59a837E1EcF88DF40f68207CD5836Ee3B"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC17873074cf38eCBF2f93E6C884e1146A85B4f27",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "test",
+      "decimals": "18",
+      "contractAddress": "0xC17873074cf38eCBF2f93E6C884e1146A85B4f27"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5524F4219828BA30f6C51427D5a932B10407E511",
+      "chain": 2004,
+      "name": "MOONDOGE",
+      "symbol": "MND",
+      "decimals": "1",
+      "contractAddress": "0x5524F4219828BA30f6C51427D5a932B10407E511"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5B20AE0a528cFe1Be541948D53580b6B624431f0",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "test",
+      "decimals": "9",
+      "contractAddress": "0x5B20AE0a528cFe1Be541948D53580b6B624431f0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8030c2AFaA22e3643d1406FdEf198fBA0928587A",
+      "chain": 2004,
+      "name": "TestInu",
+      "symbol": "TestInu",
+      "decimals": "9",
+      "contractAddress": "0x8030c2AFaA22e3643d1406FdEf198fBA0928587A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x156e1a5002D4432dD7CCF564f89D26A4e3Bb3419",
+      "chain": 2004,
+      "name": "BeamShiba",
+      "symbol": "BeamShiba",
+      "decimals": "18",
+      "contractAddress": "0x156e1a5002D4432dD7CCF564f89D26A4e3Bb3419"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x73eb940499461EF27E333268362ED1AA57B3Adb2",
+      "chain": 2004,
+      "name": "USDT",
+      "symbol": "USDT",
+      "decimals": "6",
+      "contractAddress": "0x73eb940499461EF27E333268362ED1AA57B3Adb2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xdA976E2d4b6d5435704CfbC6aD4e7963aE600317",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MoonDoge",
+      "decimals": "9",
+      "contractAddress": "0xdA976E2d4b6d5435704CfbC6aD4e7963aE600317"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x249A1732371Fd0ed5B3B79174C5053999DF8BcC0",
+      "chain": 2004,
+      "name": "BeamSwap",
+      "symbol": "$GLINT",
+      "decimals": "9",
+      "contractAddress": "0x249A1732371Fd0ed5B3B79174C5053999DF8BcC0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4e067dA39983d95e5D60f9d97742Efe953d6B1c8",
+      "chain": 2004,
+      "name": "EUTH_4",
+      "symbol": "EUTH",
+      "decimals": "18",
+      "contractAddress": "0x4e067dA39983d95e5D60f9d97742Efe953d6B1c8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6e75d1F2b0fAb67DB9DF8958bB9a915C26BB9EF2",
+      "chain": 2004,
+      "name": "Tastie",
+      "symbol": "TST",
+      "decimals": "8",
+      "contractAddress": "0x6e75d1F2b0fAb67DB9DF8958bB9a915C26BB9EF2"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x42C385C578Ab848a3E44F1AaF62a198a89c116eC",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "Test",
+      "decimals": "6",
+      "contractAddress": "0x42C385C578Ab848a3E44F1AaF62a198a89c116eC"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xf52dbDbd635a565305B7C2FA8EC762fA9A80Abf5",
+      "chain": 2004,
+      "name": "glmrdoge lnu",
+      "symbol": "GlmrDoge",
+      "decimals": "18",
+      "contractAddress": "0xf52dbDbd635a565305B7C2FA8EC762fA9A80Abf5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x74E672E4d41000c0559B7F8cE1A99E7b1Bd7F46F",
+      "chain": 2004,
+      "name": "Covid Shiba",
+      "symbol": "CVSHIB",
+      "decimals": "9",
+      "contractAddress": "0x74E672E4d41000c0559B7F8cE1A99E7b1Bd7F46F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x92Ff90Fe18f1c1488BDED3c9e91789eA5aA9157a",
+      "chain": 2004,
+      "name": "Falconheavy",
+      "symbol": "AVY",
+      "decimals": "18",
+      "contractAddress": "0x92Ff90Fe18f1c1488BDED3c9e91789eA5aA9157a"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x566F39c6dc59c0604115D2f8049a188FB9F1814B",
+      "chain": 2004,
+      "name": "Milky Way",
+      "symbol": "GALAXY",
+      "decimals": "9",
+      "contractAddress": "0x566F39c6dc59c0604115D2f8049a188FB9F1814B"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xe6F3626b017531aE8E9671DE32428f24E010B1Da",
+      "chain": 2004,
+      "name": "RiverDEX",
+      "symbol": "Driver",
+      "decimals": "9",
+      "contractAddress": "0xe6F3626b017531aE8E9671DE32428f24E010B1Da"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x609AedD990bf45926bca9E4eE988b4Fb98587D3A",
+      "chain": 2004,
+      "name": "Wrapped Fantom",
+      "symbol": "WFTM",
+      "decimals": "18",
+      "contractAddress": "0x609AedD990bf45926bca9E4eE988b4Fb98587D3A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x650483D1dd9d9919702163eA13dCd279C5401FBb",
+      "chain": 2004,
+      "name": "GLMR FLOKI",
+      "symbol": "GFLOKI",
+      "decimals": "9",
+      "contractAddress": "0x650483D1dd9d9919702163eA13dCd279C5401FBb"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x20aECb5164354060760811107983dC8481f96C76",
+      "chain": 2004,
+      "name": "Moonoge",
+      "symbol": "Moonoge",
+      "decimals": "9",
+      "contractAddress": "0x20aECb5164354060760811107983dC8481f96C76"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC85E39Cb0465d95c5E1Bc6fB89BAE8C385128B97",
+      "chain": 2004,
+      "name": "MOONBEAMOWL",
+      "symbol": "MOONOWL",
+      "decimals": "9",
+      "contractAddress": "0xC85E39Cb0465d95c5E1Bc6fB89BAE8C385128B97"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x95c7bc28BB78fbF50482BB475777fbA7cd1729D9",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "Test",
+      "decimals": "18",
+      "contractAddress": "0x95c7bc28BB78fbF50482BB475777fbA7cd1729D9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x31d1D07bFE345bB7242E597E1e47f41aDcB39f9d",
+      "chain": 2004,
+      "name": "JUSTMOONBEAM",
+      "symbol": "JMB",
+      "decimals": "18",
+      "contractAddress": "0x31d1D07bFE345bB7242E597E1e47f41aDcB39f9d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3758FFf377C3afDAf6AB11D1756B0823a4f50111",
+      "chain": 2004,
+      "name": "Moonbeam-Peg Dogecoin Token",
+      "symbol": "DOGE",
+      "decimals": "8",
+      "contractAddress": "0x3758FFf377C3afDAf6AB11D1756B0823a4f50111"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd59D66da6e1258Ffbf6400b79d0b2dEB611A049C",
+      "chain": 2004,
+      "name": "BeamPrism",
+      "symbol": "BeamPrism",
+      "decimals": "9",
+      "contractAddress": "0xd59D66da6e1258Ffbf6400b79d0b2dEB611A049C"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE9AE3c26979D108b27d9936a010717F69C1F62F6",
+      "chain": 2004,
+      "name": "Shiba Chess",
+      "symbol": "SHESS",
+      "decimals": "18",
+      "contractAddress": "0xE9AE3c26979D108b27d9936a010717F69C1F62F6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2927E4bB2Ab26b2078B02FD83292fC55835B937A",
+      "chain": 2004,
+      "name": "FATOSHIBEAM",
+      "symbol": "FBTC",
+      "decimals": "9",
+      "contractAddress": "0x2927E4bB2Ab26b2078B02FD83292fC55835B937A"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x428606fF14E1A68202650FEC1128Ac284dC07aa8",
+      "chain": 2004,
+      "name": "This isn't anything special",
+      "symbol": "TIAS",
+      "decimals": "18",
+      "contractAddress": "0x428606fF14E1A68202650FEC1128Ac284dC07aa8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3907e6ff436e2b2B05D6B929fb05F14c0ee18d90",
+      "chain": 2004,
+      "name": "ZooDAO",
+      "symbol": "ZOO",
+      "decimals": "18",
+      "contractAddress": "0x3907e6ff436e2b2B05D6B929fb05F14c0ee18d90"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4c7D17499c34a0Bbfa15F33C3589a5748C449E65",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "test",
+      "decimals": "18",
+      "contractAddress": "0x4c7D17499c34a0Bbfa15F33C3589a5748C449E65"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x83525b570efa4CFCe29DBC91809adCD54F9b9d0E",
+      "chain": 2004,
+      "name": "SafeMoonBeam",
+      "symbol": "SafeMoonBeam",
+      "decimals": "18",
+      "contractAddress": "0x83525b570efa4CFCe29DBC91809adCD54F9b9d0E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x71B5E845532F0f711C0cCbc7d06B304910A281d6",
+      "chain": 2004,
+      "name": "MoonbeamDog",
+      "symbol": "MoonbeamDog",
+      "decimals": "1",
+      "contractAddress": "0x71B5E845532F0f711C0cCbc7d06B304910A281d6"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x1FFDeDc7E213CF041961F80BE480307b2D09a950",
+      "chain": 2004,
+      "name": "CatBonk",
+      "symbol": "CATBONK",
+      "decimals": "9",
+      "contractAddress": "0x1FFDeDc7E213CF041961F80BE480307b2D09a950"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8E96Fec902ABa7BAe71D101560151031B0863c86",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TST",
+      "decimals": "18",
+      "contractAddress": "0x8E96Fec902ABa7BAe71D101560151031B0863c86"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xac8c8fEA0945d75Ba9e18936ee75ee16c2aCF7f7",
+      "chain": 2004,
+      "name": "mmondino.surge.sh",
+      "symbol": "MOONDINO",
+      "decimals": "9",
+      "contractAddress": "0xac8c8fEA0945d75Ba9e18936ee75ee16c2aCF7f7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x53356d9A0960D0841fc1dd8411d77ba4Da335d71",
+      "chain": 2004,
+      "name": "Testing",
+      "symbol": "TEST1",
+      "decimals": "18",
+      "contractAddress": "0x53356d9A0960D0841fc1dd8411d77ba4Da335d71"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x52d0A61A0C9655554becfD42b663526D18127ecB",
+      "chain": 2004,
+      "name": "KittyBeam",
+      "symbol": "KittyBeam",
+      "decimals": "18",
+      "contractAddress": "0x52d0A61A0C9655554becfD42b663526D18127ecB"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7a8eaD64B79C466d8A9Bcfd2a7B7BF938F9Cb542",
+      "chain": 2004,
+      "name": "Dummy BUSD",
+      "symbol": "dBUSD",
+      "decimals": "18",
+      "contractAddress": "0x7a8eaD64B79C466d8A9Bcfd2a7B7BF938F9Cb542"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x10E1DA6DFfDa45B74e54B1C4821c28d4245963E8",
+      "chain": 2004,
+      "name": "TheGenesisDAO",
+      "symbol": "GAO",
+      "decimals": "18",
+      "contractAddress": "0x10E1DA6DFfDa45B74e54B1C4821c28d4245963E8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xF21911984D20Cbd56a6a8C1feB47A2a46e30b046",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TEST",
+      "decimals": "6",
+      "contractAddress": "0xF21911984D20Cbd56a6a8C1feB47A2a46e30b046"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x339A7Bc2619889301E06634f12Cf5920458Bf190",
+      "chain": 2004,
+      "name": "Test1",
+      "symbol": "Test2",
+      "decimals": "18",
+      "contractAddress": "0x339A7Bc2619889301E06634f12Cf5920458Bf190"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4B5E73Ba9C0EAE439dAE8336E4397c400865cF90",
+      "chain": 2004,
+      "name": "MoonBeamDragons",
+      "symbol": "DRAGONS",
+      "decimals": "9",
+      "contractAddress": "0x4B5E73Ba9C0EAE439dAE8336E4397c400865cF90"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3f70a31089A6Bdf182FeAf3466227f2BB2051501",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "tes",
+      "decimals": "18",
+      "contractAddress": "0x3f70a31089A6Bdf182FeAf3466227f2BB2051501"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x80C1F51339D1921E621207E80Cc54714Ed4ec182",
+      "chain": 2004,
+      "name": "LWEI Token",
+      "symbol": "LWEI",
+      "decimals": "9",
+      "contractAddress": "0x80C1F51339D1921E621207E80Cc54714Ed4ec182"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3deb5243c187785D10a05C50bf5Fb89d8A3D169E",
+      "chain": 2004,
+      "name": "GLMRicardo",
+      "symbol": "GLMRCRDO",
+      "decimals": "18",
+      "contractAddress": "0x3deb5243c187785D10a05C50bf5Fb89d8A3D169E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x18Fb89dE9540C696Defd1adedFCF08dba40a8b1D",
+      "chain": 2004,
+      "name": "Test Token",
+      "symbol": "Test",
+      "decimals": "9",
+      "contractAddress": "0x18Fb89dE9540C696Defd1adedFCF08dba40a8b1D"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xBa919820C6eB698f24B6C82CC7DB43A551a0CF74",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TST",
+      "decimals": "18",
+      "contractAddress": "0xBa919820C6eB698f24B6C82CC7DB43A551a0CF74"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x2B94AC52878d30280ea89D673C847A801FCB1437",
+      "chain": 2004,
+      "name": "Test 4",
+      "symbol": "TEST",
+      "decimals": "6",
+      "contractAddress": "0x2B94AC52878d30280ea89D673C847A801FCB1437"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x25D8FF22f7594cAb0Ab4B799742e8788905C13cd",
+      "chain": 2004,
+      "name": "CoinBros",
+      "symbol": "BROS",
+      "decimals": "18",
+      "contractAddress": "0x25D8FF22f7594cAb0Ab4B799742e8788905C13cd"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x04F6511053BD8e6fEeA60A6a1f6110B953dF3BB5",
+      "chain": 2004,
+      "name": "tt3",
+      "symbol": "tt3",
+      "decimals": "18",
+      "contractAddress": "0x04F6511053BD8e6fEeA60A6a1f6110B953dF3BB5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xBb1Fd29E486d5B0546dc9Ae38C8194bc88C91718",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TST",
+      "decimals": "18",
+      "contractAddress": "0xBb1Fd29E486d5B0546dc9Ae38C8194bc88C91718"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x109C40A9207b00B794a1532636c0c9a2aef46A6c",
+      "chain": 2004,
+      "name": "Test5 Token",
+      "symbol": "Test5",
+      "decimals": "9",
+      "contractAddress": "0x109C40A9207b00B794a1532636c0c9a2aef46A6c"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xe2e8E8d04D018B40CDbf08C4C7eE898F8BC21698",
+      "chain": 2004,
+      "name": "DONT BUY",
+      "symbol": "DONTBUY",
+      "decimals": "5",
+      "contractAddress": "0xe2e8E8d04D018B40CDbf08C4C7eE898F8BC21698"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA190416EB91918F99f1C49aF99Aa58e96577674d",
+      "chain": 2004,
+      "name": "Sunbeam",
+      "symbol": "SUNBEAM",
+      "decimals": "9",
+      "contractAddress": "0xA190416EB91918F99f1C49aF99Aa58e96577674d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xea5Ca389A75e331541c0f97b4cfd4e075C923Cc0",
+      "chain": 2004,
+      "name": "test",
+      "symbol": "test",
+      "decimals": "18",
+      "contractAddress": "0xea5Ca389A75e331541c0f97b4cfd4e075C923Cc0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x83C91C1b9E96F3698403185DDfE8d14FDd44E5Cd",
+      "chain": 2004,
+      "name": "FEGBEAM",
+      "symbol": "FEGBEAM",
+      "decimals": "6",
+      "contractAddress": "0x83C91C1b9E96F3698403185DDfE8d14FDd44E5Cd"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x45f919eE9f618bf344e275620E6ac1f853Fb171F",
+      "chain": 2004,
+      "name": "MoonDAO",
+      "symbol": "MoonDAO",
+      "decimals": "18",
+      "contractAddress": "0x45f919eE9f618bf344e275620E6ac1f853Fb171F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xEBe290353FC87B6389f352a478aA5cFF636C0E87",
+      "chain": 2004,
+      "name": "Test6 Token",
+      "symbol": "Test6",
+      "decimals": "9",
+      "contractAddress": "0xEBe290353FC87B6389f352a478aA5cFF636C0E87"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x23754735D71F05C90fA8428C99a457758c1a8645",
+      "chain": 2004,
+      "name": "TestToken",
+      "symbol": "TEST1",
+      "decimals": "2",
+      "contractAddress": "0x23754735D71F05C90fA8428C99a457758c1a8645"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA5ae1F841cdF7E9675Ae1ae5cf2c7bB5FcA57328",
+      "chain": 2004,
+      "name": "SafBeam",
+      "symbol": "SAFEBEAM",
+      "decimals": "9",
+      "contractAddress": "0xA5ae1F841cdF7E9675Ae1ae5cf2c7bB5FcA57328"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x469394AEE72704aEB2E25012063ED1a718010259",
+      "chain": 2004,
+      "name": "Fluf",
+      "symbol": "fluf",
+      "decimals": "4",
+      "contractAddress": "0x469394AEE72704aEB2E25012063ED1a718010259"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x26E4BB1c99e2aDCabF6beEc7028254058fAa0d35",
+      "chain": 2004,
+      "name": "TestToken",
+      "symbol": "TTT",
+      "decimals": "18",
+      "contractAddress": "0x26E4BB1c99e2aDCabF6beEc7028254058fAa0d35"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6613dd7b7d8505A62fAF8a87b2a57698D8aB3d28",
+      "chain": 2004,
+      "name": "Pizduy nahuy v svoi gori",
+      "symbol": "GORI",
+      "decimals": "18",
+      "contractAddress": "0x6613dd7b7d8505A62fAF8a87b2a57698D8aB3d28"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x3c751Feb00364CA9e2d0105c40F0b423abf1DEE3",
+      "chain": 2004,
+      "name": "USDT from Etherem wrapped by passport.meter.io",
+      "symbol": "USDT",
+      "decimals": "6",
+      "contractAddress": "0x3c751Feb00364CA9e2d0105c40F0b423abf1DEE3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x295aa4b5Cb9aE2cA6325cA11F2cd416720a5F9F3",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TST",
+      "decimals": "18",
+      "contractAddress": "0x295aa4b5Cb9aE2cA6325cA11F2cd416720a5F9F3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x16c5EE604CC434DEb3F2E3f19ABddC795F55cAF7",
+      "chain": 2004,
+      "name": "UltraDegenBeam",
+      "symbol": "UDB",
+      "decimals": "9",
+      "contractAddress": "0x16c5EE604CC434DEb3F2E3f19ABddC795F55cAF7"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x43C7F7cD808E6d8701983471E40647b7E4DF5810",
+      "chain": 2004,
+      "name": "DONTBUY",
+      "symbol": "DB",
+      "decimals": "9",
+      "contractAddress": "0x43C7F7cD808E6d8701983471E40647b7E4DF5810"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc4ACD115F1CeeBD4A88273423D6CF77C4A1c7559",
+      "chain": 2004,
+      "name": "Asian Dragon",
+      "symbol": "AD2",
+      "decimals": "8",
+      "contractAddress": "0xc4ACD115F1CeeBD4A88273423D6CF77C4A1c7559"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x33D6754Da7cA2739431964E9C1459D0d1A7FE805",
+      "chain": 2004,
+      "name": "DONTBUY",
+      "symbol": "DB",
+      "decimals": "9",
+      "contractAddress": "0x33D6754Da7cA2739431964E9C1459D0d1A7FE805"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x284b7C73a3f2C082Fe75D80F0cA19F3C9580E7c0",
+      "chain": 2004,
+      "name": "Bunny",
+      "symbol": "Bunny",
+      "decimals": "9",
+      "contractAddress": "0x284b7C73a3f2C082Fe75D80F0cA19F3C9580E7c0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5553b6c97ee9E34DD7604b2569e2603707906436",
+      "chain": 2004,
+      "name": "Popcat",
+      "symbol": "POP",
+      "decimals": "18",
+      "contractAddress": "0x5553b6c97ee9E34DD7604b2569e2603707906436"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xBE4C130aaFf02Ee7c723351b7D8C2B6da1D22ebd",
+      "chain": 2004,
+      "name": "Covalent Query Token",
+      "symbol": "CQT",
+      "decimals": "18",
+      "contractAddress": "0xBE4C130aaFf02Ee7c723351b7D8C2B6da1D22ebd"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xbed6F40a9B4A0446B381Be4720b6195b6F6D67F8",
+      "chain": 2004,
+      "name": "MOONSHARE",
+      "symbol": "MOONSHARE",
+      "decimals": "18",
+      "contractAddress": "0xbed6F40a9B4A0446B381Be4720b6195b6F6D67F8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5130CA61Bf02618548dFC3FdeF50B50B36b11f2b",
+      "chain": 2004,
+      "name": "Covalent Query Token",
+      "symbol": "CQT",
+      "decimals": "18",
+      "contractAddress": "0x5130CA61Bf02618548dFC3FdeF50B50B36b11f2b"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x27E4Ecf13634F28588e00059594df8465E3b32E9",
+      "chain": 2004,
+      "name": "MoonShibaDoge",
+      "symbol": "MSD",
+      "decimals": "18",
+      "contractAddress": "0x27E4Ecf13634F28588e00059594df8465E3b32E9"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x6763CfD3cfc88Bce52DFAC3A9346C55b43e48DEF",
+      "chain": 2004,
+      "name": "Vaulted Solarbeam Token",
+      "symbol": "vaultedSOLAR",
+      "decimals": "18",
+      "contractAddress": "0x6763CfD3cfc88Bce52DFAC3A9346C55b43e48DEF"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE68bA9C8411B27BD71811b1B1e5574CBAdD09655",
+      "chain": 2004,
+      "name": "AlphaDEX",
+      "symbol": "ROAR",
+      "decimals": "18",
+      "contractAddress": "0xE68bA9C8411B27BD71811b1B1e5574CBAdD09655"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5C86EE51C5577f6A550166B8650616bad520897f",
+      "chain": 2004,
+      "name": "BeamPrism",
+      "symbol": "PRSM",
+      "decimals": "18",
+      "contractAddress": "0x5C86EE51C5577f6A550166B8650616bad520897f"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x5711Da7EDB2F7e093C5F0b3b11C6DDd2D50d1AcD",
+      "chain": 2004,
+      "name": "MoreETHv2",
+      "symbol": "METH",
+      "decimals": "9",
+      "contractAddress": "0x5711Da7EDB2F7e093C5F0b3b11C6DDd2D50d1AcD"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xF69d49fDDD1f857cCe053725bAC82803330b317e",
+      "chain": 2004,
+      "name": "Moonbeam2.0",
+      "symbol": "GLMR2.0",
+      "decimals": "18",
+      "contractAddress": "0xF69d49fDDD1f857cCe053725bAC82803330b317e"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x43A094DC0fB493FAE9955c32E88d6ef839c5df7E",
+      "chain": 2004,
+      "name": "Stella LP",
+      "symbol": "STELLA LP",
+      "decimals": "18",
+      "contractAddress": "0x43A094DC0fB493FAE9955c32E88d6ef839c5df7E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7D393Bc51b2FC7015C2c9c781FEb288054015b7E",
+      "chain": 2004,
+      "name": "BeamSwap LPs",
+      "symbol": "BEAM-LP",
+      "decimals": "18",
+      "contractAddress": "0x7D393Bc51b2FC7015C2c9c781FEb288054015b7E"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xa9A8365183b94d420dA11253B3b191101e9C0F91",
+      "chain": 2004,
+      "name": "BEACON",
+      "symbol": "BXNN",
+      "decimals": "18",
+      "contractAddress": "0xa9A8365183b94d420dA11253B3b191101e9C0F91"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xA8916Ded9E74f0d05E5E79fC39F036cc1734B7bF",
+      "chain": 2004,
+      "name": "BeamCat",
+      "symbol": "BEAMCAT",
+      "decimals": "18",
+      "contractAddress": "0xA8916Ded9E74f0d05E5E79fC39F036cc1734B7bF"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xC2749f2DBccB9Fdc4E0D456DE3037D852392B967",
+      "chain": 2004,
+      "name": "DOTDOGE",
+      "symbol": "DDG",
+      "decimals": "18",
+      "contractAddress": "0xC2749f2DBccB9Fdc4E0D456DE3037D852392B967"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x79eB7432Ab8Cd5c06829Ca42191766c68827dA28",
+      "chain": 2004,
+      "name": "Test",
+      "symbol": "TST",
+      "decimals": "18",
+      "contractAddress": "0x79eB7432Ab8Cd5c06829Ca42191766c68827dA28"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x7F416F123fe4E656fd8f76205b82DCf16B170F28",
+      "chain": 2004,
+      "name": "ae",
+      "symbol": "RaeOUL",
+      "decimals": "18",
+      "contractAddress": "0x7F416F123fe4E656fd8f76205b82DCf16B170F28"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd407Ab190F7d3Abc066FB18aA9fD89D96D840D4F",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MOONDOGE",
+      "decimals": "18",
+      "contractAddress": "0xd407Ab190F7d3Abc066FB18aA9fD89D96D840D4F"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xE63f425f62f3EFa1C905a7CDA7bCe61C867492DE",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MOONDOGE",
+      "decimals": "18",
+      "contractAddress": "0xE63f425f62f3EFa1C905a7CDA7bCe61C867492DE"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x42b54552CAEa14775b5E5243de5bDF83456ade68",
+      "chain": 2004,
+      "name": "TEST",
+      "symbol": "T",
+      "decimals": "9",
+      "contractAddress": "0x42b54552CAEa14775b5E5243de5bDF83456ade68"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x94ACF8af96CB2f1bc81cB58bAa9791EAAC6c99E5",
+      "chain": 2004,
+      "name": "FakeOneBeam",
+      "symbol": "FAKE1BEAM",
+      "decimals": "18",
+      "contractAddress": "0x94ACF8af96CB2f1bc81cB58bAa9791EAAC6c99E5"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x625197a35863f57E851540085099BAEa46216Ea0",
+      "chain": 2004,
+      "name": "AVY",
+      "symbol": "AVY",
+      "decimals": "18",
+      "contractAddress": "0x625197a35863f57E851540085099BAEa46216Ea0"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4A58260Cece4fe85641a6c706E70573a9A71F395",
+      "chain": 2004,
+      "name": "EnergyFiBar",
+      "symbol": "xEFT",
+      "decimals": "18",
+      "contractAddress": "0x4A58260Cece4fe85641a6c706E70573a9A71F395"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xbc25D15c31Bd3E93D0D7959D6A7F4d20FD70A469",
+      "chain": 2004,
+      "name": "MoonDoge",
+      "symbol": "MOONDOGE",
+      "decimals": "18",
+      "contractAddress": "0xbc25D15c31Bd3E93D0D7959D6A7F4d20FD70A469"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xFA36Fe1dA08C89eC72Ea1F0143a35bFd5DAea108",
+      "chain": 2004,
+      "name": "Liquid staked DOT",
+      "symbol": "stDOT",
+      "decimals": "10",
+      "contractAddress": "0xFA36Fe1dA08C89eC72Ea1F0143a35bFd5DAea108"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xd6329083ce0fEbf127257d16BcB500FB8B848Fc8",
+      "chain": 2004,
+      "name": "Little Fighter 2",
+      "symbol": "LF2",
+      "decimals": "0",
+      "contractAddress": "0xd6329083ce0fEbf127257d16BcB500FB8B848Fc8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xED8f0A114C1bc213698C28dB4aEAEB5F51C49496",
+      "chain": 2004,
+      "name": "Stella LP",
+      "symbol": "STELLA LP",
+      "decimals": "18",
+      "contractAddress": "0xED8f0A114C1bc213698C28dB4aEAEB5F51C49496"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x003Fa6dAD52729D55EbA2dB67F2B004404B111b8",
+      "chain": 2004,
+      "name": "Jimmy Sucked My Dick",
+      "symbol": "JIMMY",
+      "decimals": "0",
+      "contractAddress": "0x003Fa6dAD52729D55EbA2dB67F2B004404B111b8"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x89Cf45Bbe0850C7b0D315a48730F6a602420F8Be",
+      "chain": 2004,
+      "name": "Beamswap Stable DEX - Stable Pool",
+      "symbol": "3pool",
+      "decimals": "18",
+      "contractAddress": "0x89Cf45Bbe0850C7b0D315a48730F6a602420F8Be"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x524d524B4c9366be706D3A90dcf70076ca037aE3",
+      "chain": 2004,
+      "name": "RMRK",
+      "symbol": "RMRK",
+      "decimals": "18",
+      "contractAddress": "0x524d524B4c9366be706D3A90dcf70076ca037aE3"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xbc7E02c4178a7dF7d3E564323a5c359dc96C4db4",
+      "chain": 2004,
+      "name": "Stella stDOT",
+      "symbol": "stDOT",
+      "decimals": "10",
+      "contractAddress": "0xbc7E02c4178a7dF7d3E564323a5c359dc96C4db4"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x76F4955F090a948876dea4B1762A2FA60C850364",
+      "chain": 2004,
+      "name": "LemoSwing",
+      "symbol": "L-Swing",
+      "decimals": "9",
+      "contractAddress": "0x76F4955F090a948876dea4B1762A2FA60C850364"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xbFE3Acdca835bB60A6B51Ee6B947779A02eCE911",
+      "chain": 2004,
+      "name": "Axelar Wrapped WMAI",
+      "symbol": "axlWMAI",
+      "decimals": "18",
+      "contractAddress": "0xbFE3Acdca835bB60A6B51Ee6B947779A02eCE911"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xAb197A16a5c62c94961CA7dDE3C5d0fC31BC5e02",
+      "chain": 2004,
+      "name": "Xenvault Token on Moonbeam",
+      "symbol": "mbXVT",
+      "decimals": "18",
+      "contractAddress": "0xAb197A16a5c62c94961CA7dDE3C5d0fC31BC5e02"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xed80FEf95392bB8c0e29cF75BE356E491d0d7661",
+      "chain": 2004,
+      "name": "Trace Token",
+      "symbol": "TRAC",
+      "decimals": "18",
+      "contractAddress": "0xed80FEf95392bB8c0e29cF75BE356E491d0d7661"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x8638ac750bFd53c5C6a85Dc9A98800056dd9F55d",
+      "chain": 2004,
+      "name": "BOSS DEGEN",
+      "symbol": "DEGEN",
+      "decimals": "18",
+      "contractAddress": "0x8638ac750bFd53c5C6a85Dc9A98800056dd9F55d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x4EdF8E0778967012D46968ceadb75436d0426f88",
+      "chain": 2004,
+      "name": "BEPRO Network",
+      "symbol": "BEPRO",
+      "decimals": "18",
+      "contractAddress": "0x4EdF8E0778967012D46968ceadb75436d0426f88"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc724E95861EbD6C75Aceb29BdF47df2c542eB223",
+      "chain": 2004,
+      "name": "ecol",
+      "symbol": "ecol",
+      "decimals": "18",
+      "contractAddress": "0xc724E95861EbD6C75Aceb29BdF47df2c542eB223"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0x99Fec54a5Ad36D50A4Bba3a41CAB983a5BB86A7d",
+      "chain": 2004,
+      "name": "Wrapped SOL",
+      "symbol": "SOL",
+      "decimals": "9",
+      "contractAddress": "0x99Fec54a5Ad36D50A4Bba3a41CAB983a5BB86A7d"
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "0xc93B746eB566eED2D6A625691999BB5bE564ECF0",
+      "chain": 2004,
+      "name": "Gorilla on the Moon",
+      "symbol": "GOM",
+      "decimals": "18",
+      "contractAddress": "0xc93B746eB566eED2D6A625691999BB5bE564ECF0"
+    },
+    "hasLocation": false
+  }
+]

@@ -1,0 +1,1168 @@
+[
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": "GLMR",
+      "chain": 2004,
+      "name": "GLMR",
+      "symbol": "GLMR",
+      "decimals": "18",
+      "contractAddress": "0xAcc15dC74880C9944775448304B263D191c6077F"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2004"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "78407957940239408223554844611219482002",
+      "name": "Moonriver",
+      "symbol": "xcibcMOVR",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF3afcd2cad6174387df17180a0362e592"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2019"
+        },
+        {
+          "PalletInstance": "59"
+        },
+        {
+          "GeneralIndex": "79228162514264337593543950359"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "150874409661081770150564009349448205842",
+      "name": "Zeitgeist",
+      "symbol": "xcZTG",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF71815ab6142e0e20c7259126c6b40612"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2092"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "90225766094594282577230355136633846906",
+      "name": "Polkadex",
+      "symbol": "xcPDEX",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF43e0d9b84010b1b67ba501bc81e33c7a"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2040"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "144012926827374458669278577633504620722",
+      "name": "Bifrost Filecoin Native Token",
+      "symbol": "xcFIL",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF6c57e17d210df507c82807149ffd70b2"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0804000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "125699734534028342599692732320197985871",
+      "name": "Darwinia Parachain Token",
+      "symbol": "xcRING",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF5e90e365edca87fb4c8306df1e91464f"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2046"
+        },
+        {
+          "PalletInstance": "5"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "91372035960551235635465443179559840483",
+      "name": "Centrifuge",
+      "symbol": "xcCFG",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF44bd9d2ffee20b25d1cf9e78edb6eae3"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2031"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "187224307232923873519830480073807488153",
+      "name": "Equilibrium Dollar",
+      "symbol": "xcEQD",
+      "decimals": "9",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF8cda1707baf23834d211b08726b1e499"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2011"
+        },
+        {
+          "GeneralKey": {
+            "length": "3",
+            "data": "0x6571640000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "69606720909260275826784788104880799692",
+      "name": "HydraDX",
+      "symbol": "xcHDX",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF345dc44ddae98df024eb494321e73fcc"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2034"
+        },
+        {
+          "GeneralIndex": "0"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "133307414193833606001516599592873928539",
+      "name": "Celestia",
+      "symbol": "xcibcTIA",
+      "decimals": "6",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF644a12f6f01b754987d175f5a780a75b"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2019"
+        },
+        {
+          "PalletInstance": "59"
+        },
+        {
+          "GeneralIndex": "79228162514264337593543950355"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "190590555344745888270686124937537713878",
+      "name": "Equilibrium Token",
+      "symbol": "xcEQ",
+      "decimals": "9",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF8f6267e040d8a0638c576dfba4f0f6d6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2011"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "141196559012917796508928734717797136690",
+      "name": "Inter Stable Token",
+      "symbol": "xcibcIST",
+      "decimals": "6",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF6a3977d5b65d1044fd744b14d9cef932"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2019"
+        },
+        {
+          "PalletInstance": "59"
+        },
+        {
+          "GeneralIndex": "79228162514264337593543950361"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "29085784439601774464560083082574142143",
+      "name": "Bifrost Voucher DOT",
+      "symbol": "xcvDOT",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF15e1b7e3df971dd813bc394deb899abf"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0900000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "225719522181998468294117309041779353812",
+      "name": "Acala Liquid DOT",
+      "symbol": "xcLDOT",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFa9cfffa9834235fe53f4733f1b8b28d4"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0003000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "224077081838586484055667086558292981199",
+      "name": "Astar",
+      "symbol": "xcASTR",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFa893ad19e540e172c10d78d4d479b5cf"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2006"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "199907282886248358976504623107230837230",
+      "name": "Agoric",
+      "symbol": "xcibcBLD",
+      "decimals": "6",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF9664be0234ea4dc64558f695c4f2a9ee"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2019"
+        },
+        {
+          "PalletInstance": "59"
+        },
+        {
+          "GeneralIndex": "79228162514264337593543950354"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "166377000701797186346254371275954761085",
+      "name": "USD Coin",
+      "symbol": "xcUSDC",
+      "decimals": "6",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF7d2b0b761af01ca8e25242976ac0ad7d"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1337"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "142155548796783636521833385094843759961",
+      "name": "bncs-20 inscription token BNCS",
+      "symbol": "xcBNCS",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF6af229ae7f0f4e0188157e189a487d59"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0809000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "89994634370519791027168048838578580624",
+      "name": "Subsocial",
+      "symbol": "xcSUB",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF43b4560bc0c451a3386e082bff50ac90"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2101"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "138280378441551394289980644963240827219",
+      "name": "Cosmos Hub",
+      "symbol": "xcibcATOM",
+      "decimals": "6",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF6807d5082ff2f6f86bde409245e2d953"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2019"
+        },
+        {
+          "PalletInstance": "59"
+        },
+        {
+          "GeneralIndex": "79228162514264337593543950343"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "228510780171552721666262089780561563481",
+      "name": "Picasso",
+      "symbol": "xcibcPICA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFabe9934e61db3b11be4251e6e869cf59"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2019"
+        },
+        {
+          "PalletInstance": "59"
+        },
+        {
+          "GeneralIndex": "79228162514264337593543950337"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "204507659831918931608354793288110796652",
+      "name": "Bifrost Voucher GLMR",
+      "symbol": "xcvGLMR",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF99dabe1a8de0ea22baa6fd48fde96f6c"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0901000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "289989900872525819559124583375550296953",
+      "name": "Bifrost Voucher MANTA",
+      "symbol": "xcvMANTA",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFda2a05fb50e7ae99275f4341aed43379"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0908000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "110021739665376159354538090254163045594",
+      "name": "Acala Dollar",
+      "symbol": "xcaUSD",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF52c56a9257bb97f4b2b6f7b2d624ecda"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "311091173110107856861649819128533077277",
+      "name": "Tether USD",
+      "symbol": "xcUSDT",
+      "decimals": "6",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFea09fb06d082fd1275cd48b191cbcd1d"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1984"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "64174511183114006009298114091987195453",
+      "name": "PINK",
+      "symbol": "xcPINK",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF30478fafbe935e466da114e14fb3563d"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "23"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "309163521958167876851250718453738106865",
+      "name": "Nodle",
+      "symbol": "xcNODL",
+      "decimals": "11",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFe896ba7cb118b9fa571c6dc0a99deff1"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2026"
+        },
+        {
+          "PalletInstance": "2"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "120637696315203257380661607956669368914",
+      "name": "interBTC",
+      "symbol": "xcIBTC",
+      "decimals": "8",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF5ac1f9a51a93f5c527385edf7fe98a52"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "166446646689194205559791995948102903873",
+      "name": "Manta",
+      "symbol": "xcMANTA",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF7d3875460d4509eb8d0362c611b4e841"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2104"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "101170542313601871197860408087030232491",
+      "name": "Interlay",
+      "symbol": "xcINTR",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF4c1cbcd97597339702436d4f18a375ab"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0002000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "165823357460190568952172802245839421906",
+      "name": "BNC",
+      "symbol": "xcBNC",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF7cc06abdf7201b350a1265c62c8601d2"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "32615670524745285411807346420584982855",
+      "name": "PARA",
+      "symbol": "xcPARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF18898cb5fe1e88e668152b4f4052a947"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2012"
+        },
+        {
+          "GeneralKey": {
+            "length": "4",
+            "data": "0x5041524100000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "42259045809535163221576417993425387648",
+      "name": "xcDOT",
+      "symbol": "xcDOT",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF1fcacbd218edc0eba20fc2308c778080"
+    },
+    "hasLocation": true,
+    "tokenLocation": "here"
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "45647473099451451833602657905356404688",
+      "name": "Pendulum",
+      "symbol": "xcPEN",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF2257622f345e1acde0d4f46d7d1d77d0"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2094"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "224821240862170613278369189818311486111",
+      "name": "Acala",
+      "symbol": "xcACA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFa922fef94566104a6e5a35a4fcddaa9f"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "272547899416482196831721420898811311297",
+      "name": "Bifrost Voucher FIL",
+      "symbol": "xcvFIL",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFcd0ad0ea6576b7b285295c85e94cf4c1"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0904000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "114018676402354620972806895487280206446",
+      "name": "Bifrost Voucher ASTR",
+      "symbol": "xcvASTR",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF55c732c47639231a4c4373245763d26e"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2030"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0903000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "238111524681612888331172110363070489924",
+      "name": "NeuroWeb",
+      "symbol": "xcNEURO",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFb3229c8e7657eabea704d5e75246e544"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2043"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "132685552157663328694213725410064821485",
+      "name": "Phala Token",
+      "symbol": "xcPHA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF63d24ecc8eb8a7b5d0803e900f7b6ced"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2035"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "MOVR",
+      "name": "MOVR",
+      "symbol": "MOVR",
+      "decimals": "18",
+      "contractAddress": "0x98878B06940aE243284CA214f92Bb71a2b032B8A"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2023"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "ZLK",
+      "name": "ZLK",
+      "symbol": "ZLK",
+      "decimals": "18",
+      "contractAddress": "0x0f47ba9d9Bde3442b42175e51d6A367928A1173B"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2001"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0207000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "283870493414747423842723289889816153538",
+      "name": "Unique Network",
+      "symbol": "xcUNQ",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFd58f77e6693cfb99ebe273d73c678dc2"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2037"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "314077021455772878282433861213184736939",
+      "name": "peaq",
+      "symbol": "xcPEAQ",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFFec4908b74688a01374f789b48e9a3eab"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "3338"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "61295607754960722617854661686514597014",
+      "name": "dog wif dots",
+      "symbol": "xcWIFD",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF2e1d1ac9ea1686255befe995b31abc96"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "17"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "124463719055550872076363892993240202694",
+      "name": "DED",
+      "symbol": "xcDED",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF5da2d7214d268375cf8fb1715705fdc6"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "30"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "184218609779515850660274730699350567246",
+      "name": "Apillon",
+      "symbol": "xcNCTR",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF8a9736b44ebf188972725bed67bf694e"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1024"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2004,
+      "localId": "112679793397406599376365943185137098326",
+      "name": "STINK",
+      "symbol": "xcSTINK",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false,
+      "contractAddress": "0xFFFFFFFF54c556bd1d0f64ec6c78f1b477525e56"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "42069"
+        }
+      ]
+    }
+  }
+]

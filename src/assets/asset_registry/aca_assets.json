@@ -1,0 +1,749 @@
+[
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "NativeAssetId": {
+          "Token": "AUSD"
+        }
+      },
+      "name": "aUSD SEED",
+      "symbol": "aSEED",
+      "decimals": "12",
+      "minimalBalance": "100000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "NativeAssetId": {
+          "Token": "ACA"
+        }
+      },
+      "name": "Acala",
+      "symbol": "ACA",
+      "decimals": "12",
+      "minimalBalance": "100000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "10"
+      },
+      "name": "Unique Network",
+      "symbol": "UNQ",
+      "decimals": "18",
+      "minimalBalance": "1250000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2037"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "14"
+      },
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6",
+      "minimalBalance": "10000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1337"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "StableAssetId": "0"
+      },
+      "name": "Taiga DOT",
+      "symbol": "tDOT",
+      "decimals": "10",
+      "minimalBalance": "100000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0085000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "8"
+      },
+      "name": "Equilibrium USD",
+      "symbol": "EQD",
+      "decimals": "9",
+      "minimalBalance": "1000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2011"
+        },
+        {
+          "GeneralKey": {
+            "length": "3",
+            "data": "0x6571640000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "NativeAssetId": {
+          "Token": "TAP"
+        }
+      },
+      "name": "Tapio",
+      "symbol": "TAP",
+      "decimals": "12",
+      "minimalBalance": "1000000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "3",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "NativeAssetId": {
+          "LiquidCrowdloan": "13"
+        }
+      },
+      "name": "Liquid Crowdloan DOT",
+      "symbol": "LcDOT",
+      "decimals": "10",
+      "minimalBalance": "100000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "5",
+            "data": "0x040d000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "4"
+      },
+      "name": "Interlay",
+      "symbol": "INTR",
+      "decimals": "10",
+      "minimalBalance": "1000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0002000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0xa72206fdf839c785b3073870013f2fd57ba10b63"
+      },
+      "name": "Crust Network (Portal from Ethereum)",
+      "symbol": "CRUet",
+      "decimals": "18",
+      "minimalBalance": "12000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "6"
+      },
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": "18",
+      "minimalBalance": "500000000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "100"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0x07df96d1341a7d16ba1ad431e2c847d978bc2bce"
+      },
+      "name": "USD Coin (Portal from Ethereum)",
+      "symbol": "USDCet",
+      "decimals": "6",
+      "minimalBalance": "10000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "2"
+      },
+      "name": "Astar Native Token",
+      "symbol": "ASTR",
+      "decimals": "18",
+      "minimalBalance": "100000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2006"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0x892ddd9387dbdecedaef878bd7acf8603109227f"
+      },
+      "name": "Taiga",
+      "symbol": "TAI",
+      "decimals": "12",
+      "minimalBalance": "10000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "9"
+      },
+      "name": "Phala Token",
+      "symbol": "PHA",
+      "decimals": "12",
+      "minimalBalance": "100000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2035"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "1"
+      },
+      "name": "Parallel",
+      "symbol": "PARA",
+      "decimals": "12",
+      "minimalBalance": "100000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2012"
+        },
+        {
+          "GeneralKey": {
+            "length": "4",
+            "data": "0x5041524100000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0xf4c723e61709d90f89939c1852f516e373d418a8"
+      },
+      "name": "ApeCoin (Portal)",
+      "symbol": "APE",
+      "decimals": "18",
+      "minimalBalance": "3000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "0"
+      },
+      "name": "Moonbeam",
+      "symbol": "GLMR",
+      "decimals": "18",
+      "minimalBalance": "100000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2004"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "5"
+      },
+      "name": "Wrapped Bitcoin",
+      "symbol": "WBTC",
+      "decimals": "8",
+      "minimalBalance": "3000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "21"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0xd1729649ee6d5e3740ee2f9254c4226aabd0dc5b"
+      },
+      "name": "Lido DAO (Portal)",
+      "symbol": "LDO",
+      "decimals": "18",
+      "minimalBalance": "4500000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "NativeAssetId": {
+          "Token": "LDOT"
+        }
+      },
+      "name": "Liquid DOT",
+      "symbol": "LDOT",
+      "decimals": "10",
+      "minimalBalance": "500000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0003000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0x54a37a01cd75b616d63e0ab665bffdb0143c52ae"
+      },
+      "name": "DAI Stablecoin (Portal)",
+      "symbol": "DAI",
+      "decimals": "18",
+      "minimalBalance": "10000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "13"
+      },
+      "name": "PINK",
+      "symbol": "PINK",
+      "decimals": "10",
+      "minimalBalance": "1000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "23"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0xaf6997a70feb868df863d5380c3ab93da4297edc"
+      },
+      "name": "Shiba Inu (Portal)",
+      "symbol": "SHIB",
+      "decimals": "18",
+      "minimalBalance": "1266000000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0x604cae74cdc395a8824557d422fccf8db6809a2f"
+      },
+      "name": "Chainlink (Portal)",
+      "symbol": "LINK",
+      "decimals": "18",
+      "minimalBalance": "1700000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "11"
+      },
+      "name": "Crust Parachain Native Token",
+      "symbol": "CRU",
+      "decimals": "12",
+      "minimalBalance": "10000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2008"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "12"
+      },
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": "6",
+      "minimalBalance": "10000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1984"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0xd53e4ba478cca5080c47435769ff82f41e5e4cd0"
+      },
+      "name": "Arbitrum (Portal)",
+      "symbol": "ARB",
+      "decimals": "18",
+      "minimalBalance": "9000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0x5a4d6acdc4e3e5ab15717f407afe957f7a242578"
+      },
+      "name": "Wrapped Ether (Portal)",
+      "symbol": "WETH",
+      "decimals": "18",
+      "minimalBalance": "8500000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0x7d52316b1132c26626670fbf52aa7f5ce6f9b388"
+      },
+      "name": "Binance USD (Portal from BSC)",
+      "symbol": "BUSDbs",
+      "decimals": "18",
+      "minimalBalance": "10000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0x19eba3efa7d0e02956678c5f3c63c46beda2d7d8"
+      },
+      "name": "MATIC (Portal from Polygon)",
+      "symbol": "MATICpo",
+      "decimals": "18",
+      "minimalBalance": "12500000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "NativeAssetId": {
+          "Token": "DOT"
+        }
+      },
+      "name": "Polkadot",
+      "symbol": "DOT",
+      "decimals": "10",
+      "minimalBalance": "100000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": "here"
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "7"
+      },
+      "name": "Equilibrium",
+      "symbol": "EQ",
+      "decimals": "9",
+      "minimalBalance": "1000000000",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2011"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0x13fe490489204abde3265bfd81179e6ddd2020c3"
+      },
+      "name": "Uniswap (Portal)",
+      "symbol": "UNI",
+      "decimals": "18",
+      "minimalBalance": "2000000000000000",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "Erc20": "0xc80084af223c8b598536178d9361dc55bfda6818"
+      },
+      "name": "Wrapped Bitcoin (Portal)",
+      "symbol": "WBTC",
+      "decimals": "8",
+      "minimalBalance": "60",
+      "chain": 2000
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "localId": {
+        "ForeignAssetId": "3"
+      },
+      "name": "interBTC",
+      "symbol": "IBTC",
+      "decimals": "8",
+      "minimalBalance": "100",
+      "chain": 2000
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  }
+]

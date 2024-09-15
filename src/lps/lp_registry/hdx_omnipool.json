@@ -1,0 +1,182 @@
+[
+  {
+    "assetId": "100",
+    "tokenAmount": "1451144270076138720136866",
+    "hubAmount": "53377568112228251",
+    "assetAmount": "1326498886232022682666551",
+    "protocolAmount": "587084743598240041194",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "200000000000000000"
+  },
+  {
+    "assetId": "0",
+    "tokenAmount": "137964409259978252182",
+    "hubAmount": "25192962179589707",
+    "assetAmount": "49892669153491777550",
+    "protocolAmount": "3756527933409910371",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "20000000000000000"
+  },
+  {
+    "assetId": "28",
+    "tokenAmount": "2833393261577113010664",
+    "hubAmount": "18329172437525503",
+    "assetAmount": "2514096697037751597583",
+    "protocolAmount": "260359380559011284100",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "50000000000000000"
+  },
+  {
+    "assetId": "20",
+    "tokenAmount": "932120402528127017369",
+    "hubAmount": "79042271554579618",
+    "assetAmount": "1039695550940040550883",
+    "protocolAmount": "105236719900225777",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "300000000000000000"
+  },
+  {
+    "assetId": "101",
+    "tokenAmount": "80935995024184783579",
+    "hubAmount": "181428353988571160",
+    "assetAmount": "115018340452620341602",
+    "protocolAmount": "240638108821405154",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "200000000000000000"
+  },
+  {
+    "assetId": "16",
+    "tokenAmount": "6400335951959962123886880",
+    "hubAmount": "37938686555482533",
+    "assetAmount": "4653521210214041893304443",
+    "protocolAmount": "89099661702218766966731",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "50000000000000000"
+  },
+  {
+    "assetId": "14",
+    "tokenAmount": "5124492978836469336",
+    "hubAmount": "37260486153221560",
+    "assetAmount": "4614751109524136610",
+    "protocolAmount": "88538304282832204",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "50000000000000000"
+  },
+  {
+    "assetId": "31",
+    "tokenAmount": "30500967699842999746940818",
+    "hubAmount": "2003366402592685",
+    "assetAmount": "25142101237268305011310782",
+    "protocolAmount": "0",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "20000000000000000"
+  },
+  {
+    "assetId": "33",
+    "tokenAmount": "1624654014759489588322183",
+    "hubAmount": "4128633103808723",
+    "assetAmount": "1656530084483775079236693",
+    "protocolAmount": "902996788285580760152",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "20000000000000000"
+  },
+  {
+    "assetId": "15",
+    "tokenAmount": "7611291418820616",
+    "hubAmount": "159054178623388917",
+    "assetAmount": "7712593844989799",
+    "protocolAmount": "148166585973270",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "220000000000000000"
+  },
+  {
+    "assetId": "13",
+    "tokenAmount": "3438285004832704115015979",
+    "hubAmount": "41827398063878012",
+    "assetAmount": "3701547374727327193450152",
+    "protocolAmount": "59967353969954740510302",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "50000000000000000"
+  },
+  {
+    "assetId": "27",
+    "tokenAmount": "689376962410802547",
+    "hubAmount": "9719877785706713",
+    "assetAmount": "386091570219217997",
+    "protocolAmount": "17146459424686662",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "50000000000000000"
+  },
+  {
+    "assetId": "102",
+    "tokenAmount": "12666693358598326919097686",
+    "hubAmount": "460182674841419735",
+    "assetAmount": "14859599072446293750881708",
+    "protocolAmount": "34740374496637900940813",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "300000000000000000"
+  },
+  {
+    "assetId": "5",
+    "tokenAmount": "20796894483928817",
+    "hubAmount": "312420238762857305",
+    "assetAmount": "16938103562745945",
+    "protocolAmount": "830550278927522",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "800000000000000000"
+  },
+  {
+    "assetId": "8",
+    "tokenAmount": "3861980172407313236",
+    "hubAmount": "14389336089434844",
+    "assetAmount": "4069976459342787090",
+    "protocolAmount": "24909449829085334",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "50000000000000000"
+  },
+  {
+    "assetId": "12",
+    "tokenAmount": "98911235577934040",
+    "hubAmount": "5901394064159854",
+    "assetAmount": "40767579070185688",
+    "protocolAmount": "2831338538003049",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "50000000000000000"
+  },
+  {
+    "assetId": "17",
+    "tokenAmount": "476934598014147382",
+    "hubAmount": "20352246156728877",
+    "assetAmount": "374146505860439294",
+    "protocolAmount": "3709537088659088",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "50000000000000000"
+  },
+  {
+    "assetId": "9",
+    "tokenAmount": "25202964254350833294042911",
+    "hubAmount": "57027504019142147",
+    "assetAmount": "28790607929074351802825658",
+    "protocolAmount": "396007400831683567221491",
+    "assetFee": "250",
+    "protocolFee": "50",
+    "cap": "50000000000000000"
+  }
+]

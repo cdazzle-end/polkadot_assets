@@ -3,6 +3,10 @@
     - [ ] Create script to collect Kusama assets
     - [ ] Create allAssetsKusamaCollected.json
 
+## Repackaging
+
+    - [ ] Modify asset handler script to be able to query all chains for their assets, for now we are just adding the current files manually or as data files
+
 ## LP Registry to add
 
     - [ ] Composable

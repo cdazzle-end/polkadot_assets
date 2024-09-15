@@ -1,0 +1,364 @@
+[
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KSM"
+        }
+      },
+      {
+        "ForeignAssetId": "0"
+      }
+    ],
+    "liquidityStats": [
+      "32327933489800",
+      "8684495141585"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KAR"
+        }
+      },
+      {
+        "Erc20": "0x1f3a10587a20114ea25ba1b388ee2dd4a337ce27"
+      }
+    ],
+    "liquidityStats": [
+      "404340546848366408",
+      "43565394247"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KSM"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "LKSM"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "798656870225296",
+      "5014565594131278"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KAR"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "70939333735166272",
+      "16427737826706227"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KAR"
+        }
+      },
+      {
+        "ForeignAssetId": "2"
+      }
+    ],
+    "liquidityStats": [
+      "5454263542184104",
+      "1624427184125745346290972"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "KSM"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "259752894219469197",
+      "3866424374959793"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "BNC"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "39487625957231818",
+      "58430139849574080"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "ForeignAssetId": "5"
+      }
+    ],
+    "liquidityStats": [
+      "21792241230160448",
+      "938351959493504460"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "ForeignAssetId": "0"
+      }
+    ],
+    "liquidityStats": [
+      "3626379092968472",
+      "14713534607496"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KSM"
+        }
+      },
+      {
+        "ForeignAssetId": "1"
+      }
+    ],
+    "liquidityStats": [
+      "361346267243",
+      "13227119635711"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "KINT"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "2328287568302912",
+      "1792472225212006"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "TAI"
+        }
+      },
+      {
+        "StableAssetId": "0"
+      }
+    ],
+    "liquidityStats": [
+      "266653032232853819",
+      "8591693939063"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KAR"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "KSM"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "708922855619373098",
+      "2457839453881727"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "ForeignAssetId": "12"
+      }
+    ],
+    "liquidityStats": [
+      "3894913947034590",
+      "99917798320918905067315"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KAR"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "LKSM"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "237436941279192636",
+      "5150734111551786"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "ForeignAssetId": "2"
+      }
+    ],
+    "liquidityStats": [
+      "384973600799240",
+      "486732901843988447716752"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "PHA"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "10930196508592346",
+      "28395671566654085"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "LKSM"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "43315539560247924",
+      "4058573875052478"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "KUSD"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "KBTC"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "17098947966748333",
+      "10145309"
+    ]
+  }
+]

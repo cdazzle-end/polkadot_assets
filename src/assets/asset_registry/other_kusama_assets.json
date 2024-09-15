@@ -1,0 +1,304 @@
+[
+    {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2048,
+      "localId": "XRT",
+      "name": "Robonomics",
+      "symbol": "XRT",
+      "decimals": "9"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2048"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2004,
+      "localId": "PHA",
+      "name": "Phala Native Token",
+      "symbol": "PHA",
+      "decimals": "12",
+      "minimalBalance": "40000000000"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2004"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2012,
+      "localId": "CSM",
+      "name": "CSM",
+      "symbol": "CSM",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2012"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 1000,
+      "localId": "1984",
+      "name": "Tether USD",
+      "symbol": "USDt",
+      "decimals": "6",
+      "deposit": "6,693,999,660",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1984"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 1000,
+      "localId": "8",
+      "name": "RMRK",
+      "symbol": "RMRK",
+      "decimals": "10",
+      "deposit": "6,693,999,660",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "8"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2095,
+      "localId": "QTZ",
+      "name": "Quartz network",
+      "symbol": "QTZ",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2095"
+      }
+    }
+  },
+
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2119,
+      "localId": "BAJU",
+      "name": "BAJU",
+      "symbol": "BAJU",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2119"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2015,
+      "localId": "TEER",
+      "name": "TEER",
+      "symbol": "TEER",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2015"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2114,
+      "localId": "0",
+      "name": "Turing native token",
+      "symbol": "TUR",
+      "decimals": "10"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2114"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2125,
+      "localId": "0",
+      "name": "Tinkernet",
+      "symbol": "TNKR",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2125"
+        },
+        {
+          "GeneralIndex": "0"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2105,
+      "localId": "CRAB",
+      "name": "Crab Native Token",
+      "symbol": "CRAB",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2105"
+        },
+        {
+          "PalletInstance": "5"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2121,
+      "localId": "Native",
+      "name": "Imbue",
+      "symbol": "IMBU",
+      "decimals": "12"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2121"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0096000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "localId": {
+        "NativeToken": "0"
+      },
+      "name": "Metaverse.Network Pioneer",
+      "symbol": "NEER",
+      "decimals": "18",
+      "chain": 2096
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2096"
+        },
+        {
+          "GeneralKey": {
+            "length": "9",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "chain": 2088,
+      "localId": "Native",
+      "name": "Altair",
+      "symbol": "AIR",
+      "decimals": "18"
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2088"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "kusama",
+      "localId": "SDN",
+      "name": "Shiden Native Token",
+      "symbol": "SDN",
+      "decimals": "18",
+      "chain": 2007,
+      "contractAddress": "0x0f933dc137d21ca519ae4c7e93f87a4c8ef365ef"
+
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2007"
+      }
+    }
+  }
+]
