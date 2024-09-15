@@ -17,7 +17,7 @@ import * as bsxHandler from './basilisk.ts'
 import * as mgxHandler from './mangata.ts'
 import * as hdxHandler from './hydra.ts'
 import { ApiPromise } from '@polkadot/api';
-import { PNode, setApiMap } from 'utils.ts';
+import { PNode, setApiMap } from './../utils.ts';
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
     timeZone: 'America/New_York',
