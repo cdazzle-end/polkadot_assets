@@ -436,36 +436,17 @@ async function getUniContext(contractAddress: string): Promise<Context>{
 }
 
 export async function saveLps() {
-    // const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), 'utf8'))
-    // // let lpPromises = []
 
-    // let lpsPromise = await lpContractAddresses.map(async (lpContract: any) => {
-    //     let newLp: MyLp;
-    //     if(lpContract.abi == 'algebra'){
-    //         newLp = await getAlgebraTickData(lpContract.contractAddress)
-    //     } else if (lpContract.abi == 'uni3'){
-    //         newLp = await getUni3TickData(lpContract.contractAddress)
-    //     } else {
-    //         newLp = await getSolarData(lpContract.contractAddress)
-    //     }
-    //     // lpPromises.push(newLp)
-    //     return newLp
-    // })
     let lps = await combinedQuery()
-    // let lpsFor = await Promise.all(lpPromises)
-    // console.log(lpsFor)
-    // let lps = await Promise.all(lpsPromise)
     lps = lps.filter((lp) => lp != undefined)
-    // console.log(lps)
+    
     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
     lps.map((lp: any) => {
         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
     })
-    // console.log(lps)
     lps.forEach((lp, index) => {
-        
         if(unTradeable.includes(lp.contractAddress)){
             console.log(`Removing untradeable LP: ${lp.contractAddress}`)
             let updatedLp = lp
@@ -473,8 +454,6 @@ export async function saveLps() {
             lps[index] = updatedLp
         }
     })
-
-
     fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
 }
 

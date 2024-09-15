@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 // import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../assets/asset_types';
-import { MyLp } from '../types';
+import { ApiMap, MyLp } from '../types';
 import * as bncPolkadotHandler from './bifrost_polkadot.ts'
 import * as paraHandler from './parallel.ts'
 import * as acaHandler from './acala.ts'
@@ -17,7 +17,7 @@ import * as bsxHandler from './basilisk.ts'
 import * as mgxHandler from './mangata.ts'
 import * as hdxHandler from './hydra.ts'
 import { ApiPromise } from '@polkadot/api';
-import { PNode } from 'utils.ts';
+import { PNode, setApiMap } from 'utils.ts';
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
     timeZone: 'America/New_York',
@@ -73,7 +73,10 @@ async function updateLpTimeStamp() {
     fs.appendFileSync("lp_timestamps.txt", "LPs updated at: " + startTime + "\n");
 }
 
-export async function updateLpsWithMap(chopsticks: boolean, relay: string, apiMap: Map<PNode, ApiPromise>) {
+export async function updateLpsWithMap(chopsticks: boolean, relay: string, apiMap?: ApiMap) {
+    if(apiMap){
+        setApiMap(apiMap)
+    }
     if (relay === "polkadot") {
         await updatePolkadotLps(chopsticks)
     } else if (relay === "kusama") {
