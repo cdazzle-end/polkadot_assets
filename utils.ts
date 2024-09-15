@@ -29,6 +29,7 @@ export async function getBifrostDexApi(chopsticks: boolean): Promise<ModuleBApi>
     let endpoint = chopsticks ? localRpcs["BifrostPolkadot"] : getAllNodeProviders("BifrostPolkadot")
 
     if(map.has("BifrostPolkadot")){
+        console.log(`Returning dex api for BifrostPolkadot`)
         return map.get("BifrostPolkadot") as ModuleBApi
     } else {
         let provider = new WsProvider(endpoint)
@@ -39,7 +40,6 @@ export async function getBifrostDexApi(chopsticks: boolean): Promise<ModuleBApi>
         return dexApi
     }
 }
-
 
 export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<ApiPromise> {
 

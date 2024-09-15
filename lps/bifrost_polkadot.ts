@@ -12,6 +12,7 @@ import { localRpcs } from './../consts.ts';
 import bn from 'bignumber.js';
 
 import { fileURLToPath } from 'url';
+import { getBifrostDexApi } from 'utils.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -27,14 +28,15 @@ let BNC_A_PRECISION = new bn(100)
 let BNC_FEE_PRECISION = new bn(10000000000)
 
 export async function updateLps(chopsticks: boolean) {
-    let rpc = chopsticks ? localRpc : liveRpc
-    const provider = new WsProvider(rpc);
-    await provider.isReady;
-    const dexApi = new ModuleBApi(
-        provider,
-        BifrostPolkadotConfig
-    );
-    await dexApi.initApi();
+    // let rpc = chopsticks ? localRpc : liveRpc
+    // const provider = new WsProvider(rpc);
+    // await provider.isReady;
+    // const dexApi = new ModuleBApi(
+    //     provider,
+    //     BifrostPolkadotConfig
+    // );
+    // await dexApi.initApi();
+    const dexApi = await getBifrostDexApi(chopsticks)
     const response = await axios.get('https://raw.githubusercontent.com/zenlinkpro/token-list/main/tokens/bifrost-polkadot.json');
     const tokensMeta = response.data.tokens;
 
