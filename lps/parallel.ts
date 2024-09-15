@@ -17,15 +17,9 @@ const __dirname = path.dirname(__filename);
 const liveRpc = 'wss://parallel-rpc.dwellir.com'
 
 export async function updateLps(chopsticks: boolean) {
-    // let api = await getApiForNode("Parallel", chopsticks);
-    // let rpc = chopsticks ? localRpc : liveRpc
-
-    // const provider = new WsProvider(rpc);
-    // const api = new ApiPromise({ provider });
     let api = await getApiForNode("Parallel", chopsticks);
     await api.isReady;
-    // await api.isReady;
-
+    
     const parachainId = await (await api.query.parachainInfo.parachainId()).toJSON() as number;
     const lpEntries = await api.query.amm.pools.entries();
     let assets: TokenData[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/para_assets.json'), 'utf8')).map((asset: any) => {
