@@ -71,7 +71,7 @@ export async function saveCollectedAssetRegistry(relay: Relay){
     console.log(`Saving collected asset registry for ${relay}`)
     let assetFilePath = relay === 'polkadot' ? "asset_registry/allAssetsPolkadot.json" : "asset_registry/allAssetsKusama.json";
     let assetRegistryCollected = await buildAssetsFromFiles(relay);
-    fs.writeFileSync(assetFilePath, JSON.stringify(assetRegistryCollected, null, 2))
+    fs.writeFileSync(path.join(__dirname, assetFilePath), JSON.stringify(assetRegistryCollected, null, 2))
 }
 async function buildAssetsFromFiles(relay: Relay){
     let assetRegistryFolder = path.join(__dirname, "/asset_registry/");
