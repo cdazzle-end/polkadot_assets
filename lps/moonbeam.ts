@@ -309,9 +309,7 @@ export async function saveLps() {
     })
     lps.forEach((lp, index) => {
         if(unTradeable.includes(lp.contractAddress!)){
-            console.log(`Removing untradeable LP: ${lp.contractAddress!}`)
-            let updatedLp = lp
-            updatedLp.liquidityStats = ["0", "0"]
+            let updatedLp = { ...lp, liquidityStats: ["0", "0"] }; // Updated LP directly
             lps[index] = updatedLp
         }
     })
