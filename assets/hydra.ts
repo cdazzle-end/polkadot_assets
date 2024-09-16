@@ -534,8 +534,6 @@ async function removeAssetsWithoutData(hydraRegistry: IMyAsset[]){
         let tokenData = asset.tokenData as TokenData;
         return tokenData.decimals == null
     })
-    console.log(`Assets without data: ${assetsWithoutData.length}`)
-    console.log(`Asset registry: ${hydraRegistry.length}`)
     let updatedRegistry = hydraRegistry.filter((asset: IMyAsset) => {
         let tokenData = asset.tokenData as TokenData;
 
@@ -549,13 +547,13 @@ async function removeAssetsWithoutData(hydraRegistry: IMyAsset[]){
                 })
             })
             if(!lpRegistryContainsAsset){
-                console.log(`Removing asset: ${tokenData.localId}`)
+                // console.log(`Removing asset: ${tokenData.localId}`)
                 return false
             }
         }
         return true
     })
-    console.log(`Updated Registry: ${updatedRegistry.length}`)
+    console.log(`Assets without data: ${assetsWithoutData.length} | Asset registry: ${hydraRegistry.length} | Updated Registry: ${updatedRegistry.length}`)
     return updatedRegistry
 
     // let assetsWithoutDataInLpRegistry = assetsWithoutData.filter((asset: MyAssetRegistryObject) => {
