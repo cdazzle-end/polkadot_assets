@@ -27,5 +27,15 @@
     "ethereum-multicall": "^2.23.0",
     "ethers": "^6.11.1",
     "rxjs": "^7.8.1"
+  },
+  "overrides": {
+    "@zenlink-dex/sdk-api": "0.0.4",
+    "@zenlink-dex/sdk-core": "0.0.4",
+    "@zenlink-dex/sdk-router": "0.0.4"
+  },
+  "resolutions": {
+    "@zenlink-dex/sdk-api": "0.0.4",
+    "@zenlink-dex/sdk-core": "0.0.4",
+    "@zenlink-dex/sdk-router": "0.0.4"
   }
 }
