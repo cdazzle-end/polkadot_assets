@@ -180,7 +180,7 @@ async function main() {
     // queryAssets()
     // await queryLocations()
     await saveAssets()
-    process.exit(0)
+    // process.exit(0)
     // getAssets()
 }
 

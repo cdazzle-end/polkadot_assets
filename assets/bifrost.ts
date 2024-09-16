@@ -278,7 +278,7 @@ async function main() {
     // queryLocations();
     await saveAssets();
     // await queryZenAssets()
-    process.exit(0)
+    // process.exit(0)
 }
 
 // main()

@@ -389,7 +389,7 @@ async function main() {
     // await updateLps(false);
     await updateStables(api);
 
-    process.exit(0)
+    // process.exit(0)
 }
 
 // main()

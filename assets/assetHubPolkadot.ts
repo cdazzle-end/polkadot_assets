@@ -90,7 +90,7 @@ export async function updateRegistryAssetHub(chopsticks: boolean){
 async function main(){
     // await queryAssets()
     await updateRegistryAssetHub(false)
-    process.exit(0)
+    // process.exit(0)
 }
 
 // main()

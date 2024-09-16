@@ -77,6 +77,7 @@ export async function updateLpsWithMap(chopsticks: boolean, relay: string, apiMa
     if(apiMap){
         setApiMap(apiMap)
     }
+    console.log(`Updating ${relay} Lps`)
     if (relay === "polkadot") {
         await updatePolkadotLps(chopsticks)
     } else if (relay === "kusama") {

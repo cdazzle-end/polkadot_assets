@@ -46,7 +46,7 @@ export async function saveAssets() {
     const filePath = path.join(__dirname, 'asset_registry/hdx_assets.json')
     // console.log(JSON.stringify(assetRegistry, null, 2))
     fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2))
-    process.exit(0)
+    // process.exit(0)
 }
 
 //AssetMetadataMap merged into assets
@@ -581,7 +581,7 @@ async function main() {
     // await removeAssetsWithoutData()
     // await getAssetHubData();
     // await cleanAssetIds()
-    process.exit(0)
+    // process.exit(0)
 }
 
 // main()

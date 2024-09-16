@@ -67,7 +67,7 @@ async function main(){
 
     // await updateAssetRegistry(runWithChopsticks, relay)
     await updateAssetRegistryWithMap(runWithChopsticks, relay)
-    process.exit(0)
+    // process.exit(0)
 }
 
 // main()

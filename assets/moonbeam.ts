@@ -90,7 +90,7 @@ export async function saveAssets() {
     })
     const filePath = path.join(__dirname, '/asset_registry/glmr_assets.json')
     await fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2))
-    process.exit(0)
+    // process.exit(0)
 }
 
 export async function getAssets(): Promise<IMyAsset[]> {
@@ -313,7 +313,7 @@ async function updateRegistry(){
 
     // fs.writeFileSync("asset_registry/glmr_assets.json", JSON.stringify(assetRegistry, null, 2))
 
-    process.exit(0)
+    // process.exit(0)
 
 }
 
@@ -412,10 +412,10 @@ async function main() {
     // await updateRegistry()
     await getNonXcmAssetData()
     // await queryLocations()
-    process.exit(0)
+    // process.exit(0)
 }
 
-main()
+// main()
 
 /**
  * A function for converting hex <-> dec w/o loss of precision.
