@@ -49,8 +49,6 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
         console.log("Returning existing api for node: ", node);
         return apiMap.get(node) as ApiPromise;
     }
-
-    console.log("Getting api for node : ", node, "Chopsticks: ", chopsticks)
     let apiEndpoint: string[];
 
     if(node == "Kusama"){
@@ -61,7 +59,6 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
         apiEndpoint = getAllNodeProviders(node)
     }
 
-    console.log("Getting local RPC")
     if(chopsticks){
         let localRpc = localRpcs[node]
         if(localRpc){
@@ -69,7 +66,7 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
         }
     }
     
-    console.log("Node RPC: ", apiEndpoint[0])
+    console.log(`Initialize api for ${node} | ${apiEndpoint[0]} `)
     let api: ApiPromise | undefined;
     let apiConnected = false;
     
@@ -120,19 +117,14 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
             endpointIndex = 1 // Currently the working endpoint for moonbeam
         }
         while(endpointIndex < apiEndpoint.length && !apiConnected){
-            console.log("Connecting to api: ", apiEndpoint[endpointIndex])
             try{
                 let provider = new WsProvider(apiEndpoint[endpointIndex])
                 api = await ApiPromise.create({ provider: provider });
                 
                 await api.isReady
-                console.log("API is ready: TRUE")
                 if(api.isConnected) {
-                    console.log("API is connected: TRUE")
                 } else {
-                    console.log("API is connected: FALSE")
                     await api.connect()
-                    console.log("API now connected")
                 }
                 apiConnected = true;
                 // return api
@@ -143,7 +135,6 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
         }
     }
 
-    console.log("NODE: ", node, "API CONNECTED: ", apiConnected)
     if(!apiConnected || !api){
         throw new Error("Could not connect to api")
     }
