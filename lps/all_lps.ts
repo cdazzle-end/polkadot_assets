@@ -149,4 +149,4 @@ async function main() {
 
 // main()
 // testGlmr()
-updateLpsWithMap(true, "polkadot")
+// updateLpsWithMap(true, "polkadot")
