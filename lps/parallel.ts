@@ -51,7 +51,7 @@ export async function updateLps(chopsticks: boolean) {
         return lp.poolAssets[0] != undefined || lp.poolAssets[1] != undefined
     })
     fs.writeFileSync(path.join(__dirname, './lp_registry/para_lps.json'), JSON.stringify(lps, null, 2))
-    api.disconnect()
+    // api.disconnect()
 }
 
 async function saveLps() {

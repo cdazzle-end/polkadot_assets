@@ -67,7 +67,7 @@ export async function updateLps(chopsticks: boolean) {
     })
     await fs.writeFileSync(path.join(__dirname, './lp_registry/bnc_kusama_lps.json'), JSON.stringify(lps, null, 2));
     // console.log("BIFROST KUSAMA LPS UPDATED")
-    dexApi.api?.disconnect();
+    // dexApi.api?.disconnect();
     // console.log("DISCONNECTED FROM BIFROST KUSAMA")
 }
 

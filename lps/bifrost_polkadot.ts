@@ -75,7 +75,7 @@ export async function updateLps(chopsticks: boolean) {
 
     await saveBncStablePoolData(dexApi)
 
-    dexApi.api!.disconnect();
+    // dexApi.api!.disconnect();
 }
 
 export async function saveLps() {

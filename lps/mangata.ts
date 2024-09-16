@@ -44,7 +44,7 @@ export async function updateLps(chopsticks: boolean) {
         return lp
     }))
     fs.writeFileSync(path.join(__dirname, './lp_registry/mgx_lps.json'), JSON.stringify(lps, null, 2));
-    api.disconnect()
+    // api.disconnect()
 }
 
 // async function saveLps() {

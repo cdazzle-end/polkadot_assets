@@ -44,7 +44,7 @@ export async function updateLps(chopsticks: boolean) {
         return newLp
     }))
     fs.writeFileSync(path.join(__dirname, "./lp_registry/bsx_lps.json"), JSON.stringify(lps, null, 2), "utf8");
-    api.disconnect()
+    // api.disconnect()
 }
 
 async function saveLps() {
@@ -111,7 +111,7 @@ async function saveLps() {
     }))
     console.log(lps)
     fs.writeFileSync("./lps.json", JSON.stringify(lps, null, 2), "utf8");
-    api.disconnect()
+    // api.disconnect()
 }
 
 async function main() {

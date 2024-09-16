@@ -85,7 +85,7 @@ export async function updateLps(chopsticks: boolean) {
     // fs.writeFileSync('./kar/stablePools.json', JSON.stringify(stablePools, null, 2))
     fs.writeFileSync(path.join(__dirname, './lp_registry/kar_lps.json'), JSON.stringify(lps, null, 2))
     await stables.then(() => console.log("kar stables complete"));
-    api.disconnect()
+    // api.disconnect()
 }
 
 async function saveLps() {

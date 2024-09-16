@@ -68,7 +68,7 @@ export async function updateLps(chopsticks: boolean) {
     fs.writeFileSync(path.join(__dirname, './lp_registry/hdx_omnipool.json'), JSON.stringify(omniPools, null, 2))
     fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_lps.json"), JSON.stringify(lps, null, 2), "utf8");
     fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_stable_lps.json"), JSON.stringify(stablePools, null, 2), "utf8");
-    await api.disconnect()
+    // await api.disconnect()
 }
 
 async function saveLps() {
@@ -129,7 +129,7 @@ async function saveLps() {
     }))
     // console.log(lps)
     fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_lps.json"), JSON.stringify(lps, null, 2), "utf8");
-    api.disconnect()
+    // api.disconnect()
 }
 
 async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
