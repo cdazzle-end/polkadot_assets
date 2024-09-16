@@ -318,13 +318,10 @@ export async function updateAssetRegistryHydra(chopsticks: boolean){
         }
     });
 
-    console.log(`Number of queried assets from api: ${currentAssets.length}`)
-
     let newAssets: IMyAsset[] = []
 
     // Get all assets from our registry
     let hydraRegistry: IMyAsset[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), 'utf8'));
-    console.log(`Number of assets in registry: ${hydraRegistry.length}`)
 
     // Go through current assets, find matching asset by deep equal in registry
     currentAssets.forEach((currentAsset: IMyAsset) => {
@@ -342,9 +339,7 @@ export async function updateAssetRegistryHydra(chopsticks: boolean){
             newAssets.push(currentAsset);
         }
     })
-
-    console.log(`Number of new assets ${newAssets.length}`)
-
+    
     // ** EDGE Where not deep equal but matching ID. See if new asset has matching asset id in registry, and replace it. 
     for (let asset of newAssets) {
         for(let i = 0; i < hydraRegistry.length; i++){
@@ -355,8 +350,6 @@ export async function updateAssetRegistryHydra(chopsticks: boolean){
             }
         }
     }
-
-    console.log("Updated Registry")
 
     let assetRegistryUpdated = hydraRegistry
     newAssets.forEach((newAsset: IMyAsset) => {
@@ -373,8 +366,8 @@ export async function updateAssetRegistryHydra(chopsticks: boolean){
     assetRegistryUpdated = await getAssetHubData(assetRegistryUpdated)
     assetRegistryUpdated = await getBncAssetData(assetRegistryUpdated)
     assetRegistryUpdated = await removeAssetsWithoutData(assetRegistryUpdated)
-    // console.log(`New Assets: ${newAssets.length}`)
-    console.log(`Number of assets: ${assetRegistryUpdated.length}`)
+    console.log(`Number of queried assets from api: ${currentAssets.length} | Number of assets in registry: ${hydraRegistry.length} | Number of new assets ${newAssets.length} | Number of assets: ${assetRegistryUpdated.length}`)
+
     fs.writeFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), JSON.stringify(assetRegistryUpdated, null, 2))
 }
 
