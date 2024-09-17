@@ -32,10 +32,5 @@
     "@zenlink-dex/sdk-api": "0.0.4",
     "@zenlink-dex/sdk-core": "0.0.4",
     "@zenlink-dex/sdk-router": "0.0.4"
-  },
-  "resolutions": {
-    "@zenlink-dex/sdk-api": "0.0.4",
-    "@zenlink-dex/sdk-core": "0.0.4",
-    "@zenlink-dex/sdk-router": "0.0.4"
   }
 }
