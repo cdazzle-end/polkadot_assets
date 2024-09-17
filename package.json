@@ -28,7 +28,7 @@
     "ethers": "^6.11.1",
     "rxjs": "^7.8.1"
   },
-  "overrides": {
+  "resolutions": {
     "@zenlink-dex/sdk-api": "0.0.4",
     "@zenlink-dex/sdk-core": "0.0.4",
     "@zenlink-dex/sdk-router": "0.0.4"
