@@ -9,7 +9,7 @@
         "allowSyntheticDefaultImports": true,
         "allowImportingTsExtensions": true,
         // ... other options from Bridge's tsconfig ...
-        "baseUrl": ".",
+        // "baseUrl": ".",
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "emitDeclarationOnly": true,
