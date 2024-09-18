@@ -1,10 +1,17 @@
 {
   "name": "polkadot_assets",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A library for querying and handling Polkadot asset data",
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run build"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +34,9 @@
     "ethereum-multicall": "^2.23.0",
     "ethers": "^6.11.1",
     "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    
   },
   "resolutions": {
     "@zenlink-dex/sdk-api": "0.0.4",
