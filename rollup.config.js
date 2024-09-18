@@ -12,7 +12,13 @@ export default [
       { file: './dist/index.mjs', format: 'es' }
     ],
     plugins: [
-      typescript(),
+      typescript({
+        tsconfig: './tsconfig.json',
+      }),
+      resolve({
+        extensions: ['.js', '.ts'],
+        preferBuiltins: true,
+      }),
       json(),
       babel({
         extensions: ['.ts'],
