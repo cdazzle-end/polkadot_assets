@@ -36,7 +36,22 @@
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-import-assertions": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-json": "^6.0.1",
+    "rollup": "^4.4.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
     
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdazzle-end/polkadot_assets.git"
   },
   "resolutions": {
     "@zenlink-dex/sdk-api": "0.0.4",
