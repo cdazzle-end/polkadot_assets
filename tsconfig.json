@@ -25,5 +25,5 @@
     },
     // Include and exclude can be adjusted as per your project's structure
     "include": ["./**/*"],
-    "exclude": ["dist", "src/lps/moonbeamTestFunctions.ts"]
+    "exclude": ["dist", "src/lps/moonbeamTestFunctions.ts", "node_modules"]
 }
