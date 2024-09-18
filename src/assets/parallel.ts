@@ -1,12 +1,12 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../../types';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types';
 // import { Keyring, ApiPromise, WsProvider, } from '@polkadot/api';
 
 // import { options } from '@parallel-finance/api/index';
 // import { CurrencyId } from '@parallel-finance/types/interfaces';
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import { getApiForNode } from '../../utils';
+import { getApiForNode } from '../utils';
 // import { WsProvider } from '@polkadot/rpc-provider';
 
 

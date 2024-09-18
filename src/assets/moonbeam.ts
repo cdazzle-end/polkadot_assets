@@ -1,7 +1,7 @@
 // import { ethers } from 'ethers'
 import path from 'path'
 import * as fs from 'fs';
-import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 // import { parse } from 'path'
 // import { formatUnits } from 'ethers/lib/utils';
 // import {hexToDec2, decToHex2} from '../../parachains/hex'
@@ -11,7 +11,7 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 // import apiHelper from '../parachains/api_utils'
 // import Keyring from '@polkadot/keyring';
 import { u8aToHex, stringToHex , numberToHex} from '@polkadot/util';
-import { deepEqual, getApiForNode } from '../../utils.ts';
+import { deepEqual, getApiForNode } from '../utils.ts';
 import { ethers } from 'ethers'
 import bn from 'bignumber.js'
 import {

@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 // import { ApiOptions,  } from '@polkadot/api/types';
 // import { WsProvider  } from '@polkadot/rpc-provider'
@@ -13,7 +13,7 @@ import { ModuleBApi, BifrostConfig } from '@zenlink-dex/sdk-api';
 import { Percent, Token, TokenAmount, TradeType, StandardPair, StandardPool, StablePair, StableSwap, AssetMeta, AssetType } from '@zenlink-dex/sdk-core';
 // import sdkCore from '@zenlink-dex/sdk-core';
 // const { Percent, Token, TokenAmount, TradeType, StandardPair, StandardPool, StablePair, StableSwap, AssetType } = sdkCore
-import { getApiForNode } from '../../utils.ts';
+import { getApiForNode } from '../utils.ts';
 import axios from 'axios';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);

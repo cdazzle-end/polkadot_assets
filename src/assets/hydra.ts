@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
-import { deepEqual, getApiForNode } from '../../utils.ts';
+import { deepEqual, getApiForNode } from '../utils.ts';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
