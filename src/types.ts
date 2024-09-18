@@ -91,7 +91,7 @@ export interface MyLp{
     
     contractAddress?: string,
     abi?: string,
-    poolAssets: any[]
+    poolAssets: any[],
     liquidityStats: string[],
     feeRate?: string,
     currentTick?: string,
