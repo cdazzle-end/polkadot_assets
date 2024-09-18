@@ -59,7 +59,7 @@ export async function updateLpsWithMap(chopsticks: boolean, relay: string, apiMa
 
 }
 
-async function updatePolkadotLps(chopsticks: boolean) {
+export async function updatePolkadotLps(chopsticks: boolean) {
     await Promise.all([
         lpHandler.bncPolkadotHandler.updateLps(chopsticks).then(() => console.log("bnc polkadot complete")),
         lpHandler.paraHandler.updateLps(chopsticks).then(() => console.log("para complete")),
@@ -69,7 +69,7 @@ async function updatePolkadotLps(chopsticks: boolean) {
     ]);
 }
 
-async function updateKusamaLps(chopsticks: boolean) {
+export async function updateKusamaLps(chopsticks: boolean) {
     await Promise.all([
         lpHandler.bncKusamaHandler.updateLps(chopsticks).then(() => console.log("bnc kusama complete")),
         lpHandler.hkoHandler.updateLps(chopsticks).then(() => console.log("hko complete")),
