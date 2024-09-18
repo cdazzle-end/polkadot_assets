@@ -3,9 +3,9 @@
 // import { Junction, MultiLocation } from '@polkadot/types/interfaces'
 // import { AnyJson } from '@polkadot/types-codec/types';
 // // import * as bncHandler from './bnc/asset_handler'
-import { TNode } from '@paraspell/sdk'
-import { ApiPromise } from "@polkadot/api"
-import { ModuleBApi } from "@zenlink-dex/sdk-api"
+import type { TNode } from '@paraspell/sdk'
+import type { ApiPromise } from "@polkadot/api"
+import type { ModuleBApi } from "@zenlink-dex/sdk-api"
 
 export type Relay = 'polkadot' | 'kusama'
 export type PNode = TNode | 'Polkadot' | 'Kusama' 

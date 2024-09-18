@@ -19,7 +19,6 @@
   "type": "module",
   "dependencies": {
     "@acala-network/api": "^6.1.0",
-    
     "@mangata-finance/sdk": "file:../mangata-sdk",
     "@paraspell/sdk": "file:../xcm-sdk",
     "@polkadot/api": "12.1.1",
@@ -44,6 +43,8 @@
     "@rollup/plugin-json": "^6.0.1",
     "rollup": "^4.4.1",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2",
