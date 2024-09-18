@@ -1,0 +1,154 @@
+[
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "AUSD"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "LDOT"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "59350125821618883",
+      "303582256509761"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "DOT"
+        }
+      },
+      {
+        "ForeignAssetId": "10"
+      }
+    ],
+    "liquidityStats": [
+      "12565101058146",
+      "1391711752543093374103756"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "ACA"
+        }
+      },
+      {
+        "Erc20": "0x07df96d1341a7d16ba1ad431e2c847d978bc2bce"
+      }
+    ],
+    "liquidityStats": [
+      "1178485929799764216",
+      "68720417468"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "AUSD"
+        }
+      },
+      {
+        "ForeignAssetId": "3"
+      }
+    ],
+    "liquidityStats": [
+      "1875836354692397",
+      "1018968"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "AUSD"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "LiquidCrowdloan": "13"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "505705519112734908",
+      "401057607062733"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "ACA"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "AUSD"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "995774595125465213",
+      "173800958104044237"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "DOT"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "LiquidCrowdloan": "13"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "623512871562958",
+      "624287328076692"
+    ]
+  },
+  {
+    "chainId": 2000,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "AUSD"
+        }
+      },
+      {
+        "ForeignAssetId": "4"
+      }
+    ],
+    "liquidityStats": [
+      "1397971393720819",
+      "402788990529316"
+    ]
+  }
+]

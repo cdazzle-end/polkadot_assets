@@ -1,0 +1,673 @@
+[
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6002",
+      "name": "LP-DOT/PARA",
+      "symbol": "LP-DOT/PARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6007",
+      "name": "LP-DOT/cDOT-8/15",
+      "symbol": "LP-DOT/cDOT-8/15",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "110",
+      "name": "LDOT",
+      "symbol": "LDOT",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0003000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "1001",
+      "name": "sDOT",
+      "symbol": "sDOT",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2012"
+        },
+        {
+          "GeneralKey": {
+            "length": "4",
+            "data": "0x73444f5400000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "120",
+      "name": "INTR",
+      "symbol": "INTR",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0002000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "108",
+      "name": "ACA",
+      "symbol": "ACA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "200070014",
+      "name": "cDOT-7/14",
+      "symbol": "cDOT-7/14",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2012"
+        },
+        {
+          "PalletInstance": "6"
+        },
+        {
+          "GeneralIndex": "200070014"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6009",
+      "name": "LP-PHA/PARA",
+      "symbol": "LP-PHA/PARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "101",
+      "name": "DOT",
+      "symbol": "DOT",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": "here"
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6005",
+      "name": "LP-DOT/cDOT-7/14",
+      "symbol": "LP-DOT/cDOT-7/14",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "200080015",
+      "name": "cDOT-8/15",
+      "symbol": "cDOT-8/15",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2012"
+        },
+        {
+          "PalletInstance": "6"
+        },
+        {
+          "GeneralIndex": "200080015"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "122",
+      "name": "IBTC",
+      "symbol": "IBTC",
+      "decimals": "8",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2032"
+        },
+        {
+          "GeneralKey": {
+            "length": "2",
+            "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6016",
+      "name": "LP-INTR/PARA",
+      "symbol": "LP-INTR/PARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6004",
+      "name": "LP-DOT/cDOT-6/13",
+      "symbol": "LP-DOT/cDOT-6/13",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "200110018",
+      "name": "cDOT-11/18",
+      "symbol": "cDOT-11/18",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6013",
+      "name": "LP-PARA/cDOT-8/15",
+      "symbol": "LP-PARA/cDOT-8/15",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "104",
+      "name": "AUSD",
+      "symbol": "AUSD",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6003",
+      "name": "LP-DOT/sDOT",
+      "symbol": "LP-DOT/sDOT",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6017",
+      "name": "LP-IBTC/PARA",
+      "symbol": "LP-IBTC/PARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "102",
+      "name": "USDT",
+      "symbol": "USDT",
+      "decimals": "6",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "1000"
+        },
+        {
+          "PalletInstance": "50"
+        },
+        {
+          "GeneralIndex": "1984"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "106",
+      "name": "lcDOT",
+      "symbol": "lcDOT",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2000"
+        },
+        {
+          "GeneralKey": {
+            "length": "5",
+            "data": "0x040d000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "114",
+      "name": "GLMR",
+      "symbol": "GLMR",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2004"
+        },
+        {
+          "PalletInstance": "10"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6008",
+      "name": "LP-GLMR/PARA",
+      "symbol": "LP-GLMR/PARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "130",
+      "name": "CLV",
+      "symbol": "CLV",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2002"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "4294957296",
+      "name": "DOT_U",
+      "symbol": "DOT_U",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "112",
+      "name": "ASTR",
+      "symbol": "ASTR",
+      "decimals": "18",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "200100017",
+      "name": "cDOT-10/17",
+      "symbol": "cDOT-10/17",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2012"
+        },
+        {
+          "PalletInstance": "6"
+        },
+        {
+          "GeneralIndex": "200100017"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6011",
+      "name": "LP-lcDOT/PARA",
+      "symbol": "LP-lcDOT/PARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6012",
+      "name": "LP-PARA/cDOT-7/14",
+      "symbol": "LP-PARA/cDOT-7/14",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6010",
+      "name": "LP-USDT/PARA",
+      "symbol": "LP-USDT/PARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "200060013",
+      "name": "cDOT-6/13",
+      "symbol": "cDOT-6/13",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2012"
+        },
+        {
+          "PalletInstance": "6"
+        },
+        {
+          "GeneralIndex": "200060013"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "115",
+      "name": "PHA",
+      "symbol": "PHA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X1": {
+        "Parachain": "2035"
+      }
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "200090016",
+      "name": "cDOT-9/16",
+      "symbol": "cDOT-9/16",
+      "decimals": "10",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X3": [
+        {
+          "Parachain": "2012"
+        },
+        {
+          "PalletInstance": "6"
+        },
+        {
+          "GeneralIndex": "200090016"
+        }
+      ]
+    }
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6014",
+      "name": "LP-ACA/PARA",
+      "symbol": "LP-ACA/PARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6006",
+      "name": "LP-PARA/cDOT-6/13",
+      "symbol": "LP-PARA/cDOT-6/13",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "6015",
+      "name": "LP-LDOT/PARA",
+      "symbol": "LP-LDOT/PARA",
+      "decimals": "12",
+      "deposit": "0",
+      "isFrozen": false
+    },
+    "hasLocation": false
+  },
+  {
+    "tokenData": {
+      "network": "polkadot",
+      "chain": 2012,
+      "localId": "1",
+      "deposit": "0",
+      "name": "PARA",
+      "symbol": "PARA",
+      "decimals": "12",
+      "isFrozen": false
+    },
+    "hasLocation": true,
+    "tokenLocation": {
+      "X2": [
+        {
+          "Parachain": "2012"
+        },
+        {
+          "GeneralKey": {
+            "length": "4",
+            "data": "0x5041524100000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  }
+]

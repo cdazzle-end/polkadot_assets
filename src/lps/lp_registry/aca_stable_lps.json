@@ -1,0 +1,50 @@
+[
+  {
+    "chainId": 2000,
+    "dexType": "stable",
+    "poolId": "0",
+    "poolAssets": [
+      {
+        "NativeAssetId": {
+          "Token": "DOT"
+        }
+      },
+      {
+        "NativeAssetId": {
+          "Token": "LDOT"
+        }
+      }
+    ],
+    "liquidityStats": [
+      "1909786223283878",
+      "25487144518756669"
+    ],
+    "tokenShares": [
+      "1909786223283878",
+      "3997485210673678"
+    ],
+    "tokenPrecisions": [
+      "1",
+      "1"
+    ],
+    "tokenRates": [
+      {
+        "numerator": "1000",
+        "denominator": "1000"
+      },
+      {
+        "numerator": "1000",
+        "denominator": "1000"
+      }
+    ],
+    "swapFee": "25000000",
+    "feePrecision": "10000000000",
+    "a": "3000",
+    "aPrecision": 100,
+    "aBlock": "1073272",
+    "futureA": "3000",
+    "futureABlock": "1073272",
+    "totalSupply": "5900384532685725",
+    "poolPrecision": "10000000000"
+  }
+]

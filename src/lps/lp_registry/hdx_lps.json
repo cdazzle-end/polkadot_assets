@@ -1,0 +1,2168 @@
+[
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000408",
+      "5"
+    ],
+    "liquidityStats": [
+      "810489005533",
+      "42201175240"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000433",
+      "5"
+    ],
+    "liquidityStats": [
+      "6589687500000000000000",
+      "26358750000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000062",
+      "1000034"
+    ],
+    "liquidityStats": [
+      "4281002246541212164124703",
+      "12854400305198693"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000062",
+      "1000054"
+    ],
+    "liquidityStats": [
+      "85095226968979910933",
+      "5598248944"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000440",
+      "1000477"
+    ],
+    "liquidityStats": [
+      "1392338463229204417712389",
+      "151958805016189426"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "5"
+    ],
+    "liquidityStats": [
+      "630088980515029169",
+      "167646660982"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000324",
+      "1000397"
+    ],
+    "liquidityStats": [
+      "11873178272522516121",
+      "14603511432821501"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000494",
+      "5"
+    ],
+    "liquidityStats": [
+      "88149866547592849490",
+      "245053106199"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000376",
+      "5"
+    ],
+    "liquidityStats": [
+      "3339516951906481395",
+      "261668140764"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "1000410"
+    ],
+    "liquidityStats": [
+      "74125756121139235",
+      "4660906147166173748"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "1000021"
+    ],
+    "liquidityStats": [
+      "23720355741485719",
+      "5127654487248463"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000354",
+      "5"
+    ],
+    "liquidityStats": [
+      "2452452452450000000000",
+      "20000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000397",
+      "5"
+    ],
+    "liquidityStats": [
+      "1059855100118661",
+      "50363432948"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000275",
+      "5"
+    ],
+    "liquidityStats": [
+      "416905337121212119",
+      "120000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000242",
+      "5"
+    ],
+    "liquidityStats": [
+      "60000000000000000",
+      "2000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000392"
+    ],
+    "liquidityStats": [
+      "28534289770",
+      "357213046792"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000099",
+      "102"
+    ],
+    "liquidityStats": [
+      "286434361160280",
+      "17380951160967537430"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000307",
+      "5"
+    ],
+    "liquidityStats": [
+      "870000000000000000",
+      "100000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000550",
+      "5"
+    ],
+    "liquidityStats": [
+      "19274248626395869822",
+      "54491602593"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000431",
+      "5"
+    ],
+    "liquidityStats": [
+      "833332500000000001",
+      "25000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000492",
+      "5"
+    ],
+    "liquidityStats": [
+      "1179810347244413",
+      "95239797896"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000444",
+      "1000477"
+    ],
+    "liquidityStats": [
+      "174902035636882884640",
+      "131521353474053892"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000159"
+    ],
+    "liquidityStats": [
+      "27071747417",
+      "7416011472056024654"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "1000280"
+    ],
+    "liquidityStats": [
+      "100412415484029738",
+      "2620235823733570"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000280",
+      "1000272"
+    ],
+    "liquidityStats": [
+      "1001051849678000824",
+      "1198742907140454829"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "5"
+    ],
+    "liquidityStats": [
+      "1721617626596854",
+      "20664704040"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000036"
+    ],
+    "liquidityStats": [
+      "25088455183905",
+      "59065629419069502"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000148",
+      "1000507"
+    ],
+    "liquidityStats": [
+      "208977776446",
+      "10963244428516363"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000527",
+      "5"
+    ],
+    "liquidityStats": [
+      "16665000000000001",
+      "50000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000384",
+      "1000477"
+    ],
+    "liquidityStats": [
+      "5888685877055378338370",
+      "89657975399664664"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000382",
+      "5"
+    ],
+    "liquidityStats": [
+      "14415971433983667861739",
+      "569678436105"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "27"
+    ],
+    "liquidityStats": [
+      "1028962438476",
+      "15972563874"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "1000288"
+    ],
+    "liquidityStats": [
+      "135744868721082426",
+      "2710180184390825196687648"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000416",
+      "5"
+    ],
+    "liquidityStats": [
+      "1876875258184096236",
+      "358245021331"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000019",
+      "1000082"
+    ],
+    "liquidityStats": [
+      "24111304356327",
+      "79653275192871"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000274",
+      "5"
+    ],
+    "liquidityStats": [
+      "405612409634400331250",
+      "123380453316"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000144",
+      "1000034"
+    ],
+    "liquidityStats": [
+      "48121996892246980790482",
+      "8547255873150"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000369",
+      "1000324"
+    ],
+    "liquidityStats": [
+      "1519322491402315820",
+      "2238953087356470209"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000369",
+      "5"
+    ],
+    "liquidityStats": [
+      "3353217699208854465",
+      "264221769346"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000246",
+      "5"
+    ],
+    "liquidityStats": [
+      "900000000000000000000",
+      "10000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "26",
+      "5"
+    ],
+    "liquidityStats": [
+      "2015954846662468",
+      "73481364213"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000280",
+      "1000244"
+    ],
+    "liquidityStats": [
+      "2327914498265606",
+      "155430450527007"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000297",
+      "5"
+    ],
+    "liquidityStats": [
+      "5000000000000000",
+      "100000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "10",
+      "25"
+    ],
+    "liquidityStats": [
+      "3027018707",
+      "778609089927063192220544"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000148",
+      "1000408"
+    ],
+    "liquidityStats": [
+      "1028263059452",
+      "86866347632274"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000222"
+    ],
+    "liquidityStats": [
+      "7091707149428",
+      "307431141145609479"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "1000345"
+    ],
+    "liquidityStats": [
+      "123498300148770434",
+      "340980456879529984"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "1000408"
+    ],
+    "liquidityStats": [
+      "62790479965059166",
+      "319120464713"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000295",
+      "5"
+    ],
+    "liquidityStats": [
+      "80414672632894413100",
+      "199077961244"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "16"
+    ],
+    "liquidityStats": [
+      "3188005010749402",
+      "97925139154855928489"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000393"
+    ],
+    "liquidityStats": [
+      "97270542575",
+      "1053770520122"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000435",
+      "5"
+    ],
+    "liquidityStats": [
+      "825456271000000000000",
+      "24763688131"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "1000507"
+    ],
+    "liquidityStats": [
+      "373177928074859244",
+      "1190613152069940"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000062",
+      "1000085"
+    ],
+    "liquidityStats": [
+      "25975514250124995426292513",
+      "5453568137388722707"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "30"
+    ],
+    "liquidityStats": [
+      "395807615371551",
+      "925967411366282341177313"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000365",
+      "5"
+    ],
+    "liquidityStats": [
+      "2236477414266095",
+      "61341902699"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000392",
+      "1000393"
+    ],
+    "liquidityStats": [
+      "999999013410803920870780562612",
+      "999999010459073429926562981756"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000318",
+      "5"
+    ],
+    "liquidityStats": [
+      "125529816615247966294",
+      "83860496523"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "25"
+    ],
+    "liquidityStats": [
+      "6556134403503",
+      "703675089570338823059447"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000125",
+      "5"
+    ],
+    "liquidityStats": [
+      "2505716598867302724697",
+      "32781357415"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000081"
+    ],
+    "liquidityStats": [
+      "2637584812587",
+      "28134400109956784"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000312",
+      "5"
+    ],
+    "liquidityStats": [
+      "700000000000000000000",
+      "20000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000444",
+      "5"
+    ],
+    "liquidityStats": [
+      "252301512756994588606",
+      "54380516567"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000286",
+      "5"
+    ],
+    "liquidityStats": [
+      "525490871502471631",
+      "749028498914"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000329",
+      "5"
+    ],
+    "liquidityStats": [
+      "29373601908658060134780302",
+      "136152482636"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000034"
+    ],
+    "liquidityStats": [
+      "21503889767888",
+      "1775777121629741251"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000384",
+      "0"
+    ],
+    "liquidityStats": [
+      "1354449010214075291856106",
+      "465776154128457611"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000519",
+      "5"
+    ],
+    "liquidityStats": [
+      "18239036242270017841",
+      "101457274229"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000021",
+      "1000038"
+    ],
+    "liquidityStats": [
+      "27745663943560",
+      "37707779474"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000512",
+      "0"
+    ],
+    "liquidityStats": [
+      "14742790715659392679125484",
+      "79841781397576737"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000085",
+      "1000021"
+    ],
+    "liquidityStats": [
+      "120092736661447361",
+      "367118925129663"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000342",
+      "5"
+    ],
+    "liquidityStats": [
+      "10000000000000000",
+      "100000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "1000453"
+    ],
+    "liquidityStats": [
+      "2005489866675693072",
+      "249131433130249"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000408",
+      "0"
+    ],
+    "liquidityStats": [
+      "6805143217069",
+      "29014018620458431"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000453",
+      "1000250"
+    ],
+    "liquidityStats": [
+      "33097447680158",
+      "181659663202037178291"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "1000250"
+    ],
+    "liquidityStats": [
+      "60447003841135217",
+      "916800315862346954"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000530",
+      "5"
+    ],
+    "liquidityStats": [
+      "15638513513500002",
+      "42131121192"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000331",
+      "5"
+    ],
+    "liquidityStats": [
+      "330438246029898083",
+      "386202204936"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000524",
+      "5"
+    ],
+    "liquidityStats": [
+      "3312500000000000002",
+      "53000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000337",
+      "5"
+    ],
+    "liquidityStats": [
+      "8880377380653014057",
+      "111612273549"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000248",
+      "5"
+    ],
+    "liquidityStats": [
+      "485421382611960724",
+      "2060250311556"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000211"
+    ],
+    "liquidityStats": [
+      "50000000000",
+      "50000000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000038",
+      "0"
+    ],
+    "liquidityStats": [
+      "41754066",
+      "0"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000479",
+      "1000085"
+    ],
+    "liquidityStats": [
+      "66882043666751853548198",
+      "23775004236613598072"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000309",
+      "5"
+    ],
+    "liquidityStats": [
+      "387688415115859",
+      "3146725521635"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000099",
+      "0"
+    ],
+    "liquidityStats": [
+      "664938120057507",
+      "7947537307010834"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000440",
+      "1000085"
+    ],
+    "liquidityStats": [
+      "13913676734636322953197752",
+      "2325195999511562994"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "10"
+    ],
+    "liquidityStats": [
+      "380510336727741",
+      "1929420"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000148",
+      "0"
+    ],
+    "liquidityStats": [
+      "126738292695",
+      "46347936847791577"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000282",
+      "5"
+    ],
+    "liquidityStats": [
+      "11084614021120096786",
+      "17743047458"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000038"
+    ],
+    "liquidityStats": [
+      "152780646909",
+      "3662548890865"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000376",
+      "1000324"
+    ],
+    "liquidityStats": [
+      "3048732805848771896",
+      "4458863776239909003"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000082",
+      "5"
+    ],
+    "liquidityStats": [
+      "1314848660687668552",
+      "6375217628114"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000440",
+      "1000467"
+    ],
+    "liquidityStats": [
+      "987848967880356771513713522",
+      "1647581391835566"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000019"
+    ],
+    "liquidityStats": [
+      "4011862219002",
+      "305527452191894999"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000104",
+      "5"
+    ],
+    "liquidityStats": [
+      "2071079164864",
+      "24588146013"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000363",
+      "5"
+    ],
+    "liquidityStats": [
+      "7467472985726256488",
+      "107154281547"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000085",
+      "0"
+    ],
+    "liquidityStats": [
+      "863964057586271571",
+      "12051080674822137"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "1000222"
+    ],
+    "liquidityStats": [
+      "41960018995038358",
+      "528850871483449"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000292",
+      "5"
+    ],
+    "liquidityStats": [
+      "97107041295858984",
+      "20731422308773"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000361",
+      "5"
+    ],
+    "liquidityStats": [
+      "14509324798988980528541",
+      "46596640047385"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000203",
+      "0"
+    ],
+    "liquidityStats": [
+      "443125308311168348",
+      "9029911331880604"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000324",
+      "5"
+    ],
+    "liquidityStats": [
+      "5670659518886911957",
+      "318594001978"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000305",
+      "5"
+    ],
+    "liquidityStats": [
+      "704699551599148",
+      "113779216896"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "1000021"
+    ],
+    "liquidityStats": [
+      "120076346147339584",
+      "560904058240271"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000384",
+      "5"
+    ],
+    "liquidityStats": [
+      "106791331400500878816130",
+      "444966569851"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000197"
+    ],
+    "liquidityStats": [
+      "14064229406864",
+      "324923406426123015202678"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000073",
+      "1000034"
+    ],
+    "liquidityStats": [
+      "10540168105",
+      "7301260511799"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000019",
+      "24"
+    ],
+    "liquidityStats": [
+      "330361840676910",
+      "9894652721741"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000314",
+      "5"
+    ],
+    "liquidityStats": [
+      "34977700000000000000000000",
+      "71425225221"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000099",
+      "100"
+    ],
+    "liquidityStats": [
+      "38921746619462",
+      "2277554370061752822"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000038",
+      "1000286"
+    ],
+    "liquidityStats": [
+      "959233885402",
+      "27272873482637379"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000352",
+      "5"
+    ],
+    "liquidityStats": [
+      "1000000000000000000000",
+      "90000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000303",
+      "5"
+    ],
+    "liquidityStats": [
+      "68234354425000129776450",
+      "135268162519"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000153",
+      "1000155"
+    ],
+    "liquidityStats": [
+      "5718017022676784800626",
+      "7000000000000000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000091",
+      "5"
+    ],
+    "liquidityStats": [
+      "44195277303884248",
+      "56654430"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "1000010"
+    ],
+    "liquidityStats": [
+      "156825263794251220",
+      "164009295304158718"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000301",
+      "5"
+    ],
+    "liquidityStats": [
+      "200000000000000000000",
+      "20000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000286",
+      "0"
+    ],
+    "liquidityStats": [
+      "190950738676143710",
+      "22492891973172068"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000177",
+      "5"
+    ],
+    "liquidityStats": [
+      "107492847666590247605",
+      "5788039414517"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000082",
+      "1000286"
+    ],
+    "liquidityStats": [
+      "5168413243193144",
+      "18013234509270075"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000099",
+      "5"
+    ],
+    "liquidityStats": [
+      "133511859111043",
+      "19035098791"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000345",
+      "5"
+    ],
+    "liquidityStats": [
+      "3382219047608745297",
+      "324047351816"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "24"
+    ],
+    "liquidityStats": [
+      "25871748020872",
+      "55013388343600678"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000019",
+      "1000038"
+    ],
+    "liquidityStats": [
+      "609371500663236",
+      "201272955414"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000085",
+      "5"
+    ],
+    "liquidityStats": [
+      "1103659108855658752592",
+      "189448628276707"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000467",
+      "5"
+    ],
+    "liquidityStats": [
+      "2203948104298",
+      "39247395471"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "5",
+      "1000021"
+    ],
+    "liquidityStats": [
+      "6924415566512",
+      "123551672372090605"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "1000106"
+    ],
+    "liquidityStats": [
+      "266256826331301",
+      "75227531"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000148",
+      "1000082"
+    ],
+    "liquidityStats": [
+      "488552672330",
+      "453132952758444131"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000288",
+      "5"
+    ],
+    "liquidityStats": [
+      "3830207796418855610371705",
+      "55768314384"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000453",
+      "1000193"
+    ],
+    "liquidityStats": [
+      "10000000000000",
+      "4000000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000339",
+      "5"
+    ],
+    "liquidityStats": [
+      "13800000000000000000000",
+      "100000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000479",
+      "1000467"
+    ],
+    "liquidityStats": [
+      "52950655827142453460",
+      "2087927266042037"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000073",
+      "1000062"
+    ],
+    "liquidityStats": [
+      "4221148623",
+      "5925484931815695271665"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000429",
+      "5"
+    ],
+    "liquidityStats": [
+      "55760235129071579817",
+      "548882249781"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000367",
+      "5"
+    ],
+    "liquidityStats": [
+      "19950000000000000000",
+      "30000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000487",
+      "0"
+    ],
+    "liquidityStats": [
+      "19548911551274180187",
+      "1406415691041492"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000477",
+      "1000303"
+    ],
+    "liquidityStats": [
+      "56393125004302316",
+      "8460443975618224397224"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000244",
+      "5"
+    ],
+    "liquidityStats": [
+      "165092203175202",
+      "30440504783"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000333",
+      "5"
+    ],
+    "liquidityStats": [
+      "893963385592351751169",
+      "111900743730"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000199",
+      "5"
+    ],
+    "liquidityStats": [
+      "32727085702185265565",
+      "2393552252673"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000019",
+      "1000021"
+    ],
+    "liquidityStats": [
+      "1424942547956051",
+      "337170742741167"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000507",
+      "0"
+    ],
+    "liquidityStats": [
+      "452133754056676",
+      "3150963892429188"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000019",
+      "0"
+    ],
+    "liquidityStats": [
+      "8723156885632872",
+      "9477017297841344"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "1000014"
+    ],
+    "liquidityStats": [
+      "1000000000000",
+      "10000000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000449",
+      "9"
+    ],
+    "liquidityStats": [
+      "15516625000000000000000001",
+      "208128408141263746386"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "1000013"
+    ],
+    "liquidityStats": [
+      "27067176809292582",
+      "30501192311287802"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000494",
+      "1000085"
+    ],
+    "liquidityStats": [
+      "76905316659376043",
+      "1301476246659406"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000507",
+      "5"
+    ],
+    "liquidityStats": [
+      "927217530407281",
+      "78989194365"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "0",
+      "17"
+    ],
+    "liquidityStats": [
+      "3846166410335275",
+      "16952903808783"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000278",
+      "5"
+    ],
+    "liquidityStats": [
+      "7651273336357094163260",
+      "258796375783"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000085",
+      "1000019"
+    ],
+    "liquidityStats": [
+      "180985282299452264",
+      "2270413009324809"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000282",
+      "1000477"
+    ],
+    "liquidityStats": [
+      "4374209791888526619",
+      "23106614499311890"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000085",
+      "1000384"
+    ],
+    "liquidityStats": [
+      "69765518415099499",
+      "2739429439866561574707"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000034",
+      "1000021"
+    ],
+    "liquidityStats": [
+      "419905654273123",
+      "89655512373538"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000447",
+      "5"
+    ],
+    "liquidityStats": [
+      "595089073947037",
+      "25761179847"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000299",
+      "5"
+    ],
+    "liquidityStats": [
+      "92791064028536984992027",
+      "42730954646"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000240",
+      "5"
+    ],
+    "liquidityStats": [
+      "900000000000000000",
+      "10000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "1000473",
+      "9"
+    ],
+    "liquidityStats": [
+      "554957608374668407",
+      "8364307303890740905091"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "solar",
+    "poolAssets": [
+      "14",
+      "1000020"
+    ],
+    "liquidityStats": [
+      "100000000000000",
+      "1000000000000000000"
+    ]
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "100",
+      "1"
+    ],
+    "liquidityStats": [
+      "1451144270076138720136866",
+      "53377568112228251"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "0",
+      "1"
+    ],
+    "liquidityStats": [
+      "137964409259978252182",
+      "25192962179589707"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "28",
+      "1"
+    ],
+    "liquidityStats": [
+      "2833393261577113010664",
+      "18329172437525503"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "20",
+      "1"
+    ],
+    "liquidityStats": [
+      "932120402528127017369",
+      "79042271554579618"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "101",
+      "1"
+    ],
+    "liquidityStats": [
+      "80935995024184783579",
+      "181428353988571160"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "16",
+      "1"
+    ],
+    "liquidityStats": [
+      "6400335951959962123886880",
+      "37938686555482533"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "14",
+      "1"
+    ],
+    "liquidityStats": [
+      "5124492978836469336",
+      "37260486153221560"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "31",
+      "1"
+    ],
+    "liquidityStats": [
+      "30500967699842999746940818",
+      "2003366402592685"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "33",
+      "1"
+    ],
+    "liquidityStats": [
+      "1624654014759489588322183",
+      "4128633103808723"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "15",
+      "1"
+    ],
+    "liquidityStats": [
+      "7611291418820616",
+      "159054178623388917"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "13",
+      "1"
+    ],
+    "liquidityStats": [
+      "3438285004832704115015979",
+      "41827398063878012"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "27",
+      "1"
+    ],
+    "liquidityStats": [
+      "689376962410802547",
+      "9719877785706713"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "102",
+      "1"
+    ],
+    "liquidityStats": [
+      "12666693358598326919097686",
+      "460182674841419735"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "5",
+      "1"
+    ],
+    "liquidityStats": [
+      "20796894483928817",
+      "312420238762857305"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "8",
+      "1"
+    ],
+    "liquidityStats": [
+      "3861980172407313236",
+      "14389336089434844"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "12",
+      "1"
+    ],
+    "liquidityStats": [
+      "98911235577934040",
+      "5901394064159854"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "17",
+      "1"
+    ],
+    "liquidityStats": [
+      "476934598014147382",
+      "20352246156728877"
+    ],
+    "feeRate": "250"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "omnipool",
+    "poolAssets": [
+      "9",
+      "1"
+    ],
+    "liquidityStats": [
+      "25202964254350833294042911",
+      "57027504019142147"
+    ],
+    "feeRate": "250"
+  }
+]

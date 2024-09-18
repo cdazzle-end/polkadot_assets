@@ -1,0 +1,50 @@
+[
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Native": "BNC"
+      },
+      {
+        "Token2": "0"
+      }
+    ],
+    "liquidityStats": [
+      "87773652939376525",
+      "64960752586076"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "Token2": "0"
+      },
+      {
+        "VToken2": "0"
+      }
+    ],
+    "liquidityStats": [
+      "10200288734424",
+      "7924342968889"
+    ]
+  },
+  {
+    "chainId": 2001,
+    "dexType": "solar",
+    "poolAssets": [
+      {
+        "VToken2": "0"
+      },
+      {
+        "VSToken2": "0"
+      }
+    ],
+    "liquidityStats": [
+      "2037540074308",
+      "7000418370069"
+    ]
+  }
+]

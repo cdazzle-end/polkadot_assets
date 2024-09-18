@@ -1,0 +1,511 @@
+[
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "30",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": "6"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X3": [
+          {
+            "Parachain": "1000"
+          },
+          {
+            "PalletInstance": "50"
+          },
+          {
+            "GeneralIndex": "1984"
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "48",
+        "name": "LiquidityPoolToken0x00000030",
+        "symbol": "TKN0x00000007-TKN0x0000000E",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "7",
+        "name": "Turing native token",
+        "symbol": "TUR",
+        "decimals": "10"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X1": {
+          "Parachain": "2114"
+        }
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "13",
+        "name": "LiquidityPoolToken0x0000000D",
+        "symbol": "TKN0x0000000B-TKN0x00000004",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "26",
+        "name": "Zenlink",
+        "symbol": "ZLK",
+        "decimals": "18"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X2": [
+          {
+            "Parachain": "2001"
+          },
+          {
+            "GeneralKey": {
+              "length": "2",
+              "data": "0x0207000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "5",
+        "name": "LiquidityPoolToken0x00000005",
+        "symbol": "TKN0x00000004-TKN0x00000000",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "8",
+        "name": "LiquidityPoolToken0x00000008",
+        "symbol": "TKN0x00000000-TKN0x00000007",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "33",
+        "name": "LiquidityPoolToken0x00000021",
+        "symbol": "TKN0x00000000-TKN0x0000001F",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "39",
+        "name": "Moonriver",
+        "symbol": "MOVR",
+        "decimals": "18"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X2": [
+          {
+            "Parachain": "2023"
+          },
+          {
+            "PalletInstance": "10"
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "1",
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "19",
+        "name": "LiquidityPoolToken0x00000013",
+        "symbol": "TKN0x00000010-TKN0x00000004",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "45",
+        "name": "LiquidityPoolToken0x0000002D",
+        "symbol": "TKN0x0000000B-TKN0x00000007",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "9",
+        "name": "LiquidityPoolToken0x00000009",
+        "symbol": "TKN0x00000004-TKN0x00000007",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "16",
+        "name": "Voucher Slot KSM",
+        "symbol": "vsKSM",
+        "decimals": "12"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X2": [
+          {
+            "Parachain": "2001"
+          },
+          {
+            "GeneralKey": {
+              "length": "2",
+              "data": "0x0404000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "14",
+        "name": "Bifrost Native Token",
+        "symbol": "BNC",
+        "decimals": "12"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X2": [
+          {
+            "Parachain": "2001"
+          },
+          {
+            "GeneralKey": {
+              "length": "2",
+              "data": "0x0001000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "43",
+        "name": "LiquidityPoolToken0x0000002B",
+        "symbol": "TKN0x00000000-TKN0x00000027",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "31",
+        "name": "RMRK.app",
+        "symbol": "RMRK",
+        "decimals": "10"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X3": [
+          {
+            "Parachain": "1000"
+          },
+          {
+            "PalletInstance": "50"
+          },
+          {
+            "GeneralIndex": "8"
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "21",
+        "name": "LiquidityPoolToken0x00000015",
+        "symbol": "TKN0x0000000F-TKN0x00000004",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "15",
+        "name": "Voucher KSM",
+        "symbol": "vKSM",
+        "decimals": "12"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X2": [
+          {
+            "Parachain": "2001"
+          },
+          {
+            "GeneralKey": {
+              "length": "2",
+              "data": "0x0104000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "47",
+        "name": "LiquidityPoolToken0x0000002F",
+        "symbol": "TKN0x0000001E-TKN0x00000000",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "27",
+        "name": "LiquidityPoolToken0x0000001B",
+        "symbol": "TKN0x0000001A-TKN0x00000000",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "28",
+        "name": "LiquidityPoolToken0x0000001C",
+        "symbol": "TKN0x00000004-TKN0x0000001A",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "0",
+        "name": "Mangata",
+        "symbol": "MGX",
+        "decimals": "18"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X2": [
+          {
+            "Parachain": "2110"
+          },
+          {
+            "GeneralKey": {
+              "length": "4",
+              "data": "0x0000000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "6",
+        "name": "Karura",
+        "symbol": "KAR",
+        "decimals": "12"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X2": [
+          {
+            "Parachain": "2000"
+          },
+          {
+            "GeneralKey": {
+              "length": "2",
+              "data": "0x0080000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "11",
+        "name": "Imbue",
+        "symbol": "IMBU",
+        "decimals": "12"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X2": [
+          {
+            "Parachain": "2121"
+          },
+          {
+            "GeneralKey": {
+              "length": "2",
+              "data": "0x0096000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "3",
+        "name": "LiquidityPoolToken0x00000003",
+        "symbol": "TKN0x00000000-TKN0x00000002",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "17",
+        "name": "LiquidityPoolToken0x00000011",
+        "symbol": "TKN0x00000000-TKN0x0000000E",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "23",
+        "name": "Voucher BNC",
+        "symbol": "vBNC",
+        "decimals": "12"
+      },
+      "hasLocation": true,
+      "tokenLocation": {
+        "X2": [
+          {
+            "Parachain": "2001"
+          },
+          {
+            "GeneralKey": {
+              "length": "2",
+              "data": "0x0101000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "4",
+        "name": "Kusama Native",
+        "symbol": "KSM",
+        "decimals": "12"
+      },
+      "hasLocation": true,
+      "tokenLocation": "here"
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "34",
+        "name": "LiquidityPoolToken0x00000022",
+        "symbol": "TKN0x00000004-TKN0x0000001F",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "32",
+        "name": "LiquidityPoolToken0x00000020",
+        "symbol": "TKN0x00000004-TKN0x0000001E",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "12",
+        "name": "LiquidityPoolToken0x0000000C",
+        "symbol": "TKN0x00000000-TKN0x0000000B",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    },
+    {
+      "tokenData": {
+        "network": "kusama",
+        "chain": 2110,
+        "localId": "42",
+        "name": "LiquidityPoolToken0x0000002A",
+        "symbol": "TKN0x00000004-TKN0x0000000E",
+        "decimals": "18"
+      },
+      "hasLocation": false
+    }
+  ]

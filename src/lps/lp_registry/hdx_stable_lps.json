@@ -1,0 +1,89 @@
+[
+  {
+    "chainId": 2034,
+    "dexType": "stable",
+    "poolId": "100",
+    "shareIssuance": "1461165730861577584078976",
+    "poolAssets": [
+      "10",
+      "18",
+      "21",
+      "23"
+    ],
+    "liquidityStats": [
+      "313763129660",
+      "393691442218961691172580",
+      "393667319638",
+      "388122665934"
+    ],
+    "tokenPrecisions": [
+      "1000000000000",
+      "1",
+      "1000000000000",
+      "1000000000000"
+    ],
+    "swapFee": "4000000",
+    "feePrecision": "10000000000",
+    "a": "320",
+    "aPrecision": 1,
+    "aBlock": "3640110",
+    "futureA": "320",
+    "futureABlock": "3640110",
+    "totalSupply": "689490481296671375",
+    "poolPrecision": "1"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "stable",
+    "poolId": "101",
+    "shareIssuance": "81439502428842669376",
+    "poolAssets": [
+      "11",
+      "19"
+    ],
+    "liquidityStats": [
+      "3298136232",
+      "4883586808"
+    ],
+    "tokenPrecisions": [
+      "10000000000",
+      "10000000000"
+    ],
+    "swapFee": "4000000",
+    "feePrecision": "10000000000",
+    "a": "5",
+    "aPrecision": 1,
+    "aBlock": "4293080",
+    "futureA": "5",
+    "futureABlock": "4293080",
+    "totalSupply": "8167286487",
+    "poolPrecision": "1"
+  },
+  {
+    "chainId": 2034,
+    "dexType": "stable",
+    "poolId": "102",
+    "shareIssuance": "12683267121554799790038329",
+    "poolAssets": [
+      "10",
+      "22"
+    ],
+    "liquidityStats": [
+      "6452302941967",
+      "6305596596442"
+    ],
+    "tokenPrecisions": [
+      "1000000000000",
+      "1000000000000"
+    ],
+    "swapFee": "4000000",
+    "feePrecision": "10000000000",
+    "a": "100",
+    "aPrecision": 1,
+    "aBlock": "4384932",
+    "futureA": "100",
+    "futureABlock": "4384932",
+    "totalSupply": "12757895341307",
+    "poolPrecision": "1"
+  }
+]
