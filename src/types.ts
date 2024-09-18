@@ -57,26 +57,26 @@ export interface MyJunction {
     AccountId32?: {
         networkId: string,
         id: String
-    }
+    },
     AccountIndex64?: {
         networkId: string,
         index: String
-    }
+    },
     AccountKey20?: {
         network: string,
         key: string
-    }
+    },
     PalletInstance?: number,
     GeneralIndex?: number,
     GeneralKey?: {
         length: number,
         data: string
-    }
+    },
     OnlyChild?: boolean,
     Plurality?: {
         id: string,
         part: string
-    }
+    },
 }
 export interface TickData {
     tick: string,
