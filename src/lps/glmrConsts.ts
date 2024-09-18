@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
-import { MyLp } from '../../types.ts';
+// import { MyLp } from '../../types.ts';
 export const rpc1 = 'wss://moonbeam.public.blastapi.io';
 export const rpc2 = 'wss://moonbeam-rpc.dwellir.com'; // Usual main
 // const rpc3 = 'wss://moonriver.api.onfinality.io/public-ws';

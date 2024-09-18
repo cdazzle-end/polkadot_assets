@@ -11,7 +11,7 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 // import Keyring from '@polkadot/keyring';
 // import { u8aToHex, stringToHex, numberToHex } from '@polkadot/util';
 // import { mnemonicToLegacySeed, hdEthereum } from '@polkadot/util-crypto';
-import { MyLp } from '../../types.ts';
+import { MyLp } from '../types.ts';
 import path from 'path';
 
 import { fileURLToPath } from 'url';

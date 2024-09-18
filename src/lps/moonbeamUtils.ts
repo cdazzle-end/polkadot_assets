@@ -5,7 +5,7 @@ import path from 'path';
 import bn from 'bignumber.js'
 import { parse } from 'path'
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import { GlobalState, MyLp, Slot0, TickData } from '../../types.ts';
+import { GlobalState, MyLp, Slot0, TickData } from '../types.ts';
 import { altDexContractAbi, dexAbiMap, dexAbis, selectedHttpEndpoint, selectedWsEndpoint, wsProvider, xcTokenAbi } from './glmrConsts.ts';
 import { TickMath } from '@uniswap/v3-sdk';
 import {

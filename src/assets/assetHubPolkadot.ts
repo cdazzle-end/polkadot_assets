@@ -1,12 +1,12 @@
 
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 import { getNativeAsset, getStableAsset } from './acaNativeAssets.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 // import {WsProvider } from '@polkadot/rpc-provider'
 import { options } from '@acala-network/api'
-import { getApiForNode, PNode } from '../../utils.ts';
+import { getApiForNode} from '../utils.ts';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -66,7 +66,7 @@ async function queryAssets(chopsticks: boolean): Promise<IMyAsset[]> {
 
 }
 
-export async function updateRegistryAssetHub(chopsticks: boolean){
+export async function updateAssetRegistryAssetHub(chopsticks: boolean){
     let queriedAssets = await queryAssets(chopsticks) as any
     let assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, "asset_registry/asset_hub_polkadot_assets.json"), "utf-8")) as any
     console.log("assets in registry: ", assetRegistry.length)
@@ -89,7 +89,7 @@ export async function updateRegistryAssetHub(chopsticks: boolean){
 
 async function main(){
     // await queryAssets()
-    await updateRegistryAssetHub(false)
+    await updateAssetRegistryAssetHub(false)
     // process.exit(0)
 }
 

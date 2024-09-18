@@ -1,10 +1,10 @@
 import path from 'path';
-import { ApiMap, Relay } from '../../types.ts';
+import { ApiMap, Relay } from '../types.ts';
 import { fileURLToPath } from 'url';
-import { updateRegistryAssetHub as updateAssetRegistryAssetHub } from './assetHubPolkadot.ts';
+import { updateAssetRegistryAssetHub as updateAssetRegistryAssetHub } from './assetHubPolkadot.ts';
 import { saveCollectedAssetRegistry } from './collectAssets.ts';
 import { updateAssetRegistryHydra } from './hydra.ts';
-import { PNode, setApiMap } from '../../utils.ts';
+import { setApiMap } from '../utils.ts';
 import { ApiPromise } from '@polkadot/api';
 import { ModuleBApi } from '@zenlink-dex/sdk-api';
 

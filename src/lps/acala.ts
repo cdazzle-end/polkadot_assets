@@ -1,15 +1,20 @@
 import * as fs from 'fs';
 import path from 'path';
-import {MyLp, StableSwapPool, TokenRate} from '../../types.ts';
+import {MyLp, StableSwapPool, TokenRate} from '../types.ts';
 import {ApiPromise, WsProvider} from '@polkadot/api';
 // const { ApiPromise, WsProvider } = ('@polkadot/api');
 // const { options } = require('@acala-network/api');
 import { options } from '@acala-network/api';
-import { getApiForNode } from '../../utils.ts';
+import { getApiForNode } from '../utils.ts';
 
 import { fileURLToPath } from 'url';
+import { assetRegistryFolder, lpRegistryFolder } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const acaLpRegistry = path.join(__dirname, `${lpRegistryFolder}aca_lps.json`);
+const acaStableLpRegistry = path.join(__dirname, `${lpRegistryFolder}aca_stable_lps.json`);
+const acaAssetRegistry = path.join(__dirname, `${assetRegistryFolder}aca_assets.json`);
 const endpoint1 = 'wss://karura.api.onfinality.io/public-ws';
 const endpoint2 = 'wss://karura-rpc-2.aca-api.network/ws';
 const endpoint6 = 'wss://karura-rpc.dwellir.com'
@@ -80,7 +85,7 @@ export async function updateLps(chopsticks: boolean) {
     // let stablePools = await queryStableLps(api);
 
     // fs.writeFileSync('./kar/stablePools.json', JSON.stringify(stablePools, null, 2))
-    fs.writeFileSync(path.join(__dirname, './lp_registry/aca_lps.json'), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(path.join(__dirname, acaLpRegistry), JSON.stringify(lps, null, 2))
     await stables.then(() => console.log("aca stables complete"));
     // api.disconnect()
 }
@@ -139,7 +144,7 @@ async function saveLps() {
         return newLp
     });
 
-    fs.writeFileSync(path.join(__dirname, './lp_registry/aca_lps.json'), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(path.join(__dirname, acaLpRegistry), JSON.stringify(lps, null, 2))
 }
 
 async function updateStables(api: any) {

@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 // import { MyJunction, MyAsset, MyAssetRegistryObject, MyMultiLocation } from '../assets/asset_types';
-import { ApiMap, MyLp } from '../../types.ts';
+import { ApiMap, MyLp } from '../types.ts';
 import * as bncPolkadotHandler from './bifrost_polkadot.ts'
 import * as paraHandler from './parallel.ts'
 import * as acaHandler from './acala.ts'
@@ -17,7 +17,7 @@ import * as bsxHandler from './basilisk.ts'
 import * as mgxHandler from './mangata.ts'
 import * as hdxHandler from './hydra.ts'
 import { ApiPromise } from '@polkadot/api';
-import { PNode, setApiMap } from '../../utils.ts';
+import { setApiMap } from '../utils.ts';
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
     timeZone: 'America/New_York',

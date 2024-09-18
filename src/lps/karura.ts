@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import {MyLp, StableSwapPool} from '../../types.ts'
+import {MyLp, StableSwapPool} from '../types.ts'
 // const { ApiPromise, WsProvider } = require('@polkadot/api');
 import { ApiPromise, WsProvider } from '@polkadot/api';
 // const { options } = require('@acala-network/api');
@@ -10,7 +10,7 @@ import bn from 'bignumber.js'
 import path from 'path';
 
 import { fileURLToPath } from 'url';
-import { getApiForNode } from '../../utils.ts';
+import { getApiForNode } from '../utils.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const endpoint1 = 'wss://karura.api.onfinality.io/public-ws';

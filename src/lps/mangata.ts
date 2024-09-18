@@ -1,8 +1,8 @@
 import {Mangata } from "@mangata-finance/sdk"
-import { MyLp } from '../../types.ts';
+import { MyLp } from '../types.ts';
 import * as fs from 'fs';
 import path from 'path';
-import { getApiForNode } from '../../utils.ts';
+import { getApiForNode } from '../utils.ts';
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);

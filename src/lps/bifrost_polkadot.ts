@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyLp, MyJunction, TokenData, IMyAsset, MyMultiLocation, TokenRate, StableSwapPool } from '../../types.ts';
+import { MyLp, MyJunction, TokenData, IMyAsset, MyMultiLocation, TokenRate, StableSwapPool } from '../types.ts';
 // import { MyLp } from '../lp_types';
 // const axios = require('axios').default;
 import axios from 'axios';
@@ -8,11 +8,11 @@ import { WsProvider, Keyring, ApiPromise } from '@polkadot/api';
 import { ModuleBApi, BifrostConfig } from '@zenlink-dex/sdk-api';
 import { Percent, Token, TokenAmount, TradeType, StandardPair, StandardPool, StablePair, StableSwap,  AssetMeta } from '@zenlink-dex/sdk-core';
 import { firstValueFrom } from 'rxjs';
-import { localRpcs } from '../../consts.ts';
+import { localRpcs } from '../consts.ts';
 import bn from 'bignumber.js';
 
 import { fileURLToPath } from 'url';
-import { getBifrostDexApi } from '../../utils.ts';
+import { getBifrostDexApi } from '../utils.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 

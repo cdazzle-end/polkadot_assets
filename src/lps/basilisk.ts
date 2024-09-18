@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { MyLp } from '../../types.ts';
+import { MyLp } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import path from 'path';
 

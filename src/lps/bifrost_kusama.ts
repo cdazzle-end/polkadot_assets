@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../../types.ts';
-import { MyLp } from '../../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation, MyLp } from '../types.ts';
+
 
 // const axios = require('axios').default;
 import axios from 'axios';

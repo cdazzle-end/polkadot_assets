@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { MyLp, MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../../types.ts';
+import { MyLp, MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 // import {} from '../types';
 // import { Keyring, ApiPromise, WsProvider, } from '@polkadot/api';
 // import { options } from '@parallel-finance/api';
@@ -11,7 +11,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-import { getApiForNode } from '../../utils.ts';
+import { getApiForNode } from '../utils.ts';
 
 const localRpc = "ws://172.26.130.75:8012"
 const liveRpc = 'wss://heiko-rpc.parallel.fi'

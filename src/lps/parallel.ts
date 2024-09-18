@@ -1,12 +1,12 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../../types.ts';
-import {MyLp} from '../../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
+import {MyLp} from '../types.ts';
 // import { Keyring, ApiPromise, WsProvider, } from '@polkadot/api';
 // import { options } from '@parallel-finance/api';
 // import { CurrencyId, Pool, Balance } from '@parallel-finance/types/interfaces';
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import { getApiForNode } from '../../utils.ts';
+import { getApiForNode } from '../utils.ts';
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);

@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { TokenData, IMyAsset, MyLp, OmniPool, StableSwapPool } from '../../types.ts';
+import { TokenData, IMyAsset, MyLp, OmniPool, StableSwapPool } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
-import { getApiForNode } from '../../utils.ts';
+import { getApiForNode } from '../utils.ts';
 import bn from 'bignumber.js';
 
 import { fileURLToPath } from 'url';

@@ -5,9 +5,10 @@ export const dotRpc = "wss://polkadot-rpc.dwellir.com"
 import {Mangata } from "@mangata-finance/sdk"
 import { localRpcs } from './consts.ts';
 import { BifrostConfig, ModuleBApi } from '@zenlink-dex/sdk-api'
-import { ApiMap, Relay } from './types.ts'
+import { ApiMap, PNode, Relay } from './types.ts'
+import { databaseDirectory, assetRegistryFolder, lpRegistryFolder } from './consts.ts'
+import fs from 'fs'
 
-export type PNode = TNode | 'Polkadot' | 'Kusama' 
 let apiMap: ApiMap = new Map<PNode, ApiPromise | ModuleBApi>();
 
 export async function setApiMap(map: ApiMap) {
@@ -169,4 +170,24 @@ export function deepEqual(obj1: any, obj2: any) {
     }
 
     return true;
+}
+
+export function createDatabaseDirectory(){
+    if (!fs.existsSync(databaseDirectory)){
+        fs.mkdirSync(databaseDirectory);
+    }
+}
+
+export function confirmAssetRegistryDirectory(){
+    createDatabaseDirectory()
+    if (!fs.existsSync(assetRegistryFolder)){
+        fs.mkdirSync(assetRegistryFolder);
+    }
+}
+
+export function confirmLpRegistryDirectory(){
+    createDatabaseDirectory()
+    if (!fs.existsSync(lpRegistryFolder)){
+        fs.mkdirSync(lpRegistryFolder);
+    }
 }
