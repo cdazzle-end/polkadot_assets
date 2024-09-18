@@ -25,7 +25,6 @@ export default [
       '@zenlink-dex/sdk-api',
       'fs',
       'path',
-      // Add other external dependencies
     ],
     plugins: [
       typescript({
