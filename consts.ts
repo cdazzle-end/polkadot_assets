@@ -1,5 +1,5 @@
 
-
+export const databaseDirectory = "C://Users//dazzl//CodingProjects//substrate//polkadot_asset_registry"
 
 export const localRpcs = {
     "Kusama": "ws://172.26.130.75:8013",
