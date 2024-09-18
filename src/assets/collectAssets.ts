@@ -8,6 +8,7 @@ import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import { options } from '@acala-network/api'
 import { getApiForNode } from '../utils.ts';
 import { fileURLToPath } from 'url';
+import { assetRegistryFolder } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -69,7 +70,7 @@ async function compareAssetRegistry(){
 
 export async function saveCollectedAssetRegistry(relay: Relay){
     console.log(`Saving collected asset registry for ${relay}`)
-    let assetFilePath = relay === 'polkadot' ? "asset_registry/allAssetsPolkadot.json" : "asset_registry/allAssetsKusama.json";
+    let assetFilePath = relay === 'polkadot' ? `${assetRegistryFolder}/allAssetsPolkadot.json` : "asset_registry/allAssetsKusama.json";
     let assetRegistryCollected = await buildAssetsFromFiles(relay);
     fs.writeFileSync(path.join(__dirname, assetFilePath), JSON.stringify(assetRegistryCollected, null, 2))
 }
