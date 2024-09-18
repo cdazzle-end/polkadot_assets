@@ -29,7 +29,7 @@ export interface CexAsset {
 
 //This is the unifying interface for all asset from all chains
 export interface TokenData {
-    network: "kusama" | "polkadot"
+    network: Relay,
     chain: number,
     localId: any,
     name: string,
