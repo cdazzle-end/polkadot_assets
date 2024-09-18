@@ -9,13 +9,6 @@ import { getApiForNode } from '../utils.ts';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-// import { AnyJson, Codec } from '@polkadot/types-codec/types';
-// // import {  } from '@acala-network/types'
-// import { CurrencyId, AssetId, AcalaAssetMetadata } from '@acala-network/types/interfaces'
-// import { Junction, MultiLocation } from '@polkadot/types/interfaces'
-// import { CurrencyId, AssetId, AcalaAssetMetadata } from '@acala-network/types/interfaces'
-// import { Junction, MultiLocation } from '@polkadot/types/interfaces'
-
 //This can be converted to unified MyAsset type
 interface KaruraAsset {
     network: "polkadot";
