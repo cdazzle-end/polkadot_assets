@@ -1,11 +1,11 @@
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../../types.ts';
+import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 import { getNativeAsset, getStableAsset } from './acaNativeAssets.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 // import {WsProvider } from '@polkadot/rpc-provider'
 import { options } from '@acala-network/api'
-import { getApiForNode } from '../../utils.ts';
+import { getApiForNode } from '../utils.ts';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
