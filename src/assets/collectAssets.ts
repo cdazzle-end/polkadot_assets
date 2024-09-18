@@ -75,7 +75,7 @@ export async function saveCollectedAssetRegistry(relay: Relay){
     fs.writeFileSync(path.join(__dirname, assetFilePath), JSON.stringify(assetRegistryCollected, null, 2))
 }
 async function buildAssetsFromFiles(relay: Relay){
-    let assetRegistryFolder = path.join(__dirname, "/asset_registry/");
+    // let assetRegistryFolder = assetRegistryFolder;
     let assetFiles = relay === 'polkadot' ? polkadotAssetFiles : kusamaAssetFiles;
 
     let assetRegistryCollected: IMyAsset[] = [];
