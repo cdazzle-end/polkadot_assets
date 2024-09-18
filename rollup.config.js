@@ -2,6 +2,8 @@ import typescript from 'rollup-plugin-typescript2'
 import json from '@rollup/plugin-json'
 import dts from 'rollup-plugin-dts'
 import { babel } from '@rollup/plugin-babel'
+import builtins from 'rollup-plugin-node-builtins';
+import globals from 'rollup-plugin-node-globals';
 
 export default [
   {
@@ -25,7 +27,9 @@ export default [
         plugins: ['@babel/plugin-syntax-import-assertions'],
         babelHelpers: 'bundled',
         presets: ['@babel/preset-env', '@babel/preset-flow']
-      })
+      }),
+      globals(),
+      builtins(),
     ]
   },
   {
