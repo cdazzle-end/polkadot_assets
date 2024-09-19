@@ -16,18 +16,18 @@ export default [
       { file: './dist/index.cjs', format: 'cjs' },
       { file: './dist/index.mjs', format: 'es' }
     ],  
-    external: [
-      '@paraspell/sdk',
-      '@polkadot/api',
-      '@polkadot/types',
-      '@polkadot/util',
-      '@polkadot/keyring',
-      '@polkadot/util-crypto',
-      '@zenlink-dex/sdk-core',
-      '@zenlink-dex/sdk-api',
-      'fs',
-      'path',
-    ],
+    // external: [
+    //   '@paraspell/sdk',
+    //   '@polkadot/api',
+    //   '@polkadot/types',
+    //   '@polkadot/util',
+    //   '@polkadot/keyring',
+    //   '@polkadot/util-crypto',
+    //   '@zenlink-dex/sdk-core',
+    //   '@zenlink-dex/sdk-api',
+    //   'fs',
+    //   'path',
+    // ],
     plugins: [
       typescript({ tsconfig: './tsconfig.json' }), // Ensure tsconfig is specified
       resolve(),
