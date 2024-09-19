@@ -39,7 +39,7 @@ export default [
         extensions: ['.ts'],
         plugins: ['@babel/plugin-syntax-import-assertions'],
         babelHelpers: 'bundled',
-        presets: ['@babel/preset-env', '@babel/preset-flow']
+        presets: ['@babel/preset-env']
       }),
       globals(),
       builtins(),
