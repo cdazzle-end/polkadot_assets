@@ -13,6 +13,8 @@
       "noImplicitAny": false,
       "strict": false,
       "allowSyntheticDefaultImports": true,
+      "outDir": "./dist",
+        
     },
     "include": ["src"],
     "exclude": ["src/lps/moonbeamTestFunctions.ts"]
