@@ -16,7 +16,7 @@ export async function setApiMap(map: ApiMap) {
     apiMap = map;
 }
 function isBncDex(api: ApiPromise | ModuleBApi): api is ModuleBApi {
-    return "balanceModule" in api;
+    return "provider" in api;
 }
 /**
  * Using this to get/set dex API for bifrost, so we dont have to change return type of main function
@@ -38,7 +38,7 @@ export async function getBifrostDexApi(relay: Relay, chopsticks: boolean): Promi
 
     if(map.has(node)){
         console.log(`Returning dex api for BifrostPolkadot`);
-        let mapQuery = map.get(node);
+        let mapQuery = map.get(node)!;
         dexApi = mapQuery as ModuleBApi;
     } else {
         let provider = new WsProvider(endpoint);
