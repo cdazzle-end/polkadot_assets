@@ -31,7 +31,7 @@ export default [
     plugins: [
       typescript({ tsconfig: './tsconfig.json' }), // Ensure tsconfig is specified
       resolve(),
-      commonjs(),
+      // commonjs(),
       json(),
       globals(),
       builtins(),
