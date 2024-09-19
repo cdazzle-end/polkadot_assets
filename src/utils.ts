@@ -15,7 +15,9 @@ let apiMap: ApiMap;
 export async function setApiMap(map: ApiMap) {
     apiMap = map;
 }
-
+function isBncDex(api: ApiPromise | ModuleBApi): api is ModuleBApi {
+    return (api as ModuleBApi).api !== undefined;
+}
 /**
  * Using this to get/set dex API for bifrost, so we dont have to change return type of main function
  * 
