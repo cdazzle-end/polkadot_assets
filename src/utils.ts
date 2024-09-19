@@ -26,14 +26,14 @@ export async function setApiMap(map: ApiMap) {
  * @returns 
  */
 export async function getBifrostDexApi(relay: Relay, chopsticks: boolean): Promise<ModuleBApi>{
-    let map = apiMap
+    let map = apiMap;
 
-    let node: TNode = relay === "polkadot" ? "BifrostPolkadot" : "BifrostKusama"
+    let node: TNode = relay === "polkadot" ? "BifrostPolkadot" : "BifrostKusama";
 
-    let endpoint = chopsticks ? localRpcs[node] : getAllNodeProviders(node)
+    let endpoint = chopsticks ? localRpcs[node] : getAllNodeProviders(node);
 
     if(map.has(node)){
-        console.log(`Returning dex api for BifrostPolkadot`)
+        console.log(`Returning dex api for BifrostPolkadot`);
         return map.get(node) as ModuleBApi;
     } else {
         let provider = new WsProvider(endpoint)
