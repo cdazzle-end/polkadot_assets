@@ -29,6 +29,7 @@ export default [
     plugins: [
       typescript({
         tsconfig: './tsconfig.json',
+        typescript: require('typescript'),
       }),
       resolve({
         extensions: ['.js', '.ts'],
