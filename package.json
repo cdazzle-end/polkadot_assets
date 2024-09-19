@@ -25,6 +25,7 @@
     "@polkadot/util": "^12.6.2",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@uniswap/sdk-core": "^4.1.4",
     "@uniswap/v3-sdk": "^3.10.2",
     "@zenlink-dex/sdk-api": "0.0.4",
