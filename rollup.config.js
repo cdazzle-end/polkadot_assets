@@ -33,8 +33,8 @@ export default [
       resolve(),
       // commonjs(),
       json(),
-      globals(),
-      builtins(),
+      // globals(),
+      // builtins(),
       babel({
         extensions: ['.ts'],
         plugins: ['@babel/plugin-syntax-import-assertions'],
