@@ -36,13 +36,13 @@ export async function getBifrostDexApi(relay: Relay, chopsticks: boolean): Promi
         console.log(`Returning dex api for BifrostPolkadot`);
         return map.get(node) as ModuleBApi;
     } else {
-        let provider = new WsProvider(endpoint)
-        let dexApi = new ModuleBApi(provider, BifrostConfig)
-        await provider.isReady
-        await dexApi.initApi()
-        map.set(node, dexApi)
-        return dexApi
-    }
+        let provider = new WsProvider(endpoint);
+        let dexApi = new ModuleBApi(provider, BifrostConfig);
+        await provider.isReady;
+        await dexApi.initApi();
+        map.set(node, dexApi);
+        return dexApi;
+    };
 }
 
 export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<ApiPromise> {
