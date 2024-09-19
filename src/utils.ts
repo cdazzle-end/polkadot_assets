@@ -36,7 +36,8 @@ export async function getBifrostDexApi(relay: Relay, chopsticks: boolean): Promi
 
     if(map.has(node)){
         console.log(`Returning dex api for BifrostPolkadot`);
-        dexApi = map.get(node) as ModuleBApi;
+        let mapQuery = map.get(node);
+        dexApi = mapQuery as ModuleBApi;
     } else {
         let provider = new WsProvider(endpoint);
         let bncApi = new ModuleBApi(provider, BifrostConfig);
