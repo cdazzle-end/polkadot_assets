@@ -27,10 +27,10 @@ export default [
       'path',
     ],
     plugins: [
-      typescript(),
+      typescript({ tsconfig: './tsconfig.json' }), // Ensure tsconfig is specified
       resolve(),
+      commonjs(),
       json(),
-
       globals(),
       builtins(),
     ]
