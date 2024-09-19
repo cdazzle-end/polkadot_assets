@@ -1,29 +1,18 @@
 {
-    "ts-node": {
-        "esm": true,
-    },
     "compilerOptions": {
-        "target": "ESNext",
-        "module": "esnext",
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "allowImportingTsExtensions": true,
-        // ... other options from Bridge's tsconfig ...
-        // "baseUrl": ".",
-        "resolveJsonModule": true,
-        "skipLibCheck": true,
-        "emitDeclarationOnly": true,
-        "outDir": "./dist",
-        "typeRoots": ["./node_modules/@polkadot/ts", "./node_modules/@types"],
-        "jsx": "preserve",
-        "declaration": true,
-        "strict":  false,
-        "noImplicitAny": false,
-        // "noUnusedLocals": true,
-        // "noImplicitReturns": true,
-        "moduleResolution": "Node",
+      "target": "ES2015",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "strictNullChecks": true,
+      "skipLibCheck": true,
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "allowImportingTsExtensions": true,
+      "noImplicitAny": false
     },
-    // Include and exclude can be adjusted as per your project's structure
-    "include": ["./**/*"],
-    "exclude": ["dist", "src/lps/moonbeamTestFunctions.ts", "node_modules"]
-}
+    "include": ["src"],
+    "exclude": ["src/lps/moonbeamTestFunctions.ts"]
+  }
+  

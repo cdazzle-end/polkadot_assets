@@ -1,15 +1,16 @@
 import { TNode, getAllNodeProviders } from '@paraspell/sdk'
-import { ApiPromise, WsProvider } from '@polkadot/api'
-export const ksmRpc = "wss://kusama-rpc.dwellir.com"
-export const dotRpc = "wss://polkadot-rpc.dwellir.com"
+import { ApiPromise, WsProvider } from '@polkadot/api'; // Type-only import
+import {  } from '@polkadot/api';    // Value import
+
+
 import {Mangata } from "@mangata-finance/sdk"
-import { localRpcs } from './consts.ts';
+import { dotRpc, ksmRpc, localRpcs } from './consts.ts';
 import { BifrostConfig, ModuleBApi } from '@zenlink-dex/sdk-api'
 import { ApiMap, PNode, Relay } from './types.ts'
 import { databaseDirectory, assetRegistryFolder, lpRegistryFolder } from './consts.ts'
 import fs from 'fs'
 
-let apiMap: ApiMap = new Map<PNode, ApiPromise | ModuleBApi>();
+let apiMap: ApiMap;
 
 export async function setApiMap(map: ApiMap) {
     apiMap = map;

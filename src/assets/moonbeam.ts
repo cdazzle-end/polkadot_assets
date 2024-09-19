@@ -19,6 +19,7 @@ import {
     ContractCallResults,
     ContractCallContext,
   } from 'ethereum-multicall';
+import { CallContext } from 'ethereum-multicall/dist/esm/models/index';
 // import { mnemonicToLegacySeed, hdEthereum } from '@polkadot/util-crypto';
 const rpc1 = 'wss://wss.moonriver.moonbeam.network';
 const rpc2 = 'wss://moonriver.public.blastapi.io';
@@ -272,7 +273,7 @@ async function updateRegistry(){
     console.log("assets in registry: ", assetRegistry.length)
 
     let api = await getApiForNode("Moonbeam", false)
-    let queriedAssets = await queryAssets(api) as any
+    let queriedAssets: TokenData[] = await queryAssets(api) as any
     const locations = await queryLocations(api);
     let queriedAssetObjects = queriedAssets.map((asset) => {
         const matchedLocation = locations.find((location) => location[1] == asset.localId)
@@ -287,7 +288,7 @@ async function updateRegistry(){
         }
         return newAssetRegistryObject
     })
-    let newAssets = []
+    let newAssets: IMyAsset[] = []
     queriedAssetObjects.forEach((queriedAsset) => {
         let foundMatchingAsset = false
         assetRegistry.forEach((assetRegistryAsset, index) => {
@@ -324,7 +325,7 @@ async function getNonXcmAssetData(){
     let ignoreAssets = [
         "0xFFfffFFecB45aFD30a637967995394Cc88C0c194", // POOP
     ]
-    let unregisteredLpAssets = []
+    let unregisteredLpAssets: any[] = []
 
     glmrLpRegistry.forEach((lp: any) => {
         lp.poolAssets.forEach((poolAssetId: any) => {
@@ -341,7 +342,7 @@ async function getNonXcmAssetData(){
     let xcTokenAbi = JSON.parse(fs.readFileSync("./../lps/glmr_abis/xcTokenAbi.json", "utf-8"))
     let rpcProvider = new ethers.JsonRpcProvider(defaultRpc)
 
-    let tokenDatas: TokenData[] = await queryTokenData(unregisteredLpAssets, xcTokenAbi, rpcProvider)
+    let tokenDatas: TokenData[] = (await queryTokenData(unregisteredLpAssets, xcTokenAbi, rpcProvider))!
 
     let newAssetObjects: IMyAsset[] = tokenDatas.map((tokenData) => {
         let assetRegistryObject: IMyAsset = {
@@ -359,7 +360,7 @@ export async function queryTokenData(contractAddresses: string[], tokenAbi, prov
     // let addresses = contractAddresses.slice(0, 10)
     const united_block_http="https://moonbeam.unitedbloc.com"
     let callContexts: ContractCallContext[] = contractAddresses.map((contractAddress) => {
-        let calls = [];
+        let calls: CallContext[] = [];
         calls.push({reference: `tokenData`, methodName: `name`, methodParameters: []})
         calls.push({reference: `tokenData`, methodName: `symbol`, methodParameters: []})
         calls.push({reference: `tokenData`, methodName: `decimals`, methodParameters: []})

@@ -13,7 +13,7 @@ export type ApiMap = Map<PNode, ApiPromise | ModuleBApi>
 
 //This is the interface for the asset registry object. Combines token metadata and token location
 export interface IMyAsset {
-    tokenData: TokenData | CexAsset,
+    tokenData: TokenData,
     hasLocation: boolean,
     tokenLocation?: any
 }

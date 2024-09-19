@@ -65,3 +65,6 @@ export const karStableLpRegistry = `${lpRegistryFolder}kar_stable_lps.json`
 export const mgxLpRegistry = `${lpRegistryFolder}mgx_lps.json`
 export const movrLpRegistry = `${lpRegistryFolder}movr_lps.json`
 export const paraLpRegistry = `${lpRegistryFolder}para_lps.json`
+
+export const ksmRpc = "wss://kusama-rpc.dwellir.com"
+export const dotRpc = "wss://polkadot-rpc.dwellir.com"

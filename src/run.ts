@@ -11,8 +11,6 @@ const __dirname = path.dirname(__filename);
 
 
 export async function updateAssetRegistry(chopsticks: boolean, relay: Relay){
-
-
     if(relay === "polkadot") {
         console.log(`Updating POLKADOT assets`)
         // Update AssetHub and HyrdraDX, as these are the only ones that change often. Could change to update others if needed

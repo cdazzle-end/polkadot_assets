@@ -448,10 +448,10 @@ export async function getTicksUni(contractAddress: string){
         const ind = wordPosIndices[j]
         const bitmap = bitmapResults[j]
 
-        if(bitmap !== 0n){
+        if(bitmap !== BigInt(0)){
             for (let i = 0; i < 256; i++){
-                const bit = 1n
-                const initialized = (bitmap & (bit << BigInt(i))) !== 0n
+                const bit = BigInt(1)
+                const initialized = (bitmap & (bit << BigInt(i))) !== BigInt(0)
                 if(initialized){
                     const tickIndex = (BigInt(ind) * BigInt(256) + BigInt(i)) * tickSpacing
                     tickIndices.push(Number.parseInt(tickIndex.toString()))
@@ -497,10 +497,10 @@ export async function getTicksAlgebra(contractAddress: string){
         const ind = wordPosIndices[j]
         const bitmap = bitmapResults[j]
 
-        if(bitmap !== 0n){
+        if(bitmap !== BigInt(0)){
             for (let i = 0; i < 256; i++){
-                const bit = 1n
-                const initialized = (bitmap & (bit << BigInt(i))) !== 0n
+                const bit = BigInt(1)
+                const initialized = (bitmap & (bit << BigInt(i))) !== BigInt(0)
                 if(initialized){
                     const tickIndex = (BigInt(ind) * BigInt(256) + BigInt(i)) * tickSpacing
                     tickIndices.push(Number.parseInt(tickIndex.toString()))
@@ -635,10 +635,10 @@ export async function saveAllInitializedTicksMultiCall(){
             const ind = wordPosIndices[j]
             const bitmap = bitmapResults[j]
     
-            if(bitmap !== 0n){
+            if(bitmap !== BigInt(0)){
                 for (let i = 0; i < 256; i++){
-                    const bit = 1n
-                    const initialized = (bitmap & (bit << BigInt(i))) !== 0n
+                    const bit = BigInt(1)
+                    const initialized = (bitmap & (bit << BigInt(i))) !== BigInt(0)
                     if(initialized){
                         const tickIndex = (BigInt(ind) * BigInt(256) + BigInt(i)) * BigInt(60)
                         tickIndices.push(Number.parseInt(tickIndex.toString()))
