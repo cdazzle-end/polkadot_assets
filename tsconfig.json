@@ -12,6 +12,7 @@
       "allowImportingTsExtensions": true,
       "noImplicitAny": false,
       "strict": false,
+      "allowSyntheticDefaultImports": true,
     },
     "include": ["src"],
     "exclude": ["src/lps/moonbeamTestFunctions.ts"]
