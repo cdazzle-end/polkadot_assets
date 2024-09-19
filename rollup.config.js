@@ -27,13 +27,8 @@ export default [
       'path',
     ],
     plugins: [
-      typescript({
-        tsconfig: './tsconfig.json',
-      }),
-      resolve({
-        extensions: ['.js', '.ts'],
-        preferBuiltins: true,
-      }),
+      typescript(),
+      resolve(),
       json(),
 
       globals(),
