@@ -35,6 +35,12 @@ export default [
       json(),
       globals(),
       builtins(),
+      babel({
+        extensions: ['.ts'],
+        plugins: ['@babel/plugin-syntax-import-assertions'],
+        babelHelpers: 'bundled',
+        presets: ['@babel/preset-env']
+      })
     ]
   },
   {
