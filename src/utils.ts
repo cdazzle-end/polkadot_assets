@@ -32,17 +32,20 @@ export async function getBifrostDexApi(relay: Relay, chopsticks: boolean): Promi
 
     let endpoint = chopsticks ? localRpcs[node] : getAllNodeProviders(node);
 
+    let dexApi: ModuleBApi;
+
     if(map.has(node)){
         console.log(`Returning dex api for BifrostPolkadot`);
-        return map.get(node) as ModuleBApi;
+        dexApi = map.get(node) as ModuleBApi;
     } else {
         let provider = new WsProvider(endpoint);
-        let dexApi = new ModuleBApi(provider, BifrostConfig);
+        let bncApi = new ModuleBApi(provider, BifrostConfig);
         await provider.isReady;
-        await dexApi.initApi();
-        map.set(node, dexApi);
-        return dexApi;
+        await bncApi.initApi();
+        map.set(node, bncApi);
+        dexApi = bncApi;
     };
+    return dexApi;
 }
 
 export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<ApiPromise> {
