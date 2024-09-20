@@ -8,7 +8,7 @@ import { WsProvider, Keyring, ApiPromise } from '@polkadot/api';
 import { ModuleBApi, BifrostConfig } from '@zenlink-dex/sdk-api';
 import { Percent, Token, TokenAmount, TradeType, StandardPair, StandardPool, StablePair, StableSwap,  AssetMeta } from '@zenlink-dex/sdk-core';
 import { firstValueFrom } from 'rxjs';
-import { localRpcs } from '../consts.ts';
+import { bncKusamaAssetRegistry, bncPolkadotAssetRegistry, bncPolkadotLpRegistry, bncPolkadotStableLpRegistry, localRpcs } from '../consts.ts';
 import bn from 'bignumber.js';
 
 import { fileURLToPath } from 'url';
@@ -43,7 +43,7 @@ export async function updateLps(chopsticks: boolean) {
     const zenTokens = tokensMeta.map((item: AssetMeta) => {
         return new Token(item);
     });
-    const bncAssets = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/bnc_polkadot_assets.json'), 'utf8'))
+    const bncAssets = JSON.parse(fs.readFileSync(path.join(bncPolkadotAssetRegistry), 'utf8'))
 
     const standardPairs: any[] = await firstValueFrom(dexApi.standardPairOfTokens(zenTokens));
     const standardPools: any[] = await firstValueFrom(dexApi.standardPoolOfPairs(standardPairs));
@@ -71,7 +71,7 @@ export async function updateLps(chopsticks: boolean) {
         return newLp
     })
     // console.log(JSON.stringify(lps, null, 2))
-    await fs.writeFileSync(path.join(__dirname, './lp_registry/bnc_polkadot_lps.json'), JSON.stringify(lps, null, 2));
+    await fs.writeFileSync(path.join(bncPolkadotLpRegistry), JSON.stringify(lps, null, 2));
 
     await saveBncStablePoolData(dexApi)
 
@@ -98,9 +98,7 @@ export async function saveLps() {
     const zenTokens = tokensMeta.map((item: AssetMeta) => {
         return new Token(item);
     });
-    const filePath = path.join(__dirname, './../assets/asset_registry/bnc_polkadot_assets.json');
-    // fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2))
-    const bncAssets = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+    const bncAssets = JSON.parse(fs.readFileSync(bncPolkadotAssetRegistry, 'utf8'))
 
     // console.log(zenTokens.name + " " + zenTokens.symbol)
     zenTokens.forEach((token: any) => {
@@ -145,7 +143,7 @@ export async function saveLps() {
     })
     // console.log("---------------------")
     // console.log(lps)
-    fs.writeFileSync(path.join(__dirname, './lp_registry/bnc_polkadot_lps.json'), JSON.stringify(lps, null, 2));
+    fs.writeFileSync(bncPolkadotLpRegistry, JSON.stringify(lps, null, 2));
 }
 async function saveBncStablePoolData(dexApi: ModuleBApi){
     // const wsLocalChain = localRpcs["BifrostPolkadot"]
@@ -252,7 +250,7 @@ async function saveBncStablePoolData(dexApi: ModuleBApi){
     //     // console.log(JSON.stringify(pool, null, 2))
     // })
 
-    fs.writeFileSync(path.join(__dirname, './lp_registry/bnc_polkadot_stable_lps.json'), JSON.stringify(s, null, 2))
+    fs.writeFileSync(path.join(bncPolkadotStableLpRegistry), JSON.stringify(s, null, 2))
     return s
 }
 
@@ -297,7 +295,7 @@ async function queryAssets(): Promise<TokenData[]> {
 }
 
 async function main() {
-    await saveLps()
+    // await saveLps()
     // await queryAssets()
     // await getLps()
     process.exit(0)

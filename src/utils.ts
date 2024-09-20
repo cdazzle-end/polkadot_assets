@@ -4,19 +4,26 @@ import {  } from '@polkadot/api';    // Value import
 
 
 import {Mangata } from "@mangata-finance/sdk"
-import { dotRpc, ksmRpc, localRpcs } from './consts.ts';
+import { dotRpc, ksmRpc, kusamaAssetRegistryPath, localRpcs, polkadotAssetRegistryPath } from './consts.ts';
 import { BifrostConfig, ModuleBApi } from '@zenlink-dex/sdk-api'
-import { ApiMap, PNode, Relay } from './types.ts'
+import { ApiMap, AssetMap, IMyAsset, PNode, Relay } from './types.ts'
 import { databaseDirectory, assetRegistryFolder, lpRegistryFolder } from './consts.ts'
 import fs from 'fs'
+// await import('@mangata-finance/sdk')
+// import { Mangata } from '@mangata-finance/sdk'
 
-let apiMap: ApiMap;
+let apiMap: ApiMap = new Map<PNode, ApiPromise>();
 
 export async function setApiMap(map: ApiMap) {
     apiMap = map;
 }
-function isBncDex(api: ApiPromise | ModuleBApi): api is ModuleBApi {
-    return "provider" in api;
+
+
+
+export function getAssetRegistry(relay: Relay): IMyAsset[] {
+    const assetRegistryPath = relay === "kusama" ? kusamaAssetRegistryPath : polkadotAssetRegistryPath;
+    const assetArray: IMyAsset[] = JSON.parse(fs.readFileSync(assetRegistryPath, "utf8"));
+    return assetArray
 }
 /**
  * Using this to get/set dex API for bifrost, so we dont have to change return type of main function
@@ -80,8 +87,9 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
     
     if(node == "Mangata"){
         try{
-            const MangataSDK = await import('@mangata-finance/sdk')
-            api = await MangataSDK.Mangata.instance([apiEndpoint[0]]).api()
+            // const MangataSDK = await import('@mangata-finance/sdk')
+            // api = await MangataSDK.Mangata.instance([apiEndpoint[0]]).api()
+            api = await Mangata.instance([apiEndpoint[0]]).api()
             await api.isReady
             if(api.isConnected) {
                 // console.log("API is connected: TRUE")
@@ -94,8 +102,9 @@ export async function getApiForNode(node: PNode, chopsticks: boolean): Promise<A
             
         } catch(e){
             console.log(`Error connecting mangata api ${apiEndpoint[0]}, trying next endpoint`)
-            const MangataSDK = await import('@mangata-finance/sdk')
-            api = await MangataSDK.Mangata.instance([apiEndpoint[1]]).api()
+            // const MangataSDK = await import('@mangata-finance/sdk')
+            // api = await MangataSDK.Mangata.instance([apiEndpoint[1]]).api()
+            api = await Mangata.instance([apiEndpoint[1]]).api()
             await api.isReady
             if(api.isConnected) {
                 console.log("API is connected: TRUE")

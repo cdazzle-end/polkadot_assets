@@ -9,6 +9,7 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 import { getApiForNode } from '../utils.ts';
 
 import { fileURLToPath } from 'url';
+import { paraAssetRegistry, paraLpRegistry } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // import { localRpcs } from 'consts.ts';
@@ -22,7 +23,7 @@ export async function updateLps(chopsticks: boolean) {
     
     const parachainId = await (await api.query.parachainInfo.parachainId()).toJSON() as number;
     const lpEntries = await api.query.amm.pools.entries();
-    let assets: TokenData[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/para_assets.json'), 'utf8')).map((asset: any) => {
+    let assets: TokenData[] = JSON.parse(fs.readFileSync(paraAssetRegistry, 'utf8')).map((asset: any) => {
         return asset.tokenData
     })
     let lps = lpEntries.map(([assetData, lpData]) => {
@@ -50,7 +51,7 @@ export async function updateLps(chopsticks: boolean) {
     lps = lps.filter((lp) => {
         return lp.poolAssets[0] != undefined || lp.poolAssets[1] != undefined
     })
-    fs.writeFileSync(path.join(__dirname, './lp_registry/para_lps.json'), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(path.join(paraLpRegistry), JSON.stringify(lps, null, 2))
     // api.disconnect()
 }
 
@@ -64,7 +65,7 @@ async function saveLps() {
     
     // console.log(JSON.stringify(lpEntries, null, 2))
 
-    let assets: TokenData[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/para_assets.json'), 'utf8')).map((asset: any) => {
+    let assets: TokenData[] = JSON.parse(fs.readFileSync(path.join(paraAssetRegistry), 'utf8')).map((asset: any) => {
         return asset.tokenData
     })
     let lps = lpEntries.map(([assetData, lpData]) => {
@@ -100,12 +101,9 @@ async function saveLps() {
     lps = lps.filter((lp) => {
         return lp.poolAssets[0] != undefined || lp.poolAssets[1] != undefined
     })
-    fs.writeFileSync(path.join('./lp_registry/para_lps.json'), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(path.join(paraLpRegistry), JSON.stringify(lps, null, 2))
 }
 
-async function getLps(): Promise<MyLp[]> {
-    return JSON.parse(fs.readFileSync('../hko/lps.json', 'utf8'));
-}
 
 async function main() {
     // await saveLps()

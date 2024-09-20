@@ -8,6 +8,7 @@ import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import { options } from '@acala-network/api'
 import { getApiForNode} from '../utils.ts';
 import { fileURLToPath } from 'url';
+import { assetRegistryFolder } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -68,7 +69,7 @@ async function queryAssets(chopsticks: boolean): Promise<IMyAsset[]> {
 
 export async function updateAssetRegistryAssetHub(chopsticks: boolean){
     let queriedAssets = await queryAssets(chopsticks) as any
-    let assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, "asset_registry/asset_hub_polkadot_assets.json"), "utf-8")) as any
+    let assetRegistry = JSON.parse(fs.readFileSync(path.join(assetRegistryFolder, "asset_hub_polkadot_assets.json"), "utf-8")) as any
     console.log("assets in registry: ", assetRegistry.length)
 
     // Create a map of existing asset IDs for quick lookup
@@ -81,7 +82,7 @@ export async function updateAssetRegistryAssetHub(chopsticks: boolean){
     assetRegistry.push(...newAssets);
     console.log("assets in registry after update: ", assetRegistry.length)
 
-    fs.writeFileSync(path.join(__dirname, "asset_registry/asset_hub_polkadot_assets.json"), JSON.stringify(assetRegistry, null, 2))
+    fs.writeFileSync(path.join(assetRegistryFolder, "asset_hub_polkadot_assets.json"), JSON.stringify(assetRegistry, null, 2))
 
 }
 

@@ -11,6 +11,7 @@ import path from 'path';
 
 import { fileURLToPath } from 'url';
 import { getApiForNode } from '../utils.ts';
+import { karAssetRegistry, karLpRegistry, karStableLpRegistry } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const endpoint1 = 'wss://karura.api.onfinality.io/public-ws';
@@ -34,7 +35,7 @@ export async function updateLps(chopsticks: boolean) {
 
     let stables = updateStables(api);
     const parachainId = await api.query.parachainInfo?.parachainId();
-    const assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/kar_assets.json'), 'utf8')).map((asset: any) => {
+    const assetRegistry = JSON.parse(fs.readFileSync(path.join(karAssetRegistry), 'utf8')).map((asset: any) => {
         return asset.tokenData
     });
 
@@ -83,7 +84,7 @@ export async function updateLps(chopsticks: boolean) {
     // let stablePools = await queryStableLps(api);
 
     // fs.writeFileSync('./kar/stablePools.json', JSON.stringify(stablePools, null, 2))
-    fs.writeFileSync(path.join(__dirname, './lp_registry/kar_lps.json'), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(path.join(karLpRegistry), JSON.stringify(lps, null, 2))
     await stables.then(() => console.log("kar stables complete"));
     // api.disconnect()
 }
@@ -92,7 +93,7 @@ async function saveLps() {
     let api = await getApiForNode("Karura", false);
 
     const parachainId = await api.query.parachainInfo?.parachainId();
-    const assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../../assets/asset_registry/kar_assets.json'), 'utf8')).map((asset: any) => {
+    const assetRegistry = JSON.parse(fs.readFileSync(path.join(karAssetRegistry), 'utf8')).map((asset: any) => {
         return asset.tokenData
     });
     const lpEntries = await api.query.dex.liquidityPool.entries();
@@ -129,7 +130,7 @@ async function saveLps() {
         return newLp
     });
 
-    fs.writeFileSync(path.join('./lp_registry/kar_lps.json'), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(path.join(karLpRegistry), JSON.stringify(lps, null, 2))
 }
 
 async function updateStables(api: any) {
@@ -138,7 +139,7 @@ async function updateStables(api: any) {
     // await api.isReady;
 
     const parachainId = await api.query.parachainInfo?.parachainId();
-    const assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/kar_assets.json'), 'utf8')).map((asset: any) => {
+    const assetRegistry = JSON.parse(fs.readFileSync(path.join(karAssetRegistry), 'utf8')).map((asset: any) => {
         return asset.tokenData
     });
     const lpEntries = await api.query.stableAsset.pools.entries();
@@ -209,7 +210,7 @@ async function updateStables(api: any) {
     }));
 
     // console.log(pools)
-    fs.writeFileSync(path.join(__dirname, './lp_registry/kar_stable_pools.json'), JSON.stringify(pools, null, 2))
+    fs.writeFileSync(path.join(karStableLpRegistry), JSON.stringify(pools, null, 2))
     // return pools;
 }
 
@@ -219,7 +220,7 @@ async function queryStableLps(api: any) {
     // await api.isReady;
     
     const parachainId = await api.query.parachainInfo?.parachainId();
-    const assetRegistry = JSON.parse(fs.readFileSync('../../assets/kar/asset_registry.json', 'utf8')).map((asset: any) => {
+    const assetRegistry = JSON.parse(fs.readFileSync(karAssetRegistry, 'utf8')).map((asset: any) => {
         return asset.tokenData
     });
     const lpEntries = await api.query.stableAsset.pools.entries();
@@ -286,7 +287,7 @@ async function queryStableLps(api: any) {
     }));
 
     // console.log(pools)
-    fs.writeFileSync('./stablePools.json', JSON.stringify(pools, null, 2))
+    fs.writeFileSync(karStableLpRegistry, JSON.stringify(pools, null, 2))
     return pools;
 }
 
@@ -365,10 +366,7 @@ async function querySubscan() {
         .catch((error: any) => console.error(error));
 }
 
-async function getLps() {
-    // console.log(JSON.parse(fs.readFileSync('../kar/lps.json', 'utf8')))
-    return JSON.parse(fs.readFileSync('../kar/lps.json', 'utf8'))
-}
+
 
 async function testStableSwap() {
     // liquidityStats: ['1030529523909449995', '33112418564000000', '32952968957000000']
@@ -397,10 +395,6 @@ async function testStableSwap() {
     console.log("SUM: " + sum)
     console.log("PRODUCT: " + prod)
     console.log("PRODUCT2: " + prod2)
-}
-async function readStables() {
-    return JSON.parse(fs.readFileSync('../kar/stablePools.json', 'utf8'))
-
 }
 
 // async function queryStableLps() {

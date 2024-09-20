@@ -20,6 +20,7 @@ import {
     ContractCallContext,
   } from 'ethereum-multicall';
 import { CallContext } from 'ethereum-multicall/dist/esm/models/index';
+import { glmrAssetRegistry } from '../consts.ts';
 // import { mnemonicToLegacySeed, hdEthereum } from '@polkadot/util-crypto';
 const rpc1 = 'wss://wss.moonriver.moonbeam.network';
 const rpc2 = 'wss://moonriver.public.blastapi.io';
@@ -89,14 +90,8 @@ export async function saveAssets() {
         }
         return newAssetRegistryObject
     })
-    const filePath = path.join(__dirname, '/asset_registry/glmr_assets.json')
-    await fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2))
+    await fs.writeFileSync(glmrAssetRegistry, JSON.stringify(assetRegistry, null, 2))
     // process.exit(0)
-}
-
-export async function getAssets(): Promise<IMyAsset[]> {
-    const assetRegistry = JSON.parse(fs.readFileSync('../assets/movr/asset_registry.json', 'utf8'));
-    return assetRegistry
 }
 
 async function findValueByKey(obj: any, targetKey: any): Promise<any> {

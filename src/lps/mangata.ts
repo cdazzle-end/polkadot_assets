@@ -5,6 +5,7 @@ import path from 'path';
 import { getApiForNode } from '../utils.ts';
 
 import { fileURLToPath } from 'url';
+import { mgxLpRegistry } from "../consts.ts";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -43,7 +44,7 @@ export async function updateLps(chopsticks: boolean) {
         }
         return lp
     }))
-    fs.writeFileSync(path.join(__dirname, './lp_registry/mgx_lps.json'), JSON.stringify(lps, null, 2));
+    fs.writeFileSync(path.join(mgxLpRegistry), JSON.stringify(lps, null, 2));
     // api.disconnect()
 }
 

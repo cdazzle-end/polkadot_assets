@@ -18,6 +18,7 @@ Old config
         // "baseUrl": ".",
         "resolveJsonModule": true,
         "skipLibCheck": true,
+        "noEmit": true,
         "emitDeclarationOnly": true,
         "outDir": "./dist",
         "typeRoots": ["./node_modules/@polkadot/ts", "./node_modules/@types"],

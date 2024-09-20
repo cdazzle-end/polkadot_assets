@@ -7,6 +7,7 @@ import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types';
 // import { CurrencyId } from '@parallel-finance/types/interfaces';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { getApiForNode } from '../utils';
+import { paraAssetRegistry } from '../consts';
 // import { WsProvider } from '@polkadot/rpc-provider';
 
 
@@ -46,18 +47,9 @@ export async function saveAssets() {
 
         }
     }))
-    // assetRegistry = assetRegistry.filter((asset) => {
-    //     return asset != undefined
-    // })
-    // console.log(assetRegistry)
-    // fs.writeFileSync('../../assets/hko/asset_registry.json', JSON.stringify(assetRegistry, null, 2))
-    const filePath = path.join(__dirname, 'asset_registry/para_assets.json');
-    fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2));
+    fs.writeFileSync(paraAssetRegistry, JSON.stringify(assetRegistry, null, 2));
 }
 
-export async function getAssets(): Promise < IMyAsset[] > {
-    return JSON.parse(fs.readFileSync('../assets/hko/asset_registry.json', 'utf8'));
-}
 
 async function queryAssets(api: ApiPromise): Promise<TokenData[]> {
     // const provider = new WsProvider('wss://heiko-rpc.parallel.fi');

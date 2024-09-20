@@ -5,16 +5,13 @@ import {ApiPromise, WsProvider} from '@polkadot/api';
 // const { ApiPromise, WsProvider } = ('@polkadot/api');
 // const { options } = require('@acala-network/api');
 import { options } from '@acala-network/api';
-import { getApiForNode } from '../utils.ts';
+import { getApiForNode, getAssetRegistry } from '../utils.ts';
 
 import { fileURLToPath } from 'url';
-import { assetRegistryFolder, lpRegistryFolder } from '../consts.ts';
+import { acaAssetRegistry, acaLpRegistry, acaStableLpRegistry, assetRegistryFolder, lpRegistryFolder } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const acaLpRegistry = path.join(__dirname, `${lpRegistryFolder}aca_lps.json`);
-const acaStableLpRegistry = path.join(__dirname, `${lpRegistryFolder}aca_stable_lps.json`);
-const acaAssetRegistry = path.join(__dirname, `${assetRegistryFolder}aca_assets.json`);
 const endpoint1 = 'wss://karura.api.onfinality.io/public-ws';
 const endpoint2 = 'wss://karura-rpc-2.aca-api.network/ws';
 const endpoint6 = 'wss://karura-rpc.dwellir.com'
@@ -35,7 +32,8 @@ export async function updateLps(chopsticks: boolean) {
 
     let stables = updateStables(api);
     const parachainId = await api.query.parachainInfo?.parachainId();
-    const assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/aca_assets.json'), 'utf8')).map((asset: any) => {
+    // let assetRegistry = getAssetRegistry('polkadot')
+    const assetRegistry = JSON.parse(fs.readFileSync(acaAssetRegistry, 'utf8')).map((asset: any) => {
         return asset.tokenData
     });
 
@@ -85,7 +83,7 @@ export async function updateLps(chopsticks: boolean) {
     // let stablePools = await queryStableLps(api);
 
     // fs.writeFileSync('./kar/stablePools.json', JSON.stringify(stablePools, null, 2))
-    fs.writeFileSync(path.join(__dirname, acaLpRegistry), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(path.join(acaLpRegistry), JSON.stringify(lps, null, 2))
     await stables.then(() => console.log("aca stables complete"));
     // api.disconnect()
 }
@@ -97,7 +95,7 @@ async function saveLps() {
     await api.isReady;
 
     const parachainId = await api.query.parachainInfo?.parachainId();
-    const assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/aca_assets.json'), 'utf8')).map((asset: any) => {
+    const assetRegistry = JSON.parse(fs.readFileSync(acaAssetRegistry, 'utf8')).map((asset: any) => {
         return asset.tokenData
     });
     const lpEntries = await api.query.dex.liquidityPool.entries();
@@ -144,7 +142,7 @@ async function saveLps() {
         return newLp
     });
 
-    fs.writeFileSync(path.join(__dirname, acaLpRegistry), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(acaLpRegistry, JSON.stringify(lps, null, 2))
 }
 
 async function updateStables(api: any) {
@@ -153,7 +151,7 @@ async function updateStables(api: any) {
     // await api.isReady;
 
     const parachainId = await api.query.parachainInfo?.parachainId();
-    const assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/aca_assets.json'), 'utf8')).map((asset: any) => {
+    const assetRegistry = JSON.parse(fs.readFileSync(acaAssetRegistry, 'utf8')).map((asset: any) => {
         return asset.tokenData
     });
     const lpEntries = await api.query.stableAsset.pools.entries();
@@ -260,7 +258,7 @@ async function updateStables(api: any) {
     }));
 
     // console.log(pools)
-    fs.writeFileSync(path.join(__dirname, './lp_registry/aca_stable_lps.json'), JSON.stringify(pools, null, 2))
+    fs.writeFileSync(acaStableLpRegistry, JSON.stringify(pools, null, 2))
     // return pools;
 }
 
@@ -270,7 +268,7 @@ async function queryStableLps(api: any) {
     // await api.isReady;
     
     const parachainId = await api.query.parachainInfo?.parachainId();
-    const assetRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/aca_assets.json'), 'utf8')).map((asset: any) => {
+    const assetRegistry = JSON.parse(fs.readFileSync(acaAssetRegistry, 'utf8')).map((asset: any) => {
         return asset.tokenData
     });
     const lpEntries = await api.query.stableAsset.pools.entries();
@@ -338,7 +336,7 @@ async function queryStableLps(api: any) {
     }));
 
     // console.log(pools)
-    fs.writeFileSync(path.join(__dirname, './lp_registry/aca_stable_lps.json'), JSON.stringify(pools, null, 2))
+    fs.writeFileSync(path.join(acaStableLpRegistry), JSON.stringify(pools, null, 2))
     return pools;
 }
 

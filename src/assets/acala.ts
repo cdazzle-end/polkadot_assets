@@ -7,6 +7,7 @@ import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import { options } from '@acala-network/api'
 import { getApiForNode } from '../utils.ts';
 import { fileURLToPath } from 'url';
+import { acaAssetRegistry } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 //This can be converted to unified MyAsset type
@@ -294,8 +295,7 @@ export async function saveAssets() {
         console.log(JSON.stringify(asset?.tokenLocation))
     })
 
-    const filePath = path.join(__dirname, './asset_registry/aca_assets.json');
-    fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2));
+    fs.writeFileSync(acaAssetRegistry, JSON.stringify(assetRegistry, null, 2));
 }
 
 // export async function getAssets(): Promise<MyAssetRegistryObject[]> {

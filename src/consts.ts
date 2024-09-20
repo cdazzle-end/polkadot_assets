@@ -3,6 +3,10 @@ export const databaseDirectory = "C://Users//dazzl//CodingProjects//substrate//p
 export const assetRegistryFolder = `${databaseDirectory}asset_registry//`
 export const lpRegistryFolder = `${databaseDirectory}lp_registry//`
 
+// Main access files for all assets
+export const polkadotAssetRegistryPath = `${assetRegistryFolder}/allAssetsPolkadotCollected.json`;
+export const kusamaAssetRegistryPath = `${assetRegistryFolder}/allAssetsKusamaCollected.json`;
+
 export const localRpcs = {
     "Kusama": "ws://172.26.130.75:8013",
     "Karura": "ws://172.26.130.75:8008",
@@ -35,6 +39,8 @@ export const localRpcs = {
     // "BifrostPolkadot": "ws://172.26.130.75:9010",
 }
 
+// REVIEW We should probably remove this, and just collect all assets straight to the main file. Just need to change arb_finder
+// Individual files for each chain. Will be collected into one file to use in other projects
 export const acaAssetRegistry = `${assetRegistryFolder}aca_assets.json`
 export const assetHubKustamaAssetRegistry = `${assetRegistryFolder}asset_hub_kusama_assets.json`
 export const assetHubPolkadotAssetRegistry = `${assetRegistryFolder}asset_hub_polkadot_assets.json`
@@ -44,12 +50,14 @@ export const bsxAssetRegistry = `${assetRegistryFolder}bsx_assets.json`
 export const glmrAssetRegistry = `${assetRegistryFolder}glmr_assets.json`
 export const glmrEvmAssetRegsitry = `${assetRegistryFolder}glmr_evm_assets.json`
 export const hkoAssetRegistry = `${assetRegistryFolder}hko_assets.json`
+export const hdxAssetRegistry = `${assetRegistryFolder}hdx_assets.json`
 export const karAssetRegistry = `${assetRegistryFolder}kar_assets.json`
 export const mgxAssetRegistry = `${assetRegistryFolder}mgx_assets.json`
 export const movrAssetRegistry = `${assetRegistryFolder}movr_assets.json`
 export const otherKusamaAssetRegistry = `${assetRegistryFolder}other_kusama_assets.json`
 export const otherPolkadotAssetRegistry = `${assetRegistryFolder}other_polkadot_assets.json`
 export const paraAssetRegistry = `${assetRegistryFolder}para_assets.json`
+
 export const acaLpRegistry = `${lpRegistryFolder}aca_lps.json`
 export const acaStableLpRegistry = `${lpRegistryFolder}aca_stable_lps.json`
 export const bncKusamaLpRegistry = `${lpRegistryFolder}bnc_kusama_lps.json`
@@ -58,6 +66,7 @@ export const bncPolkadotStableLpRegistry = `${lpRegistryFolder}bnc_polkadot_stab
 export const bsxLpRegistry = `${lpRegistryFolder}bsx_lps.json`
 export const glmrLpRegistry = `${lpRegistryFolder}glmr_lps.json`
 export const hdxLpRegistry = `${lpRegistryFolder}hdx_lps.json`
+export const hdxOmniPool = `${lpRegistryFolder}hdx_omnipool.json`
 export const hdxStableLpRegistry = `${lpRegistryFolder}hdx_stable_lps.json`
 export const hkoLpRegistry = `${lpRegistryFolder}hko_lps.json`
 export const karLpRegistry = `${lpRegistryFolder}kar_lps.json`

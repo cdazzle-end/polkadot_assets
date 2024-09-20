@@ -70,9 +70,9 @@ async function compareAssetRegistry(){
 
 export async function saveCollectedAssetRegistry(relay: Relay){
     console.log(`Saving collected asset registry for ${relay}`)
-    let assetFilePath = relay === 'polkadot' ? `${assetRegistryFolder}/allAssetsPolkadotCollected.json` : `${assetRegistryFolder}/allAssetsPolkadotCollected.json`;
+    let assetFilePath = relay === 'polkadot' ? `allAssetsPolkadotCollected.json` : `allAssetsKusamaCollected.json`;
     let assetRegistryCollected = await buildAssetsFromFiles(relay);
-    fs.writeFileSync(path.join(__dirname, assetFilePath), JSON.stringify(assetRegistryCollected, null, 2))
+    fs.writeFileSync(path.join(assetRegistryFolder, assetFilePath), JSON.stringify(assetRegistryCollected, null, 2))
 }
 async function buildAssetsFromFiles(relay: Relay){
     // let assetRegistryFolder = assetRegistryFolder;

@@ -105,6 +105,7 @@ async function saveLps() {
     getSdnLiqPools()
 }
 
+
 // Save evm lps
 async function saveEvmLps() {
     const lpAddresses = JSON.parse(fs.readFileSync('all_lp_addresses.json', 'utf8'))

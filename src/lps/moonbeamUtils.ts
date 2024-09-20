@@ -6,7 +6,7 @@ import bn from 'bignumber.js'
 import { parse } from 'path'
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { GlobalState, MyLp, Slot0, TickData } from '../types.ts';
-import { altDexContractAbi, dexAbiMap, dexAbis, selectedHttpEndpoint, selectedWsEndpoint, wsProvider, xcTokenAbi } from './glmrConsts.ts';
+import { altDexContractAbi, dexAbiMap, dexAbis, glmrLpsTest1, selectedHttpEndpoint, selectedWsEndpoint, wsProvider, xcTokenAbi } from './glmrConsts.ts';
 import { TickMath } from '@uniswap/v3-sdk';
 import {
     Multicall,
@@ -15,14 +15,17 @@ import {
   } from 'ethereum-multicall';
 
   import { fileURLToPath } from 'url';
+import { lpRegistryFolder } from '../consts.ts';
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
+
 
 
 // Query all intialized ticks through multicall
 export async function getUni3TickData(contractAddress){
     // console.log(`Uni3: ${contractAddress}`)
-    let glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+    // let glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+    let glmrLps: MyLp[] = glmrLpsTest1 as MyLp[]
     let thisGlmrLp = glmrLps.find((lp) => {
         return lp.contractAddress == contractAddress
     })
@@ -98,7 +101,7 @@ export async function getUni3TickData(contractAddress){
 // Query all intialized ticks through multicall
 export async function getAlgebraTickData(contractAddress){
     // console.log(`Algebra: ${contractAddress}`)
-    let glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+    let glmrLps: MyLp[] = glmrLpsTest1 as MyLp[]
     let thisGlmrLp = glmrLps.find((lp) => {
         return lp.contractAddress == contractAddress
     })
@@ -205,7 +208,9 @@ export interface ContractTickQueryResult{
     tickDatas: TickDataQuery[]
 }
 export async function queryAllContractsTickData(contracts: ContractTickQuery[]): Promise<ContractTickQueryResult[]>{
-    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint, tryAggregate: true });
+    // console.log(`Selected HTTP Endpoint: ${selectedHttpEndpoint}`)
+    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint!, tryAggregate: true });
+    // console.log(`Set multicall`)
     let contractCallContext: ContractCallContext[] = [];
 
     contracts.forEach(({ address, ticks, abi }) => {
@@ -224,7 +229,10 @@ export async function queryAllContractsTickData(contracts: ContractTickQuery[]):
     });
 
     try {
+        // console.log(`Calling multicall`)
         const results: ContractCallResults = await multicall.call(contractCallContext);
+
+        // console.log(`Multicall results: ${JSON.stringify(results, null, 2)}`)
 
         // Process the results for each contract
         return contracts.map(({ address, ticks, abi }) => {
@@ -261,7 +269,7 @@ export async function queryTickData(contractAddress: string, ticks: number[], ab
         return {reference: `tickData`, methodName: `ticks`, methodParameters: [tick]}
     })
 
-    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint, tryAggregate: true });
+    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint!, tryAggregate: true });
     const contractCallContext: ContractCallContext[] = [
         {
             reference: 'allTicks',
@@ -423,7 +431,7 @@ export async function getTicksUni(contractAddress: string){
         calls.push(call)
     }
 
-    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint, tryAggregate: true });
+    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint!, tryAggregate: true });
     const contractCallContext: ContractCallContext[] = [
         {
             reference: 'uniBitmapCall',
@@ -475,7 +483,7 @@ export async function getTicksAlgebra(contractAddress: string){
         calls.push(call)
     }
 
-    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint, tryAggregate: true });
+    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint!, tryAggregate: true });
     const contractCallContext: ContractCallContext[] = [
         {
             reference: 'algebraTickTable',
@@ -514,7 +522,7 @@ export async function getTicksAlgebra(contractAddress: string){
 
 
 export async function saveAllInitializedTicks(){
-    const glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+    let glmrLps: MyLp[] = glmrLpsTest1 as MyLp[]
     const batchSize = 100
     let lpIndex = 0
     let dexIndexes: number[]= []
@@ -560,100 +568,16 @@ export async function saveAllInitializedTicks(){
         });
     
         // Optionally, save data after processing each batch
-        fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), JSON.stringify(glmrLps, null, 2))
+        fs.writeFileSync(path.join(lpRegistryFolder, './lp_registry/glmr_lps_test_1.json'), JSON.stringify(glmrLps, null, 2))
     }
         
     
 
 }
 
-// Batch all tick queries into a single multicall
-export async function saveAllInitializedTicksMultiCall(){
-    const glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
-    let dexes: MyLp[] = []
-    let lpIndex = 0;
-    glmrLps.forEach((lp) => {
-        if(lp.dexType === 'algebra' || lp.dexType === 'uni3'){
-            dexes.push(glmrLps[lpIndex])
-        }
-        lpIndex++
-    })
-
-    // let calls: any[] = []
-    let wordArrays:any[] = []
-    let callContractContexts: ContractCallContext[] = []
-    for(let i = 0; i < dexes.length; i++){
-        let lp = dexes[i]!
-        // let ticks = await getTicksAlgebra(lp.contractAddress!)
-        // lp.initializedTicks = ticks
-        // console.log(`Ticks for ${lp.contractAddress!}: ${ticks}`)
-        const pool = await new ethers.Contract(lp.contractAddress!, dexAbiMap['algebra'], wsProvider);
-        let tickSpacing = await pool.tickSpacing();
-        let method = lp.dexType === 'algebra' ? 'tickTable' : 'tickBitmap'
-        let wordPosIndices: number[] = []
-        let currentCalls: any[] = []
-        for (let i = minWord; i <= maxWord; i++) {
-            wordPosIndices.push(i)
-            let call = {reference: `tickBitmap`, methodName: method, methodParameters: [i]}
-            // console.log(call)
-            currentCalls.push(call)
-        }
-        // console.log(wordPosIndices)
-        wordArrays.push(wordPosIndices)
-        const contractCallContext: ContractCallContext = 
-            {
-                reference: `tickTable${i}`,
-                contractAddress: lp.contractAddress!,
-                abi: dexAbiMap[lp.dexType],
-                calls: currentCalls
-            }
-        
-        // calls.push(contractCallContext)
-        callContractContexts.push(contractCallContext)
-
-    }
-    console.log(wordArrays.length)
-    console.log("calls created")
-    console.log(callContractContexts.length)
-    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint, tryAggregate: true });
-    const results: ContractCallResults = await multicall.call(callContractContexts);
-    console.log(results)
-    for(let i = 0; i < wordArrays.length; i++){
-        let reference = `tickTable${i}`
-        let contract = results.results[reference].originalContractCallContext.contractAddress
-        const bitmapResults = results.results[reference].callsReturnContext.map((callReturnContext, i) => {
-            let hex = callReturnContext.returnValues[0].hex
-            let hexInt = BigInt(hex.toString())
-            console.log(hexInt)
-            return hexInt
-        })
-        const tickIndices: number[] = []
-    
-        let wordPosIndices = wordArrays[i]
-
-        for(let j = 0; j < wordPosIndices.length; j++){
-            const ind = wordPosIndices[j]
-            const bitmap = bitmapResults[j]
-    
-            if(bitmap !== BigInt(0)){
-                for (let i = 0; i < 256; i++){
-                    const bit = BigInt(1)
-                    const initialized = (bitmap & (bit << BigInt(i))) !== BigInt(0)
-                    if(initialized){
-                        const tickIndex = (BigInt(ind) * BigInt(256) + BigInt(i)) * BigInt(60)
-                        tickIndices.push(Number.parseInt(tickIndex.toString()))
-                    }
-                }
-            }
-        }
-        console.log(`Contrcact ${contract}`)
-        console.log(tickIndices)
-    }
-
-
-}   
+   
 export function rewriteAbi(){
-    let glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+    let glmrLps: MyLp[] = glmrLpsTest1 as MyLp[]
     glmrLps.forEach(lp => {
         if(lp.dexType === 'algebra'){
             lp.abi = 'algebra'
@@ -661,25 +585,25 @@ export function rewriteAbi(){
             lp.abi = 'uni3'
         }
     })
-    fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), JSON.stringify(glmrLps, null, 2))
+    fs.writeFileSync(path.join(lpRegistryFolder, 'glmr_lps_test_1.json'), JSON.stringify(glmrLps, null, 2))
 }
-interface TempTickData {
-    contractAddress: string,
-    ticks: number[]
-}
-export async function writeTempFile(contractAddress: string, ticks){
-    let filename = contractAddress + ".json"
-    let tickData: TempTickData = {
-        contractAddress: contractAddress,
-        ticks: ticks
-    }
-    fs.writeFileSync(path.join(__dirname, './temp', filename), JSON.stringify(tickData, null, 2))
-}
+// interface TempTickData {
+//     contractAddress: string,
+//     ticks: number[]
+// }
+// export async function writeTempFile(contractAddress: string, ticks){
+//     let filename = contractAddress + ".json"
+//     let tickData: TempTickData = {
+//         contractAddress: contractAddress,
+//         ticks: ticks
+//     }
+//     fs.writeFileSync(path.join(__dirname, './temp', filename), JSON.stringify(tickData, null, 2))
+// }
 
-async function getTempFile(contractAddress: string){
-    let ticks: TempTickData[] = JSON.parse(fs.readFileSync(path.join(__dirname, './temp', contractAddress + ".json"), 'utf8'))
-}
+// async function getTempFile(contractAddress: string){
+//     let ticks: TempTickData[] = JSON.parse(fs.readFileSync(path.join(__dirname, './temp', contractAddress + ".json"), 'utf8'))
+// }
 
-async function saveTempData(){
+// async function saveTempData(){
 
-}
+// }

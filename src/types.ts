@@ -10,6 +10,7 @@ import { ModuleBApi } from "@zenlink-dex/sdk-api"
 export type Relay = 'polkadot' | 'kusama'
 export type PNode = TNode | 'Polkadot' | 'Kusama' 
 export type ApiMap = Map<PNode, ApiPromise | ModuleBApi> 
+export type AssetMap = Map<string, IMyAsset>
 
 //This is the interface for the asset registry object. Combines token metadata and token location
 export interface IMyAsset {

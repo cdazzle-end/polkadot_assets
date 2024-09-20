@@ -1,21 +1,17 @@
+import { ApiPromise, WsProvider } from '@polkadot/api';
 import * as fs from 'fs';
 import path from 'path';
-import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
-import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
-// import { ApiOptions,  } from '@polkadot/api/types';
-// import { WsProvider  } from '@polkadot/rpc-provider'
-// // import { Codec } from '@polkadot/types-codec/types';
-// import { Junction, MultiLocation, } from '@polkadot/types/interfaces'
-// import { firstValueFrom } from 'rxjs';
-import { ModuleBApi, BifrostConfig } from '@zenlink-dex/sdk-api';
+import { IMyAsset, MyJunction, MyMultiLocation, TokenData } from '../types.ts';
+import { BifrostConfig, ModuleBApi } from '@zenlink-dex/sdk-api';
 // import pkg from '@zenlink-dex/sdk-api';
 // const { ModuleBApi, BifrostConfig } = pkg;  
-import { Percent, Token, TokenAmount, TradeType, StandardPair, StandardPool, StablePair, StableSwap, AssetMeta, AssetType } from '@zenlink-dex/sdk-core';
+import { Token } from '@zenlink-dex/sdk-core';
 // import sdkCore from '@zenlink-dex/sdk-core';
 // const { Percent, Token, TokenAmount, TradeType, StandardPair, StandardPool, StablePair, StableSwap, AssetType } = sdkCore
-import { getApiForNode } from '../utils.ts';
 import axios from 'axios';
 import { fileURLToPath } from 'url';
+import { getApiForNode } from '../utils.ts';
+import { bncPolkadotAssetRegistry } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -65,8 +61,7 @@ export async function saveAssets() {
             console.log(asset.tokenLocation)
         }
     })
-    const filePath = path.join(__dirname, 'asset_registry/bnc_polkadot_assets.json');
-    fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2));
+    fs.writeFileSync(bncPolkadotAssetRegistry, JSON.stringify(assetRegistry, null, 2));
 
 
 }
@@ -276,7 +271,7 @@ export async function getAssets(): Promise<IMyAsset[]> {
 async function main() {
     // queryAssets();
     // queryLocations();
-    await saveAssets();
+    // await saveAssets();
     // await queryZenAssets()
     // process.exit(0)
 }

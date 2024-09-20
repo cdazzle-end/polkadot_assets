@@ -8,9 +8,10 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 import { GlobalState, MyLp, Slot0 } from '../types.ts';
 import { altDexContractAbi, dexAbiMap, dexAbis, wsProvider, xcTokenAbi } from './glmrConsts.ts';
 import { TickMath } from '@uniswap/v3-sdk';
-import { ContractTickQuery, ContractTickQueryResult, getAlgebraTickData, getSolarData, getUni3TickData, queryAllContractsTickData, rewriteAbi, saveAllInitializedTicks, saveAllInitializedTicksMultiCall } from './moonbeamUtils.ts'
+import { ContractTickQuery, ContractTickQueryResult, getAlgebraTickData, getSolarData, getUni3TickData, queryAllContractsTickData, rewriteAbi, saveAllInitializedTicks} from './moonbeamUtils.ts'
 
 import { fileURLToPath } from 'url';
+import { glmrAssetRegistry, glmrLpRegistry } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const rpc1 = 'wss://moonbeam.public.blastapi.io';
 const __dirname = path.dirname(__filename);
@@ -131,6 +132,8 @@ interface Lp {
 //     // fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
 // }
 
+
+import glmrLpsTest1 from './lp_registry/glmr_lps_test_1.json' assert { type: 'json' };
 /**
  * Can rewrite this when rested
  * 
@@ -141,9 +144,9 @@ interface Lp {
  * REVIEW INITIALIZED TICK DATA, because were just pulling them from already existing data and not querying them
  */
 export async function combinedQuery(): Promise<MyLp[]>{
-    console.log('starting')
-    const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), 'utf8'))
-    const glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
+    // console.log('starting combined query')
+    const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(glmrLpRegistry), 'utf8'))
+    const glmrLps: MyLp[] = glmrLpsTest1 as MyLp[]
     const lpMap: Map<string, MyLp> = new Map(glmrLps.map(lp => [lp.contractAddress!, lp]));
     
     // let lpPromises = []
@@ -171,6 +174,7 @@ export async function combinedQuery(): Promise<MyLp[]>{
     await Promise.all(lpsPromise)
     await Promise.all(contractQueries)
     // console.log(`Contract queries: ${JSON.stringify(contractQueries, null, 2)}`)
+    // console.log(`Query glmr lps...`)
     let queryResults: ContractTickQueryResult[] = await queryAllContractsTickData(contractQueries)
     let tickLps = queryResults.map((result) => {
         if(result.abi == 'uni3'){
@@ -301,7 +305,7 @@ export async function saveLps() {
     let lps = await combinedQuery()
     lps = lps.filter((lp) => lp != undefined)
     
-    const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
+    const asseRegistry = JSON.parse(fs.readFileSync(path.join(glmrAssetRegistry), 'utf8'))
     lps.map((lp: any) => {
         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
@@ -313,138 +317,138 @@ export async function saveLps() {
             lps[index] = updatedLp
         }
     })
-    fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(path.join(glmrLpRegistry), JSON.stringify(lps, null, 2))
 }
 
 
-async function saveLpsAdvanced(){
-    let lpDataSets: LpData[] = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lp_data_results.json'), 'utf8'))
-    lpDataSets.forEach(async (lpData: LpData) => {
-        if(lpData.abi == 'algebra'){
-            console.log(`Contract: ${lpData.address}`)
-            const pool = await new ethers.Contract(lpData.address, dexAbiMap['algebra'], wsProvider);
-            console.log("Algebra")
-            let token0 = await pool.token0();
-            let token1 = await pool.token1();
-            console.log(`Token0: ${token0} - Token1: ${token1}`)
-        } 
-    })
+// async function saveLpsAdvanced(){
+//     let lpDataSets: LpData[] = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lp_data_results.json'), 'utf8'))
+//     lpDataSets.forEach(async (lpData: LpData) => {
+//         if(lpData.abi == 'algebra'){
+//             console.log(`Contract: ${lpData.address}`)
+//             const pool = await new ethers.Contract(lpData.address, dexAbiMap['algebra'], wsProvider);
+//             console.log("Algebra")
+//             let token0 = await pool.token0();
+//             let token1 = await pool.token1();
+//             console.log(`Token0: ${token0} - Token1: ${token1}`)
+//         } 
+//     })
 
-    // for(let lp of lpDataSets){
-    //     if(lp.abi == 'algebra'){
-    //         console.log(`Contract: ${lp.address}`)
-    //         const pool = await new ethers.Contract(lp.address, dexAbiMap['algebra'], provider);
-    //         console.log("Algebra")
-    //         let token0 = await pool.token0();
-    //         let token1 = await pool.token1();
-    //         console.log(`Token0: ${token0} - Token1: ${token1}`)
-    //     }
-    // }
+//     // for(let lp of lpDataSets){
+//     //     if(lp.abi == 'algebra'){
+//     //         console.log(`Contract: ${lp.address}`)
+//     //         const pool = await new ethers.Contract(lp.address, dexAbiMap['algebra'], provider);
+//     //         console.log("Algebra")
+//     //         let token0 = await pool.token0();
+//     //         let token1 = await pool.token1();
+//     //         console.log(`Token0: ${token0} - Token1: ${token1}`)
+//     //     }
+//     // }
 
-    let testContract = "0xb13b281503f6ec8a837ae1a21e86a9cae368fcc5"
-    const pool = await new ethers.Contract(testContract, dexAbiMap['algebra'], wsProvider);
-    let token0 = await pool.token0();
-    let token1 = await pool.token1();
-    let token0Contract = await new ethers.Contract(token0, xcTokenAbi, wsProvider);
-    let token1Contract = await new ethers.Contract(token1, xcTokenAbi, wsProvider);
-    let token0Symbol = await token0Contract.symbol();
-    let token1Symbol = await token1Contract.symbol();
-    let token0Decimals = await token0Contract.decimals();
-    let token1Decimals = await token1Contract.decimals();
-    let liquidity = await pool.liquidity();
-    let tickSpacing = await pool.tickSpacing();
+//     let testContract = "0xb13b281503f6ec8a837ae1a21e86a9cae368fcc5"
+//     const pool = await new ethers.Contract(testContract, dexAbiMap['algebra'], wsProvider);
+//     let token0 = await pool.token0();
+//     let token1 = await pool.token1();
+//     let token0Contract = await new ethers.Contract(token0, xcTokenAbi, wsProvider);
+//     let token1Contract = await new ethers.Contract(token1, xcTokenAbi, wsProvider);
+//     let token0Symbol = await token0Contract.symbol();
+//     let token1Symbol = await token1Contract.symbol();
+//     let token0Decimals = await token0Contract.decimals();
+//     let token1Decimals = await token1Contract.decimals();
+//     let liquidity = await pool.liquidity();
+//     let tickSpacing = await pool.tickSpacing();
     
-    let liqBn = new bn(liquidity)
-    let tickSpacingBn = new bn(tickSpacing)
+//     let liqBn = new bn(liquidity)
+//     let tickSpacingBn = new bn(tickSpacing)
  
 
 
-    let poolInfo: GlobalState = await pool.globalState()
-    console.log(`Token0: ${token0} - Token1: ${token1}`)
-    console.log(poolInfo)
-    let poolFee = new bn(poolInfo.fee)
-    let poolFeeRate = poolFee.div(new bn(1).times(new bn(10).pow(6)))
-    let currentTick =new bn(poolInfo.tick)
-    bn.config({ EXPONENTIAL_AT: 999999, DECIMAL_PLACES: 40 }) // Set to max precision
-    let sqrtPriceX96 = new bn(poolInfo.price)
+//     let poolInfo: GlobalState = await pool.globalState()
+//     console.log(`Token0: ${token0} - Token1: ${token1}`)
+//     console.log(poolInfo)
+//     let poolFee = new bn(poolInfo.fee)
+//     let poolFeeRate = poolFee.div(new bn(1).times(new bn(10).pow(6)))
+//     let currentTick =new bn(poolInfo.tick)
+//     bn.config({ EXPONENTIAL_AT: 999999, DECIMAL_PLACES: 40 }) // Set to max precision
+//     let sqrtPriceX96 = new bn(poolInfo.price)
     
-    let q96 = new bn(2).pow(96)
-    let sqrtPrice = sqrtPriceX96.div(q96)
-    let price = sqrtPrice.pow(2)
-    console.log(`Sqrt96 Price: ${sqrtPriceX96}`)
-    console.log(`Sqrt Price: ${sqrtPrice}`)
-    console.log(`Price: ${price}`)
+//     let q96 = new bn(2).pow(96)
+//     let sqrtPrice = sqrtPriceX96.div(q96)
+//     let price = sqrtPrice.pow(2)
+//     console.log(`Sqrt96 Price: ${sqrtPriceX96}`)
+//     console.log(`Sqrt Price: ${sqrtPrice}`)
+//     console.log(`Price: ${price}`)
     
-    let glmrDotPrice = (sqrtPriceX96.div(q96)).pow(2)
-    let inputGlmr = new bn(1).times(new bn(10).pow(token0Decimals))
-    let poneDot = new bn(0.1).times(new bn(10).pow(token1Decimals))
-    let oneDot = new bn(1).times(new bn(10).pow(token1Decimals))
-    let tenDot = new bn(10).times(new bn(10).pow(token1Decimals))
-    let oneHDot = new bn(100).times(new bn(10).pow(token1Decimals))
-    let dotIn = oneHDot
-    let glmrIn = new bn(100).times(new bn(10).pow(token0Decimals))
-    let feesInDot = dotIn.times(poolFeeRate)
-    let feesInGlmr = glmrIn.times(poolFeeRate)
-    console.log(`GLMR/DOT Price: ${glmrDotPrice}`)
-    // console.log(`Input GLMR: ${inputGlmr}`)
-    // L = dY / d sqrt(P)
+//     let glmrDotPrice = (sqrtPriceX96.div(q96)).pow(2)
+//     let inputGlmr = new bn(1).times(new bn(10).pow(token0Decimals))
+//     let poneDot = new bn(0.1).times(new bn(10).pow(token1Decimals))
+//     let oneDot = new bn(1).times(new bn(10).pow(token1Decimals))
+//     let tenDot = new bn(10).times(new bn(10).pow(token1Decimals))
+//     let oneHDot = new bn(100).times(new bn(10).pow(token1Decimals))
+//     let dotIn = oneHDot
+//     let glmrIn = new bn(100).times(new bn(10).pow(token0Decimals))
+//     let feesInDot = dotIn.times(poolFeeRate)
+//     let feesInGlmr = glmrIn.times(poolFeeRate)
+//     console.log(`GLMR/DOT Price: ${glmrDotPrice}`)
+//     // console.log(`Input GLMR: ${inputGlmr}`)
+//     // L = dY / d sqrt(P)
 
-    // d sqrt(P) = dY / L --- Calculate P
-    // d (1/sqrt(P)) = dX / L --- Calculate P
-    // dX = d (1/sqrt(P)) * L --- Calculate amount out
-    // dY = d sqrt(P) * L --- Calculate amount out
+//     // d sqrt(P) = dY / L --- Calculate P
+//     // d (1/sqrt(P)) = dX / L --- Calculate P
+//     // dX = d (1/sqrt(P)) * L --- Calculate amount out
+//     // dY = d sqrt(P) * L --- Calculate amount out
 
-    // Swap 10 DOT for GLMR
-    // 1) Calculate change in sqrt P
-    let amountDotInMinusFee = dotIn.minus(feesInDot)
-    let changeInSqrtP = amountDotInMinusFee.div(liqBn)
-    console.log(`Change in sqrt P: ${changeInSqrtP}`)
-    // 2) Add change in P to current P
-    let targetSqrtP = sqrtPrice.plus(changeInSqrtP)
-    console.log(`Target Sqrt P: ${targetSqrtP}`)
+//     // Swap 10 DOT for GLMR
+//     // 1) Calculate change in sqrt P
+//     let amountDotInMinusFee = dotIn.minus(feesInDot)
+//     let changeInSqrtP = amountDotInMinusFee.div(liqBn)
+//     console.log(`Change in sqrt P: ${changeInSqrtP}`)
+//     // 2) Add change in P to current P
+//     let targetSqrtP = sqrtPrice.plus(changeInSqrtP)
+//     console.log(`Target Sqrt P: ${targetSqrtP}`)
 
-    // 3) After calculating target P, calculate amount out
-    let amountDotIn = calculateAmount1(liqBn, targetSqrtP, sqrtPrice)
-    let amountGlmrOut = calculateAmount0(liqBn, targetSqrtP, sqrtPrice)
+//     // 3) After calculating target P, calculate amount out
+//     let amountDotIn = calculateAmount1(liqBn, targetSqrtP, sqrtPrice)
+//     let amountGlmrOut = calculateAmount0(liqBn, targetSqrtP, sqrtPrice)
     
-    console.log(`Amount DOT in: ${amountDotIn}`)
-    console.log(`Amount GLMR out: ${amountGlmrOut}`)
+//     console.log(`Amount DOT in: ${amountDotIn}`)
+//     console.log(`Amount GLMR out: ${amountGlmrOut}`)
 
-    // 4) Verify amount out
-    let changeInPriceInGlmr = new bn(1).div(targetSqrtP).minus(new bn(1).div(sqrtPrice))
-    let outputGlmr = changeInPriceInGlmr.times(liqBn)
-    console.log(`Output GLMR: ${outputGlmr}`)
+//     // 4) Verify amount out
+//     let changeInPriceInGlmr = new bn(1).div(targetSqrtP).minus(new bn(1).div(sqrtPrice))
+//     let outputGlmr = changeInPriceInGlmr.times(liqBn)
+//     console.log(`Output GLMR: ${outputGlmr}`)
 
-    // Swap 100 GLMR for DOT
-    // 1) Calculate change in sqrt P
-    let glmrInMinusFee = glmrIn.minus(feesInGlmr)
-    let changeInPRecipricol = glmrInMinusFee.div(liqBn)
+//     // Swap 100 GLMR for DOT
+//     // 1) Calculate change in sqrt P
+//     let glmrInMinusFee = glmrIn.minus(feesInGlmr)
+//     let changeInPRecipricol = glmrInMinusFee.div(liqBn)
 
-    // 2) Add change in P to current P
-    let inverseTargetSqrtP = new bn(1).div(sqrtPrice).plus(changeInPRecipricol)
-    let targetSqrtP2 = new bn(1).div(inverseTargetSqrtP)
+//     // 2) Add change in P to current P
+//     let inverseTargetSqrtP = new bn(1).div(sqrtPrice).plus(changeInPRecipricol)
+//     let targetSqrtP2 = new bn(1).div(inverseTargetSqrtP)
 
-    // 3) After calculating target P, calculate amount out
-    let amountGlmrIn = calculateAmount0(liqBn, targetSqrtP2, sqrtPrice)
-    let amountDotOut = calculateAmount1(liqBn, targetSqrtP2, sqrtPrice)
-    console.log(`Amount GLMR in: ${amountGlmrIn}`)
-    console.log(`Amount DOT out: ${amountDotOut}`)
+//     // 3) After calculating target P, calculate amount out
+//     let amountGlmrIn = calculateAmount0(liqBn, targetSqrtP2, sqrtPrice)
+//     let amountDotOut = calculateAmount1(liqBn, targetSqrtP2, sqrtPrice)
+//     console.log(`Amount GLMR in: ${amountGlmrIn}`)
+//     console.log(`Amount DOT out: ${amountDotOut}`)
 
-    //4) Verify amount out
-    let changeInPriceInDot = targetSqrtP2.minus(sqrtPrice)
-    let outputDot = changeInPriceInDot.times(liqBn)
-    console.log(`Output DOT: ${outputDot}`)
+//     //4) Verify amount out
+//     let changeInPriceInDot = targetSqrtP2.minus(sqrtPrice)
+//     let outputDot = changeInPriceInDot.times(liqBn)
+//     console.log(`Output DOT: ${outputDot}`)
 
 
-    console.log(`Current tick: ${currentTick}`)
-    let tickLower = currentTick.minus(currentTick.mod(new bn(tickSpacing)))
-    let tickUpper = tickLower.plus(tickSpacing)
-    console.log(`Lower tick: ${tickLower} - Upper tick: ${tickUpper}`)
+//     console.log(`Current tick: ${currentTick}`)
+//     let tickLower = currentTick.minus(currentTick.mod(new bn(tickSpacing)))
+//     let tickUpper = tickLower.plus(tickSpacing)
+//     console.log(`Lower tick: ${tickLower} - Upper tick: ${tickUpper}`)
     
-    let sqrtLower = TickMath.getSqrtRatioAtTick(tickLower.toNumber())
-    let sqrtUpper = TickMath.getSqrtRatioAtTick(tickUpper.toNumber())
-    console.log(`Lower sqrt: ${sqrtLower} - Upper sqrt: ${sqrtUpper}`)
-}
+//     let sqrtLower = TickMath.getSqrtRatioAtTick(tickLower.toNumber())
+//     let sqrtUpper = TickMath.getSqrtRatioAtTick(tickUpper.toNumber())
+//     console.log(`Lower sqrt: ${sqrtLower} - Upper sqrt: ${sqrtUpper}`)
+// }
 function calculateAmount0(liq: bn, pa: bn, pb: bn){
     if(pa > pb){
         [pa, pb] = [pb, pa]
@@ -463,12 +467,12 @@ function calculateAmount1(liq: bn, pa: bn, pb: bn){
 
 
 
-async function lpList() {
-    const lps = JSON.parse(fs.readFileSync('./liq_pool_registry', 'utf8')).map((lp: any) => {
-        return lp.contractAddress
-    })
-    fs.writeFileSync('./lp_contracts', JSON.stringify(lps, null, 2))
-}
+// async function lpList() {
+//     const lps = JSON.parse(fs.readFileSync('./liq_pool_registry', 'utf8')).map((lp: any) => {
+//         return lp.contractAddress
+//     })
+//     fs.writeFileSync('./lp_contracts', JSON.stringify(lps, null, 2))
+// }
 
 
 
@@ -545,7 +549,7 @@ async function parseCSVFilesInDirectory() {
 
 
 function readGlmrLps(){
-    let lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/glmr_lps.json'), 'utf8'))
+    let lps = JSON.parse(fs.readFileSync(path.join(glmrLpRegistry), 'utf8'))
     return lps
 }
 function readGlmrHolders(){

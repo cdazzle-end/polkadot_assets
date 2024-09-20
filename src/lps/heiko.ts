@@ -12,6 +12,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import { getApiForNode } from '../utils.ts';
+import { hkoAssetRegistry, hkoLpRegistry } from '../consts.ts';
 
 const localRpc = "ws://172.26.130.75:8012"
 const liveRpc = 'wss://heiko-rpc.parallel.fi'
@@ -25,7 +26,7 @@ export async function updateLps(chopsticks: boolean) {
 
     const parachainId = await (await api.query.parachainInfo.parachainId()).toJSON() as number;
     const lpEntries = await api.query.amm.pools.entries();
-    let assets: TokenData[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hko_assets.json'), 'utf8')).map((asset: any) => {
+    let assets: TokenData[] = JSON.parse(fs.readFileSync(path.join(hkoAssetRegistry), 'utf8')).map((asset: any) => {
         return asset.tokenData
     })
     let lps = lpEntries.map(([assetData, lpData]) => {
@@ -53,7 +54,7 @@ export async function updateLps(chopsticks: boolean) {
     lps = lps.filter((lp) => {
         return lp.poolAssets[0] != undefined || lp.poolAssets[1] != undefined
     })
-    fs.writeFileSync(path.join(__dirname, './lp_registry/hko_lps.json'), JSON.stringify(lps, null, 2))
+    fs.writeFileSync(hkoLpRegistry, JSON.stringify(lps, null, 2))
     // api.disconnect()
 }
 
@@ -65,7 +66,7 @@ async function saveLps(chopsticks: boolean) {
     const lpEntries = await api.query.amm.pools.entries();
     
 
-    let assets: TokenData[] = JSON.parse(fs.readFileSync('../../assets/hko/asset_registry.json', 'utf8')).map((asset: any) => {
+    let assets: TokenData[] = JSON.parse(fs.readFileSync(hkoAssetRegistry, 'utf8')).map((asset: any) => {
         return asset.tokenData
     })
     let lps = lpEntries.map(([assetData, lpData]) => {
@@ -96,11 +97,7 @@ async function saveLps(chopsticks: boolean) {
     lps = lps.filter((lp) => {
         return lp.poolAssets[0] != undefined || lp.poolAssets[1] != undefined
     })
-    fs.writeFileSync(path.join(__dirname, './lp_registry/hko_lps.json'), JSON.stringify(lps, null, 2))
-}
-
-async function getLps(): Promise<MyLp[]> {
-    return JSON.parse(fs.readFileSync('../hko/lps.json', 'utf8'));
+    fs.writeFileSync(path.join(hkoLpRegistry), JSON.stringify(lps, null, 2))
 }
 
 async function main() {

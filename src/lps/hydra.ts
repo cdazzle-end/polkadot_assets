@@ -6,6 +6,7 @@ import { getApiForNode } from '../utils.ts';
 import bn from 'bignumber.js';
 
 import { fileURLToPath } from 'url';
+import { hdxAssetRegistry as hdxAssetRegistry, hdxLpRegistry, hdxOmniPool, hdxStableLpRegistry } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const localRpc = "ws://172.26.130.75:8010"
@@ -65,9 +66,9 @@ export async function updateLps(chopsticks: boolean) {
     let [omniPools, omniPoolsAsLps] = await getOmnipoolData(api)
     let stablePools = await getStablePoolData(api)
     lps = lps.concat(omniPoolsAsLps)
-    fs.writeFileSync(path.join(__dirname, './lp_registry/hdx_omnipool.json'), JSON.stringify(omniPools, null, 2))
-    fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_lps.json"), JSON.stringify(lps, null, 2), "utf8");
-    fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_stable_lps.json"), JSON.stringify(stablePools, null, 2), "utf8");
+    fs.writeFileSync(path.join(hdxOmniPool), JSON.stringify(omniPools, null, 2))
+    fs.writeFileSync(path.join(hdxLpRegistry), JSON.stringify(lps, null, 2), "utf8");
+    fs.writeFileSync(path.join(hdxStableLpRegistry), JSON.stringify(stablePools, null, 2), "utf8");
     // await api.disconnect()
 }
 
@@ -128,7 +129,7 @@ async function saveLps() {
         return newLp
     }))
     // console.log(lps)
-    fs.writeFileSync(path.join(__dirname, "./lp_registry/hdx_lps.json"), JSON.stringify(lps, null, 2), "utf8");
+    fs.writeFileSync(path.join(hdxLpRegistry), JSON.stringify(lps, null, 2), "utf8");
     // api.disconnect()
 }
 
@@ -222,17 +223,13 @@ async function getStablePoolData(api: ApiPromise): Promise<StableSwapPool[]>{
     })
 
     let s = await Promise.all(stableSwapPools)
-    // s.forEach((pool) => {
-    //     console.log(JSON.stringify(pool, null, 2))
-    // })
 
-    // fs.writeFileSync(path.join(__dirname, './hdx_stable_lps.json'), JSON.stringify(s, null, 2))
     return s
 }
 async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
     const fees = await api.query.dynamicFees.assetFee.entries()
     let omnipool = await api.query.omnipool.assets.entries();
-    let hdxAssets: IMyAsset[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hdx_assets.json'), 'utf8'));
+    let hdxAssets: IMyAsset[] = JSON.parse(fs.readFileSync(hdxAssetRegistry, 'utf8'));
     let omnipoolHdxBalance = await api.query.system.account(hdxOmniPoolAccount)
     let omnipoolTokenBalances = await api.query.tokens.accounts.entries(hdxOmniPoolAccount)
 
@@ -333,9 +330,6 @@ async function getOmnipoolData(api: ApiPromise): Promise<[OmniPool[], MyLp[]]>{
         omniPoolsAsLps.push(omniPoolAsLpEntry)
     })
     
-    // fs.writeFileSync(path.join(__dirname, './hdx_omnipool.json'), JSON.stringify(allOmnipools, null, 2))
-    
-    // await api.disconnect()
     return [allOmnipools, omniPoolsAsLps]
 }
 // D or TotalSupply, calculated from reserves
@@ -382,7 +376,7 @@ function hasConverged(v0: bn, v1: bn){
 
 
 function getAssetById(assetId: String): IMyAsset{
-    let assets: IMyAsset[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/hdx_assets.json'), 'utf8'));
+    let assets: IMyAsset[] = JSON.parse(fs.readFileSync(hdxAssetRegistry, 'utf8'));
     let asset = assets.find((asset) => {
         let tokenData = asset.tokenData as TokenData
         return tokenData.chain == 2034 && tokenData.localId == assetId

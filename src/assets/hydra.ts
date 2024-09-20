@@ -4,6 +4,7 @@ import { MyJunction, TokenData, IMyAsset, MyMultiLocation } from '../types.ts';
 import { Keyring, ApiPromise, WsProvider } from '@polkadot/api';
 import { deepEqual, getApiForNode } from '../utils.ts';
 import { fileURLToPath } from 'url';
+import { assetRegistryFolder, hdxAssetRegistry, lpRegistryFolder } from '../consts.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -43,7 +44,7 @@ export async function saveAssets() {
     //     console.log(asset.tokenLocation)
     // })
 
-    const filePath = path.join(__dirname, 'asset_registry/hdx_assets.json')
+    const filePath = path.join(assetRegistryFolder, 'hdx_assets.json')
     // console.log(JSON.stringify(assetRegistry, null, 2))
     fs.writeFileSync(filePath, JSON.stringify(assetRegistry, null, 2))
     // process.exit(0)
@@ -321,7 +322,7 @@ export async function updateAssetRegistryHydra(chopsticks: boolean){
     let newAssets: IMyAsset[] = []
 
     // Get all assets from our registry
-    let hydraRegistry: IMyAsset[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), 'utf8'));
+    let hydraRegistry: IMyAsset[] = JSON.parse(fs.readFileSync(path.join(assetRegistryFolder, 'hdx_assets.json'), 'utf8'));
 
     // Go through current assets, find matching asset by deep equal in registry
     currentAssets.forEach((currentAsset: IMyAsset) => {
@@ -368,11 +369,11 @@ export async function updateAssetRegistryHydra(chopsticks: boolean){
     assetRegistryUpdated = await removeAssetsWithoutData(assetRegistryUpdated)
     console.log(`Number of queried assets from api: ${currentAssets.length} | Number of assets in registry: ${hydraRegistry.length} | Number of new assets ${newAssets.length} | Number of assets: ${assetRegistryUpdated.length}`)
 
-    fs.writeFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), JSON.stringify(assetRegistryUpdated, null, 2))
+    fs.writeFileSync(path.join(assetRegistryFolder, 'hdx_assets.json'), JSON.stringify(assetRegistryUpdated, null, 2))
 }
 
 async function removeRegistryDuplicates(){
-    let registry = JSON.parse(fs.readFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), 'utf8'));
+    let registry = JSON.parse(fs.readFileSync(hdxAssetRegistry, 'utf8'));
     console.log(`Number of assets: ${registry.length}`)
     let updatedRegistry: IMyAsset[] = []
     registry.forEach((asset: IMyAsset) => {
@@ -389,7 +390,7 @@ async function removeRegistryDuplicates(){
 }
 
 async function cleanAssetIds(){
-    let hydraAssets: IMyAsset[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), 'utf8'));
+    let hydraAssets: IMyAsset[] = JSON.parse(fs.readFileSync(path.join(assetRegistryFolder, 'hdx_assets.json'), 'utf8'));
 
     let cleanedAssets = 0
     let updatedAssets = hydraAssets.map((asset: IMyAsset) => {
@@ -413,8 +414,8 @@ async function cleanAssetIds(){
 // Get asset data for asset hub assets that arent properly defined in the hydra registry
 function getAssetHubData(hydraRegistry: IMyAsset[]){
     // let hydraRegistry: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), 'utf8'));
-    let assetHubRegistry: any[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'asset_registry/asset_hub_polkadot_assets.json'), 'utf8')) as any[]
-    let hydraLpRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, './../lps/lp_registry/hdx_lps.json'), 'utf8'))
+    let assetHubRegistry: any[] = JSON.parse(fs.readFileSync(path.join(assetRegistryFolder, 'asset_hub_polkadot_assets.json'), 'utf8')) as any[]
+    let hydraLpRegistry = JSON.parse(fs.readFileSync(path.join(lpRegistryFolder, 'hdx_lps.json'), 'utf8'))
     let assetsMissingData: IMyAsset[] = []
     hydraRegistry.forEach((hydraAsset: IMyAsset, index) => {
         let tokenData = hydraAsset.tokenData as TokenData;
@@ -464,8 +465,8 @@ function getAssetHubData(hydraRegistry: IMyAsset[]){
 }
 
 function getBncAssetData(hydraRegistry: IMyAsset[]){
-    let bncRegistry: any[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'asset_registry/bnc_polkadot_assets.json'), 'utf8')) as any[]
-    let hydraLpRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, './../lps/lp_registry/hdx_lps.json'), 'utf8'))
+    let bncRegistry: any[] = JSON.parse(fs.readFileSync(path.join(assetRegistryFolder, 'bnc_polkadot_assets.json'), 'utf8')) as any[]
+    let hydraLpRegistry = JSON.parse(fs.readFileSync(path.join(lpRegistryFolder, 'hdx_lps.json'), 'utf8'))
 
     hydraRegistry.forEach((hydraAsset: IMyAsset, index) => {
         let tokenData = hydraAsset.tokenData as TokenData;
@@ -522,7 +523,7 @@ function getBncAssetData(hydraRegistry: IMyAsset[]){
 // Remove assets from the registry that are not properly defined, If there decimal == null
 async function removeAssetsWithoutData(hydraRegistry: IMyAsset[]){
     // let hydraRegistry: MyAssetRegistryObject[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'asset_registry/hdx_assets.json'), 'utf8'));
-    let hydraLpRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, './../lps/lp_registry/hdx_lps.json'), 'utf8'))
+    let hydraLpRegistry = JSON.parse(fs.readFileSync(path.join(lpRegistryFolder, 'hdx_lps.json'), 'utf8'))
     let assetsWithoutData = hydraRegistry.filter((asset: IMyAsset) => {
         let tokenData = asset.tokenData as TokenData;
         return tokenData.decimals == null

@@ -1,12 +1,13 @@
 import * as lpHandler from './lps/index.ts';
 import { updateAssetRegistryAssetHub, saveCollectedAssetRegistry, updateAssetRegistryHydra } from './assets/index.ts';
 import path from 'path';
-import { ApiMap, Relay } from './types.ts';
+import { ApiMap, AssetMap, IMyAsset, Relay } from './types.ts';
 import { fileURLToPath } from 'url';
 import { setApiMap } from './utils.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 
 
 
@@ -79,3 +80,17 @@ export async function updateKusamaLps(chopsticks: boolean) {
         // lpHandler.sdnHandler.updateLps().then(() => console.log("sdn complete"))
     ]);
 }
+
+export async function glmrLps(){
+    await lpHandler.glmrHandler.saveLps().then(() => console.log("glmr complete"))
+}
+
+
+
+async function run(){
+    // console.log('test')
+    // await updatePolkadotLps(true)
+    await glmrLps()
+}
+
+run()

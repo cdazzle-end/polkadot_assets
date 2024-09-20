@@ -54,12 +54,13 @@ const tokenContractAbi = [
     "event Transfer(address indexed src, address indexed dst, uint val)"
 ]
 
-
+import lpsBase from './movr_holders/lps_base.json' assert { type: 'json' };
+import { movrAssetRegistry, movrLpRegistry } from '../consts.ts';
 
 export async function updateLps() {
     
-    const lps = JSON.parse(fs.readFileSync(path.join(__dirname, './movr_holders/lps_base.json'), 'utf8'))
-    const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/movr_assets.json'), 'utf8'))
+    const lps = lpsBase
+    const asseRegistry = JSON.parse(fs.readFileSync(path.join(movrAssetRegistry), 'utf8'))
     lps.map((lp: any) => {
         
         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
@@ -89,7 +90,7 @@ export async function updateLps() {
             return newPool;
         }
     }))).filter(pool => pool != null); // Filter out null entries
-    fs.writeFileSync(path.join(__dirname, './lp_registry/movr_lps.json'), JSON.stringify(updatedLps, null, 2))
+    fs.writeFileSync(path.join(movrLpRegistry), JSON.stringify(updatedLps, null, 2))
     provider.destroy()
 
 }
