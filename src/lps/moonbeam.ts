@@ -265,13 +265,20 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
         let poolInfo: Slot0 = await pool.slot0();
         currentTick =new bn(poolInfo.tick)
     }
+
+    // Use erc20 abi to get balance data
+    let token0Contract = await new ethers.Contract(token0, xcTokenAbi, wsProvider);
+    let token1Contract = await new ethers.Contract(token1, xcTokenAbi, wsProvider);
+    let token0Balance = await token0Contract.balanceOf(address);
+    let token1Balance = await token1Contract.balanceOf(address);
+
     let newLpData: MyLp = {
         chainId: 2004,
         dexType: abi,
         contractAddress: address,
         abi: abi,
         poolAssets: [token0, token1],
-        liquidityStats: ["0"],
+        liquidityStats: [token0Balance, token1Balance],
         currentTick: currentTick.toString(),
         activeLiquidity: activeLiquidity.toFixed(),
         feeRate: feeRate.toString(),
