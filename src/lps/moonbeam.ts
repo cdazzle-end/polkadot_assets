@@ -271,8 +271,8 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
     let token1Contract = await new ethers.Contract(token1, xcTokenAbi, wsProvider);
     let token0Balance = await token0Contract.balanceOf(address);
     let token1Balance = await token1Contract.balanceOf(address);
-    console.log(`Token0: ${token0} - Token1: ${token1}`)
-    console.log(`Token0 balance: ${token0Balance} - Token1 balance: ${token1Balance}`)
+    // console.log(`Token0: ${token0} - Token1: ${token1}`)
+    // console.log(`Token0 balance: ${token0Balance} - Token1 balance: ${token1Balance}`)
 
     let newLpData: MyLp = {
         chainId: 2004,
