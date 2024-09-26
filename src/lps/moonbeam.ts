@@ -25,6 +25,7 @@ const unTradeable = [
     "0x905240818bc230a532f6a84e1c3ae1916e70fdd3",
     "0xd4f1931f818e60b084fe13a40c31a05a44ed70cf",
     "0xd068746785b27c16748732ef7bcc3725c589f41e",
+    "0x54184eabc2a13830931601cc31c391c119784e3d", // MyTradeLp
 ]
 
 interface LpData {
