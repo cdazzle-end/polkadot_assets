@@ -25,7 +25,7 @@ const unTradeable = [
     "0x905240818bc230a532f6a84e1c3ae1916e70fdd3",
     "0xd4f1931f818e60b084fe13a40c31a05a44ed70cf",
     "0xd068746785b27c16748732ef7bcc3725c589f41e",
-    "0x54184eabc2a13830931601cc31c391c119784e3d", // MyTradeLp
+    "[[2024-09-28]]", // MyTradeLp
 ]
 
 interface LpData {
@@ -50,88 +50,6 @@ interface Lp {
     poolAssets: string[],
     liquidityStats: string[]
 }
-
-
-// export async function updateLps(chopsticks: boolean) {
-    
-//     const lps = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lps_base.json'), 'utf8'))
-//     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
-//     lps.map((lp: any) => {
-//         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
-//         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
-//         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
-//     })
-
-//     const updatedLps = (await Promise.all(lps.map(async (lp: any) => {
-        
-//         const pool = await new ethers.Contract(lp.contractAddress, altDexContractAbi, provider);
-//         let reserves = await pool.getReserves();
-//         // let reserve_0 = removeLastChar(reserves[0].toString());
-//         // let reserve_1 = removeLastChar(reserves[1].toString());
-//         let reserve_0 = reserves[0].toString();
-//         let reserve_1 = reserves[1].toString();
-//         if (reserve_0 !== "" && reserve_1 !== "") {
-//             const newPool: MyLp = {
-//                 chainId: 2004,
-//                 contractAddress: lp.contractAddress,
-//                 poolAssets: lp.poolAssets,
-//                 liquidityStats: [reserve_0, reserve_1]
-//             };
-//             return newPool;
-//         }
-//     }))).filter(pool => pool != null); // Filter out null entries
-//     fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(updatedLps, null, 2))
-//     provider.destroy()
-// }
-
-// export async function saveLpsOld() {
-//     const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lp_data_results.json'), 'utf8'))
-//     const lpsPromise = lpContractAddresses.map(async (lpContract: any) => {
-//         let newLp: MyLp;
-//         if(lpContract.abi == 'algebra'){
-//             newLp = await getAlgebraData(lpContract.address)
-//         } else if (lpContract.abi == 'uni3'){
-//             newLp = await getUni3Data(lpContract.address)
-//         } else {
-//             newLp = await getSolarData(lpContract.address)
-//         }
-//         return newLp;
-//     })
-//     let lps = await Promise.all(lpsPromise)
-//     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
-//     lps.map((lp: any) => {
-//         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
-//         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
-//         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
-//     })
-//     // console.log(lps)
-//     fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
-// }
-
-// export async function testUni3Data() {
-//     const lpContractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, './glmr_holders/lp_data_results.json'), 'utf8'))
-//     let lpPromises = []
-//     const lpsPromise = lpContractAddresses.forEach(async (lpContract: any) => {
-//         let newLp: MyLp;
-//         if(lpContract.abi == 'algebra'){
-//             await getAlgebraTickData(lpContract.address)
-//         } else if (lpContract.abi == 'uni3'){
-//             // newLp = await getUni3Data(lpContract.address)
-//         } else {
-//             // newLp = await getSolarData(lpContract.address)
-//         }
-//         lpPromises.push(newLp)
-//     })
-//     let lps = await Promise.all(lpPromises)
-//     const asseRegistry = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/asset_registry/glmr_assets.json'), 'utf8'))
-//     lps.map((lp: any) => {
-//         const token0 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[0].toLowerCase() )
-//         const token1 = asseRegistry.find((asset: any) => asset.tokenData.contractAddress.toLowerCase() == lp.poolAssets[1].toLowerCase() )
-//         lp.poolAssets = [token0? token0.tokenData.localId : lp.poolAssets[0], token1? token1.tokenData.localId : lp.poolAssets[1]]
-//     })
-//     // console.log(lps)
-//     // fs.writeFileSync(path.join(__dirname, './lp_registry/glmr_lps.json'), JSON.stringify(lps, null, 2))
-// }
 
 
 import glmrLpsTest1 from './lp_registry/glmr_lps_test_1.json' assert { type: 'json' };
