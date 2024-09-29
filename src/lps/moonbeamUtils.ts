@@ -174,11 +174,13 @@ export async function getAlgebraTickData(contractAddress){
     return newLpData
 }
 
-export async function getSolarData(contractAddress){
+export async function getV2DexData(contractAddress){
     const pool = await new ethers.Contract(contractAddress, altDexContractAbi, wsProvider);
     let reserves = await pool.getReserves();
     const token0 = await pool.token0();
     const token1 = await pool.token1();
+    const name = await pool.name();
+    let dexType = name.includes('Zenlink') ? 'zenlink' : 'solar'
     let reserve_0 = reserves[0].toString();
     let reserve_1 = reserves[1].toString();
     let newliquidityStats = [reserve_0, reserve_1];
