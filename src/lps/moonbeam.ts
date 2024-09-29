@@ -8,7 +8,7 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 import { GlobalState, MyLp, Slot0 } from '../types.ts';
 import { altDexContractAbi, dexAbiMap, dexAbis, wsProvider, xcTokenAbi } from './glmrConsts.ts';
 import { TickMath } from '@uniswap/v3-sdk';
-import { ContractTickQuery, ContractTickQueryResult, getAlgebraTickData, getSolarData, getUni3TickData, queryAllContractsTickData, rewriteAbi, saveAllInitializedTicks} from './moonbeamUtils.ts'
+import { ContractTickQuery, ContractTickQueryResult, getAlgebraTickData, getSolarData as getV2DexData, getUni3TickData, queryAllContractsTickData, rewriteAbi, saveAllInitializedTicks} from './moonbeamUtils.ts'
 
 import { fileURLToPath } from 'url';
 import { glmrAssetRegistry, glmrLpRegistry } from '../consts.ts';
@@ -85,7 +85,7 @@ export async function combinedQuery(): Promise<MyLp[]>{
                 lps.push(context.myLp)
             }
         } else {
-            newLp = await getSolarData(lpContract.contractAddress)
+            newLp = await getV2DexData(lpContract.contractAddress)
             lps.push(newLp)
         }
     })
