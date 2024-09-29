@@ -93,4 +93,4 @@ async function run(){
     await glmrLps()
 }
 
-run()
+// run()
