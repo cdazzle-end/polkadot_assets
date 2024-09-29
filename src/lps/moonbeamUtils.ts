@@ -186,7 +186,7 @@ export async function getV2DexData(contractAddress){
     let newliquidityStats = [reserve_0, reserve_1];
     const newPool: MyLp = {
         chainId: 2004,
-        dexType: "solar",
+        dexType: dexType,
         contractAddress: contractAddress,
         poolAssets: [token0, token1],
         liquidityStats: newliquidityStats
