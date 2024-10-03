@@ -73,7 +73,6 @@ export async function combinedQuery(): Promise<MyLp[]>{
         let newLp: MyLp;
 
         if(lpContract.abi == 'algebra' || lpContract.abi == 'uni3' || lpContract.abi == 'beamswap'){
-            // console.log(`Algebra or uni ${lpContract.contractAddress}`)
             let context: Context = await getContext(lpContract.contractAddress, lpContract.abi, lpMap)
             if(context.contractTickQuery != null){
                 contractQueries.push(context.contractTickQuery)
@@ -144,10 +143,7 @@ export interface Context {
 }
 
 async function getContext(address: string, abi: 'algebra' | 'uni3' | 'beamswap', lpMap: Map<string, MyLp>): Promise<Context> {
-    // let glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
-    // let thisGlmrLp = glmrLps.find((lp) => {
-    //     return lp.contractAddress == address
-    // })
+
     let thisGlmrLp = lpMap.get(address)
     if(!thisGlmrLp){
         throw new Error("Cant find GLMR lp")
