@@ -31,13 +31,15 @@ export async function getV2DexData(contractAddress){
     const token0 = await pool.token0();
     const token1 = await pool.token1();
     const name = await pool.name();
-    let dexType = name.includes('Zenlink') ? 'zenlink' : 'solar'
+    let abi = name.includes('Zenlink') ? 'zenlink' : 'solar'
+    let dexType = 'V2'
     let reserve_0 = reserves[0].toString();
     let reserve_1 = reserves[1].toString();
     let newliquidityStats = [reserve_0, reserve_1];
     const newPool: MyLp = {
         chainId: 2004,
         dexType: dexType,
+        abi: abi,
         contractAddress: contractAddress,
         poolAssets: [token0, token1],
         liquidityStats: newliquidityStats

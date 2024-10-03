@@ -199,7 +199,7 @@ async function getContext(address: string, abi: 'algebra' | 'uni3' | 'beamswap',
 
     let newLpData: MyLp = {
         chainId: 2004,
-        dexType: abi,
+        dexType: "V3",
         contractAddress: address,
         abi: updatedAbi,
         poolAssets: [token0, token1],
