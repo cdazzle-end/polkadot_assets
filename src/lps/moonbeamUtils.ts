@@ -16,6 +16,10 @@ import {
 
   import { fileURLToPath } from 'url';
 import { lpRegistryFolder } from '../consts.ts';
+
+const minWord = tickToWord(-887272, 60)
+const maxWord = tickToWord(887272,60 )
+
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
 
@@ -265,166 +269,9 @@ function tickToWord(tick: number, tickSpacing: number): number {
     return tick >> 8
   }
   
-  const minWord = tickToWord(-887272, 60)
-  const maxWord = tickToWord(887272,60 )
-
-// Query all initialized ticks through bitmap multicall
-export async function getTicksUni(contractAddress: string){
-    const pool = await new ethers.Contract(contractAddress, dexAbiMap['uni3'], wsProvider);
-    let tickSpacing = await pool.tickSpacing();
-    let calls: any[] = []
-    let wordPosIndices: number[] = []
-    for (let i = minWord; i <= maxWord; i++) {
-        wordPosIndices.push(i)
-        let call = {reference: `tickBitmap`, methodName: `tickBitmap`, methodParameters: [i]}
-        calls.push(call)
-    }
-
-    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint!, tryAggregate: true });
-    const contractCallContext: ContractCallContext[] = [
-        {
-            reference: 'uniBitmapCall',
-            contractAddress: contractAddress,
-            abi: dexAbiMap['uni3'],
-            calls: calls
-        }
-    ];
-    const results: ContractCallResults = await multicall.call(contractCallContext);
-    const bitmapResults = results.results.uniBitmapCall.callsReturnContext.map((callReturnContext, i) => {
-        let hex = callReturnContext.returnValues[0].hex
-        let hexInt = BigInt(hex.toString())
-        // if(callReturnContext.returnValues[0].hex !== "0x00"){
-        //     console.log(`${i} - ${hexInt} - ${callReturnContext.returnValues[0].hex}`)
-
-        // }
-        return hexInt
-    })
-    const tickIndices: number[] = []
-
-    for(let j = 0; j < wordPosIndices.length; j++){
-        const ind = wordPosIndices[j]
-        const bitmap = bitmapResults[j]
-
-        if(bitmap !== BigInt(0)){
-            for (let i = 0; i < 256; i++){
-                const bit = BigInt(1)
-                const initialized = (bitmap & (bit << BigInt(i))) !== BigInt(0)
-                if(initialized){
-                    const tickIndex = (BigInt(ind) * BigInt(256) + BigInt(i)) * tickSpacing
-                    tickIndices.push(Number.parseInt(tickIndex.toString()))
-                }
-            }
-        }
-    }
-    // console.log(tickIndices)
-    return tickIndices
-}
-
-// Query all initialized ticks through bitmap multicall
-export async function getTicksAlgebra(contractAddress: string){
-    const pool = await new ethers.Contract(contractAddress, dexAbiMap['algebra'], wsProvider);
-    let tickSpacing = await pool.tickSpacing();
-    let calls: any[] = []
-    let wordPosIndices: number[] = []
-    for (let i = minWord; i <= maxWord; i++) {
-        wordPosIndices.push(i)
-        let call = {reference: `tickBitmap`, methodName: `tickTable`, methodParameters: [i]}
-        calls.push(call)
-    }
-
-    const multicall = new Multicall({ nodeUrl: selectedHttpEndpoint!, tryAggregate: true });
-    const contractCallContext: ContractCallContext[] = [
-        {
-            reference: 'algebraTickTable',
-            contractAddress: contractAddress,
-            abi: dexAbiMap['algebra'],
-            calls: calls
-        }
-    ];
-    // console.log(calls)
-    const results: ContractCallResults = await multicall.call(contractCallContext);
-    const bitmapResults = results.results.algebraTickTable.callsReturnContext.map((callReturnContext, i) => {
-        let hex = callReturnContext.returnValues[0].hex
-        let hexInt = BigInt(hex.toString())
-        return hexInt
-    })
-    const tickIndices: number[] = []
-
-    for(let j = 0; j < wordPosIndices.length; j++){
-        const ind = wordPosIndices[j]
-        const bitmap = bitmapResults[j]
-
-        if(bitmap !== BigInt(0)){
-            for (let i = 0; i < 256; i++){
-                const bit = BigInt(1)
-                const initialized = (bitmap & (bit << BigInt(i))) !== BigInt(0)
-                if(initialized){
-                    const tickIndex = (BigInt(ind) * BigInt(256) + BigInt(i)) * tickSpacing
-                    tickIndices.push(Number.parseInt(tickIndex.toString()))
-                }
-            }
-        }
-    }
-    // console.log(tickIndices)
-    return tickIndices
-}
 
 
-export async function saveAllInitializedTicks(){
-    let glmrLps: MyLp[] = glmrLpsTest1 as MyLp[]
-    const batchSize = 100
-    let lpIndex = 0
-    let dexIndexes: number[]= []
-    glmrLps.forEach((lp) => {
-        if((lp.dexType === 'uni3' || lp.dexType === 'algebra' || lp.dexType === 'beamswap') && !lp.initializedTicks!){
-            dexIndexes.push(lpIndex)
-        }
-        lpIndex++
-    })
-    let glmrLpsToQuery = dexIndexes.map(index => {
-        return glmrLps[index]
-    })
-    console.log(glmrLpsToQuery)
 
-
-    
-    for (let i = 0; i < glmrLpsToQuery.length; i += batchSize) {
-        const batch = glmrLpsToQuery.slice(i, i + batchSize);
-    
-        const promises = batch.map((myGlmrLp) => {
-            console.log(`Querying ticks for ${myGlmrLp.contractAddress!} | ABI: ${myGlmrLp.dexType}`);
-            if (myGlmrLp.dexType === 'algebra' && !myGlmrLp.initializedTicks!) {
-                console.log("Getting ticks for algebra");
-                return getTicksAlgebra(myGlmrLp.contractAddress!).then(ticks => ({ success: true, ticks })).catch(error => ({ success: false, ticks: []}));
-            } else if (myGlmrLp.dexType === 'uni3' && !myGlmrLp.initializedTicks!) {
-                console.log("Getting ticks for uni3");
-                return getTicksUni(myGlmrLp.contractAddress!).then(ticks => ({ success: true, ticks })).catch(error => ({ success: false, ticks: [] }));
-            }
-            return Promise.resolve({ success: false, ticks: [] }); // Return an object indicating no action was taken
-        });
-    
-        // Await all settled promises in the current batch
-        const results = await Promise.allSettled(promises);
-        results.forEach((result, index) => {
-            if (result.status === 'fulfilled' && result.value.success) {
-                glmrLpsToQuery[i + index].initializedTicks! = result.value.ticks;
-                console.log(`Success: ${glmrLpsToQuery[i + index].contractAddress!}`, result.value.ticks);
-            } else if (result.status === 'fulfilled' && !result.value.success) {
-                console.log(`Failed: ${glmrLpsToQuery[i + index].contractAddress!}`);
-            } else {
-                console.log(`Error getting ticks for ${glmrLpsToQuery[i + index].contractAddress!}:`);
-            }
-        });
-    
-        // Optionally, save data after processing each batch
-        fs.writeFileSync(path.join(lpRegistryFolder, './lp_registry/glmr_lps_test_1.json'), JSON.stringify(glmrLps, null, 2))
-    }
-        
-    
-
-}
-
-   
 export function rewriteAbi(){
     let glmrLps: MyLp[] = glmrLpsTest1 as MyLp[]
     glmrLps.forEach(lp => {
