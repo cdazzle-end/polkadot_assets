@@ -6,7 +6,7 @@ import bn from 'bignumber.js'
 import { parse } from 'path'
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { GlobalState, MyLp, Slot0 } from '../types.ts';
-import { altDexContractAbi, dexAbiMap, dexAbis, wsProvider, xcTokenAbi } from './glmrConsts.ts';
+import { altDexContractAbi, dexAbiMap, dexAbis, uniFactoryAddress, wsProvider, xcTokenAbi } from './glmrConsts.ts';
 import { TickMath } from '@uniswap/v3-sdk';
 import { ContractTickQuery, ContractTickQueryResult, getAlgebraTickData, getV2DexData, getUni3TickData, queryAllContractsTickData, rewriteAbi, saveAllInitializedTicks} from './moonbeamUtils.ts'
 
@@ -163,6 +163,8 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
     let activeLiquidity
     let feeRate
     let currentTick
+    let updatedAbi
+    let factoryAddress
 
     if(abi == 'algebra'){
         pool = await new ethers.Contract(address, dexAbiMap[abi], wsProvider);
@@ -173,6 +175,7 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
         let poolInfo: GlobalState = await pool.globalState();
         feeRate = new bn(poolInfo.fee)
         currentTick = new bn(poolInfo.tick)
+        factoryAddress = await pool.factory()
     } else {
         pool = await new ethers.Contract(address, dexAbiMap[abi], wsProvider);
         token0 = await pool.token0();
@@ -182,6 +185,12 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
     
         let poolInfo: Slot0 = await pool.slot0();
         currentTick =new bn(poolInfo.tick)
+        
+        // -- TEMPORARY modify abi's for beamswap
+        factoryAddress = await pool.factory()
+        if(factoryAddress != uniFactoryAddress){
+            updatedAbi = dexAbiMap[abi]
+        }
     }
 
     // Use erc20 abi to get balance data
@@ -191,6 +200,8 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
     let token1Balance = await token1Contract.balanceOf(address);
     // console.log(`Token0: ${token0} - Token1: ${token1}`)
     // console.log(`Token0 balance: ${token0Balance} - Token1 balance: ${token1Balance}`)
+
+
 
     let newLpData: MyLp = {
         chainId: 2004,

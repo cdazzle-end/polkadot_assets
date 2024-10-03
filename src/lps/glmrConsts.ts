@@ -51,6 +51,9 @@ export const tokenContractAbi = [
     "event Transfer(address indexed src, address indexed dst, uint val)"
 ]
 
+export const uniFactoryAddress = '0x28f1158795A3585CaAA3cD6469CD65382b89BB70'
+export const beamFactoryAddress = '0xD118fa707147c54387B738F54838Ea5dD4196E71'
+
 import solarDexAbi from './glmr_abis/solarDexAbi.json' assert { type: 'json' };
 import uniswapDexV3 from './glmr_abis/uniswapDexV3.json' assert { type: 'json' };
 import algebraDex from './glmr_abis/algebraDex.json' assert { type: 'json' };
