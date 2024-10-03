@@ -146,7 +146,7 @@ export interface Context {
     myLp: MyLp
 }
 
-async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<string, MyLp>): Promise<Context> {
+async function getContext(address: string, abi: 'algebra' | 'uni3' | 'beamswap', lpMap: Map<string, MyLp>): Promise<Context> {
     // let glmrLps: MyLp[] = JSON.parse(fs.readFileSync(path.join(__dirname, './lp_registry/glmr_lps_test_1.json'), 'utf8'))
     // let thisGlmrLp = glmrLps.find((lp) => {
     //     return lp.contractAddress == address
@@ -163,7 +163,7 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
     let activeLiquidity
     let feeRate
     let currentTick
-    let updatedAbi
+    let updatedAbi = abi
     // let factoryAddress
 
     if(abi == 'algebra'){
@@ -188,6 +188,7 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
         // -- TEMPORARY modify abi's for beamswap
         const factoryAddress = await pool.factory()
         if(factoryAddress == beamFactoryAddress){
+            console.log(`Updating abi for ${address} to beamswap`)
             updatedAbi = 'beamswap'
         }
         // -- END TEMPORARY
