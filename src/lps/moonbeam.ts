@@ -96,7 +96,7 @@ export async function combinedQuery(): Promise<MyLp[]>{
     // console.log(`Query glmr lps...`)
     let queryResults: ContractTickQueryResult[] = await queryAllContractsTickData(contractQueries)
     let tickLps = queryResults.map((result) => {
-        if(result.abi == 'uni3'){
+        if(result.abi == 'uni3' ){
             let upperTickDatas: any[] = []
             let lowerTickDatas: any[] = []
             let lp = lps.find((lp) => lp.contractAddress == result.contractAddress)!
