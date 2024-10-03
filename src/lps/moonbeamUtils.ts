@@ -376,7 +376,7 @@ export async function saveAllInitializedTicks(){
     let lpIndex = 0
     let dexIndexes: number[]= []
     glmrLps.forEach((lp) => {
-        if((lp.dexType === 'uni3' || lp.dexType === 'algebra') && !lp.initializedTicks!){
+        if((lp.dexType === 'uni3' || lp.dexType === 'algebra' || lp.dexType === 'beamswap') && !lp.initializedTicks!){
             dexIndexes.push(lpIndex)
         }
         lpIndex++
