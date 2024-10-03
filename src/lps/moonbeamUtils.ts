@@ -155,111 +155,111 @@ export async function queryTickData(contractAddress: string, ticks: number[], ab
     }
 }
 
-export async function queryUpperLowerTicksUni3(tick: bn, tickSpacing: bn, pool: ethers.Contract): Promise<[TickData[], TickData[]]>{
-    let [lower, upper] = await getUpperLowerTicks(tick, tickSpacing)
-    let lowerTicks = [lower]
-    let current = new bn(lower)
-    for(let i = 0; i < 100; i++){
-        let nextTick =  new bn(current.minus(tickSpacing))
-        lowerTicks.push(nextTick)
-        current = new bn(nextTick)
-    }
-    let upperTicks = [upper]
-    current = new bn(upper)
-    for(let i = 0; i < 100; i++){
-        let nextTick = new bn(current.plus(tickSpacing))
-        upperTicks.push(nextTick)
-        current = new bn(nextTick)
-    }
+// export async function queryUpperLowerTicksUni3(tick: bn, tickSpacing: bn, pool: ethers.Contract): Promise<[TickData[], TickData[]]>{
+//     let [lower, upper] = await getUpperLowerTicks(tick, tickSpacing)
+//     let lowerTicks = [lower]
+//     let current = new bn(lower)
+//     for(let i = 0; i < 100; i++){
+//         let nextTick =  new bn(current.minus(tickSpacing))
+//         lowerTicks.push(nextTick)
+//         current = new bn(nextTick)
+//     }
+//     let upperTicks = [upper]
+//     current = new bn(upper)
+//     for(let i = 0; i < 100; i++){
+//         let nextTick = new bn(current.plus(tickSpacing))
+//         upperTicks.push(nextTick)
+//         current = new bn(nextTick)
+//     }
 
-    let lowerTickDatasPromise = lowerTicks.map(async tick => {
-        let tickData = await pool.ticks(tick.toNumber())
-        let tickDataObject: TickData = {
-            tick: tick.toString(),
-            liquidityTotal: tickData.liquidityGross.toString(),
-            liquidityDelta: tickData.liquidityNet.toString(),
-            initialized: tickData.initialized
-        }
-        return tickDataObject  
-    })
+//     let lowerTickDatasPromise = lowerTicks.map(async tick => {
+//         let tickData = await pool.ticks(tick.toNumber())
+//         let tickDataObject: TickData = {
+//             tick: tick.toString(),
+//             liquidityTotal: tickData.liquidityGross.toString(),
+//             liquidityDelta: tickData.liquidityNet.toString(),
+//             initialized: tickData.initialized
+//         }
+//         return tickDataObject  
+//     })
 
-    let upperTickDatasPromise = upperTicks.map(async tick => {
-        let tickData = await pool.ticks(tick.toNumber())
-        let tickDataObject: TickData = {
-            tick: tick.toString(),
-            liquidityTotal: tickData.liquidityGross.toString(),
-            liquidityDelta: tickData.liquidityNet.toString(),
-            initialized: tickData.initialized
-        }
-        return tickDataObject 
-    })
+//     let upperTickDatasPromise = upperTicks.map(async tick => {
+//         let tickData = await pool.ticks(tick.toNumber())
+//         let tickDataObject: TickData = {
+//             tick: tick.toString(),
+//             liquidityTotal: tickData.liquidityGross.toString(),
+//             liquidityDelta: tickData.liquidityNet.toString(),
+//             initialized: tickData.initialized
+//         }
+//         return tickDataObject 
+//     })
 
-    let lowerTickDatas = await Promise.all(lowerTickDatasPromise)
-    let upperTickDatas = await Promise.all(upperTickDatasPromise)
+//     let lowerTickDatas = await Promise.all(lowerTickDatasPromise)
+//     let upperTickDatas = await Promise.all(upperTickDatasPromise)
 
-    lowerTickDatas = lowerTickDatas.filter(tick => tick.initialized)
-    upperTickDatas = upperTickDatas.filter(tick => tick.initialized)
-    return [lowerTickDatas, upperTickDatas]
-}
+//     lowerTickDatas = lowerTickDatas.filter(tick => tick.initialized)
+//     upperTickDatas = upperTickDatas.filter(tick => tick.initialized)
+//     return [lowerTickDatas, upperTickDatas]
+// }
 
-export async function queryUpperLowerTicksAlgebra(tick: bn, tickSpacing: bn, pool: ethers.Contract) : Promise<[TickData[], TickData[]]>{
-    let [lower, upper] = await getUpperLowerTicks(tick, tickSpacing)
-    let lowerTicks = [lower]
-    let current = new bn(lower)
-    for(let i = 0; i < 100; i++){
-        let nextTick =  new bn(current.minus(tickSpacing))
-        lowerTicks.push(nextTick)
-        current = new bn(nextTick)
-    }
-    let upperTicks = [upper]
-    current = new bn(upper)
-    for(let i = 0; i < 100; i++){
-        let nextTick = new bn(current.plus(tickSpacing))
-        upperTicks.push(nextTick)
-        current = new bn(nextTick)
-    }
+// export async function queryUpperLowerTicksAlgebra(tick: bn, tickSpacing: bn, pool: ethers.Contract) : Promise<[TickData[], TickData[]]>{
+//     let [lower, upper] = await getUpperLowerTicks(tick, tickSpacing)
+//     let lowerTicks = [lower]
+//     let current = new bn(lower)
+//     for(let i = 0; i < 100; i++){
+//         let nextTick =  new bn(current.minus(tickSpacing))
+//         lowerTicks.push(nextTick)
+//         current = new bn(nextTick)
+//     }
+//     let upperTicks = [upper]
+//     current = new bn(upper)
+//     for(let i = 0; i < 100; i++){
+//         let nextTick = new bn(current.plus(tickSpacing))
+//         upperTicks.push(nextTick)
+//         current = new bn(nextTick)
+//     }
 
-    let lowerTickDatasPromise = lowerTicks.map(async tick => {
-        let tickData = await pool.ticks(tick.toNumber())
-        let tickDataObject: TickData = {
-            tick: tick.toString(),
-            liquidityTotal: tickData.liquidityTotal.toString(),
-            liquidityDelta: tickData.liquidityDelta.toString(),
-            initialized: tickData.initialized
-        }
-        return tickDataObject 
-    })
+//     let lowerTickDatasPromise = lowerTicks.map(async tick => {
+//         let tickData = await pool.ticks(tick.toNumber())
+//         let tickDataObject: TickData = {
+//             tick: tick.toString(),
+//             liquidityTotal: tickData.liquidityTotal.toString(),
+//             liquidityDelta: tickData.liquidityDelta.toString(),
+//             initialized: tickData.initialized
+//         }
+//         return tickDataObject 
+//     })
 
-    let upperTickDatasPromise = upperTicks.map(async tick => {
-        let tickData = await pool.ticks(tick.toNumber())
-        let tickDataObject: TickData = {
-            tick: tick.toString(),
-            liquidityTotal: tickData.liquidityTotal.toString(),
-            liquidityDelta: tickData.liquidityDelta.toString(),
-            initialized: tickData.initialized
-        }
-        return tickDataObject 
-    })
+//     let upperTickDatasPromise = upperTicks.map(async tick => {
+//         let tickData = await pool.ticks(tick.toNumber())
+//         let tickDataObject: TickData = {
+//             tick: tick.toString(),
+//             liquidityTotal: tickData.liquidityTotal.toString(),
+//             liquidityDelta: tickData.liquidityDelta.toString(),
+//             initialized: tickData.initialized
+//         }
+//         return tickDataObject 
+//     })
 
-    let lowerTickDatas = await Promise.all(lowerTickDatasPromise)
-    let upperTickDatas = await Promise.all(upperTickDatasPromise)
+//     let lowerTickDatas = await Promise.all(lowerTickDatasPromise)
+//     let upperTickDatas = await Promise.all(upperTickDatasPromise)
 
-    lowerTickDatas = lowerTickDatas.filter(tick => tick.initialized)
-    upperTickDatas = upperTickDatas.filter(tick => tick.initialized)
-    return [lowerTickDatas, upperTickDatas]
-}
+//     lowerTickDatas = lowerTickDatas.filter(tick => tick.initialized)
+//     upperTickDatas = upperTickDatas.filter(tick => tick.initialized)
+//     return [lowerTickDatas, upperTickDatas]
+// }
 
-export function getUpperLowerTicks(currentTick: bn, tickSpacing: bn): [bn, bn]{
-    let currentTickAbs = currentTick.abs()
-    let mod = currentTickAbs.mod(tickSpacing)
-    let lowerTick = currentTickAbs.minus(mod)
-    let upperTick = lowerTick.plus(tickSpacing)
+// export function getUpperLowerTicks(currentTick: bn, tickSpacing: bn): [bn, bn]{
+//     let currentTickAbs = currentTick.abs()
+//     let mod = currentTickAbs.mod(tickSpacing)
+//     let lowerTick = currentTickAbs.minus(mod)
+//     let upperTick = lowerTick.plus(tickSpacing)
 
-    if(currentTick.lt(0)){
-        return [upperTick.negated(), lowerTick.negated()]
-    }
-    return [lowerTick, upperTick]
-}
+//     if(currentTick.lt(0)){
+//         return [upperTick.negated(), lowerTick.negated()]
+//     }
+//     return [lowerTick, upperTick]
+// }
 // async function getNextLowerTick()
 function tickToWord(tick: number, tickSpacing: number): number {
     let compressed = Math.floor(tick / tickSpacing)
