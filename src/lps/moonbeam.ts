@@ -75,7 +75,7 @@ export async function combinedQuery(): Promise<MyLp[]>{
     let lpsPromise = await lpContractAddresses.map(async (lpContract: any) => {
         let newLp: MyLp;
 
-        if(lpContract.abi == 'algebra' || lpContract.abi == 'uni3'){
+        if(lpContract.abi == 'algebra' || lpContract.abi == 'uni3' || lpContract.abi == 'beamswap'){
             // console.log(`Algebra or uni ${lpContract.contractAddress}`)
             let context: Context = await getContext(lpContract.contractAddress, lpContract.abi, lpMap)
             if(context.contractTickQuery != null){
