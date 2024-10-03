@@ -6,7 +6,7 @@ import bn from 'bignumber.js'
 import { parse } from 'path'
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { GlobalState, MyLp, Slot0 } from '../types.ts';
-import { altDexContractAbi, dexAbiMap, dexAbis, uniFactoryAddress, wsProvider, xcTokenAbi } from './glmrConsts.ts';
+import { altDexContractAbi, beamFactoryAddress, dexAbiMap, dexAbis, uniFactoryAddress, wsProvider, xcTokenAbi } from './glmrConsts.ts';
 import { TickMath } from '@uniswap/v3-sdk';
 import { ContractTickQuery, ContractTickQueryResult, getAlgebraTickData, getV2DexData, getUni3TickData, queryAllContractsTickData, rewriteAbi, saveAllInitializedTicks} from './moonbeamUtils.ts'
 
@@ -164,7 +164,7 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
     let feeRate
     let currentTick
     let updatedAbi
-    let factoryAddress
+    // let factoryAddress
 
     if(abi == 'algebra'){
         pool = await new ethers.Contract(address, dexAbiMap[abi], wsProvider);
@@ -175,7 +175,6 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
         let poolInfo: GlobalState = await pool.globalState();
         feeRate = new bn(poolInfo.fee)
         currentTick = new bn(poolInfo.tick)
-        factoryAddress = await pool.factory()
     } else {
         pool = await new ethers.Contract(address, dexAbiMap[abi], wsProvider);
         token0 = await pool.token0();
@@ -187,10 +186,11 @@ async function getContext(address: string, abi: 'algebra' | 'uni3', lpMap: Map<s
         currentTick =new bn(poolInfo.tick)
         
         // -- TEMPORARY modify abi's for beamswap
-        factoryAddress = await pool.factory()
-        if(factoryAddress != uniFactoryAddress){
-            updatedAbi = dexAbiMap[abi]
+        const factoryAddress = await pool.factory()
+        if(factoryAddress == beamFactoryAddress){
+            updatedAbi = 'beamswap'
         }
+        // -- END TEMPORARY
     }
 
     // Use erc20 abi to get balance data
