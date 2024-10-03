@@ -60,7 +60,7 @@ export async function updateLps(chopsticks: boolean) {
         })
         const newLp: MyLp = {
             chainId: 2001,
-            dexType: "solar",
+            dexType: "V2",
             poolAssets: [token0?.tokenData.localId, token1?.tokenData.localId],
             liquidityStats: [pool.reserve0.numerator.toString(), pool.reserve1.numerator.toString()]
         }
@@ -128,7 +128,7 @@ export async function updateLps(chopsticks: boolean) {
 //         console.log(token1)
 //         const newLp: MyLp = {
 //             chainId: 2001,
-//             dexType: "solar",
+//             dexType: "V2",
 //             poolAssets: [token0?.tokenData.localId, token1?.tokenData.localId],
 //             liquidityStats: [reserve0, reserve1]
 //         }

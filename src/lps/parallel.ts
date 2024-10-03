@@ -41,7 +41,7 @@ export async function updateLps(chopsticks: boolean) {
         })
         const newLp: MyLp = {
             chainId: parachainId,
-            dexType: "solar",
+            dexType: "V2",
             poolAssets: [baseAsset?.localId, quoteAsset?.localId],
             liquidityStats: [baseAmount, quoteAmount]
         }
@@ -91,7 +91,7 @@ async function saveLps() {
         })
         const newLp: MyLp = {
             chainId: parachainId,
-            dexType: "solar",
+            dexType: "V2",
             poolAssets: [baseAsset?.localId, quoteAsset?.localId],
             liquidityStats: [baseAmount, quoteAmount]
         }

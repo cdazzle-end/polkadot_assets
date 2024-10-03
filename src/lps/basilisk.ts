@@ -38,7 +38,7 @@ export async function updateLps(chopsticks: boolean) {
 
         let newLp: MyLp = {
             chainId: parseInt(parachainId),
-            dexType: "solar",
+            dexType: "V2",
             poolAssets: assetIdsString,
             liquidityStats: tokenLiqs
         }
@@ -102,7 +102,7 @@ export async function updateLps(chopsticks: boolean) {
 
 //         let newLp: MyLp = {
 //             chainId: parseInt(parachainId),
-//             dexType: "solar",
+//             dexType: "V2",
 //             poolAssets: assetIdsString,
 //             liquidityStats: tokenLiqs
 //         }

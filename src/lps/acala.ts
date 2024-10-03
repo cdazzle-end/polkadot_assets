@@ -73,7 +73,7 @@ export async function updateLps(chopsticks: boolean) {
         })
         const newLp: MyLp = {
             chainId: parachainId.toJSON() as number,
-            dexType: "solar",
+            dexType: "V2",
             poolAssets: tokens,
             liquidityStats: liquidity
         }
@@ -135,7 +135,7 @@ async function saveLps() {
         })
         const newLp: MyLp = {
             chainId: parachainId.toJSON() as number,
-            dexType: "solar",
+            dexType: "V2",
             poolAssets: tokens,
             liquidityStats: liquidity
         }

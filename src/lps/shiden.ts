@@ -79,7 +79,7 @@ export async function updateLps() {
         // let newPool = new LiqPool("2023", poolAddress, pool["poolAssets"], newliquidityStats);
         const newPool: MyLp = {
             chainId: 2007,
-            dexType: "solar",
+            dexType: "V2",
             contractAddress: lpContract,
             poolAssets: [token0, token1],
             liquidityStats: newliquidityStats
@@ -121,7 +121,7 @@ async function saveEvmLps() {
         // let newPool = new LiqPool("2023", poolAddress, pool["poolAssets"], newliquidityStats);
         const newPool: MyLp = {
             chainId: 2007,
-            dexType: "solar",
+            dexType: "V2",
             contractAddress: lpContract,
             poolAssets: [token0, token1],
             liquidityStats: newliquidityStats
