@@ -1,14 +1,11 @@
-import { ethers } from 'ethers'
-import * as fs from 'fs';  
-import readline from 'readline';
+import bn from 'bignumber.js';
+import { ethers } from 'ethers';
+import * as fs from 'fs';
 import path from 'path';
-import bn from 'bignumber.js'
-import { parse } from 'path'
-import { ApiPromise, WsProvider } from '@polkadot/api';
+import readline from 'readline';
 import { GlobalState, MyLp, Slot0 } from '../types.ts';
-import { altDexContractAbi, beamFactoryAddress, dexAbiMap, dexAbis, uniFactoryAddress, wsProvider, xcTokenAbi } from './glmrConsts.ts';
-import { TickMath } from '@uniswap/v3-sdk';
-import { ContractTickQuery, ContractTickQueryResult, getAlgebraTickData, getV2DexData, getUni3TickData, queryAllContractsTickData, rewriteAbi, saveAllInitializedTicks} from './moonbeamUtils.ts'
+import { beamFactoryAddress, dexAbiMap, wsProvider, xcTokenAbi } from './glmrConsts.ts';
+import { ContractTickQuery, ContractTickQueryResult, getV2DexData, queryAllContractsTickData } from './moonbeamUtils.ts';
 
 import { fileURLToPath } from 'url';
 import { glmrAssetRegistry, glmrLpRegistry } from '../consts.ts';
