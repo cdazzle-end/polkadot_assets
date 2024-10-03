@@ -270,19 +270,6 @@ function tickToWord(tick: number, tickSpacing: number): number {
   }
   
 
-
-
-export function rewriteAbi(){
-    let glmrLps: MyLp[] = glmrLpsTest1 as MyLp[]
-    glmrLps.forEach(lp => {
-        if(lp.dexType === 'algebra'){
-            lp.abi = 'algebra'
-        } else if(lp.dexType === 'uni3'){
-            lp.abi = 'uni3'
-        }
-    })
-    fs.writeFileSync(path.join(lpRegistryFolder, 'glmr_lps_test_1.json'), JSON.stringify(glmrLps, null, 2))
-}
 // interface TempTickData {
 //     contractAddress: string,
 //     ticks: number[]
