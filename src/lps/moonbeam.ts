@@ -179,11 +179,11 @@ async function getContext(address: string, abi: 'algebra' | 'uni3' | 'beamswap',
         currentTick =new bn(poolInfo.tick)
         
         // -- TEMPORARY modify abi's for beamswap
-        // const factoryAddress = await pool.factory()
-        // if(factoryAddress == beamFactoryAddress){
-        //     console.log(`Updating abi for ${address} to beamswap`)
-        //     updatedAbi = 'beamswap'
-        // }
+        const factoryAddress = await pool.factory()
+        if(factoryAddress == beamFactoryAddress){
+            console.log(`Updating abi for ${address} to beamswap`)
+            updatedAbi = 'beamswap'
+        }
         // -- END TEMPORARY
     }
 
