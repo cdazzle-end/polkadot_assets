@@ -82,7 +82,7 @@ export let dexAbiMap = {
     "uni3": uniswapDexV3,
     "algebra": algebraDex,
     "beam": beamDex,
-    "beam3": beamV3Dex,
+    "beamswap": beamV3Dex,
     "stella": stellaDexAbi,
     "zenlink": zenlinkDexAbi,
     "zenlink2": zenlinkDex2Abi,
