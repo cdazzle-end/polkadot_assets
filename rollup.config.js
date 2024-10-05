@@ -19,6 +19,7 @@ const externalDependencies = [
   '@zenlink-dex/sdk-core',
   '@zenlink-dex/sdk-api',
   "ethereum-multicall",
+  "ethers",
   'fs',
   'path',
 ];
