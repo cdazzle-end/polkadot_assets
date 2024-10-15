@@ -138,7 +138,7 @@ export async function saveLps() {
             poolAssets: [token0?.tokenData.localId, token1?.tokenData.localId],
             liquidityStats: [reserve0, reserve1]
         }
-        // console.log(newLp)
+        // con[[2024-10-14]]e.log(newLp)
         return newLp
     })
     // console.log("---------------------")
