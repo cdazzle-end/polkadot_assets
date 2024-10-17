@@ -61,7 +61,7 @@ export async function updateLpsWithMap(chopsticks: boolean, relay: string, apiMa
 export async function updatePolkadotLps(chopsticks: boolean) {
     await Promise.all([
         lpHandler.bncPolkadotHandler.updateLps(chopsticks).then(() => console.log("bnc polkadot complete")),
-        lpHandler.paraHandler.updateLps(chopsticks).then(() => console.log("para complete")),
+        // lpHandler.paraHandler.updateLps(chopsticks).then(() => console.log("para complete")),
         lpHandler.acaHandler.updateLps(chopsticks).then(() => console.log("aca complete")),
         lpHandler.hdxHandler.updateLps(chopsticks).then(() => console.log("hdx complete")),
         lpHandler.glmrHandler.saveLps().then(() => console.log("glmr complete"))
@@ -71,7 +71,7 @@ export async function updatePolkadotLps(chopsticks: boolean) {
 export async function updateKusamaLps(chopsticks: boolean) {
     await Promise.all([
         lpHandler.bncKusamaHandler.updateLps(chopsticks).then(() => console.log("bnc kusama complete")),
-        lpHandler.hkoHandler.updateLps(chopsticks).then(() => console.log("hko complete")),
+        // lpHandler.hkoHandler.updateLps(chopsticks).then(() => console.log("hko complete")),
         lpHandler.karHandler.updateLps(chopsticks).then(() => console.log("kar complete")),
         // lpHandler.kucoinHandler.updateLps().then(() => console.log("kucoin complete")),
         lpHandler.mgxHandler.updateLps(chopsticks).then(() => console.log("mgx complete")),
